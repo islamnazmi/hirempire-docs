@@ -24,12 +24,12 @@
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.hirempire.com"
+    "url": "https://www.hirempire.com/sign-in"
   },
   "tabs": [
     {
       "name": "API Reference",
-      "url": "api-reference"
+      "url": "https://developers.hirempire.com"
     }
   ],
   "anchors": [
