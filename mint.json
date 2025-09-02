@@ -59,8 +59,14 @@
         "companies",
         "jobs",
         "candidates",
-        "ai-screening",
         "automated-follow-ups"
+      ]
+    },
+    {
+      "group": "AI-Powered Features",
+      "pages": [
+        "hirempire-ai",
+        "ai-screening"
       ]
     },
     {
@@ -68,25 +74,9 @@
       "pages": [
         "subscription"
       ]
-    },
-    {
-      "group": "API Reference",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "API Endpoints",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/hirempire",
-    "github": "https://github.com/hirempire",
-    "linkedin": "https://www.linkedin.com/company/hirempire"
+    "linkedin": "https://www.linkedin.com/company/hirempire-ai"
   }
 }
