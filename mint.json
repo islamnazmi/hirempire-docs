@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Hirempire Docs",
   "logo": {
-    "dark": "/logo/dark.png",
-    "light": "/logo/light.png",
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg",
     "alt": "Hirempire"
   },
   "favicon": "/favicon.svg",
