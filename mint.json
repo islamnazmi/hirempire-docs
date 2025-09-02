@@ -6,14 +6,14 @@
     "light": "/logo/light.svg",
     "alt": "Hirempire"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "colors": {
     "primary": "#3349C0",
-    "light": "#3349C0",
+    "light": "#335bc0",
     "dark": "#3349C0",
     "anchors": {
       "from": "#3349C0",
-      "to": "#3349C0"
+      "to": "#335bc0"
     }
   },
   "topbarLinks": [
@@ -24,24 +24,25 @@
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://www.hirempire.com/sign-in"
+    "url": "https://hirempire.com/sign-in"
   },
   "tabs": [
     {
       "name": "API Reference",
-      "url": "https://developers.hirempire.com"
+      "url": "https://developers.hirempire.com/"
     }
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://hirempire.com/docs"
+      "name": "Dashboard",
+      "icon": "chart-line",
+      "url": "https://hirempire.com/sign-in"
     },
+
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://community.hirempire.com"
+      "name": "Pricing",
+      "icon": "credit-card",
+      "url": "https://hirempire.com/pricing"
     }
   ],
   "navigation": [
@@ -49,19 +50,23 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "quickstart",
-        "development"
+        "quickstart"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Core Features",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "companies",
+        "jobs",
+        "candidates",
+        "ai-screening",
+        "automated-follow-ups"
+      ]
+    },
+    {
+      "group": "Pricing & Plans",
+      "pages": [
+        "subscription"
       ]
     },
     {
@@ -71,7 +76,7 @@
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "API Endpoints",
       "pages": [
         "api-reference/endpoint/get",
         "api-reference/endpoint/create",
