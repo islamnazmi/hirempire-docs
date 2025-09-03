@@ -7,6 +7,36 @@
   --font-headers: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+  --hirempire-primary: #3349C0;
+  --hirempire-light: #335bc0;
+}
+
+/* Geometric background pattern */
+body {
+  background: linear-gradient(135deg, #fafbfc 0%, #f8f9fb 100%);
+  background-image: 
+    linear-gradient(45deg, rgba(51, 73, 192, 0.04) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(51, 73, 192, 0.04) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(51, 91, 192, 0.02) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(51, 91, 192, 0.02) 75%);
+  background-size: 80px 80px;
+  background-position: 0 0, 0 40px, 40px -40px, -40px 0px;
+}
+
+/* Subtle grid overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(90deg, rgba(51, 73, 192, 0.015) 1px, transparent 1px),
+    linear-gradient(rgba(51, 73, 192, 0.015) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: -1;
 }
 
 /* Apply Manrope to body and main content */
@@ -124,4 +154,18 @@ h3, h4, h5, h6 {
 .mintlify-toc h3 {
   font-family: var(--font-headers) !important;
   font-weight: 600;
+}
+
+/* Ensure main content area has proper background */
+.mintlify-content,
+.mintlify-main {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+/* Sidebar enhancement with subtle background */
+.mintlify-sidebar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
 }
