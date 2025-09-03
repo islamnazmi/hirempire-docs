@@ -73,6 +73,12 @@
       "pages": [
         "subscription"
       ]
+    },
+    {
+      "group": "Support",
+      "pages": [
+        "support"
+      ]
     }
   ],
   "footerSocials": {
