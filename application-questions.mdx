@@ -1,0 +1,255 @@
+---
+title: 'Application Questions'
+description: 'Customize what information you collect from job applicants'
+---
+
+## Application Questions Overview
+
+Control exactly what information you collect from candidates when they apply to your jobs. Hirempire provides standard essential questions plus optional fields you can enable based on your specific needs.
+
+## Standard Questions (Always Included)
+
+Every job application automatically includes these essential questions:
+
+<AccordionGroup>
+  <Accordion icon="user" title="Basic Information">
+    **Required Fields**:
+    - **Full Name** - Text input for candidate's complete name
+    - **Email** - Email address for communication
+    - **Phone** - Phone number for contact
+    - **LinkedIn Link** - LinkedIn profile URL (validates LinkedIn format)
+    - **CV Upload** - PDF file upload for resume/CV
+    
+    These fields cannot be disabled as they're essential for candidate evaluation and communication.
+  </Accordion>
+</AccordionGroup>
+
+## Optional Fields
+
+Choose which additional information to collect from candidates:
+
+<AccordionGroup>
+  <Accordion icon="file-text" title="Additional Documents">
+    **Cover Letter** - Long text field
+    - Allows candidates to write detailed cover letters
+    - Useful for roles requiring written communication skills
+    - Type: Long text area
+    
+    **Personal Photo** - Image file upload
+    - Accepts JPEG and PNG formats
+    - Optional for most roles
+    - Type: Image file upload
+  </Accordion>
+  
+  <Accordion icon="briefcase" title="Professional Information">
+    **Years of Experience** - Number input
+    - Helps with quick experience-level filtering
+    - Useful for roles with specific experience requirements
+    - Type: Number field
+    
+    **Spoken Languages** - Multi-language selector
+    - Important for international roles or customer-facing positions
+    - Allows multiple language selection
+    - Type: Multi-language selector
+  </Accordion>
+  
+  <Accordion icon="map-pin" title="Location & Personal Details">
+    **Nationality** - Text input
+    - Required for roles with citizenship requirements
+    - Useful for visa/work permit considerations
+    - Type: Text field
+    
+    **Current Location** - Text input
+    - Helps assess relocation needs
+    - Useful for understanding candidate's geographic flexibility
+    - Type: Text field
+  </Accordion>
+  
+  <Accordion icon="dollar-sign" title="Compensation">
+    **Salary Expectation** - Text input
+    - Helps align compensation expectations early
+    - Reduces mismatched applications
+    - Type: Text field (allows ranges or "Negotiable")
+  </Accordion>
+</AccordionGroup>
+
+## Custom Special Questions
+
+Add up to 6 custom questions tailored to your specific role requirements:
+
+### Question Types Available
+
+<CardGroup cols={2}>
+  <Card title="Text" icon="type">
+    Short text responses for brief answers like "Previous company name"
+  </Card>
+  <Card title="Number" icon="hash">
+    Numeric responses for questions like "Years in management role"
+  </Card>
+  <Card title="Long Text" icon="align-left">
+    Detailed responses for questions like "Describe your biggest achievement"
+  </Card>
+  <Card title="Single Select" icon="check-circle">
+    Choose one option from a list like "Preferred work schedule"
+  </Card>
+  <Card title="Multiple Select" icon="list-check">
+    Choose multiple options like "Which programming languages do you know?"
+  </Card>
+</CardGroup>
+
+### Custom Question Examples
+
+**For Technical Roles**:
+- "Which programming languages are you proficient in?" (Multiple Select)
+- "Years of experience with React?" (Number)
+- "Describe your most complex project" (Long Text)
+
+**For Management Roles**:
+- "How many people have you managed?" (Number)
+- "Preferred management style" (Single Select)
+- "Describe your leadership philosophy" (Long Text)
+
+**For Sales Roles**:
+- "Previous sales experience in years" (Number)
+- "Which industries have you sold to?" (Multiple Select)
+- "Describe your biggest sales win" (Long Text)
+
+**For Customer Service**:
+- "Languages you can provide support in" (Multiple Select)
+- "Rate your communication skills 1-10" (Number)
+- "How do you handle difficult customers?" (Long Text)
+
+**For Creative Roles**:
+- "Link to your portfolio" (Text)
+- "Which design tools do you use?" (Multiple Select)
+- "Describe your creative process" (Long Text)
+
+**For Remote Roles**:
+- "Do you have a dedicated home office?" (Single Select: Yes/No/Partially)
+- "Your timezone" (Text)
+- "Experience with remote collaboration tools" (Multiple Select)
+
+## Setting Up Application Questions
+
+### For New Jobs
+
+When creating a job:
+1. **Fill Basic Job Details**: Complete position, department, location, etc.
+2. **Choose Optional Fields**: Select which optional questions to include
+3. **Add Custom Questions**: Write up to 6 special questions with appropriate types
+4. **Preview Application**: Review how the application form will look to candidates
+
+### For Existing Jobs
+
+**Modifying Questions**:
+- Edit job details to add or remove optional fields
+- Add custom questions to gather more specific information
+- Remove questions that aren't providing valuable insights
+
+<Warning>
+  Changing application questions for active jobs only affects new applicants. Existing applications will retain their original question set.
+</Warning>
+
+## Best Practices
+
+### Question Selection Strategy
+
+<Tip>
+  **Relevance First**: Only ask questions that directly impact your hiring decision. Too many questions can reduce application completion rates.
+</Tip>
+
+<Tip>
+  **Progressive Disclosure**: Start with essential questions, add optional ones only if they provide significant value for your specific role.
+</Tip>
+
+### Writing Effective Custom Questions
+
+<Tip>
+  **Be Specific**: Instead of "Do you have experience?", ask "How many years of Python development experience do you have?"
+</Tip>
+
+<Tip>
+  **Provide Context**: Explain why you're asking if it's not obvious. "We work across US time zones - what's your preferred work schedule?"
+</Tip>
+
+<Tip>
+  **Consider Candidate Experience**: Balance information gathering with application ease. Long forms can deter quality candidates.
+</Tip>
+
+## Integration with Other Features
+
+### AI Screening Enhancement
+
+**Question Data in AI Analysis**:
+- Custom question responses feed into AI screening
+- More data points lead to better candidate matching
+- Specific skills questions improve AI recommendations
+
+### Automated Follow-ups
+
+**Personalized Communication**:
+- Use question responses to personalize automated emails
+- Reference candidate's experience level or skills in communications
+- Create more relevant interview discussions
+
+## Analytics and Optimization
+
+### Question Performance Tracking
+
+**Available Insights**:
+- Application completion rates by question count
+- Most/least answered optional questions
+- Custom question response quality analysis
+- Time-to-complete application metrics
+
+### Optimization Recommendations
+
+**Based on Data**:
+- Remove questions with low response quality
+- Simplify questions that cause application abandonment
+- Add questions that improve candidate fit prediction
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Low Application Completion Rates">
+    **Possible Causes**:
+    - Too many optional questions enabled
+    - Custom questions are too complex or lengthy
+    - Required fields are inappropriate for the role level
+    
+    **Solutions**:
+    - Reduce number of optional questions
+    - Simplify custom question wording
+    - Make some questions optional instead of required
+  </Accordion>
+  
+  <Accordion title="Poor Quality Responses">
+    **Common Issues**:
+    - Questions are too vague or broad
+    - Multiple choice options don't cover all scenarios
+    - Text fields allow responses that are too brief
+    
+    **Improvements**:
+    - Be more specific in question wording
+    - Add "Other" option to single/multiple select questions
+    - Provide examples of good responses in question descriptions
+  </Accordion>
+  
+  <Accordion title="Custom Questions Not Saving">
+    **Technical Solutions**:
+    - Ensure all required question fields are completed
+    - Check that question text doesn't exceed character limits
+    - Try refreshing the page and entering questions again
+    - Contact support if issues persist
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+After setting up your application questions:
+
+1. **[Test Your Application](/jobs)** - Apply to your own job to test the candidate experience
+2. **[Review Applications](/candidates)** - See how question responses appear in candidate profiles
+3. **[Analyze Performance](/jobs)** - Monitor application completion and response quality
+4. **[Use AI Insights](/ai-screening)** - Leverage question data for better candidate screening (paid plans)

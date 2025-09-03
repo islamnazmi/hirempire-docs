@@ -18,108 +18,136 @@ Navigate to [Jobs](https://hirempire.com/jobs) to view and manage all your job p
 ### Job Information Fields
 
 <AccordionGroup>
-  <Accordion icon="briefcase" title="Position & Department">
-    **Position Title**: Enter the exact job title you're hiring for
+  <Accordion icon="briefcase" title="Position & Department Details">
+    **Position Title** *(Required)*: Enter the exact job title you're hiring for
     - Be specific and clear
     - Use industry-standard terminology
     
-    **Department**: Choose the relevant department
-    - Select from predefined options
-    - Helps with organization and filtering
+    **Job Title Short Description** *(Optional)*: Brief description to help AI understand the role
+    - Helps AI generate better job descriptions
+    - Example: "Manage social media campaigns and content creation"
+    
+    **Department** *(Required)*: Choose from available departments
+    - Options include: Accounting/Auditing, Administrative, Advertising, Analyst, Art/Creative, Business Development, Consulting, Customer Service, Design, Distribution, Education, Engineering, Finance, Health Care Provider, Human Resources, Information Technology, Legal, Management, Manufacturing, Marketing, Operations, Product Management, Project Management, Production, Public Relations, Purchasing, Quality Assurance, Research, Sales, Science, Strategy/Planning, Supply Chain, Training, Other
   </Accordion>
   
-  <Accordion icon="map-pin" title="Location Details">
-    **Location**: Specify where the role is based
-    - Enter country name (e.g., "Egypt", "United States")
+  <Accordion icon="map-pin" title="Location & Work Details">
+    **Job Country** *(Required)*: Select the primary country for this role
+    - Choose from dropdown list of countries
     - Use "Worldwide" for global remote positions
-    - Be specific about regions if applicable
     
-    **Job Type**: Select work arrangement
-    - **Remote**: Work from anywhere
-    - **Hybrid**: Mix of remote and office work  
+    **City or State** *(Optional)*: Specify city or state if applicable
+    - More specific location information
+    - Helps candidates understand exact location
+    
+    **Career Level** *(Required)*: Select appropriate experience level
+    - Options: Junior, Mid-level, Senior, Team Leader, Manager, Director, VP, C-level
+    
+    **Job Type** *(Required)*: Choose employment type
+    - Options: Full-time, Part-time, Contract, Freelance, Internship, Temporary, Project-based
+    
+    **Workplace Type** *(Required)*: Select work arrangement
     - **On-site**: Office-based position
+    - **Remote**: Work from anywhere
+    - **Hybrid**: Mix of remote and office work
   </Accordion>
   
   <Accordion icon="dollar-sign" title="Salary Information">
-    **Salary Options**:
-    - **Exact Amount**: Specify precise salary figure
-    - **Range**: Provide minimum and maximum
-    - **Confidential**: Leave empty to hide salary details
+    **Amount** *(Required)*: Enter salary amount or range
+    - Examples: "50000", "50000 - 70000", "Competitive"
+    - Can leave blank if confidential
     
-    **Best Practice**: Include salary ranges when possible to attract quality candidates
+    **Period** *(Required)*: Select salary frequency
+    - Options: Per hour, Per day, Per week, Bi-weekly, Per month, Per year
+    
+    **Currency** *(Required)*: Choose currency
+    - Options: USD, EUR, GBP, JPY, AUD, CAD, CHF, CNY, INR, BRL, MXN, ZAR, Other
+    
+    **Hide Salary Option**: Check to keep salary confidential in job posting
+    - Salary won't appear on public job listing
+    - Useful for sensitive or negotiable positions
   </Accordion>
   
-  <Accordion icon="file-text" title="Job Description">
-    **Job Description**: Write comprehensive role details
-    - Hirempire automatically formats with headers
+  <Accordion icon="file-text" title="Job Description & AI Generation">
+    **Job Description** *(Required)*: Write comprehensive role details
+    - Can be generated using AI or written manually
     - Include responsibilities, requirements, and benefits
-    - Use clear, engaging language
+    - Hirempire automatically formats with headers
     
-    **Formatting**: No need to manually format - our system handles styling
+    **AI Job Description Generation**: 
+    - Click "Generate with AI" button to auto-create description
+    - Requires all fields above to be filled (except Job Title Short Description)
+    - Job Title Short Description helps AI better understand the role
+    - AI uses your inputs to create tailored, professional job descriptions
+    
+    <Info>
+      **AI Generation Requirements**: All fields except "Job Title Short Description" must be completed before using AI generation. The short description helps the AI create more accurate content.
+    </Info>
   </Accordion>
 </AccordionGroup>
 
-### Application Tracking Setup
+### Source Platform Tracking
 
-<Accordion icon="link" title="Source Platform Tracking">
-  **Source Platforms**: List where you'll post the job
-  - Separate platforms with commas (e.g., "LinkedIn, Indeed, Company Website")
-  - Hirempire creates unique tracking URLs for each platform
-  - Track which sources bring the best candidates
+<Accordion icon="link" title="Application Source Management">
+  **Sources** *(Required)*: Select where you'll post this job
+  - **Available Options**: LinkedIn, Referral, Facebook, WhatsApp, Pinterest, Reddit, Snapchat, TikTok, X, Instagram, Xing, WeChat, YouTube, Indeed, My Website, Other
+  - **Multiple Selection**: Choose one or more platforms
+  - **Automatic URLs**: Hirempire creates unique tracking URLs for each selected platform
+  - **Performance Tracking**: Monitor which sources bring the best candidates
   
-  **Example**: `LinkedIn, Indeed, AngelList, Company Career Page`
+  **How Source Tracking Works**:
+  - Each selected platform gets a unique application URL
+  - Candidates applying through different URLs are automatically tagged
+  - View source performance in job analytics
+  - Optimize your posting strategy based on data
 </Accordion>
 
 ## Application Questions
 
-### Standard Questions
+### Standard Application Questions
 
-Every job application automatically includes:
+Every job application automatically includes these essential fields:
 
 <CardGroup cols={2}>
   <Card title="Basic Information" icon="user">
-    - Full Name
-    - Email Address
-    - Phone Number
-    - LinkedIn Profile Link
+    - Full Name (required)
+    - Email Address (required)
+    - Phone Number (required)
+    - LinkedIn Profile (required)
   </Card>
   <Card title="Application Materials" icon="file">
-    - Profile Photo Upload
-    - CV/Resume Upload
-    - Cover Letter (optional)
+    - CV/Resume Upload (required, PDF format)
+    - All fields are automatically included and cannot be disabled
   </Card>
 </CardGroup>
 
-### Special Questions (Optional)
+### Optional Questions
 
-Add extra screening questions from these options:
+Choose additional information to collect based on your role requirements:
 
-<AccordionGroup>
-  <Accordion icon="clock" title="Experience Level">
-    **Years of Experience**: Helps filter candidates by experience level
-    - Useful for senior vs junior role differentiation
-    - Enables quick screening based on requirements
-  </Accordion>
-  
-  <Accordion icon="dollar-sign" title="Salary Expectations">
-    **Salary Expectation**: Understand candidate compensation needs
-    - Helps align expectations early
-    - Prevents mismatched applications
-  </Accordion>
-  
-  <Accordion icon="globe" title="Language Skills">
-    **Languages Spoken**: Important for international roles
-    - Specify required languages
-    - Assess communication capabilities
-  </Accordion>
-  
-  <Accordion icon="users" title="References">
-    **References**: Request professional references
-    - Useful for senior positions
-    - Streamlines background check process
-  </Accordion>
-</AccordionGroup>
+**Available Optional Fields**:
+- Cover Letter (long text)
+- Personal Photo (image upload)
+- Years of Experience (number)
+- Spoken Languages (multi-select)
+- Nationality (text)
+- Current Location (text)
+- Salary Expectation (text)
 
+### Custom Special Questions
+
+Add up to **6 custom questions** tailored to your specific role:
+
+**Question Types Available**:
+- **Text**: Short responses (e.g., "Previous company name")
+- **Number**: Numeric answers (e.g., "Years of management experience")
+- **Long Text**: Detailed responses (e.g., "Describe your biggest achievement")
+- **Single Select**: Choose one option (e.g., "Preferred work schedule")
+- **Multiple Select**: Choose multiple options (e.g., "Programming languages you know")
+
+<Info>
+  For detailed guidance on setting up application questions, visit our [Application Questions guide](/application-questions).
+</Info>
 
 ## Job Management
 
