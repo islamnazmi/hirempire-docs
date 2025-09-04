@@ -57,8 +57,8 @@
       "pages": [
         "companies",
         "jobs",
-        "candidates",
         "application-questions",
+        "candidates",
         "automated-follow-ups"
       ]
     },
@@ -76,15 +76,15 @@
       ]
     },
     {
-      "group": "Need Help?",
+      "group": "Referral Program",
       "pages": [
-        "support"
+        "refer-a-friend"
       ]
     },
     {
-      "group": "Referring Program",
+      "group": "Need Help?",
       "pages": [
-        "refer-a-friend"
+        "support"
       ]
     }
   ],
