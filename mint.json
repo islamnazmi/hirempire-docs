@@ -72,14 +72,14 @@
     {
       "group": "Pricing & Plans",
       "pages": [
-        "subscription"
+        "subscription",
+        "test"
       ]
     },
     {
       "group": "Referral Program",
       "pages": [
-        "referral",
-        "test"
+        "referral"
       ]
     },
     {
