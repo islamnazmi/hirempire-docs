@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: Hirempire Chat API
+  version: 1.0.0
+servers:
+  - url: https://api.hirempire.com/v1/534de251-059f-4a0e-bfa4-ae4976a3e6cf
+paths:
+  /chat:
+    post:   # I assume it's POST since it's "chat", but if it's GET change this
+      summary: Send a message to the Hirempire chat endpoint
+      security: []   # no authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: "Hello from MCP!"
+      responses:
+        "200":
+          description: Chat response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reply:
+                    type: string
