@@ -77,6 +77,12 @@
     },
 
     {
+      "group": "Referral Program",
+      "pages": [
+        "referral"
+      ]
+    },
+    {
       "group": "Need Help?",
       "pages": [
         "support"
