@@ -3,8 +3,7 @@
   "name": "Hirempire Docs",
   "logo": {
     "dark": "/logo/logo-light.svg",
-    "light": "/logo/logo-dark.svg",
-    "alt": "Hirempire"
+    "light": "/logo/logo-dark.svg"
   },
   "favicon": "/favicon.png",
   "colors": {
