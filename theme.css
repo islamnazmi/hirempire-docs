@@ -6,9 +6,64 @@
 :root {
   --font-headers: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+  --font-mono: Consolas, 'Courier New', monospace;
   --hirempire-primary: #3349C0;
-  --hirempire-light: #335bc0;
+  --hirempire-light: #4287f5;
+}
+
+/* Force monospace font on all code elements */
+code, pre, 
+.font-mono, 
+[data-component-part="code-group-tab-content"],
+[data-component-part="code-block-root"],
+.shiki code, 
+.shiki pre,
+.api-playground code,
+.api-playground pre,
+[data-testid*="playground"] code,
+[data-testid*="playground"] pre,
+.playground-response code,
+.playground-response pre,
+[class*="response"] code,
+[class*="response"] pre,
+[class*="body"] code,
+[class*="body"] pre,
+[class*="playground"] code,
+[class*="playground"] pre {
+  font-family: Consolas, 'Courier New', monospace !important;
+}
+
+/* Target all child elements within code blocks */
+code *, 
+pre *, 
+.font-mono *, 
+.shiki *, 
+.api-playground *, 
+[data-testid*="playground"] *,
+.playground-response *,
+[class*="response"] *,
+[class*="body"] *,
+[class*="playground"] * {
+  font-family: inherit !important;
+}
+
+/* Specific targeting for JSON response content */
+.text-sm.font-mono,
+.text-xs.font-mono,
+[class*="json"] *,
+[class*="response-body"] *,
+[data-language="json"] *,
+[data-language="javascript"] *,
+[data-language="curl"] * {
+  font-family: Consolas, 'Courier New', monospace !important;
+}
+
+/* Override any Manrope usage in code contexts */
+[class*="font-manrope"] code,
+[class*="font-manrope"] pre,
+[style*="font-family"] code,
+[style*="font-family"] pre {
+  font-family: Consolas, 'Courier New', monospace !important;
 }
 
 /* Geometric background pattern */
@@ -98,11 +153,10 @@ button,
 }
 
 /* Code elements - keep monospace */
-code, 
-pre, 
-.code-block,
-.mintlify-code {
-  font-family: var(--font-mono) !important;
+.mintlify-code code,
+pre code,
+code {
+  font-family: Consolas, 'Courier New', monospace !important;
 }
 
 /* Enhance readability */

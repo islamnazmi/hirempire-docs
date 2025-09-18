@@ -1,0 +1,155 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "willow",
+  "name": "Hirempire Docs",
+  "description": "Hirempire documentation for setup, features, and API reference.",
+  "favicon": "favicon.png",
+  "colors": {
+    "primary": "#3349C0",
+    "light": "#4287f5",
+    "dark": "#3349C0"
+  },
+  "api": {
+    "mdx": {
+      "server": "https://api.hirempire.com/v1",
+      "auth": {
+        "method": "bearer"
+      }
+    }
+  },
+  "navigation": {
+    "dropdowns": [
+      {
+        "dropdown": "Documentation",
+        "icon": "book-open",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "core-features/companies",
+              "core-features/jobs",
+              "core-features/application-questions",
+              "core-features/automated-follow-ups"
+            ]
+          },
+          {
+            "group": "Candidates",
+            "pages": [
+              "candidates/candidates",
+              "candidates/candidates-bank",
+              "candidates/chrome"
+            ]
+          },
+          {
+            "group": "✦ AI-Powered Features",
+            "pages": [
+              "ai-features/hirempire-ai",
+              "ai-features/ai-screening"
+            ]
+          },
+          {
+            "group": "Pricing & Plans",
+            "pages": [
+              "subscription"
+            ]
+          },
+          {
+            "group": "Referral Program",
+            "pages": [
+              "referral"
+            ]
+          },
+          {
+            "group": "Updates",
+            "pages": [
+              "updates/whats-new",
+              "updates/feature-requests",
+              "updates/roadmap"
+            ]
+          },
+          {
+            "group": "Need Help?",
+            "pages": [
+              "support"
+            ]
+          }
+        ]
+      },
+      {
+      "dropdown": "Developers",
+      "icon": "code",
+
+  
+      "groups": [
+        {
+          "group": "Get Started",
+          "pages": [
+            "developers/get-started",
+            "developers/auth",
+            "developers/scopes"
+          ]
+        },
+        {
+          "group": "Jobs",
+          "pages": [
+            "developers/jobs/add-job",
+            "developers/jobs/delete-job",
+            "developers/jobs/get-jobs",
+            "developers/jobs/get-specific-job",
+            "developers/jobs/update-job-status"
+          ]
+        },
+        {
+          "group": "Applicants",
+          "pages": [
+            "developers/applicants/get-all-applicants",
+            "developers/applicants/get-specific-applicant",
+            "developers/applicants/get-specific-job-applicants",
+            "developers/applicants/update-applicant-status"
+          ]
+        },
+        {
+          "group": "Companies",
+          "pages": [
+            "developers/companies/create-company"
+            ]
+          }
+        ]
+      }   
+    ]
+  },
+  "logo": {
+    "light": "/logo/logo-dark.svg",
+    "dark": "/logo/logo-light.svg",
+    "href": "https://hirempire.com"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Pricing",
+        "href": "https://hirempire.com/pricing"
+      },
+      {
+        "label": "Support",
+        "href": "mailto:support@hirempire.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "https://hirempire.com/sign-in"
+    }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/hirempire-ai"
+    }
+  }
+}

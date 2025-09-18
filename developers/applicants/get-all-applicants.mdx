@@ -1,0 +1,314 @@
+---
+title: "Get all applicants"
+api: "GET https://api.hirempire.com/v1/applicants"
+description: "Retrieve all applicants from your Hirempire account"
+---
+
+## Authentication
+
+<ResponseField name="Authorization" type="string" required>
+Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token. 
+</ResponseField>
+
+<RequestExample>
+
+```bash cURL
+curl --location --request GET 'https://api.hirempire.com/v1/applicants' \
+--header 'Authorization: Bearer YOUR_TOKEN'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.hirempire.com/v1/applicants', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_TOKEN'
+  }
+});
+
+const data = await response.json();
+console.log(data);
+```
+
+```python Python
+import requests
+
+url = "https://api.hirempire.com/v1/applicants"
+headers = {
+    "Authorization": "Bearer YOUR_TOKEN"
+}
+
+response = requests.get(url, headers=headers)
+data = response.json()
+print(data)
+```
+
+```php PHP
+<?php
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.hirempire.com/v1/applicants',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_HTTPHEADER => array(
+    'Authorization: Bearer YOUR_TOKEN'
+  ),
+));
+
+$response = curl_exec($curl);
+curl_close($curl);
+
+$data = json_decode($response, true);
+print_r($data);
+?>
+```
+
+```ruby Ruby
+require 'net/http'
+require 'json'
+
+uri = URI('https://api.hirempire.com/v1/applicants')
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Get.new(uri)
+request['Authorization'] = 'Bearer YOUR_TOKEN'
+
+response = http.request(request)
+data = JSON.parse(response.body)
+puts data
+```
+
+```go Go
+package main
+
+import (
+    "fmt"
+    "io"
+    "net/http"
+)
+
+func main() {
+    client := &http.Client{}
+    req, _ := http.NewRequest("GET", "https://api.hirempire.com/v1/applicants", nil)
+    req.Header.Add("Authorization", "Bearer YOUR_TOKEN")
+    
+    resp, _ := client.Do(req)
+    defer resp.Body.Close()
+    
+    body, _ := io.ReadAll(resp.Body)
+    fmt.Println(string(body))
+}
+```
+
+```java Java
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.URI;
+
+public class HirempireAPI {
+    public static void main(String[] args) throws Exception {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create("https://api.hirempire.com/v1/applicants"))
+            .header("Authorization", "Bearer YOUR_TOKEN")
+            .GET()
+            .build();
+            
+        HttpResponse<String> response = client.send(request, 
+            HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.body());
+    }
+}
+```
+
+```csharp C#
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+class Program
+{
+    private static readonly HttpClient client = new HttpClient();
+
+    static async Task Main(string[] args)
+    {
+        client.DefaultRequestHeaders.Add("Authorization", "Bearer YOUR_TOKEN");
+        
+        HttpResponseMessage response = await client.GetAsync("https://api.hirempire.com/v1/applicants");
+        string responseBody = await response.Content.ReadAsStringAsync();
+        
+        Console.WriteLine(responseBody);
+    }
+}
+```
+
+```swift Swift
+import Foundation
+
+let url = URL(string: "https://api.hirempire.com/v1/applicants")!
+var request = URLRequest(url: url)
+request.setValue("Bearer YOUR_TOKEN", forHTTPHeaderField: "Authorization")
+
+let task = URLSession.shared.dataTask(with: request) { data, response, error in
+    if let data = data {
+        let json = try? JSONSerialization.jsonObject(with: data)
+        print(json ?? "No data")
+    }
+}
+
+task.resume()
+```
+
+```kotlin Kotlin
+import kotlinx.coroutines.*
+import java.net.http.HttpClient
+import java.net.http.HttpRequest
+import java.net.http.HttpResponse
+import java.net.URI
+
+fun main() = runBlocking {
+    val client = HttpClient.newHttpClient()
+    val request = HttpRequest.newBuilder()
+        .uri(URI.create("https://api.hirempire.com/v1/applicants"))
+        .header("Authorization", "Bearer YOUR_TOKEN")
+        .GET()
+        .build()
+        
+    val response = client.send(request, HttpResponse.BodyHandlers.ofString())
+    println(response.body())
+}
+```
+
+```rust Rust
+use reqwest::header::{HeaderMap, HeaderValue, AUTHORIZATION};
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut headers = HeaderMap::new();
+    headers.insert(AUTHORIZATION, HeaderValue::from_str("Bearer YOUR_TOKEN")?);
+    
+    let client = reqwest::Client::new();
+    let response = client
+        .get("https://api.hirempire.com/v1/applicants")
+        .headers(headers)
+        .send()
+        .await?;
+        
+    let body = response.text().await?;
+    println!("{}", body);
+    
+    Ok(())
+}
+```
+
+</RequestExample>
+
+## Response
+
+<ResponseField name="success" type="boolean">
+Indicates if the request was successful
+</ResponseField>
+
+<ResponseField name="total_applicants" type="integer">
+Total number of applicants returned
+</ResponseField>
+
+<ResponseField name="applicants" type="array">
+Array of applicant objects
+
+<Expandable title="Applicant Object Properties">
+<ResponseField name="id" type="string">
+Unique identifier for the applicant
+</ResponseField>
+
+<ResponseField name="applied_at" type="string">
+ISO 8601 timestamp when the application was submitted
+</ResponseField>
+
+<ResponseField name="name" type="string">
+Full name of the applicant
+</ResponseField>
+
+<ResponseField name="job_title" type="string">
+Title of the job the applicant applied for
+</ResponseField>
+
+<ResponseField name="company_name" type="string">
+Name of the company for the job application
+</ResponseField>
+
+<ResponseField name="first_name" type="string">
+First name of the applicant
+</ResponseField>
+
+<ResponseField name="email" type="string">
+Email address of the applicant
+</ResponseField>
+
+<ResponseField name="phone_number" type="string">
+Phone number of the applicant
+</ResponseField>
+
+<ResponseField name="linkedin_url" type="string">
+LinkedIn profile URL of the applicant
+</ResponseField>
+
+<ResponseField name="source" type="string">
+Platform or source where the application came from
+</ResponseField>
+
+<ResponseField name="cv_url" type="string">
+URL to download the applicant's CV/resume
+</ResponseField>
+
+<ResponseField name="status" type="string">
+Current status of the application (e.g., Applied, Accepted, Rejected)
+</ResponseField>
+
+<ResponseField name="score" type="integer">
+Scoring or rating assigned to the applicant
+</ResponseField>
+</Expandable>
+</ResponseField>
+
+<ResponseExample>
+```json
+{
+  "success": true,
+  "total_applicants": 2,
+  "applicants": [
+    {
+      "id": "abc123xyz456",
+      "applied_at": "2025-02-18T12:30:00.000Z",
+      "name": "John Doe",
+      "job_title": "Software Engineer",
+      "company_name": "TechCorp",
+      "first_name": "John",
+      "email": "johndoe@example.com",
+      "phone_number": "+15551234567",
+      "linkedin_url": "https://www.linkedin.com/in/username",
+      "source": "Indeed",
+      "cv_url": "https://example.com/cv/johndoe.pdf",
+      "status": "Applied",
+      "score": 6
+    },
+    {
+      "id": "xyz789abc321",
+      "applied_at": "2025-02-17T09:15:00.000Z",
+      "name": "Sarah Smith",
+      "job_title": "Marketing Manager",
+      "company_name": "MarketGenius",
+      "first_name": "Sarah",
+      "email": "sarahsmith@example.com",
+      "phone_number": "+447987654321",
+      "linkedin_url": "https://www.linkedin.com/in/username",
+      "source": "Company Website",
+      "cv_url": "https://example.com/cv/sarahsmith.pdf",
+      "status": "Accepted",
+      "score": 8
+    }
+  ]
+}
+```
+</ResponseExample>

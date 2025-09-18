@@ -1,0 +1,90 @@
+---
+title: "API Scopes"
+description: "Understand the different permission scopes available in the Hirempire API"
+---
+
+## Overview
+
+API scopes control which resources your token can access. When creating an API token, you can select one or more scopes to limit the permissions granted to your application.
+
+<CardGroup cols={2}>
+  <Card title="Jobs" icon="briefcase">
+    Access job postings and job-related data
+    - Create, read, update, and delete job postings
+    - Manage job status and visibility
+    - Access job analytics and metrics
+  </Card>
+
+  <Card title="Companies" icon="building">
+    Manage company profiles and information
+    - Create and update company profiles
+    - Access company details and branding
+    - Manage company settings and preferences
+  </Card>
+
+  <Card title="Applicants" icon="users">
+    Manage applicant profiles and data
+    - Access applicant information
+    - View applicant resumes and profiles
+    - Manage applicant communications
+  </Card>
+
+  <Card title="Users" icon="user">
+    Manage user accounts and permissions
+    - Create and update user profiles
+    - Manage user roles and permissions
+    - Handle user authentication settings
+  </Card>
+</CardGroup>
+
+## Scope Selection Best Practices
+
+<Tip>
+**Principle of Least Privilege**: Only request the scopes your application actually needs. This improves security and makes your integration more focused.
+</Tip>
+
+### Common Scope Combinations
+
+<AccordionGroup>
+  <Accordion title="Job Board Integration">
+    **Recommended scopes:** Jobs, Companies
+    
+    Perfect for displaying job listings and company information on external job boards or career sites.
+  </Accordion>
+
+  <Accordion title="Applicant Tracking System">
+    **Recommended scopes:** Jobs, Applicants
+    
+    Ideal for building ATS integrations that need to manage the full hiring pipeline.
+  </Accordion>
+
+  <Accordion title="HR Management Platform">
+    **Recommended scopes:** All scopes
+    
+    Comprehensive access for full HR platform integrations that manage all aspects of hiring.
+  </Accordion>
+
+  <Accordion title="Analytics Dashboard">
+    **Recommended scopes:** Jobs, Applications, Organizations
+    
+    Great for creating reporting and analytics tools that track hiring metrics.
+  </Accordion>
+</AccordionGroup>
+
+## Managing Scopes
+
+### Token Creation
+When creating a new API token in your [Hirempire API Tokens](https://www.hirempire.com/api-tokens) page:
+
+1. Select the required scopes for your use case
+2. Set an appropriate expiry date
+3. Save the token securely
+
+### Scope Limitations
+- Tokens are limited to the scopes selected during creation
+- You cannot expand scopes for existing tokens
+- Create a new token if you need additional permissions
+
+<Warning>
+**Important**: API requests will fail with a `403 Forbidden` error if your token lacks the required scope for the endpoint you're trying to access.
+</Warning>

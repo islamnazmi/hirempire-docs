@@ -1,0 +1,331 @@
+---
+title: "Create a Company"
+api: "POST https://api.hirempire.com/v1/create-company"
+description: "Create a new company in your Hirempire account"
+---
+
+## Request Body
+
+<ParamField body="company_name" type="string" required placeholder="Enter company name">
+  The name of the company
+</ParamField>
+
+<ParamField body="company_domain" type="string" required placeholder="Enter company domain">
+  The domain of the company (e.g., example.com)
+</ParamField>
+
+<ParamField body="company_logo_url" type="string" required placeholder="Enter company logo URL">
+  The URL to the company's logo image
+</ParamField>
+
+## Authentication
+
+<ResponseField name="Authorization" type="string" required>
+Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token. 
+</ResponseField>
+
+<RequestExample>
+
+```bash cURL
+curl --location --request POST 'https://api.hirempire.com/v1/create-company' \
+--header 'Authorization: Bearer YOUR_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "company_name": "Example",
+    "company_domain": "example.com",
+    "company_logo_url": "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png"
+}'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.hirempire.com/v1/create-company', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_TOKEN',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    company_name: "Example",
+    company_domain: "example.com",
+    company_logo_url: "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png"
+  })
+});
+
+const data = await response.json();
+console.log(data);
+```
+
+```python Python
+import requests
+import json
+
+url = "https://api.hirempire.com/v1/create-company"
+headers = {
+    "Authorization": "Bearer YOUR_TOKEN",
+    "Content-Type": "application/json"
+}
+
+payload = {
+    "company_name": "Example",
+    "company_domain": "example.com",
+    "company_logo_url": "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png"
+}
+
+response = requests.post(url, headers=headers, data=json.dumps(payload))
+data = response.json()
+print(data)
+```
+
+```php PHP
+<?php
+$curl = curl_init();
+
+$payload = json_encode([
+    "company_name" => "Example",
+    "company_domain" => "example.com",
+    "company_logo_url" => "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png"
+]);
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://api.hirempire.com/v1/create-company',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS => $payload,
+  CURLOPT_HTTPHEADER => array(
+    'Authorization: Bearer YOUR_TOKEN',
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+curl_close($curl);
+
+$data = json_decode($response, true);
+print_r($data);
+?>
+```
+
+```ruby Ruby
+require 'net/http'
+require 'json'
+
+uri = URI('https://api.hirempire.com/v1/create-company')
+http = Net::HTTP.new(uri.host, uri.port)
+http.use_ssl = true
+
+request = Net::HTTP::Post.new(uri)
+request['Authorization'] = 'Bearer YOUR_TOKEN'
+request['Content-Type'] = 'application/json'
+request.body = {
+  company_name: "Example",
+  company_domain: "example.com",
+  company_logo_url: "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png"
+}.to_json
+
+response = http.request(request)
+data = JSON.parse(response.body)
+puts data
+```
+
+```go Go
+package main
+
+import (
+    "bytes"
+    "encoding/json"
+    "fmt"
+    "io"
+    "net/http"
+)
+
+func main() {
+    payload := map[string]interface{}{
+        "company_name": "Example",
+        "company_domain": "example.com",
+        "company_logo_url": "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png",
+    }
+    
+    jsonPayload, _ := json.Marshal(payload)
+    
+    client := &http.Client{}
+    req, _ := http.NewRequest("POST", "https://api.hirempire.com/v1/create-company", bytes.NewBuffer(jsonPayload))
+    req.Header.Add("Authorization", "Bearer YOUR_TOKEN")
+    req.Header.Add("Content-Type", "application/json")
+    
+    resp, _ := client.Do(req)
+    defer resp.Body.Close()
+    
+    body, _ := io.ReadAll(resp.Body)
+    fmt.Println(string(body))
+}
+```
+
+```java Java
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.URI;
+
+public class HirempireAPI {
+    public static void main(String[] args) throws Exception {
+        String payload = """
+        {
+            "company_name": "Example",
+            "company_domain": "example.com",
+            "company_logo_url": "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png"
+        }
+        """;
+        
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create("https://api.hirempire.com/v1/create-company"))
+            .header("Authorization", "Bearer YOUR_TOKEN")
+            .header("Content-Type", "application/json")
+            .POST(HttpRequest.BodyPublishers.ofString(payload))
+            .build();
+            
+        HttpResponse<String> response = client.send(request, 
+            HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.body());
+    }
+}
+```
+
+```csharp C#
+using System;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+class Program
+{
+    private static readonly HttpClient client = new HttpClient();
+
+    static async Task Main(string[] args)
+    {
+        client.DefaultRequestHeaders.Add("Authorization", "Bearer YOUR_TOKEN");
+        
+        var payload = """
+        {
+            "company_name": "Example",
+            "company_domain": "example.com",
+            "company_logo_url": "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png"
+        }
+        """;
+        
+        var content = new StringContent(payload, Encoding.UTF8, "application/json");
+        HttpResponseMessage response = await client.PostAsync("https://api.hirempire.com/v1/create-company", content);
+        string responseBody = await response.Content.ReadAsStringAsync();
+        
+        Console.WriteLine(responseBody);
+    }
+}
+```
+
+```swift Swift
+import Foundation
+
+let url = URL(string: "https://api.hirempire.com/v1/create-company")!
+var request = URLRequest(url: url)
+request.httpMethod = "POST"
+request.setValue("Bearer YOUR_TOKEN", forHTTPHeaderField: "Authorization")
+request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+let payload: [String: Any] = [
+    "company_name": "Example",
+    "company_domain": "example.com",
+    "company_logo_url": "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png"
+]
+
+request.httpBody = try? JSONSerialization.data(withJSONObject: payload)
+
+let task = URLSession.shared.dataTask(with: request) { data, response, error in
+    if let data = data {
+        let json = try? JSONSerialization.jsonObject(with: data)
+        print(json ?? "No data")
+    }
+}
+
+task.resume()
+```
+
+```kotlin Kotlin
+import kotlinx.coroutines.*
+import java.net.http.HttpClient
+import java.net.http.HttpRequest
+import java.net.http.HttpResponse
+import java.net.URI
+
+fun main() = runBlocking {
+    val payload = """
+    {
+        "company_name": "Example",
+        "company_domain": "example.com",
+        "company_logo_url": "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png"
+    }
+    """.trimIndent()
+    
+    val client = HttpClient.newHttpClient()
+    val request = HttpRequest.newBuilder()
+        .uri(URI.create("https://api.hirempire.com/v1/create-company"))
+        .header("Authorization", "Bearer YOUR_TOKEN")
+        .header("Content-Type", "application/json")
+        .POST(HttpRequest.BodyPublishers.ofString(payload))
+        .build()
+        
+    val response = client.send(request, HttpResponse.BodyHandlers.ofString())
+    println(response.body())
+}
+```
+
+```rust Rust
+use reqwest::header::{HeaderMap, HeaderValue, AUTHORIZATION, CONTENT_TYPE};
+use serde_json::json;
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut headers = HeaderMap::new();
+    headers.insert(AUTHORIZATION, HeaderValue::from_str("Bearer YOUR_TOKEN")?);
+    headers.insert(CONTENT_TYPE, HeaderValue::from_str("application/json")?);
+    
+    let payload = json!({
+        "company_name": "Example",
+        "company_domain": "example.com",
+        "company_logo_url": "https://1000logos.net/wp-content/uploads/2017/02/Apple-Logosu.png"
+    });
+    
+    let client = reqwest::Client::new();
+    let response = client
+        .post("https://api.hirempire.com/v1/create-company")
+        .headers(headers)
+        .json(&payload)
+        .send()
+        .await?;
+        
+    let body = response.text().await?;
+    println!("{}", body);
+    
+    Ok(())
+}
+```
+
+</RequestExample>
+
+## Response
+
+<ResponseField name="success" type="boolean">
+Indicates if the company was created successfully
+</ResponseField>
+
+<ResponseField name="company_id" type="string">
+The unique identifier of the newly created company
+</ResponseField>
+
+<ResponseExample>
+```json
+{
+  "success": true,
+  "company_id": "xyz456abc123"
+}
+```
+</ResponseExample>

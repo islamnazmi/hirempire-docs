@@ -1,0 +1,127 @@
+---
+title: "Get Started"
+description: "Learn how to integrate with the Hirempire API and start building powerful recruitment applications"
+---
+
+# Get Started with Hirempire API
+
+The Hirempire API allows you to programmatically access and manage your recruitment data, including jobs, applicants, companies, and more. Build powerful integrations, automate workflows, and create custom applications with our RESTful API.
+
+## Base URL
+
+All API requests should be made to:
+
+```
+https://api.hirempire.com/v1
+```
+
+## API Features
+
+### 🚀 **RESTful Architecture**
+- Clean, intuitive endpoints following REST conventions
+- Consistent response formats across all endpoints
+- Standard HTTP methods (GET, POST, PUT, DELETE)
+
+### 🔒 **Secure Authentication**
+- Bearer token authentication with configurable scopes
+- Granular permissions for different API resources
+- Secure token management with expiration controls
+
+### 📊 **Comprehensive Data Access**
+- **Jobs**: Create, update, and manage job postings
+- **Applicants**: Access candidate profiles and application data
+- **Companies**: Manage client and company information
+- **Users**: Manage team members and permissions
+- **Organizations**: Handle multi-company structures
+
+### ⚡ **Developer-Friendly**
+- Detailed documentation with code examples
+- Multiple programming language examples
+- Interactive API playground for testing
+- Pagination and filtering support
+
+## Quick Start Guide
+
+<Steps>
+<Step title="Create Your Account">
+If you haven't already, [sign up for a Hirempire account](https://www.hirempire.com/signup) and verify your email.
+</Step>
+<Step title="Generate API Token">
+Visit your [Profile Page](https://www.hirempire.com/profile) to create your first API token with the required scopes.
+</Step>
+<Step title="Make Your First Request">
+Test your setup with a simple API call to retrieve your jobs:
+
+```bash
+curl -H "Authorization: Bearer YOUR_TOKEN" https://api.hirempire.com/v1/jobs
+```
+</Step>
+<Step title="Explore Endpoints">
+Browse the documentation sidebar to discover all available endpoints and their capabilities.
+</Step>
+</Steps>
+
+
+
+## Response Format
+
+All API responses follow a consistent JSON structure:
+
+```json
+{
+  "success": true,
+  "data": {
+    // Response data here
+  },
+  "message": "Optional success message"
+}
+```
+
+Error responses include additional error information:
+
+```json
+{
+  "success": false,
+  "error": {
+    "code": "ERROR_CODE",
+    "message": "Human-readable error description"
+  }
+}
+```
+
+## Rate Limits
+
+To ensure fair usage and optimal performance:
+
+- **Free Plan**: 100 requests per hour
+- **Starter Plan**: 500 requests per hour  
+- **Pro Plan**: 1,000 requests per hour
+- **Premium Plan**: 5,000 requests per hour
+
+
+## SDKs and Libraries
+
+<Info>
+Official SDKs are coming soon! Currently, you can use any HTTP client library in your preferred programming language.
+</Info>
+
+Popular HTTP client libraries:
+- **JavaScript**: fetch, axios, request
+- **Python**: requests, urllib3, httpx
+- **PHP**: cURL, Guzzle, file_get_contents
+- **Ruby**: net/http, HTTParty, Faraday
+- **Go**: net/http, resty
+- **Java**: HttpClient, OkHttp, Apache HttpClient
+
+## Need Help?
+
+<CardGroup cols={2}>
+<Card title="Documentation" icon="book">
+Explore our comprehensive API reference and guides
+</Card>
+<Card title="Support" icon="life-ring">
+Contact our team at [support@hirempire.com](mailto:support@hirempire.com)
+</Card>
+</CardGroup>
+
+Ready to get started? Head over to [Authentication](/auth) to create your first API token!
