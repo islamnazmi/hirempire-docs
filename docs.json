@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "mint",
   "name": "Hirempire Docs",
   "description": "Hirempire documentation for setup, features, and API reference.",
   "favicon": "favicon.png",

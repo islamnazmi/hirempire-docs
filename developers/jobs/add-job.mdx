@@ -503,3 +503,259 @@ URL to view the full application details
 }
 ```
 </ResponseExample>
+
+## Error Responses
+
+### Authorization Errors
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing 'Authorization' header."
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Authorization header must start with 'Bearer '."
+}
+```
+
+### Request Format Errors
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Query parameters or URL params are not allowed."
+}
+```
+
+### Missing Required Fields
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: company_id"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: job_title"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: department"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: job_country"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: salary"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: currency"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: salary_period"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: job_type"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: workplace"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: career_level"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: job_description"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required field: job_sources"
+}
+```
+
+### Field Validation Errors
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Field 'salary' must be a number."
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Invalid salary_period. Allowed values: Per hour, Per day, Per week, Bi-weekly, Per month, Per year"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Invalid job_type. Allowed values: Full-time, Part-time, Contract, Freelance, Internship, Temporary, Project-based"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Invalid workplace. Allowed values: On-site, Remote, Hybrid"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Invalid career_level. Allowed values: Junior, Mid-level, Senior, Team Leader, Manager, Director, VP, C-level"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Field 'job_sources' must be an array."
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Invalid job_source: [source_name]. Allowed: LinkedIn, Referral, Alien Talents, Facebook, WhatsApp, Pinterest, Reddit, Snapchat, TikTok, X, Instagram, Xing, WeChat, YouTube, Indeed, My Website, Other, Hirempire"
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Field 'status' must be a string if provided."
+}
+```
+
+### Company Authorization Errors
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Invalid company id"
+}
+```
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Unauthorized. You don't have the permission post a job in this company."
+}
+```
+
+### Limit Reached Error
+
+**402 - Payment Required**
+```json
+{
+    "success": false,
+    "error": "Active jobs limit reached. Upgrade to add more, or close one of your jobs."
+}
+```
+
+### Token Validation Errors
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Invalid token"
+}
+```
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Token is expired"
+}
+```
+
+**403 - Forbidden**
+```json
+{
+    "success": false,
+    "error": "Token has been deleted"
+}
+```
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Token is missing required scope 'Jobs'"
+}
+```

@@ -248,24 +248,40 @@ ISO 8601 timestamp when the job was created
 Title of the job position
 </ResponseField>
 
-<ResponseField name="job_type" type="string">
-Employment type (e.g., Full-time, Part-time, Contract)
-</ResponseField>
-
-<ResponseField name="job_mode" type="string">
-Work arrangement (e.g., Remote, Hybrid, On-site)
-</ResponseField>
-
-<ResponseField name="job_location" type="string">
-Geographic location for the job
-</ResponseField>
-
 <ResponseField name="company_name" type="string">
 Name of the hiring company
 </ResponseField>
 
-<ResponseField name="job_description" type="string">
-Full description of the job requirements and responsibilities
+<ResponseField name="job_type" type="string">
+Employment type (e.g., Full-time, Part-time, Contract)
+</ResponseField>
+
+<ResponseField name="workplace_type" type="string">
+Work arrangement (e.g., Remote, Hybrid, On-site)
+</ResponseField>
+
+<ResponseField name="salary" type="string">
+Salary amount for the position
+</ResponseField>
+
+<ResponseField name="currency" type="string">
+Currency code for the salary (e.g., USD, EUR)
+</ResponseField>
+
+<ResponseField name="salary_period" type="string">
+Salary payment period (e.g., Per year, Per month, Per hour)
+</ResponseField>
+
+<ResponseField name="is_salary_hidden" type="boolean">
+Indicates if the salary is hidden from public view
+</ResponseField>
+
+<ResponseField name="career_level" type="string">
+Required experience level (e.g., Entry-level, Mid-level, Senior-level)
+</ResponseField>
+
+<ResponseField name="job_location" type="string">
+Geographic location for the job
 </ResponseField>
 
 <ResponseField name="status" type="string">
@@ -275,27 +291,134 @@ Current status of the job posting (Active, Paused, Closed)
 <ResponseField name="applicants" type="integer">
 Number of applicants who have applied to this job
 </ResponseField>
+
+<ResponseField name="job_description" type="string">
+Full description of the job requirements and responsibilities
+</ResponseField>
+
+<ResponseField name="sources" type="object">
+Application source tracking information
+
+<Expandable title="Sources Object Properties">
+<ResponseField name="count" type="integer">
+Total number of application sources
+</ResponseField>
+
+<ResponseField name="items" type="array">
+Array of source objects
+
+<Expandable title="Source Item Properties">
+<ResponseField name="source_name" type="string">
+Name of the application source (e.g., LinkedIn, Referral)
+</ResponseField>
+
+<ResponseField name="source_url" type="string">
+URL for the application form for this source
+</ResponseField>
+</Expandable>
+</ResponseField>
+</Expandable>
+</ResponseField>
 </Expandable>
 </ResponseField>
 
 <ResponseExample>
 ```json
 {
-  "success": true,
-  "job": [
-    {
-      "id": "xyz456abc123",
-      "created_time": "2025-02-18T15:30:00.000Z",
-      "job_title": "Marketing Manager",
-      "job_type": "Part-time",
-      "job_mode": "Hybrid",
-      "job_location": "UK",
-      "company_name": "MarketGenius",
-      "job_description": "The Marketing Manager will be responsible for developing and executing marketing campaigns, analyzing market trends, and working with internal teams to enhance brand visibility. The ideal candidate should have strong communication skills and experience in digital marketing strategies.",
-      "status": "Paused",
-      "applicants": 3
-    }
-  ]
+    "success": true,
+    "job": [
+        {
+            "id": "tskxb758re93mmdv8g",
+            "created_time": "2025-08-23T12:40:08.000Z",
+            "job_title": "Marketing Manager",
+            "company_name": "Hirempire",
+            "job_type": "Full-time",
+            "workplace_type": "Remote",
+            "salary": "500000",
+            "currency": "USD",
+            "salary_period": "Per year",
+            "is_salary_hidden": false,
+            "career_level": "Mid-level",
+            "job_location": "Egypt",
+            "status": "Active",
+            "applicants": 13,
+            "job_description": "Job Description",
+            "sources": {
+                "count": 2,
+                "items": [
+                    { "source_name": "LinkedIn", "source_url": "https://hirempire.com/job-application?recordid=recdJKwSWQWFfs" },
+                    { "source_name": "Referral", "source_url": "https://hirempire.com/job-application?recordid=recAEQ9l1Q7kVN" }
+                ]
+            }
+        }
+    ]
 }
+
 ```
 </ResponseExample>
+
+## Error Responses
+
+### 400 Bad Request
+
+```json
+{
+    "success": false,
+    "error": "Only 'job_id' is allowed in query parameters."
+}
+```
+
+```json
+{
+    "success": false,
+    "error": "Invalid token"
+}
+```
+
+```json
+{
+    "success": false,
+    "error": "Not found. This job has been deleted."
+}
+```
+
+### 401 Unauthorized
+
+```json
+{
+    "success": false,
+    "error": "Token is expired"
+}
+```
+
+```json
+{
+    "success": false,
+    "error": "Token is missing required scope 'Jobs'"
+}
+```
+
+```json
+{
+    "success": false,
+    "error": "Unauthorized. You don't have the permission to access this job."
+}
+```
+
+### 403 Forbidden
+
+```json
+{
+    "success": false,
+    "error": "Token has been deleted"
+}
+```
+
+### 404 Not Found
+
+```json
+{
+    "success": false,
+    "error": "Job not found."
+}
+```

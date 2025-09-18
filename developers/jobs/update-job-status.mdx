@@ -324,12 +324,102 @@ The new status of the job
 ```
 </ResponseExample>
 
+
+
 ## Error Responses
 
-<ResponseExample name="400 - Invalid status value">
+### Authorization Errors
+
+**400 - Bad Request**
 ```json
 {
-  "code": 400
+    "success": false,
+    "error": "Authorization header is required."
 }
 ```
-</ResponseExample>
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Authorization header must start with 'Bearer '."
+}
+```
+
+### Request Validation Errors
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Job ID is required and cannot be empty."
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Job status is required and cannot be empty."
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Invalid job status: '[status]'. Allowed values are: Pending, Active, Paused, Hired, Closed"
+}
+```
+
+### Token Validation Errors
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Invalid token"
+}
+```
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Token is expired"
+}
+```
+
+**403 - Forbidden**
+```json
+{
+    "success": false,
+    "error": "Token has been deleted"
+}
+```
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Token is missing required scope"
+}
+```
+
+### Job Access Errors
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Invalid job id"
+}
+```
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Unauthorized. You don't have the permission to update this job."
+}
+```

@@ -296,3 +296,57 @@ Number of applicants who have applied to this job
 }
 ```
 </ResponseExample>
+
+## Error Responses
+
+### 400 Bad Request
+
+```json
+{
+    "success": false,
+    "error": "Request params are not allowed."
+}
+```
+
+```json
+{
+    "success": false,
+    "error": "Invalid token"
+}
+```
+
+
+### 401 Unauthorized
+
+```json
+{
+    "success": false,
+    "error": "Token is expired"
+}
+```
+
+```json
+{
+    "success": false,
+    "error": "Token is missing required scope 'Jobs'"
+}
+```
+
+
+### 403 Forbidden
+
+```json
+{
+    "success": false,
+    "error": "Token has been deleted"
+}
+```
+
+### 404 Not Found
+
+```json
+{
+    "success": false,
+    "error": "Job not found."
+}
+```

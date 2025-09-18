@@ -242,7 +242,115 @@ Confirmation message about the deletion
 {
   "success": true,
   "job_id": "xyz456abc123",
-  "message": "Job has been deleted successfully"
+  "message": "Job has been deleted successfully",
+  "deleted": "1970-01-01 00:00:01"
 }
 ```
 </ResponseExample>
+
+## Error Responses
+
+### Authorization Errors
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing 'Authorization' header."
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Authorization header must start with 'Bearer '."
+}
+```
+
+### Request Format Errors
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Request params are not allowed."
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Request body is not allowed."
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Missing required query parameter 'job_id'."
+}
+```
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Only 'job_id' query parameter is allowed."
+}
+```
+
+### Token Validation Errors
+
+**400 - Bad Request**
+```json
+{
+    "success": false,
+    "error": "Invalid token"
+}
+```
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Token is expired"
+}
+```
+
+**403 - Forbidden**
+```json
+{
+    "success": false,
+    "error": "Token has been deleted"
+}
+```
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Token is missing required scope"
+}
+```
+
+### Job Access Errors
+
+**404 - Not Found**
+```json
+{
+    "success": false,
+    "error": "Job not found."
+}
+```
+
+**401 - Unauthorized**
+```json
+{
+    "success": false,
+    "error": "Unauthorized. You don't have the permission to delete this job."
+}
+```
+
