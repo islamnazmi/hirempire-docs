@@ -190,8 +190,13 @@ h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-/* Additional Mintlify-specific selectors */
-.mintlify-page-title {
+/* Page title in Manrope */
+.mintlify-page-title,
+h1.mintlify-page-title,
+article h1:first-child,
+main h1:first-child,
+[data-page-title],
+#content h1:first-of-type {
   font-family: var(--font-body) !important;
   font-weight: 500;
 }
