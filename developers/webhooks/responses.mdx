@@ -1,0 +1,395 @@
+---
+title: "Responses"
+description: "Example webhook payloads for each event type"
+---
+
+## Event Payloads
+
+Below are example response payloads for each webhook event type. All payloads are sent as JSON via a `POST` request to your webhook endpoint.
+
+---
+
+## applicant_applied
+
+Sent when a candidate applies to one of your jobs.
+
+```json
+{
+  "event": "applicant_applied",
+  "timestamp": "2026-01-30T00:14:56.395Z",
+  "job": {
+    "id": "o6e9te34hau7upulp6gwf",
+    "title": "Talent Pool"
+  },
+  "company": {
+    "id": "po0vtybqcnta264tze49jl",
+    "company": "Beyond-ED"
+  },
+  "applicant": {
+    "id": "bhye69ccexvnollg205vdf",
+    "name": "Sandeep  Kumar Jha",
+    "email": "sandeepjha618@yahoo.com",
+    "phone": "+919182467713",
+    "linkedin_url": "https://www.linkedin.com/in/sandeep-jha-a0887a28b",
+    "cv_url": "https://drive.google.com/file/d/1hM5pymbdgp6mFYuxqeunUkl9p_ygs5Zk/view?usp=drivesdk",
+    "photo": "https://drive.google.com/uc?id=1nXqXrQPxIbqNknFwJCGQwSx4usEx_erm&export=download",
+    "source": "LinkedIn",
+    "nationality": "India",
+    "location": "India",
+    "city": null,
+    "years_of_experience": 8,
+    "spoken_languages": [
+      {
+        "language": "German",
+        "fluency": "Fluent"
+      },
+      {
+        "language": "Hindi",
+        "fluency": "Native"
+      },
+      {
+        "language": "English",
+        "fluency": "Fluent"
+      }
+    ],
+    "ai_evaluation": {
+      "score": 30,
+      "skill_match": "Weak",
+      "experience_match": "Moderate",
+      "location_match": "No",
+      "decision": "Reject",
+      "decision_reason": "Sandeep lacks the required experience in technology, marketing, or sales roles as outlined in the job description. His experience is primarily in customer service and risk investigation, which does not align with the desired skills for roles in the talent pool. Additionally, he is based in India, while the position requires candidates based in the USA, Canada, or Europe.",
+      "linkedin_match": false,
+      "linkedin_match_score": 70,
+      "linkedin_differences": "1. Job Title: CV lists 'Transaction Risk Investigator' while LinkedIn lists 'German language expert' as the most recent role, causing ambiguity about career focus.\n2. Missing Position: CV does not mention the 'Freelance Translator' role (2009-2011) found on LinkedIn.\n3. Employment Dates: Dates align for 'Transaction Risk Investigator' role but 'Freelance Translator' role shows a gap in CV (not mentioned).\n4. Job Details: Some responsibilities are consistent but CV has less detail on mentoring and procedural improvements compared to LinkedIn."
+    },
+    "special_questions": [
+      {
+        "question": "What role or position are you seeking for your next career move?",
+        "answer": "German language expert"
+      }
+    ],
+    "media_questions": {
+      "audio_url": null,
+      "video_url": null
+    }
+  }
+}
+```
+
+### Response Fields
+
+| Field                  | Type    | Description                                      |
+|------------------------|---------|--------------------------------------------------|
+| `event`                | string  | Event type identifier                            |
+| `timestamp`            | string  | ISO 8601 timestamp                               |
+| `job.id`               | string  | Unique job identifier                            |
+| `job.title`            | string  | Job title                                        |
+| `company.id`           | string  | Unique company identifier                        |
+| `company.company`      | string  | Company name                                     |
+| `applicant.id`         | string  | Unique applicant identifier                      |
+| `applicant.name`       | string  | Full name                                        |
+| `applicant.email`      | string  | Email address                                    |
+| `applicant.phone`      | string  | Phone number                                     |
+| `applicant.linkedin_url` | string | LinkedIn profile URL                            |
+| `applicant.cv_url`     | string  | CV/resume download URL                           |
+| `applicant.photo`      | string  | Profile photo URL                                |
+| `applicant.source`     | string  | Application source (e.g. LinkedIn)               |
+| `applicant.nationality`| string  | Nationality                                      |
+| `applicant.location`   | string  | Current location                                 |
+| `applicant.city`       | string  | City (nullable)                                  |
+| `applicant.years_of_experience` | number | Years of experience                     |
+| `applicant.spoken_languages` | array | Languages and fluency levels                |
+| `applicant.ai_evaluation` | object | AI-powered candidate evaluation               |
+| `applicant.special_questions` | array | Answers to custom screening questions      |
+| `applicant.media_questions` | object | Audio/video response URLs                   |
+
+---
+
+## job_activated
+
+Sent when a job is made active.
+
+```json
+{
+  "event": "job_activated",
+  "timestamp": "2026-01-30T00:48:52.101Z",
+  "company": {
+    "id": "7qo0qgt06lwy94mrmhopog",
+    "name": "Hirempire"
+  },
+  "job": {
+    "id": "ew3t4w8je657u9evnygh",
+    "title": "CMO",
+    "department": "Marketing",
+    "job_country": "Egypt",
+    "career_level": "C-level",
+    "salary_range": "2000 USD",
+    "salary_period": "Per month",
+    "salary_currency": "USD",
+    "hide_salary": true,
+    "job_type": "Full-time",
+    "workplace_type": "Remote",
+    "job_description": "Lead the marketing strategy and execution Manage the marketing team to drive brand growth Develop and oversee marketing budgets Analyze market trends and competition Collaborate with executives to align marketing goals\n",
+    "sources": [
+      "LinkedIn"
+    ]
+  }
+}
+```
+
+### Response Fields
+
+| Field                  | Type    | Description                                      |
+|------------------------|---------|--------------------------------------------------|
+| `event`                | string  | Event type identifier                            |
+| `timestamp`            | string  | ISO 8601 timestamp                               |
+| `company.id`           | string  | Unique company identifier                        |
+| `company.name`         | string  | Company name                                     |
+| `job.id`               | string  | Unique job identifier                            |
+| `job.title`            | string  | Job title                                        |
+| `job.department`       | string  | Department name                                  |
+| `job.job_country`      | string  | Job location country                             |
+| `job.career_level`     | string  | Career level (e.g. C-level, Senior)              |
+| `job.salary_range`     | string  | Salary amount                                    |
+| `job.salary_period`    | string  | Pay period (e.g. Per month, Per year)            |
+| `job.salary_currency`  | string  | Currency code                                    |
+| `job.hide_salary`      | boolean | Whether salary is hidden from applicants         |
+| `job.job_type`         | string  | Employment type (e.g. Full-time, Part-time)      |
+| `job.workplace_type`   | string  | Workplace type (e.g. Remote, On-site, Hybrid)    |
+| `job.job_description`  | string  | Full job description text                        |
+| `job.sources`          | array   | Posting sources (e.g. LinkedIn)                  |
+
+---
+
+## job_deactivated
+
+Sent when a job is deactivated.
+
+```json
+{
+  "event": "job_deactivated",
+  "timestamp": "2026-01-30T01:12:33.204Z",
+  "company": {
+    "id": "7qo0qgt06lwy94mrmhopog",
+    "name": "Hirempire"
+  },
+  "job": {
+    "id": "ew3t4w8je657u9evnygh",
+    "title": "CMO",
+    "department": "Marketing",
+    "job_country": "Egypt",
+    "career_level": "C-level",
+    "salary_range": "2000 USD",
+    "salary_period": "Per month",
+    "salary_currency": "USD",
+    "hide_salary": true,
+    "job_type": "Full-time",
+    "workplace_type": "Remote",
+    "job_description": "Lead the marketing strategy and execution Manage the marketing team to drive brand growth Develop and oversee marketing budgets Analyze market trends and competition Collaborate with executives to align marketing goals\n",
+    "sources": [
+      "LinkedIn"
+    ]
+  }
+}
+```
+
+### Response Fields
+
+Same fields as [job_activated](#job_activated).
+
+---
+
+## job_added
+
+Sent when a new job is published.
+
+```json
+{
+  "event": "job_added",
+  "timestamp": "2026-01-30T02:05:17.892Z",
+  "company": {
+    "id": "7qo0qgt06lwy94mrmhopog",
+    "name": "Hirempire"
+  },
+  "job": {
+    "id": "kp7r2m9xw4t1v3qn8yz5",
+    "title": "Senior Frontend Engineer",
+    "department": "Engineering",
+    "job_country": "Germany",
+    "career_level": "Senior",
+    "salary_range": "5000 EUR",
+    "salary_period": "Per month",
+    "salary_currency": "EUR",
+    "hide_salary": false,
+    "job_type": "Full-time",
+    "workplace_type": "Hybrid",
+    "job_description": "Build and maintain modern web applications using React and TypeScript Lead frontend architecture decisions Mentor junior developers Collaborate with design and product teams Ensure performance and accessibility standards\n",
+    "sources": [
+      "LinkedIn",
+      "Indeed"
+    ]
+  }
+}
+```
+
+### Response Fields
+
+Same fields as [job_activated](#job_activated).
+
+---
+
+## job_deleted
+
+Sent when a job is permanently removed.
+
+```json
+{
+  "event": "job_deleted",
+  "timestamp": "2026-01-30T03:22:41.556Z",
+  "company": {
+    "id": "7qo0qgt06lwy94mrmhopog",
+    "name": "Hirempire"
+  },
+  "job": {
+    "id": "ew3t4w8je657u9evnygh",
+    "title": "CMO",
+    "department": "Marketing",
+    "job_country": "Egypt",
+    "career_level": "C-level",
+    "salary_range": "2000 USD",
+    "salary_period": "Per month",
+    "salary_currency": "USD",
+    "hide_salary": true,
+    "job_type": "Full-time",
+    "workplace_type": "Remote",
+    "job_description": "Lead the marketing strategy and execution Manage the marketing team to drive brand growth Develop and oversee marketing budgets Analyze market trends and competition Collaborate with executives to align marketing goals\n",
+    "sources": [
+      "LinkedIn"
+    ]
+  }
+}
+```
+
+### Response Fields
+
+Same fields as [job_activated](#job_activated).
+
+---
+
+## cv_upload_completed
+
+Sent when CV processing and analysis is finished.
+
+```json
+{
+  "event": "cv_upload_completed",
+  "timestamp": "2026-01-30T04:18:09.731Z",
+  "company": {
+    "id": "po0vtybqcnta264tze49jl",
+    "company": "Beyond-ED"
+  },
+  "job": {
+    "id": "o6e9te34hau7upulp6gwf",
+    "title": "Talent Pool"
+  },
+  "applicant": {
+    "id": "bhye69ccexvnollg205vdf",
+    "name": "Sandeep  Kumar Jha",
+    "email": "sandeepjha618@yahoo.com",
+    "phone": "+919182467713",
+    "cv_url": "https://drive.google.com/file/d/1hM5pymbdgp6mFYuxqeunUkl9p_ygs5Zk/view?usp=drivesdk",
+    "source": "LinkedIn",
+    "nationality": "India",
+    "location": "India",
+    "years_of_experience": 8,
+    "ai_evaluation": {
+      "score": 30,
+      "skill_match": "Weak",
+      "experience_match": "Moderate",
+      "location_match": "No",
+      "decision": "Reject",
+      "decision_reason": "Sandeep lacks the required experience in technology, marketing, or sales roles as outlined in the job description."
+    }
+  }
+}
+```
+
+### Response Fields
+
+| Field                  | Type    | Description                                      |
+|------------------------|---------|--------------------------------------------------|
+| `event`                | string  | Event type identifier                            |
+| `timestamp`            | string  | ISO 8601 timestamp                               |
+| `company.id`           | string  | Unique company identifier                        |
+| `company.company`      | string  | Company name                                     |
+| `job.id`               | string  | Unique job identifier                            |
+| `job.title`            | string  | Job title                                        |
+| `applicant.id`         | string  | Unique applicant identifier                      |
+| `applicant.name`       | string  | Full name                                        |
+| `applicant.email`      | string  | Email address                                    |
+| `applicant.phone`      | string  | Phone number                                     |
+| `applicant.cv_url`     | string  | CV/resume URL                                    |
+| `applicant.source`     | string  | Application source                               |
+| `applicant.nationality`| string  | Nationality                                      |
+| `applicant.location`   | string  | Current location                                 |
+| `applicant.years_of_experience` | number | Years of experience                     |
+| `applicant.ai_evaluation` | object | AI evaluation results                          |
+
+---
+
+## meeting_booked
+
+Sent when a meeting is successfully scheduled via Hirempire.
+
+```json
+{
+  "event": "meeting_booked",
+  "timestamp": "2026-01-30T05:45:22.118Z",
+  "company": {
+    "id": "7qo0qgt06lwy94mrmhopog",
+    "name": "Hirempire"
+  },
+  "job": {
+    "id": "ew3t4w8je657u9evnygh",
+    "title": "CMO"
+  },
+  "applicant": {
+    "id": "bhye69ccexvnollg205vdf",
+    "name": "Sandeep  Kumar Jha",
+    "email": "sandeepjha618@yahoo.com"
+  },
+  "meeting": {
+    "id": "mtg_x8k2p4r7w1n9v3q5",
+    "scheduled_at": "2026-02-05T10:00:00.000Z",
+    "duration_minutes": 30,
+    "meeting_type": "Interview",
+    "meeting_link": "https://meet.google.com/abc-defg-hij",
+    "organizer": {
+      "name": "Islam Nazmi",
+      "email": "islam@hirempire.com"
+    }
+  }
+}
+```
+
+### Response Fields
+
+| Field                        | Type    | Description                                |
+|------------------------------|---------|--------------------------------------------|
+| `event`                      | string  | Event type identifier                      |
+| `timestamp`                  | string  | ISO 8601 timestamp                         |
+| `company.id`                 | string  | Unique company identifier                  |
+| `company.name`               | string  | Company name                               |
+| `job.id`                     | string  | Unique job identifier                      |
+| `job.title`                  | string  | Job title                                  |
+| `applicant.id`               | string  | Unique applicant identifier                |
+| `applicant.name`             | string  | Applicant full name                        |
+| `applicant.email`            | string  | Applicant email                            |
+| `meeting.id`                 | string  | Unique meeting identifier                  |
+| `meeting.scheduled_at`       | string  | ISO 8601 scheduled date and time           |
+| `meeting.duration_minutes`   | number  | Meeting duration in minutes                |
+| `meeting.meeting_type`       | string  | Type of meeting (e.g. Interview)           |
+| `meeting.meeting_link`       | string  | Video call link                            |
+| `meeting.organizer.name`     | string  | Organizer's name                           |
+| `meeting.organizer.email`    | string  | Organizer's email                          |

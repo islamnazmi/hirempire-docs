@@ -1,10 +1,10 @@
-/* Import fonts from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+/* Import fonts */
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 /* Define font variables */
 :root {
-  --font-headers: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-headers: 'Clash Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-mono: Consolas, 'Courier New', monospace;
   --hirempire-primary: #3349C0;
@@ -110,7 +110,7 @@ th,
   font-family: var(--font-body) !important;
 }
 
-/* Apply Space Grotesk to all headers */
+/* Apply Clash Display to all headers */
 h1, 
 h2, 
 h3, 

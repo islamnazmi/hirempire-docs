@@ -120,6 +120,15 @@
           "pages": [
             "developers/companies/create-company"
             ]
+          },
+          {
+            "group": "Webhooks",
+            "pages": [
+              "developers/webhooks/get-started",
+              "developers/webhooks/event-types",
+              "developers/webhooks/challenge",
+              "developers/webhooks/responses"
+            ]
           }
         ]
       }   
