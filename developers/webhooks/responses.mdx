@@ -18,55 +18,51 @@ Sent when a candidate applies to one of your jobs.
   "event": "applicant_applied",
   "timestamp": "2026-01-30T00:14:56.395Z",
   "job": {
-    "id": "o6e9te34hau7upulp6gwf",
-    "title": "Talent Pool"
+    "id": "abc123def456ghi789jkl",
+    "title": "Senior Software Engineer"
   },
   "company": {
-    "id": "po0vtybqcnta264tze49jl",
-    "company": "Beyond-ED"
+    "id": "comp_abc123def456ghi789",
+    "company": "Acme Corp"
   },
   "applicant": {
-    "id": "bhye69ccexvnollg205vdf",
-    "name": "Sandeep  Kumar Jha",
-    "email": "sandeepjha618@yahoo.com",
-    "phone": "+919182467713",
-    "linkedin_url": "https://www.linkedin.com/in/sandeep-jha-a0887a28b",
-    "cv_url": "https://drive.google.com/file/d/1hM5pymbdgp6mFYuxqeunUkl9p_ygs5Zk/view?usp=drivesdk",
-    "photo": "https://drive.google.com/uc?id=1nXqXrQPxIbqNknFwJCGQwSx4usEx_erm&export=download",
+    "id": "app_xyz789wvu654tsr321",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+14155551234",
+    "linkedin_url": "https://www.linkedin.com/in/johndoe",
+    "cv_url": "https://example.com/cv/johndoe-resume.pdf",
+    "photo": "https://example.com/photos/johndoe.jpg",
     "source": "LinkedIn",
-    "nationality": "India",
-    "location": "India",
-    "city": null,
-    "years_of_experience": 8,
+    "nationality": "United States",
+    "location": "United States",
+    "city": "San Francisco",
+    "years_of_experience": 6,
     "spoken_languages": [
       {
-        "language": "German",
-        "fluency": "Fluent"
-      },
-      {
-        "language": "Hindi",
+        "language": "English",
         "fluency": "Native"
       },
       {
-        "language": "English",
+        "language": "Spanish",
         "fluency": "Fluent"
       }
     ],
     "ai_evaluation": {
-      "score": 30,
-      "skill_match": "Weak",
-      "experience_match": "Moderate",
-      "location_match": "No",
-      "decision": "Reject",
-      "decision_reason": "Sandeep lacks the required experience in technology, marketing, or sales roles as outlined in the job description. His experience is primarily in customer service and risk investigation, which does not align with the desired skills for roles in the talent pool. Additionally, he is based in India, while the position requires candidates based in the USA, Canada, or Europe.",
-      "linkedin_match": false,
-      "linkedin_match_score": 70,
-      "linkedin_differences": "1. Job Title: CV lists 'Transaction Risk Investigator' while LinkedIn lists 'German language expert' as the most recent role, causing ambiguity about career focus.\n2. Missing Position: CV does not mention the 'Freelance Translator' role (2009-2011) found on LinkedIn.\n3. Employment Dates: Dates align for 'Transaction Risk Investigator' role but 'Freelance Translator' role shows a gap in CV (not mentioned).\n4. Job Details: Some responsibilities are consistent but CV has less detail on mentoring and procedural improvements compared to LinkedIn."
+      "score": 85,
+      "skill_match": "Strong",
+      "experience_match": "Strong",
+      "location_match": "Yes",
+      "decision": "Shortlist",
+      "decision_reason": "John has 6 years of relevant software engineering experience with strong skills in React and Node.js. His background aligns well with the job requirements, and he is based in San Francisco which matches the preferred location.",
+      "linkedin_match": true,
+      "linkedin_match_score": 92,
+      "linkedin_differences": "1. Job Title: CV and LinkedIn both list 'Senior Software Engineer' as the current role.\n2. Employment Dates: All dates are consistent between CV and LinkedIn.\n3. Skills: LinkedIn profile includes additional endorsements for TypeScript and AWS not explicitly listed on CV."
     },
     "special_questions": [
       {
         "question": "What role or position are you seeking for your next career move?",
-        "answer": "German language expert"
+        "answer": "Lead Software Engineer"
       }
     ],
     "media_questions": {
@@ -115,22 +111,22 @@ Sent when a job is made active.
   "event": "job_activated",
   "timestamp": "2026-01-30T00:48:52.101Z",
   "company": {
-    "id": "7qo0qgt06lwy94mrmhopog",
-    "name": "Hirempire"
+    "id": "comp_mn34op56qr78st90uv",
+    "name": "Acme Corp"
   },
   "job": {
-    "id": "ew3t4w8je657u9evnygh",
-    "title": "CMO",
-    "department": "Marketing",
-    "job_country": "Egypt",
-    "career_level": "C-level",
-    "salary_range": "2000 USD",
+    "id": "job_ab12cd34ef56gh78ij",
+    "title": "Product Designer",
+    "department": "Design",
+    "job_country": "United States",
+    "career_level": "Senior",
+    "salary_range": "8000 USD",
     "salary_period": "Per month",
     "salary_currency": "USD",
-    "hide_salary": true,
+    "hide_salary": false,
     "job_type": "Full-time",
     "workplace_type": "Remote",
-    "job_description": "Lead the marketing strategy and execution Manage the marketing team to drive brand growth Develop and oversee marketing budgets Analyze market trends and competition Collaborate with executives to align marketing goals\n",
+    "job_description": "Lead product design initiatives from concept to launch Create wireframes prototypes and high-fidelity mockups Collaborate with engineering and product teams Conduct user research and usability testing Maintain and evolve the design system\n",
     "sources": [
       "LinkedIn"
     ]
@@ -171,22 +167,22 @@ Sent when a job is deactivated.
   "event": "job_deactivated",
   "timestamp": "2026-01-30T01:12:33.204Z",
   "company": {
-    "id": "7qo0qgt06lwy94mrmhopog",
-    "name": "Hirempire"
+    "id": "comp_mn34op56qr78st90uv",
+    "name": "Acme Corp"
   },
   "job": {
-    "id": "ew3t4w8je657u9evnygh",
-    "title": "CMO",
-    "department": "Marketing",
-    "job_country": "Egypt",
-    "career_level": "C-level",
-    "salary_range": "2000 USD",
+    "id": "job_ab12cd34ef56gh78ij",
+    "title": "Product Designer",
+    "department": "Design",
+    "job_country": "United States",
+    "career_level": "Senior",
+    "salary_range": "8000 USD",
     "salary_period": "Per month",
     "salary_currency": "USD",
-    "hide_salary": true,
+    "hide_salary": false,
     "job_type": "Full-time",
     "workplace_type": "Remote",
-    "job_description": "Lead the marketing strategy and execution Manage the marketing team to drive brand growth Develop and oversee marketing budgets Analyze market trends and competition Collaborate with executives to align marketing goals\n",
+    "job_description": "Lead product design initiatives from concept to launch Create wireframes prototypes and high-fidelity mockups Collaborate with engineering and product teams Conduct user research and usability testing Maintain and evolve the design system\n",
     "sources": [
       "LinkedIn"
     ]
@@ -209,22 +205,22 @@ Sent when a new job is published.
   "event": "job_added",
   "timestamp": "2026-01-30T02:05:17.892Z",
   "company": {
-    "id": "7qo0qgt06lwy94mrmhopog",
-    "name": "Hirempire"
+    "id": "comp_qr45st67uv89wx01yz",
+    "name": "Globex Inc"
   },
   "job": {
-    "id": "kp7r2m9xw4t1v3qn8yz5",
-    "title": "Senior Frontend Engineer",
+    "id": "job_kl23mn45op67qr89st",
+    "title": "Backend Engineer",
     "department": "Engineering",
-    "job_country": "Germany",
-    "career_level": "Senior",
-    "salary_range": "5000 EUR",
+    "job_country": "Canada",
+    "career_level": "Mid-level",
+    "salary_range": "6000 CAD",
     "salary_period": "Per month",
-    "salary_currency": "EUR",
+    "salary_currency": "CAD",
     "hide_salary": false,
     "job_type": "Full-time",
     "workplace_type": "Hybrid",
-    "job_description": "Build and maintain modern web applications using React and TypeScript Lead frontend architecture decisions Mentor junior developers Collaborate with design and product teams Ensure performance and accessibility standards\n",
+    "job_description": "Design and implement scalable backend services Maintain and optimize databases Write clean and well-tested code Collaborate with frontend and DevOps teams Participate in code reviews and architecture discussions\n",
     "sources": [
       "LinkedIn",
       "Indeed"
@@ -248,22 +244,22 @@ Sent when a job is permanently removed.
   "event": "job_deleted",
   "timestamp": "2026-01-30T03:22:41.556Z",
   "company": {
-    "id": "7qo0qgt06lwy94mrmhopog",
-    "name": "Hirempire"
+    "id": "comp_mn34op56qr78st90uv",
+    "name": "Acme Corp"
   },
   "job": {
-    "id": "ew3t4w8je657u9evnygh",
-    "title": "CMO",
+    "id": "job_wx01yz23ab45cd67ef",
+    "title": "Marketing Manager",
     "department": "Marketing",
-    "job_country": "Egypt",
-    "career_level": "C-level",
-    "salary_range": "2000 USD",
+    "job_country": "United Kingdom",
+    "career_level": "Mid-level",
+    "salary_range": "4500 GBP",
     "salary_period": "Per month",
-    "salary_currency": "USD",
+    "salary_currency": "GBP",
     "hide_salary": true,
     "job_type": "Full-time",
-    "workplace_type": "Remote",
-    "job_description": "Lead the marketing strategy and execution Manage the marketing team to drive brand growth Develop and oversee marketing budgets Analyze market trends and competition Collaborate with executives to align marketing goals\n",
+    "workplace_type": "On-site",
+    "job_description": "Plan and execute marketing campaigns Manage social media channels and content strategy Track and report on campaign performance Coordinate with sales team on lead generation Oversee brand guidelines and messaging\n",
     "sources": [
       "LinkedIn"
     ]
@@ -286,30 +282,30 @@ Sent when CV processing and analysis is finished.
   "event": "cv_upload_completed",
   "timestamp": "2026-01-30T04:18:09.731Z",
   "company": {
-    "id": "po0vtybqcnta264tze49jl",
-    "company": "Beyond-ED"
+    "id": "comp_abc123def456ghi789",
+    "company": "Acme Corp"
   },
   "job": {
-    "id": "o6e9te34hau7upulp6gwf",
-    "title": "Talent Pool"
+    "id": "abc123def456ghi789jkl",
+    "title": "Senior Software Engineer"
   },
   "applicant": {
-    "id": "bhye69ccexvnollg205vdf",
-    "name": "Sandeep  Kumar Jha",
-    "email": "sandeepjha618@yahoo.com",
-    "phone": "+919182467713",
-    "cv_url": "https://drive.google.com/file/d/1hM5pymbdgp6mFYuxqeunUkl9p_ygs5Zk/view?usp=drivesdk",
+    "id": "app_xyz789wvu654tsr321",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+14155551234",
+    "cv_url": "https://example.com/cv/johndoe-resume.pdf",
     "source": "LinkedIn",
-    "nationality": "India",
-    "location": "India",
-    "years_of_experience": 8,
+    "nationality": "United States",
+    "location": "United States",
+    "years_of_experience": 6,
     "ai_evaluation": {
-      "score": 30,
-      "skill_match": "Weak",
-      "experience_match": "Moderate",
-      "location_match": "No",
-      "decision": "Reject",
-      "decision_reason": "Sandeep lacks the required experience in technology, marketing, or sales roles as outlined in the job description."
+      "score": 85,
+      "skill_match": "Strong",
+      "experience_match": "Strong",
+      "location_match": "Yes",
+      "decision": "Shortlist",
+      "decision_reason": "John has strong relevant experience in software engineering that aligns well with the job requirements."
     }
   }
 }
@@ -347,27 +343,27 @@ Sent when a meeting is successfully scheduled via Hirempire.
   "event": "meeting_booked",
   "timestamp": "2026-01-30T05:45:22.118Z",
   "company": {
-    "id": "7qo0qgt06lwy94mrmhopog",
-    "name": "Hirempire"
+    "id": "comp_mn34op56qr78st90uv",
+    "name": "Acme Corp"
   },
   "job": {
-    "id": "ew3t4w8je657u9evnygh",
-    "title": "CMO"
+    "id": "job_ab12cd34ef56gh78ij",
+    "title": "Product Designer"
   },
   "applicant": {
-    "id": "bhye69ccexvnollg205vdf",
-    "name": "Sandeep  Kumar Jha",
-    "email": "sandeepjha618@yahoo.com"
+    "id": "app_xyz789wvu654tsr321",
+    "name": "John Doe",
+    "email": "john.doe@example.com"
   },
   "meeting": {
-    "id": "mtg_x8k2p4r7w1n9v3q5",
+    "id": "mtg_ab12cd34ef56gh78ij",
     "scheduled_at": "2026-02-05T10:00:00.000Z",
     "duration_minutes": 30,
     "meeting_type": "Interview",
     "meeting_link": "https://meet.google.com/abc-defg-hij",
     "organizer": {
-      "name": "Islam Nazmi",
-      "email": "islam@hirempire.com"
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com"
     }
   }
 }

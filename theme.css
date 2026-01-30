@@ -111,11 +111,11 @@ th,
 }
 
 /* Apply Clash Display to all headers */
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+h1,
+h2,
+h3,
+h4,
+h5,
 h6,
 .mintlify-h1,
 .mintlify-h2,
@@ -124,7 +124,7 @@ h6,
 .mintlify-h5,
 .mintlify-h6 {
   font-family: var(--font-headers) !important;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Navigation titles */
@@ -132,7 +132,7 @@ h6,
 .mintlify-nav-title,
 .mintlify-logo {
   font-family: var(--font-headers) !important;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Card titles */
@@ -167,15 +167,15 @@ p {
 
 /* Make headers more prominent */
 h1 {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h3, h4, h5, h6 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Accordion titles */
@@ -193,7 +193,7 @@ h3, h4, h5, h6 {
 /* Additional Mintlify-specific selectors */
 .mintlify-page-title {
   font-family: var(--font-headers) !important;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .mintlify-breadcrumb {
@@ -207,7 +207,7 @@ h3, h4, h5, h6 {
 /* Table of contents headers */
 .mintlify-toc h3 {
   font-family: var(--font-headers) !important;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Ensure main content area has proper background */
