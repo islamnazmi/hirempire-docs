@@ -192,7 +192,7 @@ h3, h4, h5, h6 {
 
 /* Additional Mintlify-specific selectors */
 .mintlify-page-title {
-  font-family: var(--font-headers) !important;
+  font-family: var(--font-body) !important;
   font-weight: 500;
 }
 
