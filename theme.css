@@ -1,22 +1,20 @@
 /* Import fonts */
-@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 /* Define font variables */
 :root {
-  --font-headers: 'Clash Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-mono: Consolas, 'Courier New', monospace;
   --hirempire-primary: #3349C0;
   --hirempire-light: #4287f5;
 }
 
 /* Force monospace font on all code elements */
-code, pre, 
-.font-mono, 
+code, pre,
+.font-mono,
 [data-component-part="code-group-tab-content"],
 [data-component-part="code-block-root"],
-.shiki code, 
+.shiki code,
 .shiki pre,
 .api-playground code,
 .api-playground pre,
@@ -34,11 +32,11 @@ code, pre,
 }
 
 /* Target all child elements within code blocks */
-code *, 
-pre *, 
-.font-mono *, 
-.shiki *, 
-.api-playground *, 
+code *,
+pre *,
+.font-mono *,
+.shiki *,
+.api-playground *,
 [data-testid*="playground"] *,
 .playground-response *,
 [class*="response"] *,
@@ -58,7 +56,7 @@ pre *,
   font-family: Consolas, 'Courier New', monospace !important;
 }
 
-/* Override any Manrope usage in code contexts */
+/* Override any font usage in code contexts */
 [class*="font-manrope"] code,
 [class*="font-manrope"] pre,
 [style*="font-family"] code,
@@ -69,7 +67,7 @@ pre *,
 /* Geometric background pattern */
 body {
   background: linear-gradient(135deg, #fafbfc 0%, #f8f9fb 100%);
-  background-image: 
+  background-image:
     linear-gradient(45deg, rgba(51, 73, 192, 0.04) 25%, transparent 25%),
     linear-gradient(-45deg, rgba(51, 73, 192, 0.04) 25%, transparent 25%),
     linear-gradient(45deg, transparent 75%, rgba(51, 91, 192, 0.02) 75%),
@@ -87,15 +85,15 @@ body::before {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background-image: 
+  background-image:
     linear-gradient(90deg, rgba(51, 73, 192, 0.015) 1px, transparent 1px),
     linear-gradient(rgba(51, 73, 192, 0.015) 1px, transparent 1px);
   background-size: 60px 60px;
   z-index: -1;
 }
 
-/* Apply Manrope to body and main content */
-body, 
+/* Apply Manrope everywhere */
+body,
 .mintlify-content,
 .mintlify-sidebar,
 .mintlify-nav,
@@ -106,11 +104,7 @@ li,
 td,
 th,
 .sidebar,
-.nav {
-  font-family: var(--font-body) !important;
-}
-
-/* Apply Clash Display to all headers */
+.nav,
 h1,
 h2,
 h3,
@@ -122,33 +116,41 @@ h6,
 .mintlify-h3,
 .mintlify-h4,
 .mintlify-h5,
-.mintlify-h6 {
-  font-family: var(--font-headers) !important;
-  font-weight: 500;
-}
-
-/* Navigation titles */
+.mintlify-h6,
 .mintlify-sidebar .mintlify-sidebar-group-title,
 .mintlify-nav-title,
-.mintlify-logo {
-  font-family: var(--font-headers) !important;
-  font-weight: 500;
-}
-
-/* Card titles */
+.mintlify-logo,
 .mintlify-card h3,
 .mintlify-card h4,
 .card-title,
 .card h3,
-.card h4 {
-  font-family: var(--font-headers) !important;
+.card h4,
+button,
+.mintlify-button,
+.mintlify-cta,
+.mintlify-accordion-title,
+.mintlify-tab-label,
+.mintlify-breadcrumb,
+.mintlify-toc,
+.mintlify-toc h3 {
+  font-family: var(--font) !important;
+}
+
+/* Page title - bold */
+#page-title {
+  font-family: var(--font) !important;
+  font-weight: 700 !important;
+}
+
+/* Headers weight */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
 }
 
 /* Buttons and CTAs */
 button,
 .mintlify-button,
 .mintlify-cta {
-  font-family: var(--font-body) !important;
   font-weight: 500;
 }
 
@@ -163,51 +165,6 @@ code {
 p {
   line-height: 1.7;
   font-weight: 400;
-}
-
-/* Make headers more prominent */
-h1 {
-  font-weight: 500;
-}
-
-h2 {
-  font-weight: 500;
-}
-
-h3, h4, h5, h6 {
-  font-weight: 500;
-}
-
-/* Accordion titles */
-.mintlify-accordion-title {
-  font-family: var(--font-headers) !important;
-  font-weight: 500;
-}
-
-/* Tab labels */
-.mintlify-tab-label {
-  font-family: var(--font-headers) !important;
-  font-weight: 500;
-}
-
-/* Page title in Manrope */
-#page-title {
-  font-family: var(--font-body) !important;
-  font-weight: 500 !important;
-}
-
-.mintlify-breadcrumb {
-  font-family: var(--font-body) !important;
-}
-
-.mintlify-toc {
-  font-family: var(--font-body) !important;
-}
-
-/* Table of contents headers */
-.mintlify-toc h3 {
-  font-family: var(--font-headers) !important;
-  font-weight: 500;
 }
 
 /* Ensure main content area has proper background */
