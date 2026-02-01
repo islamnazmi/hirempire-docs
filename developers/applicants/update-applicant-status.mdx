@@ -3,6 +3,11 @@ title: "Update applicant status"
 api: "PATCH https://api.hirempire.com/v1/update-applicant"
 description: "Update the status of an existing applicant in your Hirempire account"
 ---
+## Authentication
+
+<ResponseField name="Authorization" type="string" required>
+Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token. 
+</ResponseField>
 
 ## Request Body
 
@@ -14,11 +19,7 @@ description: "Update the status of an existing applicant in your Hirempire accou
   The new status for the applicant. Valid values: Applied, Reviewed, Accepted, Scheduled, Met, Hired, Rejected
 </ParamField>
 
-## Authentication
 
-<ResponseField name="Authorization" type="string" required>
-Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token. 
-</ResponseField>
 
 <RequestExample>
 
