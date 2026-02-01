@@ -1,41 +1,55 @@
+
 ---
 title: "API Scopes"
 description: "Understand the different permission scopes available in the Hirempire API"
 ---
 
 ## Overview
-
 API scopes control which resources your token can access. When creating an API token, you can select one or more scopes to limit the permissions granted to your application.
 
-<CardGroup cols={2}>
-  <Card title="Jobs" icon="briefcase">
-    Access job postings and job-related data
-    - Create, read, update, and delete job postings
-    - Manage job status and visibility
-    - Access job analytics and metrics
-  </Card>
+## Available Scopes
 
-  <Card title="Companies" icon="building">
-    Manage company profiles and information
-    - Create and update company profiles
-    - Access company details and branding
-    - Manage company settings and preferences
-  </Card>
+### Jobs
+Access job postings and job-related data
+- Create, read, update, and delete job postings
+- Manage job status and visibility
+- Access job analytics and metrics
 
-  <Card title="Applicants" icon="users">
-    Manage applicant profiles and data
-    - Access applicant information
-    - View applicant resumes and profiles
-    - Manage applicant communications
-  </Card>
+### Applications
+Manage job applications and application flow
+- View and update application statuses
+- Access application data and candidate responses
+- Handle application workflows and processes
 
-  <Card title="Users" icon="user">
-    Manage user accounts and permissions
-    - Create and update user profiles
-    - Manage user roles and permissions
-    - Handle user authentication settings
-  </Card>
-</CardGroup>
+### Companies
+Manage company profiles and information
+- Create and update company profiles
+- Access company details and branding
+- Manage company settings and preferences
+
+### Applicants
+Manage applicant profiles and data
+- Access applicant information
+- View applicant resumes and profiles
+- Manage applicant communications
+
+### Organizations
+Access organization-level data and settings
+- Manage organization structure and hierarchy
+- Access organization-wide analytics and reports
+- Handle organization settings and configurations
+
+### Webhooks
+Manage webhook endpoints and events
+- Create, update, and delete webhook endpoints
+- Configure event subscriptions
+- Monitor webhook delivery and status
+
+### Users
+Manage user accounts and permissions
+- Create and update user profiles
+- Manage user roles and permissions
+- Handle user authentication settings
 
 ## Scope Selection Best Practices
 
@@ -75,7 +89,6 @@ API scopes control which resources your token can access. When creating an API t
 
 ### Token Creation
 When creating a new API token in your [Hirempire API Tokens](https://www.hirempire.com/api-tokens) page:
-
 1. Select the required scopes for your use case
 2. Set an appropriate expiry date
 3. Save the token securely

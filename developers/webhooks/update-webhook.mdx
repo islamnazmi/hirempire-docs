@@ -188,6 +188,14 @@ ISO 8601 timestamp of when the webhook was last modified
 }
 ```
 
+**400 - Bad Request**
+```json
+{
+  "success": false,
+  "error": "Invalid request url"
+}
+```
+
 ### Authorization Errors
 
 **401 - Unauthorized**
@@ -203,14 +211,6 @@ ISO 8601 timestamp of when the webhook was last modified
 {
   "success": false,
   "error": "Token is missing required scope"
-}
-```
-
-**401 - Unauthorized**
-```json
-{
-  "success": false,
-  "error": "Invalid request url"
 }
 ```
 
