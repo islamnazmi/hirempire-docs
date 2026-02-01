@@ -3,6 +3,11 @@ title: "Create Webhook"
 api: "POST https://api.hirempire.com/v1/create-webhook"
 description: "Register a new webhook endpoint to receive event notifications"
 ---
+## Authentication
+
+<ResponseField name="Authorization" type="string" required>
+Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token.
+</ResponseField>
 
 ## Request Body
 
@@ -14,11 +19,7 @@ The URL where webhook events will be sent via POST requests. Must be a valid, pu
 Array of event types to subscribe to. Available events: `job_added` `job_activated` `job_deactivated` `job_deleted` `applicant_applied` `cv_upload_completed` `meeting_booked`
 </ParamField>
 
-## Authentication
 
-<ResponseField name="Authorization" type="string" required>
-Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token.
-</ResponseField>
 
 <RequestExample>
 

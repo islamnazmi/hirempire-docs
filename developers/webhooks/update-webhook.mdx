@@ -3,6 +3,11 @@ title: "Update Webhook"
 api: "PATCH https://api.hirempire.com/v1/webhook"
 description: "Update an existing webhook's events or active status"
 ---
+## Authentication
+
+<ResponseField name="Authorization" type="string" required>
+Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token.
+</ResponseField>
 
 ## Request Body
 
@@ -22,11 +27,7 @@ Set to `true` to activate or `false` to deactivate the webhook
 At least one of `events` or `active` must be provided alongside the required `id` field. Both can be sent together in a single request.
 </Info>
 
-## Authentication
 
-<ResponseField name="Authorization" type="string" required>
-Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token.
-</ResponseField>
 
 <RequestExample>
 
