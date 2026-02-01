@@ -1,0 +1,391 @@
+---
+title: "Responses"
+description: "Example webhook payloads for each event type"
+---
+
+## Event Payloads
+
+Below are example response payloads for each webhook event type. All payloads are sent as JSON via a `POST` request to your webhook endpoint.
+
+---
+
+## applicant_applied
+
+Sent when a candidate applies to one of your jobs.
+
+```json
+{
+  "event": "applicant_applied",
+  "timestamp": "2026-01-30T00:14:56.395Z",
+  "job": {
+    "id": "abc123def456ghi789jkl",
+    "title": "Senior Software Engineer"
+  },
+  "company": {
+    "id": "comp_abc123def456ghi789",
+    "company": "Acme Corp"
+  },
+  "applicant": {
+    "id": "app_xyz789wvu654tsr321",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+14155551234",
+    "linkedin_url": "https://www.linkedin.com/in/johndoe",
+    "cv_url": "https://example.com/cv/johndoe-resume.pdf",
+    "photo": "https://example.com/photos/johndoe.jpg",
+    "source": "LinkedIn",
+    "nationality": "United States",
+    "location": "United States",
+    "city": "San Francisco",
+    "years_of_experience": 6,
+    "spoken_languages": [
+      {
+        "language": "English",
+        "fluency": "Native"
+      },
+      {
+        "language": "Spanish",
+        "fluency": "Fluent"
+      }
+    ],
+    "ai_evaluation": {
+      "score": 85,
+      "skill_match": "Strong",
+      "experience_match": "Strong",
+      "location_match": "Yes",
+      "decision": "Shortlist",
+      "decision_reason": "John has 6 years of relevant software engineering experience with strong skills in React and Node.js. His background aligns well with the job requirements, and he is based in San Francisco which matches the preferred location.",
+      "linkedin_match": true,
+      "linkedin_match_score": 92,
+      "linkedin_differences": "1. Job Title: CV and LinkedIn both list 'Senior Software Engineer' as the current role.\n2. Employment Dates: All dates are consistent between CV and LinkedIn.\n3. Skills: LinkedIn profile includes additional endorsements for TypeScript and AWS not explicitly listed on CV."
+    },
+    "special_questions": [
+      {
+        "question": "What role or position are you seeking for your next career move?",
+        "answer": "Lead Software Engineer"
+      }
+    ],
+    "media_questions": {
+      "audio_url": null,
+      "video_url": null
+    }
+  }
+}
+```
+
+### Response Fields
+
+| Field                  | Type    | Description                                      |
+|------------------------|---------|--------------------------------------------------|
+| `event`                | string  | Event type identifier                            |
+| `timestamp`            | string  | ISO 8601 timestamp                               |
+| `job.id`               | string  | Unique job identifier                            |
+| `job.title`            | string  | Job title                                        |
+| `company.id`           | string  | Unique company identifier                        |
+| `company.company`      | string  | Company name                                     |
+| `applicant.id`         | string  | Unique applicant identifier                      |
+| `applicant.name`       | string  | Full name                                        |
+| `applicant.email`      | string  | Email address                                    |
+| `applicant.phone`      | string  | Phone number                                     |
+| `applicant.linkedin_url` | string | LinkedIn profile URL                            |
+| `applicant.cv_url`     | string  | CV/resume download URL                           |
+| `applicant.photo`      | string  | Profile photo URL                                |
+| `applicant.source`     | string  | Application source (e.g. LinkedIn)               |
+| `applicant.nationality`| string  | Nationality                                      |
+| `applicant.location`   | string  | Current location                                 |
+| `applicant.city`       | string  | City (nullable)                                  |
+| `applicant.years_of_experience` | number | Years of experience                     |
+| `applicant.spoken_languages` | array | Languages and fluency levels                |
+| `applicant.ai_evaluation` | object | AI-powered candidate evaluation               |
+| `applicant.special_questions` | array | Answers to custom screening questions      |
+| `applicant.media_questions` | object | Audio/video response URLs                   |
+
+---
+
+## job_activated
+
+Sent when a job is made active.
+
+```json
+{
+  "event": "job_activated",
+  "timestamp": "2026-01-30T00:48:52.101Z",
+  "company": {
+    "id": "comp_mn34op56qr78st90uv",
+    "name": "Acme Corp"
+  },
+  "job": {
+    "id": "job_ab12cd34ef56gh78ij",
+    "title": "Product Designer",
+    "department": "Design",
+    "job_country": "United States",
+    "career_level": "Senior",
+    "salary_range": "8000 USD",
+    "salary_period": "Per month",
+    "salary_currency": "USD",
+    "hide_salary": false,
+    "job_type": "Full-time",
+    "workplace_type": "Remote",
+    "job_description": "Lead product design initiatives from concept to launch Create wireframes prototypes and high-fidelity mockups Collaborate with engineering and product teams Conduct user research and usability testing Maintain and evolve the design system\n",
+    "sources": [
+      "LinkedIn"
+    ]
+  }
+}
+```
+
+### Response Fields
+
+| Field                  | Type    | Description                                      |
+|------------------------|---------|--------------------------------------------------|
+| `event`                | string  | Event type identifier                            |
+| `timestamp`            | string  | ISO 8601 timestamp                               |
+| `company.id`           | string  | Unique company identifier                        |
+| `company.name`         | string  | Company name                                     |
+| `job.id`               | string  | Unique job identifier                            |
+| `job.title`            | string  | Job title                                        |
+| `job.department`       | string  | Department name                                  |
+| `job.job_country`      | string  | Job location country                             |
+| `job.career_level`     | string  | Career level (e.g. C-level, Senior)              |
+| `job.salary_range`     | string  | Salary amount                                    |
+| `job.salary_period`    | string  | Pay period (e.g. Per month, Per year)            |
+| `job.salary_currency`  | string  | Currency code                                    |
+| `job.hide_salary`      | boolean | Whether salary is hidden from applicants         |
+| `job.job_type`         | string  | Employment type (e.g. Full-time, Part-time)      |
+| `job.workplace_type`   | string  | Workplace type (e.g. Remote, On-site, Hybrid)    |
+| `job.job_description`  | string  | Full job description text                        |
+| `job.sources`          | array   | Posting sources (e.g. LinkedIn)                  |
+
+---
+
+## job_deactivated
+
+Sent when a job is deactivated.
+
+```json
+{
+  "event": "job_deactivated",
+  "timestamp": "2026-01-30T01:12:33.204Z",
+  "company": {
+    "id": "comp_mn34op56qr78st90uv",
+    "name": "Acme Corp"
+  },
+  "job": {
+    "id": "job_ab12cd34ef56gh78ij",
+    "title": "Product Designer",
+    "department": "Design",
+    "job_country": "United States",
+    "career_level": "Senior",
+    "salary_range": "8000 USD",
+    "salary_period": "Per month",
+    "salary_currency": "USD",
+    "hide_salary": false,
+    "job_type": "Full-time",
+    "workplace_type": "Remote",
+    "job_description": "Lead product design initiatives from concept to launch Create wireframes prototypes and high-fidelity mockups Collaborate with engineering and product teams Conduct user research and usability testing Maintain and evolve the design system\n",
+    "sources": [
+      "LinkedIn"
+    ]
+  }
+}
+```
+
+### Response Fields
+
+Same fields as [job_activated](#job_activated).
+
+---
+
+## job_added
+
+Sent when a new job is published.
+
+```json
+{
+  "event": "job_added",
+  "timestamp": "2026-01-30T02:05:17.892Z",
+  "company": {
+    "id": "comp_qr45st67uv89wx01yz",
+    "name": "Globex Inc"
+  },
+  "job": {
+    "id": "job_kl23mn45op67qr89st",
+    "title": "Backend Engineer",
+    "department": "Engineering",
+    "job_country": "Canada",
+    "career_level": "Mid-level",
+    "salary_range": "6000 CAD",
+    "salary_period": "Per month",
+    "salary_currency": "CAD",
+    "hide_salary": false,
+    "job_type": "Full-time",
+    "workplace_type": "Hybrid",
+    "job_description": "Design and implement scalable backend services Maintain and optimize databases Write clean and well-tested code Collaborate with frontend and DevOps teams Participate in code reviews and architecture discussions\n",
+    "sources": [
+      "LinkedIn",
+      "Indeed"
+    ]
+  }
+}
+```
+
+### Response Fields
+
+Same fields as [job_activated](#job_activated).
+
+---
+
+## job_deleted
+
+Sent when a job is permanently removed.
+
+```json
+{
+  "event": "job_deleted",
+  "timestamp": "2026-01-30T03:22:41.556Z",
+  "company": {
+    "id": "comp_mn34op56qr78st90uv",
+    "name": "Acme Corp"
+  },
+  "job": {
+    "id": "job_wx01yz23ab45cd67ef",
+    "title": "Marketing Manager",
+    "department": "Marketing",
+    "job_country": "United Kingdom",
+    "career_level": "Mid-level",
+    "salary_range": "4500 GBP",
+    "salary_period": "Per month",
+    "salary_currency": "GBP",
+    "hide_salary": true,
+    "job_type": "Full-time",
+    "workplace_type": "On-site",
+    "job_description": "Plan and execute marketing campaigns Manage social media channels and content strategy Track and report on campaign performance Coordinate with sales team on lead generation Oversee brand guidelines and messaging\n",
+    "sources": [
+      "LinkedIn"
+    ]
+  }
+}
+```
+
+### Response Fields
+
+Same fields as [job_activated](#job_activated).
+
+---
+
+## cv_upload_completed
+
+Sent when CV processing and analysis is finished.
+
+```json
+{
+  "event": "cv_upload_completed",
+  "timestamp": "2026-01-30T04:18:09.731Z",
+  "company": {
+    "id": "comp_abc123def456ghi789",
+    "company": "Acme Corp"
+  },
+  "job": {
+    "id": "abc123def456ghi789jkl",
+    "title": "Senior Software Engineer"
+  },
+  "applicant": {
+    "id": "app_xyz789wvu654tsr321",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+14155551234",
+    "cv_url": "https://example.com/cv/johndoe-resume.pdf",
+    "source": "LinkedIn",
+    "nationality": "United States",
+    "location": "United States",
+    "years_of_experience": 6,
+    "ai_evaluation": {
+      "score": 85,
+      "skill_match": "Strong",
+      "experience_match": "Strong",
+      "location_match": "Yes",
+      "decision": "Shortlist",
+      "decision_reason": "John has strong relevant experience in software engineering that aligns well with the job requirements."
+    }
+  }
+}
+```
+
+### Response Fields
+
+| Field                  | Type    | Description                                      |
+|------------------------|---------|--------------------------------------------------|
+| `event`                | string  | Event type identifier                            |
+| `timestamp`            | string  | ISO 8601 timestamp                               |
+| `company.id`           | string  | Unique company identifier                        |
+| `company.company`      | string  | Company name                                     |
+| `job.id`               | string  | Unique job identifier                            |
+| `job.title`            | string  | Job title                                        |
+| `applicant.id`         | string  | Unique applicant identifier                      |
+| `applicant.name`       | string  | Full name                                        |
+| `applicant.email`      | string  | Email address                                    |
+| `applicant.phone`      | string  | Phone number                                     |
+| `applicant.cv_url`     | string  | CV/resume URL                                    |
+| `applicant.source`     | string  | Application source                               |
+| `applicant.nationality`| string  | Nationality                                      |
+| `applicant.location`   | string  | Current location                                 |
+| `applicant.years_of_experience` | number | Years of experience                     |
+| `applicant.ai_evaluation` | object | AI evaluation results                          |
+
+---
+
+## meeting_booked
+
+Sent when a meeting is successfully scheduled via Hirempire.
+
+```json
+{
+  "event": "meeting_booked",
+  "timestamp": "2026-01-30T05:45:22.118Z",
+  "company": {
+    "id": "comp_mn34op56qr78st90uv",
+    "name": "Acme Corp"
+  },
+  "job": {
+    "id": "job_ab12cd34ef56gh78ij",
+    "title": "Product Designer"
+  },
+  "applicant": {
+    "id": "app_xyz789wvu654tsr321",
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+  },
+  "meeting": {
+    "id": "mtg_ab12cd34ef56gh78ij",
+    "scheduled_at": "2026-02-05T10:00:00.000Z",
+    "duration_minutes": 30,
+    "meeting_type": "Interview",
+    "meeting_link": "https://meet.google.com/abc-defg-hij",
+    "organizer": {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com"
+    }
+  }
+}
+```
+
+### Response Fields
+
+| Field                        | Type    | Description                                |
+|------------------------------|---------|--------------------------------------------|
+| `event`                      | string  | Event type identifier                      |
+| `timestamp`                  | string  | ISO 8601 timestamp                         |
+| `company.id`                 | string  | Unique company identifier                  |
+| `company.name`               | string  | Company name                               |
+| `job.id`                     | string  | Unique job identifier                      |
+| `job.title`                  | string  | Job title                                  |
+| `applicant.id`               | string  | Unique applicant identifier                |
+| `applicant.name`             | string  | Applicant full name                        |
+| `applicant.email`            | string  | Applicant email                            |
+| `meeting.id`                 | string  | Unique meeting identifier                  |
+| `meeting.scheduled_at`       | string  | ISO 8601 scheduled date and time           |
+| `meeting.duration_minutes`   | number  | Meeting duration in minutes                |
+| `meeting.meeting_type`       | string  | Type of meeting (e.g. Interview)           |
+| `meeting.meeting_link`       | string  | Video call link                            |
+| `meeting.organizer.name`     | string  | Organizer's name                           |
+| `meeting.organizer.email`    | string  | Organizer's email                          |

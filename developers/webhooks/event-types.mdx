@@ -1,0 +1,96 @@
+---
+title: "Event Types"
+description: "All available webhook event types you can subscribe to in Hirempire"
+---
+
+## Available Events
+
+When configuring your webhook at [hirempire.com/webhooks](https://hirempire.com/webhooks), you can subscribe to any of the following event types:
+
+<AccordionGroup>
+  <Accordion title="job_added" icon="plus">
+    **Job Added**
+
+    Triggered when a new job is published.
+
+    This event fires as soon as a new job posting is created and published in your Hirempire account.
+
+    **Event ID:** `job_added`
+  </Accordion>
+
+  <Accordion title="job_activated" icon="circle-check">
+    **Job Activated**
+
+    Triggered when a job is made active.
+
+    This event fires when a previously inactive or draft job is activated and becomes visible.
+
+    **Event ID:** `job_activated`
+  </Accordion>
+
+  <Accordion title="job_deactivated" icon="circle-pause">
+    **Job Deactivated**
+
+    Triggered when a job is not active.
+
+    This event fires when an active job is deactivated, removing it from active listings.
+
+    **Event ID:** `job_deactivated`
+  </Accordion>
+
+  <Accordion title="job_deleted" icon="trash">
+    **Job Deleted**
+
+    Triggered when a job is permanently removed.
+
+    This event fires when a job posting is permanently deleted from your Hirempire account.
+
+    **Event ID:** `job_deleted`
+  </Accordion>
+
+  <Accordion title="applicant_applied" icon="user-plus">
+    **Applicant Applied**
+
+    Triggered when someone applies to one of your jobs.
+
+    This event fires when a candidate submits an application to any of your published job postings. The payload includes the applicant's full profile, AI evaluation, and application details.
+
+    **Event ID:** `applicant_applied`
+  </Accordion>
+
+  <Accordion title="cv_upload_completed" icon="file-circle-check">
+    **CV Uploading Process Completed**
+
+    Triggered when CV processing and analysis is finished.
+
+    This event fires after Hirempire has completed processing and analyzing an uploaded CV, including AI-powered data extraction and evaluation.
+
+    **Event ID:** `cv_upload_completed`
+  </Accordion>
+
+  <Accordion title="meeting_booked" icon="calendar-check">
+    **Meeting Booked**
+
+    Triggered when a meeting is successfully scheduled via Hirempire.
+
+    This event fires when a candidate or team member books a meeting through the Hirempire scheduling system.
+
+    **Event ID:** `meeting_booked`
+  </Accordion>
+</AccordionGroup>
+
+## Quick Reference
+
+| Event ID                | Description                                              |
+|-------------------------|----------------------------------------------------------|
+| `job_added`             | Triggered when a new job is published                    |
+| `job_activated`         | Triggered when a job is made active                      |
+| `job_deactivated`       | Triggered when a job is not active                       |
+| `job_deleted`           | Triggered when a job is permanently removed              |
+| `applicant_applied`     | Triggered when someone applies to one of your jobs       |
+| `cv_upload_completed`   | Triggered when CV processing and analysis is finished    |
+| `meeting_booked`        | Triggered when a meeting is successfully scheduled via Hirempire |
+
+<Info>
+  You can subscribe to one or more events per webhook. Visit [hirempire.com/webhooks](https://hirempire.com/webhooks) to configure your subscriptions.
+</Info>

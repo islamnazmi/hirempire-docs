@@ -1,0 +1,108 @@
+---
+title: "Challenge Verification"
+description: "How to verify your webhook endpoint using the challenge handshake"
+---
+
+## Overview
+
+When you register a new webhook endpoint, Hirempire sends a **challenge request** to verify that you own and control the endpoint. Your server must correctly respond to this challenge before it can start receiving webhook events.
+
+## How It Works
+
+<Steps>
+  <Step title="Hirempire Sends a Challenge">
+    When you create or update a webhook, Hirempire sends a `POST` request to your endpoint with a `challenge` field in the JSON body.
+  </Step>
+  <Step title="Your Server Returns the Challenge">
+    Your endpoint must read the `challenge` value from the request body and return it **exactly as received** in the response.
+  </Step>
+  <Step title="Verification Complete">
+    If the returned value matches, your webhook is verified and will begin receiving event notifications.
+  </Step>
+</Steps>
+
+## Challenge Request
+
+Hirempire sends a `POST` request with the following JSON body:
+
+```json
+{
+  "challenge": "a1b2c3d4e5f6g7h8i9j0"
+}
+```
+
+## Expected Response
+
+Your server must return the same challenge value in the response body:
+
+```json
+{
+  "challenge": "a1b2c3d4e5f6g7h8i9j0"
+}
+```
+
+<Warning>
+  The challenge value must be returned **exactly** as received. Any modification, extra whitespace, or encoding changes will cause verification to fail.
+</Warning>
+
+## Example Implementation
+
+<CodeGroup>
+```javascript Node.js (Express)
+app.post('/webhook', (req, res) => {
+  const { challenge } = req.body;
+
+  // If a challenge is present, respond with it
+  if (challenge) {
+    return res.json({ challenge });
+  }
+
+  // Otherwise, handle the webhook event
+  const event = req.body;
+  console.log('Received event:', event.event);
+
+  res.sendStatus(200);
+});
+```
+
+```python Python (Flask)
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    data = request.get_json()
+
+    # If a challenge is present, respond with it
+    if 'challenge' in data:
+        return jsonify({'challenge': data['challenge']})
+
+    # Otherwise, handle the webhook event
+    print(f"Received event: {data['event']}")
+
+    return '', 200
+```
+
+```php PHP
+<?php
+$payload = json_decode(file_get_contents('php://input'), true);
+
+// If a challenge is present, respond with it
+if (isset($payload['challenge'])) {
+    header('Content-Type: application/json');
+    echo json_encode(['challenge' => $payload['challenge']]);
+    exit;
+}
+
+// Otherwise, handle the webhook event
+error_log('Received event: ' . $payload['event']);
+
+http_response_code(200);
+?>
+```
+</CodeGroup>
+
+<Info>
+  Your endpoint should handle both challenge verification requests and regular event notifications on the same URL. Check for the presence of the `challenge` field to distinguish between the two.
+</Info>

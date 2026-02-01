@@ -1,0 +1,62 @@
+---
+title: "Get Started"
+description: "Set up webhooks to receive real-time notifications when events happen in your Hirempire account"
+---
+
+## What are Webhooks?
+
+Webhooks allow you to receive **real-time notifications** whenever a new event happens in your Hirempire account. Instead of polling the API to check for updates, Hirempire will instantly send an HTTP `POST` request to your specified endpoint as soon as an event occurs.
+
+<Info>
+  Webhooks are the most efficient way to stay in sync with your Hirempire data. You receive updates the moment they happen — no delays, no repeated requests.
+</Info>
+
+## How It Works
+
+<Steps>
+  <Step title="Create a Webhook">
+    Go to [hirempire.com/webhooks](https://hirempire.com/webhooks) to create and manage your webhooks. You'll provide an endpoint URL where Hirempire will send event notifications.
+  </Step>
+  <Step title="Select Events">
+    Choose which events you want to subscribe to. You can listen for job updates, new applicants, CV processing completions, meetings, and more.
+  </Step>
+  <Step title="Verify the Challenge">
+    When you register your webhook, Hirempire sends a challenge request to verify your endpoint. Your server must return the challenge value to confirm ownership. See the [Challenge Verification](/developers/webhooks/challenge) page for details.
+  </Step>
+  <Step title="Receive Events">
+    Once verified, your endpoint will receive `POST` requests in real time whenever a subscribed event occurs. Each request includes a JSON payload with the event type, timestamp, and relevant data.
+  </Step>
+</Steps>
+
+## Webhook Payload Structure
+
+Every webhook payload follows a consistent structure:
+
+```json
+{
+  "event": "event_type",
+  "timestamp": "2026-01-30T00:14:56.395Z",
+  ...event-specific data
+}
+```
+
+| Field       | Type   | Description                                    |
+|-------------|--------|------------------------------------------------|
+| `event`     | string | The event type identifier (e.g. `job_added`)   |
+| `timestamp` | string | ISO 8601 timestamp of when the event occurred  |
+
+The rest of the payload varies depending on the event type. See [Event Types](/developers/webhooks/event-types) and [Responses](/developers/webhooks/responses) for full details.
+
+## Next Steps
+
+<CardGroup cols={3}>
+  <Card title="Event Types" icon="list" href="/developers/webhooks/event-types">
+    View all available webhook events
+  </Card>
+  <Card title="Challenge Verification" icon="shield-check" href="/developers/webhooks/challenge">
+    Learn how to verify your endpoint
+  </Card>
+  <Card title="Responses" icon="code" href="/developers/webhooks/responses">
+    See example payloads for each event
+  </Card>
+</CardGroup>
