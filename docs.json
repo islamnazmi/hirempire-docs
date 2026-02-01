@@ -127,7 +127,10 @@
               "developers/webhooks/get-started",
               "developers/webhooks/event-types",
               "developers/webhooks/challenge",
-              "developers/webhooks/responses"
+              "developers/webhooks/responses",
+              "developers/webhooks/create-webhook",
+              "developers/webhooks/get-webhooks",
+              "developers/webhooks/update-webhook"
             ]
           }
         ]
