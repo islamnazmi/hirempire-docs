@@ -3,6 +3,12 @@ title: "Add a job"
 api: "POST https://api.hirempire.com/v1/add-job"
 description: "Create a new job posting in your Hirempire account"
 ---
+## Authentication
+
+<ResponseField name="Authorization" type="string" required>
+Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token. 
+</ResponseField>
+
 
 ## Request Body
 
@@ -65,12 +71,6 @@ Array of job posting sources. Example: `LinkedIn` `Referral` or any source you w
 <ParamField body="status" type="string">
 Job posting status. Options: `Pending` `Active` `Paused` `Hired` `Closed` `Delete`. Default is `Pending` 
 </ParamField>
-
-## Authentication
-
-<ResponseField name="Authorization" type="string" required>
-Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token. 
-</ResponseField>
 
 
 
