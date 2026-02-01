@@ -3,6 +3,11 @@ title: "Create a Company"
 api: "POST https://api.hirempire.com/v1/create-company"
 description: "Create a new company in your Hirempire account"
 ---
+## Authentication
+
+<ResponseField name="Authorization" type="string" required>
+Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token. 
+</ResponseField>
 
 ## Request Body
 
@@ -17,12 +22,6 @@ description: "Create a new company in your Hirempire account"
 <ParamField body="company_logo_url" type="string" required placeholder="Enter company logo URL">
   The URL to the company's logo image
 </ParamField>
-
-## Authentication
-
-<ResponseField name="Authorization" type="string" required>
-Bearer authentication header of the form `Bearer <token>`, where `<token>` is your auth token. 
-</ResponseField>
 
 <RequestExample>
 
