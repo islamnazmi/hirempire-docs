@@ -1,32 +1,37 @@
-# Mintlify Starter Kit
+# Hirempire Documentation
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
+![Hirempire Logo](https://assets-hirempire.s3.us-east-1.amazonaws.com/hirempire-logo-blue.svg)
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+Welcome to Hirempire's documentation repository. This contains guides for using our AI-powered recruitment platform and API reference for developers.
+
+## 🤝 Contributing
+
+We welcome contributions to improve our documentation. Feel free to:
+
+- Fix typos or errors
+- Add examples and clarifications 
+- Suggest new content
+- Improve existing guides
 
 ### Development
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
+Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview changes locally:
 
-```
+```bash
 npm i -g mintlify
 ```
 
-Run the following command at the root of your documentation (where mint.json is)
+Run the following command at the root of your documentation (where docs.json is):
 
-```
+```bash
 mintlify dev
 ```
 
 ### Publishing Changes
 
-Install our Github App to autopropagate changes from youre repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
+Changes are automatically deployed to production after pushing to the main branch.
 
 #### Troubleshooting
 
-- Mintlify dev isn't running - Run `mintlify install` it'll re-install dependencies.
-- Page loads as a 404 - Make sure you are running in a folder with `mint.json`
+- **Mintlify dev isn't running** - Run `mintlify install` to re-install dependencies
+- **Page loads as 404** - Make sure you are running in a folder with `docs.json`
