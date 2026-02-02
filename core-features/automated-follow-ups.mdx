@@ -18,6 +18,7 @@ Never miss a candidate follow-up again! Hirempire's automated email system handl
 **Automatic Email Sending**:
 - **Status-Based Triggers**: Emails sent when candidate status changes
 - **Professional Templates**: Pre-written, branded email templates
+- **AI-Generated Feedback**: Smart, personalized rejection notes for better candidate experience
 - **Instant Delivery**: Emails sent immediately upon status updates
 - **Consistent Experience**: Same professional tone for all candidates
 
@@ -34,27 +35,25 @@ Never miss a candidate follow-up again! Hirempire's automated email system handl
     - Professional, welcoming tone
   </Accordion>
   
-  <Accordion icon="shield-x" title="Rejection Emails">
-    **Sent When**: Candidate status changed to "Rejected"
+  <Accordion icon="ban" title="Rejection Emails with AI Notes">
+    **Sent When**: Candidate status changed to `Rejected`
     
     **Email Contents**:
     - Professional, respectful rejection message
+    - **AI-Generated Personalized Note**: Constructive feedback based on candidate profile and job requirements
     - Thanks for their interest and time
     - Encouragement to apply for future roles
     - Maintains positive employer brand
-    - Optional feedback inclusion
+    - Customizable feedback through [Talents Hub](https://hirempire.com/talents-hub)
+    
+    **AI Note Features**:
+    - Personalized feedback based on candidate's background comparing to the job description
+    - Constructive suggestions for improvement
+    - Encouragement for future applications
+    - Professional and respectful tone
+    - Fully customizable and editable
   </Accordion>
   
-  <Accordion icon="clock" title="Interview Scheduling">
-    **Sent When**: Candidate status changed to "Interview Scheduled"
-    
-    **Email Contents**:
-    - Interview confirmation
-    - Calendar booking link
-    - Interview preparation information
-    - Contact details for questions
-    - Meeting logistics
-  </Accordion>
 </AccordionGroup>
 
 ## Setting Up Automated Follow-ups
@@ -64,32 +63,15 @@ Never miss a candidate follow-up again! Hirempire's automated email system handl
 **Step-by-Step Activation**:
 
 1. **Navigate to Follow-ups**: Go to [Auto Follow-ups](https://hirempire.com/automated-follow-up)
-2. **Add Calendar Link**: Enter your scheduling URL (e.g., Calendly, Acuity, etc.)
-3. **Click "Activate"**: Enable the automated system
-4. **Confirmation**: Receive setup confirmation
+2. **Activate**: Click **Activate Automated Follow-ups**
+
 
 ### Calendar Integration Requirements
 
-<AccordionGroup>
-  <Accordion icon="calendar" title="Supported Calendar Platforms">
-    **Compatible Services**:
-    - **Calendly**: `https://calendly.com/yourname`
-    - **Acuity Scheduling**: Your Acuity booking link
-    - **Book Like a Boss**: Your BLAB scheduling URL
-    - **SimplyBook.me**: Your booking page URL
-    - **Any scheduling service**: That provides a direct booking link
-  </Accordion>
-  
-  <Accordion icon="link" title="Calendar Link Format">
-    **Required Format**: Complete URL including `https://`
-    
-    **Examples**:
-    - ✅ `https://calendly.com/john-smith`
-    - ✅ `https://acuityscheduling.com/schedule.php?owner=12345`
-    - ❌ `calendly.com/john-smith` (missing https://)
-    - ❌ `john-smith` (incomplete URL)
-  </Accordion>
-</AccordionGroup>
+
+<Tip>
+  **Pro Tip**: Regularly review and refine your AI note settings to ensure they align with your company's communication style and values.
+</Tip>
 
 ## Managing Automated Follow-ups
 
@@ -151,7 +133,7 @@ Best regards,
 [Company Name] Hiring Team
 ```
 
-### Rejection Email Sample
+### Rejection Email Sample with AI Note
 
 ```
 Subject: Thank you for your interest in [Position Title] at [Company Name]
@@ -162,7 +144,10 @@ Thank you for taking the time to apply for the [Position Title] position at [Com
 
 After careful consideration, we have decided to move forward with other candidates whose experience more closely matches our current needs.
 
-We were impressed with your background and encourage you to apply for future opportunities that align with your skills and experience.
+[AI-Generated Personalized Note]:
+We were particularly impressed with your background in [specific skill/experience]. To strengthen future applications, consider gaining additional experience in [relevant area] or pursuing certification in [specific technology/skill]. Your expertise in [strength area] would be valuable for similar roles in our industry.
+
+We encourage you to apply for future opportunities that align with your skills and experience, as we believe you have strong potential in the field.
 
 Thank you again for your interest in [Company Name].
 
@@ -192,6 +177,10 @@ Best regards,
   **Personal Touch**: While emails are automated, consider adding personal notes for final-stage candidates.
 </Tip>
 
+<Tip>
+  **AI Note Review**: Periodically review AI-generated rejection notes to ensure they maintain your desired tone and provide valuable feedback.
+</Tip>
+
 ### Follow-up Timing
 
 <Tip>
@@ -205,6 +194,7 @@ Best regards,
 **Seamless Workflow**:
 - Update candidate status in [Candidates dashboard](/candidates)
 - Automated email triggers immediately
+- AI generates personalized rejection feedback when applicable
 - Candidate receives professional communication
 - Interview booking happens automatically
 
@@ -214,7 +204,17 @@ Best regards,
 - AI screening identifies top candidates
 - Quick status updates to "Interview Scheduled"
 - Automated interview booking email with calendar link
+- AI-powered rejection feedback for unsuccessful candidates
 - Streamlined progression from screening to interview
+
+### Talents Hub Integration
+
+**Comprehensive Management**:
+- Configure AI rejection note templates
+- Monitor feedback effectiveness
+- Adjust communication preferences
+- Track candidate satisfaction metrics
+- Maintain consistent brand voice
 
 ## Troubleshooting
 
@@ -225,12 +225,28 @@ Best regards,
     - Invalid calendar link format
     - Candidate email address invalid
     - Status not properly updated
+    - AI note configuration incomplete
     
     **Solutions**:
     - Check activation status in Auto Follow-ups page
     - Verify calendar link format (must include https://)
     - Test with known good email address
     - Confirm status change was saved
+    - Complete AI note setup in Talents Hub
+  </Accordion>
+  
+  <Accordion title="AI Notes Not Generating">
+    **Possible Issues**:
+    - AI note feature not enabled
+    - Incomplete candidate profile data
+    - Talents Hub configuration missing
+    - Template settings not saved
+    
+    **Solutions**:
+    - Check AI note activation in Talents Hub
+    - Ensure candidate profiles have sufficient information
+    - Verify template configuration is saved
+    - Test with sample rejection to verify functionality
   </Accordion>
   
   <Accordion title="Calendar Link Not Working">
@@ -266,13 +282,26 @@ Best regards,
 
 ### Email Customization
 
+**Current Features**:
+- AI-generated personalized rejection notes
+- Customizable feedback templates
+- Brand-consistent messaging
+- Tone and formality adjustment
+
 **Coming Soon**:
 - Custom email templates
 - Company branding in emails
-- Personalized message additions
 - Multiple email sequence options
+- Advanced AI personalization
 
+### AI Note Customization
 
+**Available in Talents Hub**:
+- **Tone Settings**: Professional, friendly, encouraging, direct
+- **Feedback Depth**: Brief, detailed, comprehensive
+- **Focus Areas**: Technical skills, experience level, cultural fit
+- **Encouragement Level**: High, moderate, minimal
+- **Template Variations**: Multiple options for different rejection reasons
 
 ## Benefits of Automated Follow-ups
 
@@ -293,18 +322,38 @@ Best regards,
   </Card>
 </CardGroup>
 
-### Candidate Experience Benefits
+### Enhanced Candidate Experience Benefits
 
 - **Fast Response Times**: Immediate acknowledgment of status changes
 - **Professional Communication**: Consistent, well-written emails
-- **Personal Connection**: Recruiter notes make candidates feel heard and valued
-- **Constructive Feedback**: Even rejections include helpful, encouraging notes
+- **Personalized Feedback**: AI-generated notes tailored to each candidate's profile
+- **Constructive Guidance**: Helpful suggestions for professional development
 - **Respectful Process**: Professional communication maintains positive relationships
+- **Future Opportunities**: Encouragement to apply for suitable positions
+
+### AI-Powered Advantages
+
+<CardGroup cols={2}>
+  <Card title="Personalized Feedback" icon="brain">
+    Each rejection includes tailored advice based on candidate background
+  </Card>
+  <Card title="Consistent Quality" icon="star-fill">
+    AI ensures every candidate receives thoughtful, constructive feedback
+  </Card>
+  <Card title="Employer Brand Enhancement" icon="building">
+    Professional, helpful rejections improve company reputation
+  </Card>
+  <Card title="Candidate Development" icon="graduation-cap">
+    Actionable feedback helps candidates improve for future opportunities
+  </Card>
+</CardGroup>
 
 ## Next Steps
 
 After setting up Automated Follow-ups:
 
-1. **[Manage Candidates](/candidates)** - Update candidate statuses to trigger automated emails
-2. **[Enable AI Screening](/ai-screening)** - Combine automation with AI insights (paid plans)
-3. **[Optimize Job Postings](/jobs)** - Create better job descriptions to attract quality candidates
+1. **[Configure AI Notes](/talents-hub)** - Customize rejection feedback in Talents Hub
+2. **[Manage Candidates](/candidates)** - Update candidate statuses to trigger automated emails
+3. **[Enable AI Screening](/ai-screening)** - Combine automation with AI insights (paid plans)
+4. **[Optimize Job Postings](/jobs)** - Create better job descriptions to attract quality candidates
+5. **[Monitor Performance](/analytics)** - Track email effectiveness and candidate satisfaction metrics
