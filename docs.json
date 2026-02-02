@@ -17,10 +17,10 @@
       }
     }
   },
-  "navigation": {
-    "dropdowns": [
+"navigation": {
+    "tabs": [
       {
-        "dropdown": "Documentation",
+        "tab": "Documentation",
         "icon": "book-open",
         "groups": [
           {
@@ -83,42 +83,40 @@
         ]
       },
       {
-      "dropdown": "Developers",
-      "icon": "code",
-
-  
-      "groups": [
-        {
-          "group": "Get Started",
-          "pages": [
-            "developers/get-started",
-            "developers/auth",
-            "developers/scopes"
-          ]
-        },
-        {
-          "group": "Jobs",
-          "pages": [
-            "developers/jobs/add-job",
-            "developers/jobs/delete-job",
-            "developers/jobs/get-jobs",
-            "developers/jobs/get-specific-job",
-            "developers/jobs/update-job-status"
-          ]
-        },
-        {
-          "group": "Applicants",
-          "pages": [
-            "developers/applicants/get-all-applicants",
-            "developers/applicants/get-specific-applicant",
-            "developers/applicants/get-specific-job-applicants",
-            "developers/applicants/update-applicant-status"
-          ]
-        },
-        {
-          "group": "Companies",
-          "pages": [
-            "developers/companies/create-company"
+        "tab": "API Reference",
+        "icon": "code",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "developers/get-started",
+              "developers/auth",
+              "developers/scopes"
+            ]
+          },
+          {
+            "group": "Jobs",
+            "pages": [
+              "developers/jobs/add-job",
+              "developers/jobs/delete-job",
+              "developers/jobs/get-jobs",
+              "developers/jobs/get-specific-job",
+              "developers/jobs/update-job-status"
+            ]
+          },
+          {
+            "group": "Applicants",
+            "pages": [
+              "developers/applicants/get-all-applicants",
+              "developers/applicants/get-specific-applicant",
+              "developers/applicants/get-specific-job-applicants",
+              "developers/applicants/update-applicant-status"
+            ]
+          },
+          {
+            "group": "Companies",
+            "pages": [
+              "developers/companies/create-company"
             ]
           },
           {
@@ -134,7 +132,7 @@
             ]
           }
         ]
-      }   
+      }
     ]
   },
   "logo": {
@@ -156,7 +154,7 @@
     "primary": {
       "type": "button",
       "label": "Get Started",
-      "href": "https://hirempire.com/sign-in"
+      "href": "https://hirempire.com/pricing"
     }
   },
   "footer": {
