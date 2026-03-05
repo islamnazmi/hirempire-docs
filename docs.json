@@ -17,7 +17,7 @@
       }
     }
   },
-"navigation": {
+  "navigation": {
     "tabs": [
       {
         "tab": "Documentation",
@@ -163,5 +163,8 @@
     "socials": {
       "linkedin": "https://www.linkedin.com/company/hirempire-ai"
     }
+  },
+  "seo": {
+    "indexing": "all"
   }
 }
