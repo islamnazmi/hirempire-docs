@@ -79,7 +79,8 @@
           {
             "group": "Need Help?",
             "pages": [
-              "support"
+              "support",
+              "status"
             ]
           }
         ]
