@@ -1,0 +1,567 @@
+---
+title: Hirempire MCP Server
+description: Integrate your Hirempire recruitment workspace with Claude
+icon: /logo/mcp.svg
+---
+
+# Hirempire MCP Server
+
+Integrate your Hirempire recruitment workspace with Claude to manage job postings, candidates, and hiring workflows using natural language.
+
+## Overview
+
+The Hirempire MCP server enables Claude to interact directly with your Hirempire recruitment platform. Ask Claude to create job postings, search candidates, update hiring pipeline stages, and manage your entire recruitment workflow without switching between tools. Your Hirempire data is securely accessed via OAuth 2.0 authentication.
+
+### Key Features
+
+- **Manage Job Postings** — Create, view, and search job postings across your workspace
+- **Candidate Management** — Access and organize candidates, search by job or status
+- **Pipeline Updates** — Move candidates through hiring stages (reviewed, accepted, scheduled, hired, etc.)
+- **Company Insights** — View company information and job posting limits
+- **OAuth Security** — Secure authentication with automatic token refresh
+- **Natural Language Workflow** — Talk to Claude in plain English to accomplish recruitment tasks
+
+## Getting Started
+
+### Quick Setup
+
+<Steps>
+  <Step title="Open Claude.ai">
+    Navigate to Settings → Connectors
+  </Step>
+  <Step title="Find Hirempire">
+    Search for Hirempire in the MCP Directory
+  </Step>
+  <Step title="Click Connect">
+    Click the "Connect" button
+  </Step>
+  <Step title="Authorize">
+    Log in with your Hirempire account and grant permissions
+  </Step>
+  <Step title="Done">
+    Claude now has access to your recruitment data
+  </Step>
+</Steps>
+
+### Requirements
+
+- A valid Hirempire account with recruiter/admin access
+- Active workspace in Hirempire
+
+## Authentication
+
+### OAuth 2.0 Flow
+
+The Hirempire MCP server uses OAuth 2.0 for secure authentication:
+
+1. Click "Connect" in Claude's Connector settings
+2. You'll be redirected to Hirempire's login page
+3. Log in with your Hirempire credentials
+4. Grant Claude permission to access your workspace
+5. You'll be redirected back to Claude
+6. Claude now has an access token valid for 1 hour
+
+### Automatic Token Refresh
+
+Your access token expires after **3600 seconds (1 hour)**. Claude automatically refreshes your token in the background — you won't need to re-authenticate unless you explicitly disconnect.
+
+### Security
+
+<Info>
+Your Hirempire password is **never** stored in Claude. OAuth tokens are encrypted and secured, and all communication uses HTTPS encryption.
+</Info>
+
+### Disconnecting
+
+To disconnect Hirempire from Claude:
+1. Go to **Settings → Connectors**
+2. Find **Hirempire**
+3. Click **"Disconnect"**
+4. Your access token is immediately invalidated
+
+## Tools
+
+### Get Companies
+
+Retrieve all companies in your workspace with information about active job limits.
+
+**Parameters:**
+- None required
+
+**When to use:**
+- Starting a workflow (always called first)
+- Checking your company details
+- Verifying job posting limits
+
+<Card title="Example" icon="code">
+```
+User: "What companies do I have access to?"
+
+Result:
+- Company: Acme Corp
+  Jobs available: 5/10
+  Active jobs: 3
+  Can post: Yes
+```
+</Card>
+
+---
+
+### Get Jobs
+
+List all job postings in your workspace, optionally filtered by status.
+
+**Parameters:**
+- `status` (optional) — Filter by status: `draft`, `active`, `paused`, `closed`, `archived`
+
+**When to use:**
+- Finding specific jobs
+- Checking posting status
+- Listing all active jobs
+- Reviewing drafted postings
+
+<Card title="Example" icon="code">
+```
+User: "Show me all my active job postings"
+
+Result:
+- Senior Engineer (Active)
+  Posted: 2024-03-15
+  Candidates: 12
+  
+- Marketing Manager (Active)
+  Posted: 2024-03-10
+  Candidates: 8
+```
+</Card>
+
+---
+
+### Get Candidates
+
+Retrieve all candidates for a specific job posting.
+
+**Parameters:**
+- `job_id` (required) — The job ID to fetch candidates for
+
+**When to use:**
+- Reviewing applicants for a job
+- Finding candidates in specific stages
+- Checking candidate count
+- Viewing candidate details
+
+<Card title="Example" icon="code">
+```
+User: "Show me candidates for the Senior Engineer job"
+
+Result:
+- Alice Chen (Applied)
+  Stage: Reviewed
+  Applied: 2024-03-18
+  
+- Bob Smith (Applied)
+  Stage: Accepted
+  Applied: 2024-03-17
+```
+</Card>
+
+---
+
+### Update Candidate Stage
+
+Move a candidate to a different pipeline stage in your hiring process.
+
+**Parameters:**
+- `candidate_id` (required) — The candidate's ID
+- `stage` (required) — Target stage: `uploaded`, `applied`, `reviewed`, `accepted`, `scheduled`, `met`, `hired`, `rejected`
+
+**When to use:**
+- Moving candidates forward after interviews
+- Rejecting candidates
+- Scheduling interviews
+- Marking candidates as hired
+
+<Card title="Example" icon="code">
+```
+User: "Move Alice Chen to the scheduled stage"
+
+Result:
+Candidate: Alice Chen
+New Stage: Scheduled
+Updated: 2024-03-20 14:32 UTC
+```
+</Card>
+
+---
+
+### Create Job
+
+Create a new job posting in your workspace with full customization.
+
+**Parameters:**
+- `title` (required) — Job title (e.g., "Senior Software Engineer")
+- `department` (required) — Department category (e.g., "Engineering", "Marketing", "Sales")
+- `industry` (required) — Industry/field
+- `location_type` (required) — `onsite`, `remote`, or `hybrid`
+- `location_country` (required) — Country (e.g., "United States", "United Kingdom")
+- `location_city` (required) — City/region (e.g., "San Francisco", "London")
+- `employment_type` (required) — `full-time`, `part-time`, `contract`, `freelance`, `internship`
+- `career_level` (required) — Experience level (e.g., "Entry Level", "Senior", "Manager")
+- `salary_type` (required) — `fixed` or `range`
+- `salary_currency` (required) — ISO 4217 code (e.g., `USD`, `EUR`, `GBP`, `INR`)
+- `salary_period` (required) — `Per hour`, `Per day`, `Per month`, `Per year`, etc.
+- `salary_min` / `salary_max` (if range) — Minimum and maximum salary
+- `salary_fixed` (if fixed) — Fixed salary amount
+- `salary_confidential` (optional) — Hide salary from candidates
+- `description` (required) — Full job description in markdown
+- `status` (required) — `draft` or `active`
+- `post_on_linkedin` (optional) — Post to LinkedIn
+- `sources` (required) — Where to source candidates (e.g., LinkedIn, Indeed, Referral)
+- `questions` — Application form customization
+
+<Warning>
+Claude will ask you for details step-by-step. Answer each group of questions to create a complete posting.
+</Warning>
+
+<Card title="Example" icon="code">
+```
+User: "Help me create a marketing coordinator job in London, UK"
+
+Claude guides you through:
+1. Job details (title, department, industry)
+2. Location (London, UK, onsite/remote/hybrid)
+3. Employment type and level
+4. Salary range and currency
+5. Job description
+6. Sourcing channels
+7. LinkedIn posting
+8. Application form setup
+
+After answering all questions:
+✓ Job created successfully!
+Job: Marketing Coordinator
+Location: Onsite, London, United Kingdom
+Salary: £25,000 - £32,000/year
+Status: Active
+```
+</Card>
+
+## Usage Examples
+
+### Example 1: View Your Active Jobs
+
+**User prompt:**
+```
+"Show me all my active job postings"
+```
+
+**What happens:**
+1. Server retrieves all jobs with status = "active"
+2. Returns job titles, posting dates, and candidate counts
+3. Claude displays them in an organized list
+
+**Typical response:**
+```
+You have 3 active jobs:
+
+1. Senior Software Engineer
+   - Posted: March 15, 2024
+   - Candidates: 12
+   - Location: Remote, United States
+   - Salary: $120,000 - $160,000/year
+
+2. Product Manager
+   - Posted: March 10, 2024
+   - Candidates: 8
+   - Location: Hybrid, United States
+   - Salary: $100,000 - $140,000/year
+
+3. UX Designer
+   - Posted: March 5, 2024
+   - Candidates: 5
+   - Location: Onsite, San Francisco, United States
+   - Salary: $90,000 - $120,000/year
+```
+
+---
+
+### Example 2: Search and Move Candidates
+
+**User prompt:**
+```
+"Show me all candidates for the Senior Engineer job, then move anyone in the 'reviewed' stage to 'accepted'"
+```
+
+**What happens:**
+1. Server fetches all candidates for the Senior Engineer position
+2. Identifies candidates in "reviewed" stage
+3. Updates each one to "accepted" stage
+4. Returns confirmation of changes
+
+**Typical response:**
+```
+Found 12 candidates for Senior Engineer job:
+
+Moved to Accepted (3 candidates):
+✓ Alice Chen - Updated 14:32 UTC
+✓ David Park - Updated 14:33 UTC  
+✓ Emma Rodriguez - Updated 14:33 UTC
+
+Still in other stages:
+- Bob Smith (Stage: Applied)
+- Carol White (Stage: Scheduled)
+- Frank Jones (Stage: Met)
+[+7 more]
+```
+
+---
+
+### Example 3: Create a Job Posting
+
+**User prompt:**
+```
+"Help me create a marketing coordinator job in London, UK"
+```
+
+**What happens:**
+Claude will guide you through the job creation process step-by-step:
+
+<Accordion title="Step 1: Job Details">
+- Title: Marketing Coordinator
+- Department: Marketing
+- Industry: Technology
+</Accordion>
+
+<Accordion title="Step 2: Location">
+- Type: Onsite
+- Country: United Kingdom
+- City: London
+</Accordion>
+
+<Accordion title="Step 3: Employment">
+- Type: Full-time
+- Level: Entry Level
+</Accordion>
+
+<Accordion title="Step 4: Salary">
+- Type: Range
+- Currency: GBP
+- Period: Per year
+- Min: 25,000
+- Max: 32,000
+</Accordion>
+
+<Accordion title="Step 5: Description">
+- Write it yourself or have Claude generate it
+</Accordion>
+
+<Accordion title="Step 6: Sourcing">
+- Channels: LinkedIn, Company Website, Referral
+</Accordion>
+
+<Accordion title="Step 7: LinkedIn">
+- Post on LinkedIn: Yes
+</Accordion>
+
+<Accordion title="Step 8: Status">
+- Publish now (Active) or save as draft
+</Accordion>
+
+<Accordion title="Step 9: Application Form">
+- Cover letter: Show, Optional
+- Experience: Show, Required
+- Languages: Show, Optional
+- Custom questions: Optional
+</Accordion>
+
+**After answering all questions, Claude creates the job:**
+```
+✓ Job created successfully!
+
+Job: Marketing Coordinator
+Location: Onsite, London, United Kingdom
+Employment: Full-time, Entry Level
+Salary: £25,000 - £32,000/year
+Status: Active
+Posted to: LinkedIn, Company Website
+
+Job ID: mkt-2024-0145
+Candidates can apply starting now.
+```
+
+---
+
+### Example 4: Check Company Information and Limits
+
+**User prompt:**
+```
+"How many job postings can I still create?"
+```
+
+**What happens:**
+1. Server retrieves company information
+2. Shows job posting limits and usage
+3. Indicates if you need to upgrade or close jobs
+
+**Typical response:**
+```
+Company: Acme Corp
+
+Job Posting Limits:
+- Active jobs: 3/10
+- Can activate: Yes (7 slots remaining)
+- Plan: Professional
+
+You can still create 7 active job postings.
+If you need more, upgrade your plan or close existing jobs.
+```
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Authorization failed or Invalid credentials">
+    **Problem:** You're getting authentication errors.
+
+    **Solution:**
+    1. Disconnect Hirempire from Claude (Settings → Connectors)
+    2. Wait 10 seconds
+    3. Click "Connect" again
+    4. Log in with your Hirempire account
+    5. Make sure to grant all permissions
+  </Accordion>
+
+  <Accordion title="Job not found">
+    **Problem:** Claude says a job ID doesn't exist.
+
+    **Solution:**
+    1. Get a list of your jobs: "Show me my active jobs"
+    2. Copy the correct job ID from the list
+    3. Try again with the right ID
+  </Accordion>
+
+  <Accordion title="Rate limit exceeded">
+    **Problem:** You're making too many requests.
+
+    **Solution:**
+    - Wait a few minutes before making more requests
+    - Hirempire has rate limits to prevent abuse
+    - Typical limit: 100 requests per minute
+  </Accordion>
+
+  <Accordion title="Token expired or Re-authentication needed">
+    **Problem:** Your OAuth token expired.
+
+    **Solution:**
+    1. Disconnect Hirempire (Settings → Connectors)
+    2. Click "Connect" again
+    3. Log in to Hirempire
+    4. Grant permissions again
+  </Accordion>
+
+  <Accordion title="Slow responses">
+    **Problem:** Claude is taking a long time to respond.
+
+    **Solution:**
+    - Check your internet connection
+    - Hirempire servers might be under load
+    - Try again in a few moments
+    - If persistent, contact support
+  </Accordion>
+</AccordionGroup>
+
+## Limitations
+
+<CardGroup cols={2}>
+  <Card title="Max candidates per query" icon="users">
+    1,000 candidates
+  </Card>
+  <Card title="Token expiry" icon="clock">
+    3,600 seconds (auto-refreshes)
+  </Card>
+  <Card title="Response timeout" icon="hourglass">
+    30 seconds max per request
+  </Card>
+  <Card title="Rate limit" icon="gauge">
+    100 requests per minute
+  </Card>
+</CardGroup>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Is my data secure?">
+    Yes. We use OAuth 2.0, HTTPS encryption, and never store sensitive data. Your credentials remain in Hirempire.
+  </Accordion>
+
+  <Accordion title="Can I disconnect anytime?">
+    Yes. Go to Settings → Connectors and click "Disconnect". Your access is immediately revoked.
+  </Accordion>
+
+  <Accordion title="How often can I refresh my token?">
+    Your token refreshes automatically every hour. No action needed.
+  </Accordion>
+
+  <Accordion title="What if I change my Hirempire password?">
+    Your existing tokens remain valid. You don't need to re-authenticate.
+  </Accordion>
+
+  <Accordion title="Can multiple team members use this?">
+    Yes. Each team member connects with their own Hirempire account. Their data is isolated.
+  </Accordion>
+
+  <Accordion title="What data does Claude have access to?">
+    Claude can access:
+    - Company information
+    - Job postings (all statuses)
+    - Candidate profiles and applications
+    - Hiring pipeline stages
+    
+    Claude cannot:
+    - Access your Hirempire password
+    - Delete jobs or candidates permanently
+    - Access other users' private data
+  </Accordion>
+</AccordionGroup>
+
+## Support
+
+<CardGroup cols={2}>
+  <Card title="Email Support" icon="envelope">
+    support@hirempire.com
+  </Card>
+  <Card title="Help Center" icon="question">
+    https://help.hirempire.com
+  </Card>
+  <Card title="Status Page" icon="activity">
+    https://status.hirempire.com
+  </Card>
+  <Card title="Response Time" icon="clock">
+    Usually within 24 hours
+  </Card>
+</CardGroup>
+
+## Privacy
+
+For information about how Hirempire handles your data, see our [Privacy Policy](https://hirempire.com/privacy).
+
+**Key points:**
+- We never store Claude conversation history
+- OAuth tokens are encrypted and secure
+- You can revoke access anytime
+- Data is processed in compliance with GDPR and local regulations
+
+## Roadmap
+
+Future features we're working on:
+
+- Bulk candidate actions (move multiple candidates at once)
+- Interview scheduling integration
+- Candidate scoring and ranking
+- Email communication history
+- Custom workflow automation
+
+## Version Info
+
+- **MCP Server Version:** 1.0.0
+- **Supported Hirempire Versions:** 2.0 and later
+- **Last Updated:** March 2024

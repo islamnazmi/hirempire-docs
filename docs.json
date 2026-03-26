@@ -53,7 +53,8 @@
             "icon": "brain",
             "pages": [
               "ai-features/hirempire-ai",
-              "ai-features/ai-screening"
+              "ai-features/ai-screening",
+              "ai-features/mcp-server"
             ]
           },
           {
