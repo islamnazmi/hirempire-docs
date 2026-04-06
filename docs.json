@@ -27,45 +27,61 @@
             "group": "Get Started",
             "pages": [
               "introduction",
-              "quickstart"
+              "quickstart",
+              "subscription"
             ]
           },
           {
-            "group": "Core Features",
+            "group": "Recruiting",
             "pages": [
               "core-features/companies",
               "core-features/jobs",
+              "core-features/requisitions",
               "core-features/application-questions",
-              "core-features/automated-follow-ups",
-              "core-features/cal-com"
-            ]
-          },
-          {
-            "group": "Candidates",
-            "pages": [
               "candidates/candidates",
               "candidates/candidates-bank",
               "candidates/chrome"
             ]
           },
           {
-            "group": "AI-Powered Features",
+            "group": "Team Collaboration",
+            "pages": [
+              "collaboration/chat",
+              "collaboration/tasks",
+              "collaboration/inbox"
+            ]
+          },
+          {
+            "group": "Meetings",
+            "pages": [
+              "meetings/overview",
+              "meetings/interview-intelligence"
+            ]
+          },
+          {
+            "group": "Analytics & Growth",
+            "pages": [
+              "analytics/overview",
+              "analytics/referrals"
+            ]
+          },
+          {
+            "group": "AI Features",
             "icon": "brain",
             "pages": [
+              "ai-features/job-wizard",
+              "ai-features/ai-screening",
               "ai-features/hirempire-ai",
-              "ai-features/ai-screening"
+              "ai-features/mcp-server"
             ]
           },
           {
-            "group": "Pricing & Plans",
+            "group": "Settings & Workspace",
             "pages": [
-              "subscription"
-            ]
-          },
-          {
-            "group": "Referral Program",
-            "pages": [
-              "referral"
+              "settings/workspace",
+              "settings/members-roles",
+              "settings/personal",
+              "settings/integrations"
             ]
           },
           {
@@ -100,11 +116,11 @@
           {
             "group": "Jobs",
             "pages": [
-              "developers/jobs/add-job",
-              "developers/jobs/delete-job",
               "developers/jobs/get-jobs",
               "developers/jobs/get-specific-job",
-              "developers/jobs/update-job-status"
+              "developers/jobs/add-job",
+              "developers/jobs/update-job-status",
+              "developers/jobs/delete-job"
             ]
           },
           {
@@ -156,8 +172,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Get Started",
-      "href": "https://hirempire.com/pricing"
+      "label": "Open App",
+      "href": "https://app.hirempire.com"
     }
   },
   "footer": {

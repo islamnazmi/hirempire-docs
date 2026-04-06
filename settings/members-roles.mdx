@@ -1,0 +1,72 @@
+---
+title: 'Members & Roles'
+description: 'Invite your team and control access with role-based permissions'
+---
+
+## Inviting team members
+
+Go to **Settings → Members** and click **Invite Member**. Enter their email address and select a role. They'll receive an invitation email with a link to join the workspace.
+
+<Info>
+  Invited members must sign up (or log in) with the email address you used for the invitation. The link expires after 7 days.
+</Info>
+
+## Roles
+
+Hirempire has four roles with different levels of access:
+
+<AccordionGroup>
+  <Accordion icon="crown" title="Owner">
+    Full access to everything. Can manage billing, delete the workspace, and change other members' roles. There can only be one owner per workspace.
+
+    **Access:** All pages, billing, workspace settings, member management.
+  </Accordion>
+
+  <Accordion icon="shield" title="Admin">
+    Full access except billing and workspace deletion. Can manage team members and all recruiting operations.
+
+    **Access:** All pages except subscription/billing management.
+  </Accordion>
+
+  <Accordion icon="user" title="Member">
+    Standard recruiter access. Can manage jobs, candidates, and use collaboration features.
+
+    **Access:** Jobs, Talents, CV Bank, Chat, Tasks, Inbox, Meetings, Referrals.
+
+    **No access:** Analytics, Companies settings, Subscription, Tokens.
+  </Accordion>
+
+  <Accordion icon="building" title="Department Manager">
+    Limited access designed for hiring managers who need to submit requests and attend interviews without full recruiter access.
+
+    **Access:** Dashboard, Requisitions, Meetings, Chat, Tasks, Personal settings only.
+
+    **No access:** Jobs, Talents, CV Bank, Analytics, Companies, Subscription.
+  </Accordion>
+</AccordionGroup>
+
+## Permission matrix
+
+| Feature | Owner | Admin | Member | Dept Manager |
+|---------|-------|-------|--------|--------------|
+| Jobs | ✓ | ✓ | ✓ | — |
+| Talents / CV Bank | ✓ | ✓ | ✓ | — |
+| Requisitions | ✓ | ✓ | ✓ | ✓ |
+| Chat & Tasks | ✓ | ✓ | ✓ | ✓ |
+| Meetings | ✓ | ✓ | ✓ | ✓ |
+| Analytics | ✓ | ✓ | — | — |
+| Workspace Settings | ✓ | ✓ | — | — |
+| Billing | ✓ | — | — | — |
+| API Tokens | ✓ | ✓ | — | — |
+
+## Changing a member's role
+
+From the Members settings page, click the role dropdown next to any member to change their role. Changes take effect immediately.
+
+## Removing a member
+
+Click the three-dot menu next to a member and select **Remove**. They will immediately lose access to the workspace. Their past activity (messages, tasks, etc.) is retained.
+
+## Pending invitations
+
+Invitations that haven't been accepted yet appear in a separate "Pending" section. You can resend or cancel pending invitations from there.

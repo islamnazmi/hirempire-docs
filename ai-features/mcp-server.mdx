@@ -1,0 +1,61 @@
+---
+title: 'MCP Server'
+description: 'Connect Claude AI to your Hirempire workspace for AI-powered recruiting actions'
+---
+
+## What is the MCP Server?
+
+The Hirempire MCP (Model Context Protocol) Server lets you connect Claude AI directly to your Hirempire workspace. Once connected, you can use Claude to query your candidates, manage jobs, and get AI-powered insights — all through natural language conversation.
+
+## Use cases
+
+- "Show me all candidates for the Senior Developer role"
+- "What's the status of Ahmed's application?"
+- "How many applications did we receive this week?"
+- "Draft a rejection email for the three candidates in the Reviewing stage"
+
+## Setting up the MCP Server
+
+<Steps>
+  <Step title="Go to Settings → Claude AI (MCP)">
+    In Hirempire, open **Settings** and click **Claude AI (MCP)** in the sidebar.
+  </Step>
+  <Step title="Click 'Connect to Claude'">
+    This opens [claude.ai/settings/connectors](https://claude.ai/settings/connectors) in a new tab.
+  </Step>
+  <Step title="Add a custom connector">
+    Click **Add custom connector** and fill in the details shown on the settings page:
+
+    | Field | Value |
+    |-------|-------|
+    | Name | `Hirempire` |
+    | Remote MCP server URL | `https://api.hirempire.com/v1/mcp` |
+    | OAuth Client ID | Copy from [Settings → Claude AI (MCP)](https://app.hirempire.com/dashboard/settings/mcp) |
+    | OAuth Client Secret | Copy from [Settings → Claude AI (MCP)](https://app.hirempire.com/dashboard/settings/mcp) |
+
+    Use the copy buttons on the settings page for convenience.
+  </Step>
+  <Step title="Click Connect and authorize">
+    Click **Connect**. Claude will redirect you back to Hirempire to authorize access — make sure you're logged in to your Hirempire account.
+  </Step>
+</Steps>
+
+<Info>
+  You must be logged in to Hirempire when Claude redirects back for authorization. The OAuth flow connects Claude specifically to your workspace.
+</Info>
+
+## Available tools
+
+Once connected, Claude has access to tools for:
+
+| Tool | What it does |
+|------|-------------|
+| `list_jobs` | Get all jobs in your workspace |
+| `get_applicants` | Fetch candidates for a specific job |
+| `update_applicant_status` | Move a candidate to a new pipeline stage |
+| `get_companies` | List your workspace companies |
+| `create_job` | Create a new job posting |
+
+## Getting help
+
+For MCP setup issues, contact [support@hirempire.com](mailto:support@hirempire.com) or visit the [support page](/support).
