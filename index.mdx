@@ -1,21 +1,38 @@
 ---
-title: "Welcome to Hirempire"
+title: "Hirempire Docs"
 description: "The all-in-one recruitment platform — from job creation to hire"
+mode: "custom"
 ---
 
-<Frame>
-<img src="/images/hirempire-intro.png" />
-</Frame>
+<div className="max-w-7xl mx-auto px-6 py-16">
 
-## What is Hirempire?
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-Hirempire is a complete recruitment platform built by recruiters, for recruiters. It brings together everything your team needs to hire — job posting, candidate management, AI screening, team collaboration, scheduling, and analytics — in one place.
+<div>
 
-Whether you're a solo recruiter or a growing HR team, Hirempire scales with you.
+<p className="text-sm font-semibold tracking-widest uppercase" style={{ color: "#3349C0" }}>
+  Recruitment Platform
+</p>
 
-## What's inside
+# Hire smarter with Hirempire
 
-<CardGroup cols={2}>
+<p className="text-lg text-gray-600 dark:text-gray-300 mt-4">
+  The all-in-one recruitment platform — from job creation to hire. Post jobs, screen candidates with AI, run interviews, and collaborate as a team, all in one place.
+</p>
+
+</div>
+
+<div>
+  <img src="/images/hirempire-intro.png" alt="Hirempire" className="rounded-2xl w-full" />
+</div>
+
+</div>
+
+<div className="mt-24">
+
+<h2 className="text-center text-3xl font-semibold mb-12">Explore by product</h2>
+
+<CardGroup cols={3}>
   <Card title="Jobs & Requisitions" icon="briefcase" href="/core-features/jobs">
     Post jobs with AI-generated descriptions, track applications by source, and manage internal hiring requests.
   </Card>
@@ -32,11 +49,15 @@ Whether you're a solo recruiter or a growing HR team, Hirempire scales with you.
     Source performance, pipeline conversion, and time-to-hire metrics in one dashboard.
   </Card>
   <Card title="AI Features" icon="sparkles" href="/ai-features/job-wizard">
-    AI job creation wizard, candidate screening, Hirempire AI chat assistant, and MCP server.
+    Job creation wizard, candidate screening, the Hirempire AI assistant, and the MCP Server.
   </Card>
 </CardGroup>
 
-## Quick navigation
+</div>
+
+<div className="mt-24">
+
+<h2 className="text-center text-3xl font-semibold mb-12">Get started</h2>
 
 <CardGroup cols={2}>
   <Card title="Quick Start" icon="rocket" href="/quickstart">
@@ -48,7 +69,11 @@ Whether you're a solo recruiter or a growing HR team, Hirempire scales with you.
   <Card title="API Reference" icon="code" href="/developers/get-started">
     Integrate Hirempire into your own tools and workflows.
   </Card>
-  <Card title="Settings" icon="gear" href="/settings/workspace">
-    Configure your workspace, invite your team, and manage integrations.
+  <Card title="MCP Server" icon="plug" href="/mcp/overview">
+    Connect Claude AI to your workspace for natural-language recruiting actions.
   </Card>
 </CardGroup>
+
+</div>
+
+</div>

@@ -1,6 +1,7 @@
 ---
 title: 'Interview Intelligence'
-description: 'AI-powered analysis of your recorded interviews — scores, scorecards, and recommendations'
+description: 'AI-powered analysis of your recorded interviews — scores, scorecards, transcripts, and recommendations'
+icon: 'sparkles'
 ---
 
 <Info>
@@ -9,37 +10,62 @@ description: 'AI-powered analysis of your recorded interviews — scores, scorec
 
 ## What is Interview Intelligence?
 
-Interview Intelligence uses AI to analyze your recorded interviews and give you structured, objective feedback on each candidate. After a meeting ends, Hirempire processes the recording and produces a detailed report including an overall score, a competency scorecard, and a hiring recommendation.
+Interview Intelligence automates everything that happens around your interviews — recording, transcription, evaluation, and reporting. Run the meeting normally; Hirempire captures the conversation in the background and produces a structured report when it's done.
 
-This helps your team make faster, more consistent hiring decisions — especially useful when multiple interviewers are evaluating the same candidate.
+It replaces manual note-taking and brings consistency to multi-interviewer panels, so your team can make faster, less biased hiring decisions.
+
+**What it delivers:**
+- 100% of interviews captured automatically
+- Faster candidate reviews with scored, searchable transcripts
+- Zero manual notes required
 
 ## How it works
 
 <Steps>
-  <Step title="Meeting is recorded">
-    The interview is recorded via your video conferencing tool (e.g., Google Meet, Zoom). Hirempire's AI bot joins the call to capture audio.
+  <Step title="Run the interview">
+    Conduct the interview as you normally would in your video tool (Google Meet, Zoom, etc.). Hirempire's AI bot joins the call and records in the background — no extra setup needed during the meeting.
   </Step>
-  <Step title="AI processing">
-    After the call ends, the recording is processed. This typically takes a few minutes. The meeting card in Hirempire will show a processing indicator.
+  <Step title="AI processes the recording">
+    After the call ends, Hirempire transcribes the audio, maps each response to the job's requirements, and analyzes the candidate's performance. Processing typically takes a few minutes — the meeting card shows a processing indicator while it runs.
   </Step>
-  <Step title="Report is ready">
-    Once done, a **View Interview Intelligence** button appears on the meeting detail card. Click it to open the analysis.
+  <Step title="Review insights instantly">
+    Once done, a **View Interview Intelligence** button appears on the meeting detail card. You'll have a full scorecard, transcript, and highlights ready before your next meeting — and one-click sharing for the team.
   </Step>
 </Steps>
 
 ## What's in the report
+
+<Frame>
+  ![Interview Intelligence report](/images/interview-intelligence.png)
+</Frame>
 
 <AccordionGroup>
   <Accordion icon="star" title="Overall Score">
     A 0–100 score representing the candidate's overall performance in the interview. Calculated from all evaluated competencies.
   </Accordion>
 
-  <Accordion icon="list-check" title="Scorecard">
-    A breakdown of the candidate's performance across key competencies — communication, technical skills, problem solving, culture fit, and more. Each competency gets an individual score and brief notes.
+  <Accordion icon="list-check" title="Structured Scorecard">
+    A multi-competency breakdown — communication, technical skills, problem solving, culture fit, and more. Each competency gets an individual score and brief notes.
   </Accordion>
 
-  <Accordion icon="thumbs-up" title="AI Recommendation">
-    A plain-language summary recommendation: **Strong Hire**, **Hire**, **No Hire**, or **Strong No Hire** — along with the reasoning behind it.
+  <Accordion icon="thumbs-up" title="AI Decision">
+    A categorical recommendation: **Accept**, **Hold**, or **Reject** — along with the plain-language reasoning behind it.
+  </Accordion>
+
+  <Accordion icon="file-lines" title="Automatic Transcription">
+    A full, searchable transcript of the entire interview, with both interviewer and candidate dialogue clearly attributed. Available the moment processing completes.
+  </Accordion>
+
+  <Accordion icon="comments-question" title="Question & Answer Analysis">
+    Each question and the candidate's response is reviewed individually. The AI surfaces red flags — vague answers, inconsistencies, or concerning responses — so you can jump straight to the moments that matter.
+  </Accordion>
+
+  <Accordion icon="clapperboard" title="Time-Stamped Highlights">
+    Standout moments — strong answers, red flags, key examples — are detected automatically and time-stamped. Highlights are shareable as video clips so you can send a teammate the exact moment instead of the whole recording.
+  </Accordion>
+
+  <Accordion icon="bolt" title="Instant Summary">
+    An executive overview of the interview, ready for one-click team distribution. Useful for hiring panels and async stakeholder updates.
   </Accordion>
 
   <Accordion icon="shield-check" title="Credibility Signals">
@@ -63,6 +89,10 @@ This helps your team make faster, more consistent hiring decisions — especiall
   </Accordion>
 </AccordionGroup>
 
+## Live transcript
+
+During the call, Hirempire shows a live transcript with both sides of the conversation in real time. When the AI detects a standout response, an **AI highlight detected** indicator appears with quick context on why the moment was notable — useful for interviewers who want to follow up immediately.
+
 ## Candidate consent
 
 <Warning>
@@ -71,9 +101,13 @@ This helps your team make faster, more consistent hiring decisions — especiall
 
 Hirempire handles the consent flow automatically — the AI bot announces its presence at the start of the call and records only after the candidate acknowledges.
 
+## Sharing reports
+
+Every report is shareable with one click. Send the full report, or share an individual time-stamped highlight clip to a teammate — they'll see the exact moment without having to scrub through the recording.
+
 ## Accessing past reports
 
-All Interview Intelligence reports are stored on the meeting record. Open any past meeting from the Meetings page and click **View Interview Intelligence** to re-read the analysis at any time.
+All Interview Intelligence reports are stored on the meeting record. Open any past meeting from the [Meetings page](/meetings/overview) and click **View Interview Intelligence** to re-read the analysis at any time.
 
 ## Status indicators
 
@@ -84,3 +118,17 @@ All Interview Intelligence reports are stored on the meeting record. Open any pa
 | `processing` | AI is analyzing the recording |
 | `done` | Report is ready |
 | `failed` | Analysis failed — contact support |
+
+## Best practices
+
+<Tip>
+  **Define competencies on the job posting.** The scorecard maps responses against the role's requirements — clearer requirements produce more useful scorecards.
+</Tip>
+
+<Tip>
+  **Use highlights for hiring panels.** Instead of asking teammates to watch a 45-minute recording, share two or three time-stamped highlights. Faster decisions, same context.
+</Tip>
+
+<Tip>
+  **Review compliance flags before rejecting.** If a flag appears, check the transcript moment before acting on the AI's recommendation.
+</Tip>

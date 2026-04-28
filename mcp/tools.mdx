@@ -1,0 +1,37 @@
+---
+title: 'Available Tools'
+description: 'Reference of every action Claude can take in your Hirempire workspace via MCP'
+icon: 'wrench'
+---
+
+Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to the following tools.
+
+## Jobs
+
+| Tool | What it does |
+|------|-------------|
+| `list_jobs` | Get all jobs in your workspace |
+| `create_job` | Create a new job posting |
+
+## Applicants
+
+| Tool | What it does |
+|------|-------------|
+| `get_applicants` | Fetch candidates for a specific job |
+| `update_applicant_status` | Move a candidate to a new pipeline stage |
+
+## Companies
+
+| Tool | What it does |
+|------|-------------|
+| `get_companies` | List your workspace companies |
+
+## Example prompts
+
+Each tool can be invoked with natural language — Claude picks the right tool based on what you ask:
+
+- *"Show me all jobs in my workspace"* → `list_jobs`
+- *"Create a Senior Backend Engineer job in the Engineering department"* → `create_job`
+- *"Who applied to the Marketing Manager role?"* → `get_applicants`
+- *"Move Ahmed Hassan to the Interview stage"* → `update_applicant_status`
+- *"Which companies do I have set up?"* → `get_companies`

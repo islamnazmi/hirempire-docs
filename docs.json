@@ -9,6 +9,9 @@
     "light": "#4287f5",
     "dark": "#3349C0"
   },
+  "background": {
+    "decoration": "windows"
+  },
   "api": {
     "mdx": {
       "server": "https://api.hirempire.com/v1",
@@ -20,13 +23,19 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "Home",
+        "icon": "house",
+        "pages": [
+          "index"
+        ]
+      },
+      {
         "tab": "Documentation",
         "icon": "book-open",
         "groups": [
           {
             "group": "Get Started",
             "pages": [
-              "introduction",
               "quickstart",
               "subscription"
             ]
@@ -67,12 +76,12 @@
           },
           {
             "group": "AI Features",
-            "icon": "brain",
+            "icon": "sparkles",
             "pages": [
               "ai-features/job-wizard",
               "ai-features/ai-screening",
-              "ai-features/hirempire-ai",
-              "ai-features/mcp-server"
+              "ai-features/ai-pre-screen",
+              "ai-features/hirempire-ai"
             ]
           },
           {
@@ -148,6 +157,25 @@
               "developers/webhooks/create-webhook",
               "developers/webhooks/get-webhooks",
               "developers/webhooks/update-webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "MCP",
+        "icon": "plug",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "mcp/overview",
+              "mcp/quickstart"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "mcp/tools"
             ]
           }
         ]
