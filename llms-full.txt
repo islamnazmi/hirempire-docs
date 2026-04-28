@@ -1,9 +1,126 @@
+# File: ai-features/ai-pre-screen.mdx
+
+```markdown
+---
+title: 'AI Pre-Screen'
+description: 'Asynchronous, proctored AI interviews that screen candidates without scheduling'
+icon: 'sparkles'
+---
+
+<Info>
+  AI Pre-Screen is available on **Pro** and higher plans.
+</Info>
+
+## What is AI Pre-Screen?
+
+AI Pre-Screen is an asynchronous, proctored interview that runs entirely on its own — no scheduling, no recruiter time, no extra tools. You send a candidate a one-time link, the AI runs a live structured interview with proctoring active, and you get a scored transcript and recommendation as soon as they finish.
+
+It's how you replace the first-round phone screen with something faster, more consistent, and less biased.
+
+<Frame>
+  ![AI Pre-Screen candidate view](/images/ai-pre-screen.png)
+</Frame>
+
+## How it works
+
+<Steps>
+  <Step title="Send the link">
+    From an applicant card, click **AI Pre-Screen**. A unique, one-time interview link is generated and emailed to the candidate.
+  </Step>
+  <Step title="Candidate interviews">
+    The candidate accepts the ground rules, then has a live conversation with the AI. Proctoring is active throughout — tab-switching, paste attempts, and other integrity violations are detected in real time.
+  </Step>
+  <Step title="Review results">
+    You're notified the moment the interview completes (or terminates early). Open the candidate panel to see the score, scorecard, AI recommendation, and full transcript.
+  </Step>
+</Steps>
+
+## Proctoring & integrity
+
+Candidates are told upfront that this is a proctored evaluation. The session enforces several anti-cheating measures:
+
+| Check | What it does |
+|-------|------------|
+| **Tab-switching detection** | Session terminates instantly if the candidate navigates away from the interview page. You're notified immediately. |
+| **Paste blocking** | Copy-paste is disabled at the input level — answers must be typed. |
+| **Real-time typing** | The AI watches for natural typing patterns rather than pasted blocks of text. |
+| **Ground rules enforcement** | Candidates must explicitly accept the rules before the interview starts. |
+
+The AI also probes for specifics — vague or generic answers get followed up on, so candidates can't coast on rehearsed responses.
+
+## What you get back
+
+When the interview ends, the candidate's panel includes a full evaluation:
+
+<Frame>
+  ![AI Pre-Screen results panel](/images/ai-pre-screen-result.png)
+</Frame>
+
+<CardGroup cols={2}>
+  <Card title="Overall Score" icon="star">
+    A single number summarizing how the candidate performed across all evaluated dimensions.
+  </Card>
+  <Card title="Scorecard" icon="list-check">
+    Per-dimension breakdown with individual scores and brief notes on each area assessed.
+  </Card>
+  <Card title="AI Recommendation" icon="thumbs-up">
+    A plain-language hiring recommendation with the reasoning behind it.
+  </Card>
+  <Card title="Credibility Signals" icon="shield-check">
+    Flags around answer authenticity, consistency, and any integrity violations during the session.
+  </Card>
+  <Card title="Full Transcript" icon="file-lines">
+    Complete record of the conversation — questions asked and answers given — stored permanently on the candidate record.
+  </Card>
+  <Card title="Instant Notifications" icon="bell">
+    Get notified the moment the candidate completes — or if the session terminates early due to a violation.
+  </Card>
+</CardGroup>
+
+## When to use it
+
+AI Pre-Screen replaces the first-round phone screen. Use it when:
+
+- You have **high applicant volume** and need to triage faster
+- You want **consistent evaluation** across every applicant for a role
+- You want to **reduce bias** in the first-round filter
+- Your candidates are **distributed across time zones** and scheduling is painful
+
+## Sending a Pre-Screen
+
+1. Open the candidate from the **Talents** page or a job's applicants list
+2. Click **AI Pre-Screen** on the applicant card
+3. The candidate receives an email with a unique link
+4. Track status from the candidate panel — Sent, In Progress, Completed, or Terminated
+
+## Best practices
+
+<Tip>
+  **Use it as the first filter, not the only one.** AI Pre-Screen is designed to replace the initial phone screen — a hiring decision should still combine pre-screen results with CV analysis and a human interview.
+</Tip>
+
+<Tip>
+  **Tell candidates what to expect.** A short note in your application confirmation email explaining that they'll receive a proctored AI interview reduces drop-off and integrity violations.
+</Tip>
+
+<Tip>
+  **Check terminated sessions before rejecting.** A tab switch can sometimes be accidental. Review the transcript before making a decision.
+</Tip>
+
+## Related features
+
+- [AI Screening](/ai-features/ai-screening) — automatic CV analysis and job-fit scoring on every application
+- [Interview Intelligence](/meetings/interview-intelligence) — AI analysis of full live recorded interviews
+- [Hirempire AI](/ai-features/hirempire-ai) — the AI capabilities running across the platform
+```
+
 # File: ai-features/ai-screening.mdx
 
 ```markdown
 ---
 title: 'AI Screening'
 description: 'Automatically screen candidates with AI-powered insights and recommendations'
+icon: 'sparkles'
 ---
  
 <Info>
@@ -255,6 +372,7 @@ After setting up AI Screening:
 ---
 title: 'Hirempire AI'
 description: 'Chat directly with your jobs and get instant answers to recruitment questions'
+icon: 'sparkles'
 ---
  
 <Info>
@@ -611,6 +729,7 @@ After using Hirempire AI, explore:
 ---
 title: 'AI Job Creation Wizard'
 description: 'Create complete job postings in minutes with a conversational AI guide'
+icon: 'sparkles'
 ---
 
 ## What is the AI Job Wizard?
@@ -661,72 +780,6 @@ After generation, you can edit any part of the description directly in the wizar
 ## Skipping the wizard
 
 Prefer to fill out the form manually? You can close the wizard at any time and use the standard job creation form instead.
-```
-
-# File: ai-features/mcp-server.mdx
-
-```markdown
----
-title: 'MCP Server'
-description: 'Connect Claude AI to your Hirempire workspace for AI-powered recruiting actions'
----
-
-## What is the MCP Server?
-
-The Hirempire MCP (Model Context Protocol) Server lets you connect Claude AI directly to your Hirempire workspace. Once connected, you can use Claude to query your candidates, manage jobs, and get AI-powered insights — all through natural language conversation.
-
-## Use cases
-
-- "Show me all candidates for the Senior Developer role"
-- "What's the status of Ahmed's application?"
-- "How many applications did we receive this week?"
-- "Draft a rejection email for the three candidates in the Reviewing stage"
-
-## Setting up the MCP Server
-
-<Steps>
-  <Step title="Go to Settings → Claude AI (MCP)">
-    In Hirempire, open **Settings** and click **Claude AI (MCP)** in the sidebar.
-  </Step>
-  <Step title="Click 'Connect to Claude'">
-    This opens [claude.ai/settings/connectors](https://claude.ai/settings/connectors) in a new tab.
-  </Step>
-  <Step title="Add a custom connector">
-    Click **Add custom connector** and fill in the details shown on the settings page:
-
-    | Field | Value |
-    |-------|-------|
-    | Name | `Hirempire` |
-    | Remote MCP server URL | `https://api.hirempire.com/v1/mcp` |
-    | OAuth Client ID | Copy from [Settings → Claude AI (MCP)](https://app.hirempire.com/dashboard/settings/mcp) |
-    | OAuth Client Secret | Copy from [Settings → Claude AI (MCP)](https://app.hirempire.com/dashboard/settings/mcp) |
-
-    Use the copy buttons on the settings page for convenience.
-  </Step>
-  <Step title="Click Connect and authorize">
-    Click **Connect**. Claude will redirect you back to Hirempire to authorize access — make sure you're logged in to your Hirempire account.
-  </Step>
-</Steps>
-
-<Info>
-  You must be logged in to Hirempire when Claude redirects back for authorization. The OAuth flow connects Claude specifically to your workspace.
-</Info>
-
-## Available tools
-
-Once connected, Claude has access to tools for:
-
-| Tool | What it does |
-|------|-------------|
-| `list_jobs` | Get all jobs in your workspace |
-| `get_applicants` | Fetch candidates for a specific job |
-| `update_applicant_status` | Move a candidate to a new pipeline stage |
-| `get_companies` | List your workspace companies |
-| `create_job` | Create a new job posting |
-
-## Getting help
-
-For MCP setup issues, contact [support@hirempire.com](mailto:support@hirempire.com) or visit the [support page](/support).
 ```
 
 # File: analytics/overview.mdx
@@ -9499,27 +9552,44 @@ Example: `mintlify`
 </ResponseField>
 ```
 
-# File: introduction.mdx
+# File: index.mdx
 
 ```markdown
 ---
-title: "Welcome to Hirempire"
+title: "Hirempire Docs"
 description: "The all-in-one recruitment platform — from job creation to hire"
+mode: "custom"
 ---
 
-<Frame>
-<img src="/images/hirempire-intro.png" />
-</Frame>
+<div className="max-w-7xl mx-auto px-6 py-16">
 
-## What is Hirempire?
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-Hirempire is a complete recruitment platform built by recruiters, for recruiters. It brings together everything your team needs to hire — job posting, candidate management, AI screening, team collaboration, scheduling, and analytics — in one place.
+<div>
 
-Whether you're a solo recruiter or a growing HR team, Hirempire scales with you.
+<p className="text-sm font-semibold tracking-widest uppercase" style={{ color: "#3349C0" }}>
+  Recruitment Platform
+</p>
 
-## What's inside
+# Hire smarter with Hirempire
 
-<CardGroup cols={2}>
+<p className="text-lg text-gray-600 dark:text-gray-300 mt-4">
+  The all-in-one recruitment platform — from job creation to hire. Post jobs, screen candidates with AI, run interviews, and collaborate as a team, all in one place.
+</p>
+
+</div>
+
+<div>
+  <img src="/images/hirempire-intro.png" alt="Hirempire" className="rounded-2xl w-full" />
+</div>
+
+</div>
+
+<div className="mt-24">
+
+<h2 className="text-center text-3xl font-semibold mb-12">Explore by product</h2>
+
+<CardGroup cols={3}>
   <Card title="Jobs & Requisitions" icon="briefcase" href="/core-features/jobs">
     Post jobs with AI-generated descriptions, track applications by source, and manage internal hiring requests.
   </Card>
@@ -9536,11 +9606,15 @@ Whether you're a solo recruiter or a growing HR team, Hirempire scales with you.
     Source performance, pipeline conversion, and time-to-hire metrics in one dashboard.
   </Card>
   <Card title="AI Features" icon="sparkles" href="/ai-features/job-wizard">
-    AI job creation wizard, candidate screening, Hirempire AI chat assistant, and MCP server.
+    Job creation wizard, candidate screening, the Hirempire AI assistant, and the MCP Server.
   </Card>
 </CardGroup>
 
-## Quick navigation
+</div>
+
+<div className="mt-24">
+
+<h2 className="text-center text-3xl font-semibold mb-12">Get started</h2>
 
 <CardGroup cols={2}>
   <Card title="Quick Start" icon="rocket" href="/quickstart">
@@ -9552,10 +9626,138 @@ Whether you're a solo recruiter or a growing HR team, Hirempire scales with you.
   <Card title="API Reference" icon="code" href="/developers/get-started">
     Integrate Hirempire into your own tools and workflows.
   </Card>
-  <Card title="Settings" icon="gear" href="/settings/workspace">
-    Configure your workspace, invite your team, and manage integrations.
+  <Card title="MCP Server" icon="plug" href="/mcp/overview">
+    Connect Claude AI to your workspace for natural-language recruiting actions.
   </Card>
 </CardGroup>
+
+</div>
+
+</div>
+```
+
+# File: mcp/overview.mdx
+
+```markdown
+---
+title: 'Hirempire MCP'
+description: 'Connect Claude AI to your Hirempire workspace for AI-powered recruiting actions'
+icon: 'sparkles'
+---
+
+## What is the MCP Server?
+
+The Hirempire MCP (Model Context Protocol) Server lets you connect Claude AI directly to your Hirempire workspace. Once connected, you can use Claude to query your candidates, manage jobs, and get AI-powered insights — all through natural language conversation.
+
+## Why use it?
+
+Instead of switching between Hirempire and another tool, you can do recruiting work right in Claude:
+
+- "Show me all candidates for the Senior Developer role"
+- "What's the status of Ahmed's application?"
+- "How many applications did we receive this week?"
+- "Draft a rejection email for the three candidates in the Reviewing stage"
+
+## Get started
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/mcp/quickstart">
+    Connect Claude to Hirempire in four steps.
+  </Card>
+  <Card title="Available Tools" icon="wrench" href="/mcp/tools">
+    Reference of every action Claude can take in your workspace.
+  </Card>
+</CardGroup>
+
+## Getting help
+
+For MCP setup issues, contact [support@hirempire.com](mailto:support@hirempire.com) or visit the [support page](/support).
+```
+
+# File: mcp/quickstart.mdx
+
+```markdown
+---
+title: 'Quickstart'
+description: 'Connect Claude AI to your Hirempire workspace in four steps'
+icon: 'rocket'
+---
+
+Follow these steps to connect Claude AI to your Hirempire workspace via the MCP Server.
+
+<Steps>
+  <Step title="Go to Settings → Claude AI (MCP)">
+    In Hirempire, open **Settings** and click **Claude AI (MCP)** in the sidebar.
+  </Step>
+  <Step title="Click 'Connect to Claude'">
+    This opens [claude.ai/settings/connectors](https://claude.ai/settings/connectors) in a new tab.
+  </Step>
+  <Step title="Add a custom connector">
+    Click **Add custom connector** and fill in the details shown on the settings page:
+
+    | Field | Value |
+    |-------|-------|
+    | Name | `Hirempire` |
+    | Remote MCP server URL | `https://api.hirempire.com/v1/mcp` |
+    | OAuth Client ID | Copy from [Settings → Claude AI (MCP)](https://app.hirempire.com/dashboard/settings/mcp) |
+    | OAuth Client Secret | Copy from [Settings → Claude AI (MCP)](https://app.hirempire.com/dashboard/settings/mcp) |
+
+    Use the copy buttons on the settings page for convenience.
+  </Step>
+  <Step title="Click Connect and authorize">
+    Click **Connect**. Claude will redirect you back to Hirempire to authorize access — make sure you're logged in to your Hirempire account.
+  </Step>
+</Steps>
+
+<Info>
+  You must be logged in to Hirempire when Claude redirects back for authorization. The OAuth flow connects Claude specifically to your workspace.
+</Info>
+
+## Next steps
+
+Once connected, see [Available Tools](/mcp/tools) for the full list of actions Claude can take in your workspace.
+```
+
+# File: mcp/tools.mdx
+
+```markdown
+---
+title: 'Available Tools'
+description: 'Reference of every action Claude can take in your Hirempire workspace via MCP'
+icon: 'wrench'
+---
+
+Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to the following tools.
+
+## Jobs
+
+| Tool | What it does |
+|------|-------------|
+| `list_jobs` | Get all jobs in your workspace |
+| `create_job` | Create a new job posting |
+
+## Applicants
+
+| Tool | What it does |
+|------|-------------|
+| `get_applicants` | Fetch candidates for a specific job |
+| `update_applicant_status` | Move a candidate to a new pipeline stage |
+
+## Companies
+
+| Tool | What it does |
+|------|-------------|
+| `get_companies` | List your workspace companies |
+
+## Example prompts
+
+Each tool can be invoked with natural language — Claude picks the right tool based on what you ask:
+
+- *"Show me all jobs in my workspace"* → `list_jobs`
+- *"Create a Senior Backend Engineer job in the Engineering department"* → `create_job`
+- *"Who applied to the Marketing Manager role?"* → `get_applicants`
+- *"Move Ahmed Hassan to the Interview stage"* → `update_applicant_status`
+- *"Which companies do I have set up?"* → `get_companies`
 ```
 
 # File: meetings/interview-intelligence.mdx
@@ -9563,7 +9765,8 @@ Whether you're a solo recruiter or a growing HR team, Hirempire scales with you.
 ```markdown
 ---
 title: 'Interview Intelligence'
-description: 'AI-powered analysis of your recorded interviews — scores, scorecards, and recommendations'
+description: 'AI-powered analysis of your recorded interviews — scores, scorecards, transcripts, and recommendations'
+icon: 'sparkles'
 ---
 
 <Info>
@@ -9572,37 +9775,62 @@ description: 'AI-powered analysis of your recorded interviews — scores, scorec
 
 ## What is Interview Intelligence?
 
-Interview Intelligence uses AI to analyze your recorded interviews and give you structured, objective feedback on each candidate. After a meeting ends, Hirempire processes the recording and produces a detailed report including an overall score, a competency scorecard, and a hiring recommendation.
+Interview Intelligence automates everything that happens around your interviews — recording, transcription, evaluation, and reporting. Run the meeting normally; Hirempire captures the conversation in the background and produces a structured report when it's done.
 
-This helps your team make faster, more consistent hiring decisions — especially useful when multiple interviewers are evaluating the same candidate.
+It replaces manual note-taking and brings consistency to multi-interviewer panels, so your team can make faster, less biased hiring decisions.
+
+**What it delivers:**
+- 100% of interviews captured automatically
+- Faster candidate reviews with scored, searchable transcripts
+- Zero manual notes required
 
 ## How it works
 
 <Steps>
-  <Step title="Meeting is recorded">
-    The interview is recorded via your video conferencing tool (e.g., Google Meet, Zoom). Hirempire's AI bot joins the call to capture audio.
+  <Step title="Run the interview">
+    Conduct the interview as you normally would in your video tool (Google Meet, Zoom, etc.). Hirempire's AI bot joins the call and records in the background — no extra setup needed during the meeting.
   </Step>
-  <Step title="AI processing">
-    After the call ends, the recording is processed. This typically takes a few minutes. The meeting card in Hirempire will show a processing indicator.
+  <Step title="AI processes the recording">
+    After the call ends, Hirempire transcribes the audio, maps each response to the job's requirements, and analyzes the candidate's performance. Processing typically takes a few minutes — the meeting card shows a processing indicator while it runs.
   </Step>
-  <Step title="Report is ready">
-    Once done, a **View Interview Intelligence** button appears on the meeting detail card. Click it to open the analysis.
+  <Step title="Review insights instantly">
+    Once done, a **View Interview Intelligence** button appears on the meeting detail card. You'll have a full scorecard, transcript, and highlights ready before your next meeting — and one-click sharing for the team.
   </Step>
 </Steps>
 
 ## What's in the report
+
+<Frame>
+  ![Interview Intelligence report](/images/interview-intelligence.png)
+</Frame>
 
 <AccordionGroup>
   <Accordion icon="star" title="Overall Score">
     A 0–100 score representing the candidate's overall performance in the interview. Calculated from all evaluated competencies.
   </Accordion>
 
-  <Accordion icon="list-check" title="Scorecard">
-    A breakdown of the candidate's performance across key competencies — communication, technical skills, problem solving, culture fit, and more. Each competency gets an individual score and brief notes.
+  <Accordion icon="list-check" title="Structured Scorecard">
+    A multi-competency breakdown — communication, technical skills, problem solving, culture fit, and more. Each competency gets an individual score and brief notes.
   </Accordion>
 
-  <Accordion icon="thumbs-up" title="AI Recommendation">
-    A plain-language summary recommendation: **Strong Hire**, **Hire**, **No Hire**, or **Strong No Hire** — along with the reasoning behind it.
+  <Accordion icon="thumbs-up" title="AI Decision">
+    A categorical recommendation: **Accept**, **Hold**, or **Reject** — along with the plain-language reasoning behind it.
+  </Accordion>
+
+  <Accordion icon="file-lines" title="Automatic Transcription">
+    A full, searchable transcript of the entire interview, with both interviewer and candidate dialogue clearly attributed. Available the moment processing completes.
+  </Accordion>
+
+  <Accordion icon="comments-question" title="Question & Answer Analysis">
+    Each question and the candidate's response is reviewed individually. The AI surfaces red flags — vague answers, inconsistencies, or concerning responses — so you can jump straight to the moments that matter.
+  </Accordion>
+
+  <Accordion icon="clapperboard" title="Time-Stamped Highlights">
+    Standout moments — strong answers, red flags, key examples — are detected automatically and time-stamped. Highlights are shareable as video clips so you can send a teammate the exact moment instead of the whole recording.
+  </Accordion>
+
+  <Accordion icon="bolt" title="Instant Summary">
+    An executive overview of the interview, ready for one-click team distribution. Useful for hiring panels and async stakeholder updates.
   </Accordion>
 
   <Accordion icon="shield-check" title="Credibility Signals">
@@ -9626,6 +9854,10 @@ This helps your team make faster, more consistent hiring decisions — especiall
   </Accordion>
 </AccordionGroup>
 
+## Live transcript
+
+During the call, Hirempire shows a live transcript with both sides of the conversation in real time. When the AI detects a standout response, an **AI highlight detected** indicator appears with quick context on why the moment was notable — useful for interviewers who want to follow up immediately.
+
 ## Candidate consent
 
 <Warning>
@@ -9634,9 +9866,13 @@ This helps your team make faster, more consistent hiring decisions — especiall
 
 Hirempire handles the consent flow automatically — the AI bot announces its presence at the start of the call and records only after the candidate acknowledges.
 
+## Sharing reports
+
+Every report is shareable with one click. Send the full report, or share an individual time-stamped highlight clip to a teammate — they'll see the exact moment without having to scrub through the recording.
+
 ## Accessing past reports
 
-All Interview Intelligence reports are stored on the meeting record. Open any past meeting from the Meetings page and click **View Interview Intelligence** to re-read the analysis at any time.
+All Interview Intelligence reports are stored on the meeting record. Open any past meeting from the [Meetings page](/meetings/overview) and click **View Interview Intelligence** to re-read the analysis at any time.
 
 ## Status indicators
 
@@ -9647,6 +9883,20 @@ All Interview Intelligence reports are stored on the meeting record. Open any pa
 | `processing` | AI is analyzing the recording |
 | `done` | Report is ready |
 | `failed` | Analysis failed — contact support |
+
+## Best practices
+
+<Tip>
+  **Define competencies on the job posting.** The scorecard maps responses against the role's requirements — clearer requirements produce more useful scorecards.
+</Tip>
+
+<Tip>
+  **Use highlights for hiring panels.** Instead of asking teammates to watch a 45-minute recording, share two or three time-stamped highlights. Faster decisions, same context.
+</Tip>
+
+<Tip>
+  **Review compliance flags before rejecting.** If a flag appears, check the transcript moment before acting on the AI's recommendation.
+</Tip>
 ```
 
 # File: meetings/overview.mdx
@@ -10350,7 +10600,7 @@ For the fastest response to your questions or issues:
   <Card title="Email Support" icon="envelope" href="mailto:support@hirempire.com">
     Direct email support for urgent issues
   </Card>
-  <Card title="Documentation" icon="book-open" href="/introduction">
+  <Card title="Documentation" icon="book-open" href="/">
     Browse our comprehensive documentation
   </Card>
 </CardGroup>
@@ -10623,32 +10873,145 @@ description: "The latest features and improvements in Hirempire"
 
 Stay up to date with the latest features, improvements, and enhancements to Hirempire.
 
-<Update label="2025" description="Major Platform Expansion" tags={["New Feature", "Platform"]}>
+<Update label="April 2026" description="AI Pre-Screen — Async Proctored Interviews" tags={["New Feature", "AI"]}>
 
-Hirempire has been completely rebuilt and expanded with a full suite of team and recruiting tools. Here's what's new:
+Replace the first-round phone screen with an asynchronous, proctored AI interview. Send a candidate a one-time link and they complete a live, structured AI conversation on their own time — no scheduling, no recruiter time.
 
-**Team Collaboration**
-- **Real-time Chat** — team channels, direct messages, @mentions, emoji reactions, and typing indicators
-- **Shared Tasks** — a team task board with statuses, assignments, and filters
-- **Notification Inbox** — centralized feed for mentions, reactions, and channel invites
+**Built-in proctoring:**
+- Tab-switching detection terminates the session instantly
+- Paste blocking forces real, typed responses
+- The AI probes for specifics — vague answers get followed up on
 
-**Meetings & Interview Intelligence**
-- **Meetings Page** — all scheduled interviews in Calendar and List views, with a full meeting detail card and Join Meeting button
-- **Interview Intelligence** — AI analysis of recorded interviews: overall score, competency scorecard, hiring recommendation, engagement timeline, and compliance flags
+When the interview ends, you get an overall score, a scorecard, an AI recommendation, credibility signals, and the full transcript.
 
-**Recruiting Workflow**
-- **Requisitions** — structured internal hiring requests for department managers to submit before a job goes live
-- **AI Job Creation Wizard** — conversational AI that builds complete job postings through guided questions
+[Read the AI Pre-Screen guide](/ai-features/ai-pre-screen)
+</Update>
 
-**Analytics**
-- **Analytics Dashboard** — source performance, pipeline funnel, time-to-hire, and application volume
+<Update label="April 2026" description="MCP Server — Claude AI Integration" tags={["New Feature", "AI", "Developer"]}>
 
-**Workspace & Settings**
-- **Role-based access control** — Owner, Admin, Member, and Department Manager roles with tailored page access
-- **Culture Page Builder** — employer brand page with hero image, description, testimonials, and photo gallery
+Connect Claude AI directly to your Hirempire workspace using the new **MCP Server** integration. Once connected, you can query candidates, manage jobs, and get AI-powered insights through natural language conversation — without leaving Claude.
 
-**Developer Tools**
-- **MCP Server** — connect Claude AI to your Hirempire workspace for natural language recruiting actions
+**Example prompts:**
+- "Show me all candidates for the Senior Developer role"
+- "What's the status of Ahmed's application?"
+- "Draft a rejection email for candidates in the Reviewing stage"
+
+Go to **Settings → Claude AI (MCP)** to connect.
+
+[Read the MCP Server guide](/mcp/overview)
+</Update>
+
+<Update label="April 2026" description="Interview Intelligence — AI Interview Analysis" tags={["New Feature", "AI", "Meetings"]}>
+
+After a recorded interview ends, Hirempire's AI automatically analyzes it and produces a structured report — so your team can make faster, more consistent hiring decisions.
+
+**Each report includes:**
+- Overall candidate score (0–100)
+- Competency scorecard (communication, technical skills, problem solving, culture fit)
+- AI hiring recommendation: Strong Hire, Hire, No Hire, or Strong No Hire
+- Engagement timeline showing candidate energy and participation
+- Credibility signals and compliance flags
+- Interviewer feedback to help your team improve over time
+
+[Read the Interview Intelligence guide](/meetings/interview-intelligence)
+</Update>
+
+<Update label="April 2026" description="Meetings Page" tags={["New Feature", "Meetings"]}>
+
+All your scheduled interviews and candidate meetings are now in one place. The Meetings page syncs with your connected Cal.com calendar and shows every booking in **Calendar** or **List** view.
+
+**Key features:**
+- Monthly, weekly, and daily calendar views
+- Meeting detail card with attendee info, duration, and video link
+- Join Meeting button for video calls
+- Invite team members to any meeting directly from Hirempire
+
+[Read the Meetings guide](/meetings/overview)
+</Update>
+
+<Update label="April 2026" description="Team Chat" tags={["New Feature", "Collaboration"]}>
+
+Your recruiting team can now communicate in real time without switching tools. Hirempire Chat includes channels, direct messages, @mentions, emoji reactions, and typing indicators — all built into your hiring workspace.
+
+**Highlights:**
+- Public and private channels
+- Mention candidates (`@@name`), jobs (`@@@name`), and tasks (`@@@@name`) as clickable links
+- Rich text formatting with bold, italic, headings, and lists
+- Reaction notifications in your Inbox
+
+[Read the Chat guide](/collaboration/chat)
+</Update>
+
+<Update label="April 2026" description="Tasks — Shared Team Task Board" tags={["New Feature", "Collaboration"]}>
+
+Manage recruiting action items as a team with the shared Tasks board. Create tasks, assign them to teammates, and track progress through four stages: **To Do → In Progress → In Review → Done**.
+
+Filter by status, assignee, or search by title to find what you need fast.
+
+[Read the Tasks guide](/collaboration/tasks)
+</Update>
+
+<Update label="April 2026" description="Inbox — Notification Center" tags={["New Feature", "Collaboration"]}>
+
+The Inbox collects all notifications relevant to you — chat mentions, emoji reactions, channel invites, and workspace activity — in one feed. Stay on top of what needs your attention without leaving Hirempire.
+
+[Read the Inbox guide](/collaboration/inbox)
+</Update>
+
+<Update label="April 2026" description="Requisitions — Internal Hiring Requests" tags={["New Feature", "Recruiting"]}>
+
+Department managers can now submit structured internal hiring requests before a job goes live. HR reviews and approves requisitions, then converts them into actual job postings — creating a clear approval workflow between managers and recruiters.
+
+**Requisition fields:** Job title, department, employment type, workplace type, location, priority (Low / Medium / High), target start date, and description.
+
+Department Managers have access to Requisitions without needing full recruiter access.
+
+[Read the Requisitions guide](/core-features/requisitions)
+</Update>
+
+<Update label="April 2026" description="AI Job Creation Wizard" tags={["New Feature", "AI", "Jobs"]}>
+
+Creating a job posting is now a conversation. The **AI Job Wizard** walks you through each detail step by step, then generates a complete, professionally written job description automatically.
+
+**The wizard covers:**
+- Job title, department, location, and workplace type
+- Career level, employment type, and salary range
+- Application sources and custom questions
+
+You can edit the generated description before saving, or skip the wizard and use the standard form.
+
+[Read the AI Job Wizard guide](/ai-features/job-wizard)
+</Update>
+
+<Update label="April 2026" description="Analytics Dashboard" tags={["New Feature", "Analytics"]}>
+
+Get a data-driven view of your entire recruiting operation with the new Analytics dashboard.
+
+**What's tracked:**
+- Total applications, hired count, time-to-hire, and active jobs
+- Source performance with conversion rates (hired ÷ applications per source)
+- Pipeline funnel showing drop-off between stages
+- Time-to-hire trend over time
+
+Analytics is available on **Pro** and higher plans.
+
+[Read the Analytics guide](/analytics/overview)
+</Update>
+
+<Update label="April 2026" description="Role-Based Access Control" tags={["New Feature", "Settings", "Team"]}>
+
+Hirempire now has four distinct roles — **Owner**, **Admin**, **Member**, and **Department Manager** — each with tailored access to the right pages and features.
+
+Department Managers get targeted access to Requisitions, Meetings, Chat, and Tasks without seeing the full recruiting pipeline.
+
+[Read the Members & Roles guide](/settings/members-roles)
+</Update>
+
+<Update label="April 2026" description="Integrations Settings" tags={["Improvement", "Settings"]}>
+
+All third-party connections are now managed from a single **Settings → Integrations** page. Connect Cal.com for meeting sync, manage the Chrome Extension, and access API tokens — all in one place.
+
+[Read the Integrations guide](/settings/integrations)
 </Update>
 
 <Update label="September 15, 2025" description="AI Docs Helper" tags={["New Feature", "AI"]}>
@@ -10691,4 +11054,3 @@ A visual pipeline board where you can drag candidates across hiring stages — A
 [Try it](https://app.hirempire.com/dashboard/talents)
 </Update>
 ```
-
