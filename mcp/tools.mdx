@@ -4,34 +4,104 @@ description: 'Reference of every action Claude can take in your Hirempire worksp
 icon: 'wrench'
 ---
 
-Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to the following tools.
-
-## Jobs
-
-| Tool | What it does |
-|------|-------------|
-| `list_jobs` | Get all jobs in your workspace |
-| `create_job` | Create a new job posting |
-
-## Applicants
-
-| Tool | What it does |
-|------|-------------|
-| `get_applicants` | Fetch candidates for a specific job |
-| `update_applicant_status` | Move a candidate to a new pipeline stage |
+Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to the following tools. Each tool maps to an action Claude can take on your behalf — read data from your workspace, create jobs and companies, or move candidates through your pipeline.
 
 ## Companies
 
-| Tool | What it does |
-|------|-------------|
-| `get_companies` | List your workspace companies |
+<AccordionGroup>
+  <Accordion icon="building" title="get_companies">
+    **Read-only.** Returns every company in your workspace along with current plan limits (e.g., `active_jobs_remaining`, `can_activate_job`).
+
+    Claude calls this automatically before creating a job — it needs the `company_id` and uses the limit fields to decide whether a new job can be activated or must be saved as a draft.
+
+    **Inputs:** none.
+  </Accordion>
+
+  <Accordion icon="plus" title="create_company">
+    Create a new company in your workspace. Claude will ask you for the required details before calling.
+
+    **Required inputs:**
+    - `name` — company name
+    - `website` — company website URL
+    - `logo` — logo image URL
+    - `industry` — one of the supported industries (Accounting, Advertising, Healthcare, Information Technology, etc.)
+
+    **Optional inputs:**
+    - `linkedin_url` — LinkedIn company page URL
+    - `location` — headquarters location
+    - `size` — employee size range (`1-10`, `11-50`, `51-100`, … `10000+`)
+  </Accordion>
+</AccordionGroup>
+
+## Jobs
+
+<AccordionGroup>
+  <Accordion icon="briefcase" title="get_jobs">
+    **Read-only.** Lists all job postings in your workspace.
+
+    **Optional input:**
+    - `status` — filter by `draft`, `active`, `paused`, `closed`, or `archived`
+  </Accordion>
+
+  <Accordion icon="wand-magic-sparkles" title="create_job">
+    Create a new job posting. Claude follows a strict step-by-step flow and asks you for every field — title, department, location, employment type, career level, salary structure, description, sourcing channels, application form fields, and custom screening questions.
+
+    **Plan limits are respected.** If your workspace has reached its active jobs limit (`can_activate_job` is `false` from `get_companies`), Claude will save the job as a `draft` and tell you to upgrade or close an existing job to activate it.
+
+    **Highlights of what Claude will ask you for:**
+    - Title, industry, department
+    - Location type (`onsite` / `remote` / `hybrid`), country, city
+    - Employment type and career level
+    - Salary structure (fixed vs range), currency, period, amount, and whether to hide it from candidates
+    - Description (write your own or have Claude generate it)
+    - Sourcing channels (LinkedIn, Indeed, Referral, Company Website, etc.)
+    - Whether to post the job on LinkedIn
+    - Status — `active` to publish now, `draft` to save for later
+    - Application form: which built-in fields to show or require (cover letter, photo, experience years, languages, nationality, location, salary expectation), plus any custom screening questions
+  </Accordion>
+</AccordionGroup>
+
+## Candidates
+
+<AccordionGroup>
+  <Accordion icon="users" title="get_candidates">
+    **Read-only.** Fetches all candidates for a specific job.
+
+    **Required input:**
+    - `job_id` — the job to fetch candidates for
+  </Accordion>
+
+  <Accordion icon="arrow-right-arrow-left" title="update_candidate_stage">
+    Moves a candidate to a different pipeline stage.
+
+    **Required inputs:**
+    - `candidate_id`
+    - `stage` — one of `uploaded`, `applied`, `reviewed`, `accepted`, `scheduled`, `met`, `hired`, `rejected`
+  </Accordion>
+</AccordionGroup>
 
 ## Example prompts
 
 Each tool can be invoked with natural language — Claude picks the right tool based on what you ask:
 
-- *"Show me all jobs in my workspace"* → `list_jobs`
-- *"Create a Senior Backend Engineer job in the Engineering department"* → `create_job`
-- *"Who applied to the Marketing Manager role?"* → `get_applicants`
-- *"Move Ahmed Hassan to the Interview stage"* → `update_applicant_status`
-- *"Which companies do I have set up?"* → `get_companies`
+- *"What companies do I have set up?"* → `get_companies`
+- *"Create a new company called Acme Corp"* → `create_company`
+- *"Show me all my active jobs"* → `get_jobs`
+- *"Create a Senior Backend Engineer job in Engineering, remote, $120k–$150k"* → `create_job`
+- *"Who applied to the Marketing Manager role?"* → `get_candidates`
+- *"Move Ahmed Hassan to the scheduled stage"* → `update_candidate_stage`
+
+## Pipeline stages reference
+
+The full pipeline used by `update_candidate_stage`:
+
+| Stage | Meaning |
+|-------|---------|
+| `uploaded` | CV added to your bank, no application yet |
+| `applied` | Candidate has submitted an application |
+| `reviewed` | You've reviewed the application |
+| `accepted` | Candidate accepted for the next step |
+| `scheduled` | Interview scheduled |
+| `met` | Interview completed |
+| `hired` | Offer accepted, candidate hired |
+| `rejected` | Not moving forward |
