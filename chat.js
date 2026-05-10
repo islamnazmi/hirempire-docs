@@ -14,7 +14,7 @@
       position: fixed;
       bottom: 24px;
       left: 50%;
-      transform: translateX(calc(-50% - 12px));
+      transform: translateX(-50%);
       width: min(720px, calc(100% - 48px));
       z-index: 99999;
       display: flex;
