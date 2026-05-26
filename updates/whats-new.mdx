@@ -171,6 +171,130 @@ All third-party connections are now managed from a single **Settings → Integra
 [Read the Integrations guide](/settings/integrations)
 </Update>
 
+<Update label="March 2026" description="Webhooks — Real-Time Event Notifications" tags={["New Feature", "Developer"]}>
+
+Subscribe to events in your Hirempire account and receive instant HTTP `POST` notifications when they happen — no polling required. The webhooks system uses a challenge-verification handshake to confirm your endpoint before delivery begins.
+
+**Available events:**
+- `job_added`, `job_updated`, `job_deleted`
+- `new_applicant` — new application received
+- `cv_processed` — CV parsing complete
+- `meeting_created` — interview scheduled
+- `application_status_changed` — candidate moved in pipeline
+
+Set up webhooks from **Settings → Integrations → Webhooks**.
+
+[Read the Webhooks guide](/developers/webhooks/get-started)
+</Update>
+
+<Update label="March 2026" description="Cal.com Calendar Integration — Automatic Interview Scheduling" tags={["New Feature", "Meetings"]}>
+
+Let candidates book their own interviews directly on your calendar. Connect your **Cal.com** account and candidates who advance in the pipeline receive an automatic booking link — no back-and-forth emails, no scheduling overhead.
+
+**How it works:**
+- Connect Cal.com from **Settings → Integrations → My Calendar**
+- Select which Cal.com event type candidates should book (e.g., 30-min interview)
+- Accepted candidates receive the booking link automatically
+- Meetings sync to your Hirempire Meetings page in real time
+
+[Read the Calendar Integration guide](/settings/integrations)
+</Update>
+
+<Update label="March 2026" description="Automated Follow-ups — AI Rejection Notes" tags={["New Feature", "Recruiting"]}>
+
+Every candidate status change now triggers a professional, automated email — from acceptance to rejection — without any manual work. Rejection emails include an **AI-generated personalized note** based on the candidate's background compared to the job requirements, so every candidate leaves with a constructive response and your employer brand stays intact.
+
+**Trigger types:**
+- **Accepted** → congratulations email with next steps
+- **Rejected** → professional rejection with AI-written feedback note
+
+Available on all plans, including Free Forever.
+
+</Update>
+
+<Update label="March 2026" description="AI Screening — Instant Candidate Fit Scoring" tags={["New Feature", "AI", "Recruiting"]}>
+
+Every application is automatically screened the moment it arrives. Hirempire AI analyzes the candidate's CV against your job requirements and produces an instant summary, match score, and key highlights — so you spend time on the best candidates, not reading every CV from scratch.
+
+**What you get per applicant:**
+- AI-generated professional summary
+- Job fit match score
+- Career level and skills assessment
+- Interview focus areas and potential gaps
+
+Available on **Starter, Pro, and Premium** plans.
+
+[Read the AI Screening guide](/ai-features/ai-screening)
+</Update>
+
+<Update label="March 2026" description="Candidate Bank — AI CV Database" tags={["New Feature", "Recruiting", "AI"]}>
+
+Build a searchable database of candidates beyond your active job pipeline. Upload CVs in bulk (PDF) and Hirempire AI automatically extracts contact info, experience, education, skills, languages, and certifications — then generates a structured profile with an intelligent summary.
+
+**Key capabilities:**
+- Bulk PDF upload (up to 10 MB per file, processed in 30–60 seconds)
+- AI extracts: name, email, phone, roles, companies, degrees, skills, certifications
+- Search and filter by skills, experience level, or location
+- Add notes, tags, and custom labels to organize your talent pool
+- Combine with the Chrome Extension to add LinkedIn prospects in one click
+
+Available on **paid plans**.
+
+[Read the Candidate Bank guide](/candidates/candidates-bank)
+</Update>
+
+<Update label="March 2026" description="Referral Program — Sourcing Through Your Network" tags={["New Feature", "Recruiting"]}>
+
+Turn your network — and your team's networks — into a candidate source. Every Hirempire account has a unique referral link. Share it anywhere and anyone who visits can browse your open roles and submit a candidate on behalf of a referrer.
+
+**What gets tracked automatically:**
+- The referred candidate's details
+- Which job they were referred for
+- The referrer's identity
+- Current pipeline status of every referral
+
+Share the link in email signatures, LinkedIn posts, or your company's careers page.
+
+[Read the Referrals guide](/analytics/referrals)
+</Update>
+
+<Update label="March 2026" description="Custom Application Questions — 6 Types, 6 Per Job" tags={["New Feature", "Recruiting"]}>
+
+Go beyond the standard CV. Add up to **6 custom questions** per job posting and collect exactly the information you need before the first interview.
+
+**Question types available:**
+- Short text
+- Long text (paragraph)
+- Single choice
+- Multiple choice
+- Yes / No
+- File upload
+
+Questions can be marked as required or optional. Candidates answer them as part of the application flow.
+
+[Read the Application Questions guide](/core-features/application-questions)
+</Update>
+
+<Update label="March 2026" description="Developer API — Jobs, Applicants & Companies" tags={["New Feature", "Developer"]}>
+
+The Hirempire REST API is now available. Programmatically access and manage your recruitment data with Bearer token authentication and granular scope controls.
+
+**Available endpoints at launch:**
+- `GET /jobs` — list all job postings
+- `GET /jobs/:id` — get a specific job
+- `POST /jobs` — create a job
+- `PUT /jobs/:id/status` — update job status
+- `DELETE /jobs/:id` — delete a job
+- `GET /applicants` — list all applicants
+- `GET /applicants/:id` — get a specific applicant
+- `GET /jobs/:id/applicants` — get applicants for a job
+- `PUT /applicants/:id/status` — update applicant status
+
+Rate limits apply by plan: **100 req/hr** (Free) → **5,000 req/hr** (Premium).
+
+[Read the API docs](/developers/get-started)
+</Update>
+
 <Update label="September 15, 2025" description="AI Docs Helper" tags={["New Feature", "AI"]}>
 ![AI Docs Helper](/images/new-ai-docs-helper.png)
 

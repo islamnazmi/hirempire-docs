@@ -1,0 +1,130 @@
+---
+title: 'API Changelog'
+description: 'History of changes, additions, and deprecations to the Hirempire API'
+---
+
+Stay up to date with every change to the Hirempire API. Breaking changes are marked clearly.
+
+<Update label="May 2026" description="Google Jobs sync field" tags={["New"]}>
+
+Jobs created via the API now include a `google_jobs_indexed` boolean in the response, indicating whether the listing has been submitted to Google Jobs indexing.
+
+</Update>
+
+<Update label="April 2026" description="Webhook event types expanded" tags={["New"]}>
+
+Five new webhook event types are now available:
+
+| Event | Description |
+|-------|-------------|
+| `candidate.stage_changed` | Fired when a candidate moves pipeline stage |
+| `candidate.hired` | Fired when a candidate is marked as hired |
+| `interview.scheduled` | Fired when a meeting is booked |
+| `requisition.approved` | Fired when a requisition is approved by HR |
+| `ai_prescreen.completed` | Fired when an AI Pre-Screen session ends |
+
+See the [Event Types](/developers/webhooks/event-types) reference for full payloads.
+
+</Update>
+
+<Update label="April 2026" description="Create Company endpoint" tags={["New"]}>
+
+Added `POST /companies` — create a company directly via the API. See [Create Company](/developers/companies/create-company) for the full schema.
+
+</Update>
+
+<Update label="April 2026" description="Applicant status values expanded" tags={["New"]}>
+
+The `status` field on applicants now supports two additional values:
+
+- `scheduled` — interview has been scheduled
+- `met` — interview has been completed
+
+These align with the pipeline stages available in the Hirempire UI and MCP Server.
+
+</Update>
+
+<Update label="March 2026" description="Webhooks — real-time event delivery" tags={["New"]}>
+
+The Hirempire Webhooks API is now available. Subscribe to workspace events and receive instant `POST` notifications to your endpoint.
+
+**Supported events at launch:**
+
+| Event | Trigger |
+|-------|---------|
+| `job_added` | A new job is created |
+| `job_updated` | A job's details are changed |
+| `job_deleted` | A job is deleted |
+| `new_applicant` | A candidate applies to a job |
+| `cv_processed` | CV parsing by AI completes |
+| `meeting_created` | An interview is scheduled |
+| `application_status_changed` | A candidate's status changes |
+
+Endpoints: `POST /webhooks` (create), `GET /webhooks` (list), `PUT /webhooks/:id` (update).
+
+Each registered webhook goes through a **challenge verification** step — your endpoint must echo back the challenge token before delivery begins.
+
+See the [Webhooks reference](/developers/webhooks/get-started) for full setup instructions and payload schemas.
+
+</Update>
+
+<Update label="March 2026" description="Rate limits introduced" tags={["New"]}>
+
+API rate limits are now enforced per plan. Exceeding the limit returns `HTTP 429 Too Many Requests`.
+
+| Plan | Requests per hour |
+|------|------------------|
+| Free | 100 |
+| Starter | 500 |
+| Pro | 1,000 |
+| Premium | 5,000 |
+
+</Update>
+
+<Update label="March 2026" description="Bearer token scopes" tags={["New"]}>
+
+API tokens now support **granular scopes**. When generating a token from **Settings → Integrations → API Tokens**, you choose which resource groups the token can access:
+
+- `Jobs` — read and write job postings
+- `Applicants` — read and update applicant records
+- `Companies` — create and read company profiles
+
+Requests that use a token without the required scope return:
+
+```json
+{
+  "success": false,
+  "error": "Token is missing required scope 'Jobs'"
+}
+```
+
+</Update>
+
+<Update label="March 2026" description="Initial API launch — Jobs and Applicants endpoints" tags={["New"]}>
+
+The Hirempire REST API launched with full **Jobs** and **Applicants** coverage.
+
+**Jobs endpoints:**
+
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/v1/jobs` | List all jobs |
+| `GET` | `/v1/jobs/:id` | Get a specific job |
+| `POST` | `/v1/jobs` | Create a job |
+| `PUT` | `/v1/jobs/:id/status` | Update job status (`Active` / `Paused` / `Closed`) |
+| `DELETE` | `/v1/jobs/:id` | Delete a job |
+
+**Applicants endpoints:**
+
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/v1/applicants` | List all applicants across all jobs |
+| `GET` | `/v1/applicants/:id` | Get a specific applicant |
+| `GET` | `/v1/jobs/:id/applicants` | Get all applicants for a specific job |
+| `PUT` | `/v1/applicants/:id/status` | Update applicant status |
+
+**Applicant status values at launch:** `new`, `reviewed`, `accepted`, `rejected`
+
+All endpoints require Bearer token authentication. See [Get Started](/developers/get-started) for base URL, authentication, and response format details.
+
+</Update>
