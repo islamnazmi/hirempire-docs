@@ -94,18 +94,24 @@
             ]
           },
           {
+            "group": "Need Help?",
+            "pages": [
+              "support",
+              "status"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "What's New",
+        "icon": "newspaper",
+        "groups": [
+          {
             "group": "Updates",
             "pages": [
               "updates/whats-new",
               "updates/feature-requests",
               "updates/roadmap"
-            ]
-          },
-          {
-            "group": "Need Help?",
-            "pages": [
-              "support",
-              "status"
             ]
           }
         ]
@@ -157,6 +163,18 @@
               "developers/webhooks/create-webhook",
               "developers/webhooks/get-webhooks",
               "developers/webhooks/update-webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Changelog",
+        "icon": "bullhorn",
+        "groups": [
+          {
+            "group": "API Changelog",
+            "pages": [
+              "developers/changelog"
             ]
           }
         ]
