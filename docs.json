@@ -71,12 +71,12 @@
             "group": "Analytics & Growth",
             "pages": [
               "analytics/overview",
-              "analytics/referrals"
+              "analytics/referrals",
+              "referral"
             ]
           },
           {
             "group": "AI Features",
-            "icon": "sparkles",
             "pages": [
               "ai-features/job-wizard",
               "ai-features/ai-screening",
