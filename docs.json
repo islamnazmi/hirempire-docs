@@ -5,9 +5,9 @@
   "description": "Hirempire documentation for setup, features, and API reference.",
   "favicon": "favicon.png",
   "colors": {
-    "primary": "#3349C0",
+    "primary": "#0A66C2",
     "light": "#4287f5",
-    "dark": "#3349C0"
+    "dark": "#0A66C2"
   },
   "background": {
     "decoration": "windows"

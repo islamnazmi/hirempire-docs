@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:hirempire.com)",
+      "Bash(ls images/ai-pre-screen*)",
+      "Bash(ls images/*pre-screen*)",
+      "WebFetch(domain:mintlify.com)"
+    ]
+  }
+}

@@ -57,7 +57,7 @@
       padding: 2px; opacity: .6; transition: opacity .15s;
     }
     #he-cls:hover { opacity: 1; }
-    #he-history.he-show                { display: flex; border-color: #3349C0; }
+    #he-history.he-show                { display: flex; border-color: #0A66C2; }
     #he-bar {
       display: flex; align-items: center; gap: 10px;
       background: var(--he-bg);
@@ -66,16 +66,16 @@
       padding: 10px 14px;
       transition: border-color .2s, border-radius .15s;
     }
-    #he-bar:focus-within               { border-color: #3349C0; }
-    #he-history.he-show + #he-bar      { border-radius: 0 0 16px 16px; border-top: none; border-color: #3349C0; }
+    #he-bar:focus-within               { border-color: #0A66C2; }
+    #he-history.he-show + #he-bar      { border-radius: 0 0 16px 16px; border-top: none; border-color: #0A66C2; }
     #he-input {
       flex: 1; background: none; border: none; outline: none;
       font-size: 14px; color: var(--he-text); font-family: inherit;
-      caret-color: #3349C0;
+      caret-color: #0A66C2;
     }
     #he-input::placeholder { color: var(--he-placeholder); }
     #he-send {
-      background: #3349C0; border: none; border-radius: 50%;
+      background: #0A66C2; border: none; border-radius: 50%;
       width: 32px; height: 32px; flex-shrink: 0; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       opacity: .4; transition: opacity .2s;
@@ -89,7 +89,7 @@
       word-wrap: break-word; white-space: pre-wrap;
     }
     .he-user {
-      background: #3349C0; color: #fff;
+      background: #0A66C2; color: #fff;
       align-self: flex-end; border-bottom-right-radius: 4px;
     }
     .he-bot {
@@ -105,7 +105,7 @@
     .he-bot code { background:rgba(127,127,127,.15); border-radius:4px; padding:1px 5px; font-size:.88em; font-family:ui-monospace,monospace; }
     .he-bot pre { background:rgba(127,127,127,.1); border-radius:8px; padding:10px 14px; overflow-x:auto; margin:6px 0; }
     .he-bot pre code { background:none; padding:0; }
-    .he-bot a { color:#3349C0; text-decoration:underline; }
+    .he-bot a { color:#0A66C2; text-decoration:underline; }
     #he-root[data-dark] .he-bot a { color:#93c5fd; }
     .he-bot strong { font-weight:600; }
     .he-bot em { font-style:italic; }
