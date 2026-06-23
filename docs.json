@@ -6,6 +6,7 @@
   "favicon": "favicon.png",
   "colors": {
     "primary": "#0A66C2",
+    "light": "#378FE9",
     "dark": "#0A66C2"
   },
   "background": {
