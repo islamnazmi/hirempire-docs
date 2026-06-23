@@ -1,0 +1,143 @@
+---
+title: 'LinkedIn Sourcing'
+description: 'Source candidates from LinkedIn and the open web into Hirempire'
+icon: 'user-plus'
+---
+
+Sourcing lets you describe the candidate you want in plain English and get back a ranked list of real people with verified contact info, pulled from LinkedIn and other public professional sources. No boolean strings, no scraping, no spreadsheets.
+
+<Check>
+  Each search consumes Sourcing credits from your workspace plan.
+</Check>
+
+## How sourcing works
+
+<CardGroup cols={3}>
+  <Card title="1. Describe" icon="message">
+    Type the role, skills, location, and seniority you need.
+  </Card>
+  <Card title="2. Search" icon="magnifying-glass">
+    Hirempire AI scans professional networks and returns matching profiles.
+  </Card>
+  <Card title="3. Review" icon="users">
+    Browse candidates with photos, headlines, contact info, and AI summaries.
+  </Card>
+</CardGroup>
+
+## Running a search
+
+<Steps>
+  <Step title="Open the Sourcing page">
+    Go to [**Sourcing**](https://app.hirempire.com/dashboard/sourcing) from your dashboard sidebar.
+  </Step>
+  <Step title="Describe who you're looking for">
+    Use the prompt box and write a natural description. Be specific about the things that matter to you.
+
+    Example prompts:
+    - `Senior React developer with fintech experience in London`
+    - `Product designer who has shipped B2B SaaS, based in Berlin or remote EU`
+    - `Sales engineer with API and developer-tools background in the US`
+  </Step>
+  <Step title="Press Enter or click Search">
+    The search typically takes 30 to 90 seconds while Hirempire scans profiles, pulls contact data, and generates AI summaries.
+  </Step>
+  <Step title="Review results">
+    Candidates appear as cards with name, headline, location, LinkedIn and GitHub links, email, phone, and a short AI fit summary.
+  </Step>
+</Steps>
+
+<Tip>
+  Press `Enter` to search. Use `Shift + Enter` to add a new line inside your prompt.
+</Tip>
+
+## Understanding the results
+
+Each candidate card includes:
+
+| Field | What it shows |
+| --- | --- |
+| **Photo** | Profile picture from LinkedIn or GitHub |
+| **Name and headline** | Current role and short pitch |
+| **Location** | City or region |
+| **LinkedIn** | Direct link to the LinkedIn profile |
+| **GitHub** | Direct link when the candidate has a public GitHub |
+| **Email** | Verified work or personal email when available |
+| **Phone** | Phone number when available |
+| **AI summary** | One-line fit signal generated for your prompt |
+
+<Info>
+  Contact details (email, phone) are best-effort. Some profiles return a LinkedIn link only, especially for senior or privacy-conscious candidates.
+</Info>
+
+## Selecting and acting on candidates
+
+- Click the checkbox on any card to select it. A counter appears at the top right showing how many candidates you have selected.
+- Click the email, LinkedIn, GitHub, or phone icons on a card to open or copy that contact channel directly.
+- Click **Clear** to deselect everything and start again.
+
+## Search history
+
+The left sidebar lists your workspace's previous searches with the original prompt and how long ago it ran.
+
+- Click any past search to reopen its results without spending credits again.
+- Click **New Search** at the top of the sidebar to start a fresh prompt.
+- Collapse the sidebar with the arrow icon to give yourself more room on wider result grids.
+
+<Tip>
+  Past searches are shared at the workspace level, so teammates can see and reuse each other's sourcing work.
+</Tip>
+
+## Connecting LinkedIn (optional)
+
+Sourcing itself runs against Hirempire's own data and does not require a LinkedIn login. You can still connect a LinkedIn account in **Settings > LinkedIn** if you want to:
+
+- Post jobs to LinkedIn from inside Hirempire
+- Send connection requests or InMail from connected accounts in future workflows
+
+<Warning>
+  Connecting LinkedIn is only available on paid plans, not on Free or during a free trial. Each user connects their own LinkedIn account.
+</Warning>
+
+To connect:
+
+<Steps>
+  <Step title="Open settings">
+    Go to [**Settings > LinkedIn**](https://app.hirempire.com/dashboard/settings/linkedin).
+  </Step>
+  <Step title="Click Connect LinkedIn">
+    Accept the consent panel to authorize Hirempire to act on your behalf.
+  </Step>
+  <Step title="Pick a posting company">
+    Once connected, select the LinkedIn Company Page you want to post jobs as.
+  </Step>
+</Steps>
+
+## Writing better prompts
+
+<AccordionGroup>
+  <Accordion title="Be specific about must-haves">
+    Vague prompts like `developer in Europe` produce vague results. Try `Senior Go developer with payments or fintech experience, based in Western Europe` instead.
+  </Accordion>
+  <Accordion title="Mention seniority and scope">
+    Use words like `junior`, `senior`, `staff`, `lead`, `head of`, or specific years of experience.
+  </Accordion>
+  <Accordion title="Include industry or product context">
+    Context like `B2B SaaS`, `marketplaces`, `consumer mobile`, or `regulated healthcare` sharpens the matches considerably.
+  </Accordion>
+  <Accordion title="Be honest about location">
+    Say `remote OK`, `must be in CET timezone`, or list specific cities. The AI uses location as a hard filter.
+  </Accordion>
+</AccordionGroup>
+
+## Tips
+
+- Use one prompt per role. Avoid trying to source two different jobs in one search.
+- If results feel off, refine the prompt and run a second search rather than scrolling endlessly.
+- Save high-signal candidates to your [Candidates Bank](/candidates/candidates-bank) so you can search and reuse them later.
+- For passive sourcing while browsing LinkedIn yourself, use the [Chrome Extension](/candidates/chrome) instead.
+
+## Related
+
+- [Candidates Bank](/candidates/candidates-bank) - Store and search sourced candidates over time
+- [Chrome Extension](/candidates/chrome) - Capture and evaluate candidates while browsing LinkedIn manually
+- [Candidates](/candidates/candidates) - Manage candidates already in your pipeline

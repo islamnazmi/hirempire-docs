@@ -1,6 +1,5 @@
 # File: ai-features/ai-pre-screen.mdx
 
-```markdown
 ---
 title: 'AI Pre-Screen'
 description: 'Asynchronous, proctored AI interviews that screen candidates without scheduling'
@@ -13,7 +12,7 @@ icon: 'sparkles'
 
 ## What is AI Pre-Screen?
 
-AI Pre-Screen is an asynchronous, proctored interview that runs entirely on its own — no scheduling, no recruiter time, no extra tools. You send a candidate a one-time link, the AI runs a live structured interview with proctoring active, and you get a scored transcript and recommendation as soon as they finish.
+AI Pre-Screen is an asynchronous, proctored interview that runs entirely on its own - no scheduling, no recruiter time, no extra tools. You send a candidate a one-time link, the AI runs a live structured interview with proctoring active, and you get a scored transcript and recommendation as soon as they finish.
 
 It's how you replace the first-round phone screen with something faster, more consistent, and less biased.
 
@@ -28,7 +27,7 @@ It's how you replace the first-round phone screen with something faster, more co
     From an applicant card, click **AI Pre-Screen**. A unique, one-time interview link is generated and emailed to the candidate.
   </Step>
   <Step title="Candidate interviews">
-    The candidate accepts the ground rules, then has a live conversation with the AI. Proctoring is active throughout — tab-switching, paste attempts, and other integrity violations are detected in real time.
+    The candidate accepts the ground rules, then has a live conversation with the AI. Proctoring is active throughout - tab-switching, paste attempts, and other integrity violations are detected in real time.
   </Step>
   <Step title="Review results">
     You're notified the moment the interview completes (or terminates early). Open the candidate panel to see the score, scorecard, AI recommendation, and full transcript.
@@ -42,11 +41,11 @@ Candidates are told upfront that this is a proctored evaluation. The session enf
 | Check | What it does |
 |-------|------------|
 | **Tab-switching detection** | Session terminates instantly if the candidate navigates away from the interview page. You're notified immediately. |
-| **Paste blocking** | Copy-paste is disabled at the input level — answers must be typed. |
+| **Paste blocking** | Copy-paste is disabled at the input level - answers must be typed. |
 | **Real-time typing** | The AI watches for natural typing patterns rather than pasted blocks of text. |
 | **Ground rules enforcement** | Candidates must explicitly accept the rules before the interview starts. |
 
-The AI also probes for specifics — vague or generic answers get followed up on, so candidates can't coast on rehearsed responses.
+The AI also probes for specifics - vague or generic answers get followed up on, so candidates can't coast on rehearsed responses.
 
 ## What you get back
 
@@ -70,10 +69,10 @@ When the interview ends, the candidate's panel includes a full evaluation:
     Flags around answer authenticity, consistency, and any integrity violations during the session.
   </Card>
   <Card title="Full Transcript" icon="file-lines">
-    Complete record of the conversation — questions asked and answers given — stored permanently on the candidate record.
+    Complete record of the conversation - questions asked and answers given - stored permanently on the candidate record.
   </Card>
   <Card title="Instant Notifications" icon="bell">
-    Get notified the moment the candidate completes — or if the session terminates early due to a violation.
+    Get notified the moment the candidate completes - or if the session terminates early due to a violation.
   </Card>
 </CardGroup>
 
@@ -91,12 +90,12 @@ AI Pre-Screen replaces the first-round phone screen. Use it when:
 1. Open the candidate from the **Talents** page or a job's applicants list
 2. Click **AI Pre-Screen** on the applicant card
 3. The candidate receives an email with a unique link
-4. Track status from the candidate panel — Sent, In Progress, Completed, or Terminated
+4. Track status from the candidate panel - Sent, In Progress, Completed, or Terminated
 
 ## Best practices
 
 <Tip>
-  **Use it as the first filter, not the only one.** AI Pre-Screen is designed to replace the initial phone screen — a hiring decision should still combine pre-screen results with CV analysis and a human interview.
+  **Use it as the first filter, not the only one.** AI Pre-Screen is designed to replace the initial phone screen - a hiring decision should still combine pre-screen results with CV analysis and a human interview.
 </Tip>
 
 <Tip>
@@ -109,14 +108,12 @@ AI Pre-Screen replaces the first-round phone screen. Use it when:
 
 ## Related features
 
-- [AI Screening](/ai-features/ai-screening) — automatic CV analysis and job-fit scoring on every application
-- [Interview Intelligence](/meetings/interview-intelligence) — AI analysis of full live recorded interviews
-- [Hirempire AI](/ai-features/hirempire-ai) — the AI capabilities running across the platform
-```
+- [AI Screening](/ai-features/ai-screening) - automatic CV analysis and job-fit scoring on every application
+- [Interview Intelligence](/meetings/interview-intelligence) - AI analysis of full live recorded interviews
+- [Hirempire AI](/ai-features/hirempire-ai) - the AI capabilities running across the platform
 
 # File: ai-features/ai-screening.mdx
 
-```markdown
 ---
 title: 'AI Screening'
 description: 'Automatically screen candidates with AI-powered insights and recommendations'
@@ -364,11 +361,9 @@ After setting up AI Screening:
 1. **[Review Candidates](/candidates/candidates)** - Use AI insights to prioritize your candidate pipeline
 2. **[Optimize Job Postings](/core-features/jobs)** - Improve job descriptions for better AI matching
 3. **[Analytics](/analytics/overview)** - Measure how AI-screened candidates convert through your pipeline
-```
 
 # File: ai-features/hirempire-ai.mdx
 
-```markdown
 ---
 title: 'Hirempire AI'
 description: 'Chat directly with your jobs and get instant answers to recruitment questions'
@@ -383,7 +378,7 @@ icon: 'sparkles'
 
 Hirempire AI is your intelligent recruitment assistant that understands your jobs, candidates, and hiring process. Chat directly with AI about your specific job postings and get instant, contextual answers to help you make better hiring decisions.
 
-Access Hirempire AI from the **dashboard** — click the AI chat icon in the sidebar or header.
+Access Hirempire AI from the **dashboard** - click the AI chat icon in the sidebar or header.
 
 ## How Hirempire AI Works
 
@@ -711,21 +706,19 @@ Access Hirempire AI from the **dashboard** — click the AI chat icon in the sid
 ### Getting Started with Hirempire AI
 
 1. **[Access Hirempire AI](https://app.hirempire.com/dashboard/ai)** - Start your first conversation
-2. **[Review Your Jobs](/jobs)** - Ensure job details are comprehensive for better AI context
-3. **[Check Candidates](/candidates)** - Have candidate data ready for AI analysis
+2. **[Review Your Jobs](/core-features/jobs)** - Ensure job details are comprehensive for better AI context
+3. **[Check Candidates](/candidates/candidates)** - Have candidate data ready for AI analysis
 4. **[Upgrade Your Plan](/subscription)** - Ensure access to AI features (paid plans only)
 
 ### Related Features
 
 After using Hirempire AI, explore:
-- **[AI Screening](/ai-screening)** - Automated candidate evaluation
-- **[Automated Follow-ups](/automated-follow-ups)** - Streamline candidate communication
-- **[Advanced Candidate Management](/candidates)** - Organize insights from AI conversations
-```
+- **[AI Screening](/ai-features/ai-screening)** - Automated candidate evaluation
+- **[Automated Follow-ups](/core-features/automated-follow-ups)** - Streamline candidate communication
+- **[Advanced Candidate Management](/candidates/candidates)** - Organize insights from AI conversations
 
 # File: ai-features/job-wizard.mdx
 
-```markdown
 ---
 title: 'AI Job Creation Wizard'
 description: 'Create complete job postings in minutes with a conversational AI guide'
@@ -734,7 +727,7 @@ icon: 'sparkles'
 
 ## What is the AI Job Wizard?
 
-The AI Job Wizard is a conversational interface that walks you through creating a job posting step by step. Instead of filling out a long form, you chat with the AI — it asks the right questions, generates the job description, and sets up everything automatically.
+The AI Job Wizard is a conversational interface that walks you through creating a job posting step by step. Instead of filling out a long form, you chat with the AI - it asks the right questions, generates the job description, and sets up everything automatically.
 
 It's the fastest way to go from "we need to hire" to a live job posting.
 
@@ -780,11 +773,9 @@ After generation, you can edit any part of the description directly in the wizar
 ## Skipping the wizard
 
 Prefer to fill out the form manually? You can close the wizard at any time and use the standard job creation form instead.
-```
 
 # File: analytics/overview.mdx
 
-```markdown
 ---
 title: 'Analytics'
 description: 'Track hiring performance, source effectiveness, and pipeline health'
@@ -817,11 +808,11 @@ The Analytics dashboard gives you a data-driven view of your entire recruiting o
 
 ## Source performance
 
-The source breakdown shows which platforms are delivering the most candidates and — more importantly — the best candidates. For each source you'll see:
+The source breakdown shows which platforms are delivering the most candidates and - more importantly - the best candidates. For each source you'll see:
 
 - **Total applications** received
-- **Hired count** — how many reached Hired status
-- **Conversion rate** — hired ÷ applications
+- **Hired count** - how many reached Hired status
+- **Conversion rate** - hired ÷ applications
 
 Use this to double down on high-performing sources and cut spend on channels that don't convert.
 
@@ -837,7 +828,7 @@ The pipeline chart shows how candidates move (or drop) through your hiring stage
 Applied → Reviewing → Interview → Offer → Hired
 ```
 
-A large drop between any two stages is a signal to investigate — maybe your screening criteria are too strict, or there's a delay in scheduling.
+A large drop between any two stages is a signal to investigate - maybe your screening criteria are too strict, or there's a delay in scheduling.
 
 ## Time-to-hire trend
 
@@ -846,11 +837,9 @@ Track whether your hiring speed is improving over time. Spikes often correlate w
 ## Data freshness
 
 Analytics data updates in real time as candidates move through your pipeline. There is no need to refresh manually.
-```
 
 # File: analytics/referrals.mdx
 
-```markdown
 ---
 title: 'Referrals'
 description: 'Drive candidate referrals through your public referral program'
@@ -885,111 +874,11 @@ Share your referral link anywhere:
 - On your company careers page
 
 <Tip>
-  Ask your existing employees to share the link in their networks — employee referrals consistently produce higher-quality hires than most job boards.
+  Ask your existing employees to share the link in their networks - employee referrals consistently produce higher-quality hires than most job boards.
 </Tip>
-```
-
-# File: candidates/candidates-bank.mdx
-
-```markdown
----
-title: 'Candidates Bank'
-description: 'Upload candidate CVs and leverage AI to automatically extract key information and generate intelligent summaries. Transform your hiring workflow with automated candidate data processing.'
----
-
-
-<Warning>
-This feature is available on paid plans only. [Upgrade your plan](https://hirempire.com/pricing) to access the Candidates Bank.
-</Warning>
-
-## Overview
-
-The Candidates Bank allows you to build a comprehensive database of potential candidates by uploading their CVs directly to Hirempire. Our AI technology automatically extracts relevant information and creates structured candidate profiles with intelligent summaries.
-
-## How It Works
-
-### Upload CVs
-- **Drag and drop** CV files or click to browse and select
-- **Supported formats**: `PDF` Only 
-- **Bulk upload**: Process multiple CVs simultaneously
-- **File validation**: Automatic format and content verification
-
-### AI Data Extraction
-Hirempire AI automatically extracts:
-- **Contact Information**: Name, email, phone, location
-- **Professional Experience**: Job titles, companies, dates, responsibilities
-- **Education**: Degrees, institutions, graduation dates
-- **Skills & Technologies**: Technical and soft skills mentioned
-- **Languages**: Spoken languages and proficiency levels
-- **Certifications**: Professional credentials and qualifications
-
-### Intelligent Summaries
-AI generates comprehensive summaries including:
-- **Professional Overview**: Career progression and key achievements
-- **Core Competencies**: Primary skills and areas of expertise
-- **Experience Level**: Years of experience and seniority
-- **Industry Background**: Relevant sectors and domains
-- **Key Highlights**: Notable accomplishments and strengths
-
-## Using Candidates Bank
-
-### Accessing the Feature
-1. Navigate to [**Candidates**](https://app.hirempire.com/dashboard/talents) in your dashboard
-2. Select **Candidate Bank** from the bottom navigation
-3. Click **Upload CVs** to begin
-
-### Uploading Process
-1. **Select Files**: Choose CV files from your computer
-2. **Review Queue**: See files queued for processing
-3. **AI Processing**: Wait for automatic extraction (usually 30-60 seconds per CV)
-4. **Review Results**: Check extracted data and AI summaries
-
-### Managing Candidates
-- **Search & Filter**: Find candidates by skills, experience, location
-- **Edit Profiles**: Modify or add information as needed
-- **Add Notes**: Include internal comments and recruitment notes
-- **Tag Candidates**: Organize with custom tags and categories
-- **Export Data**: Download candidate information for external use
-
-## Best Practices
-
-### CV Quality
-<Tip>
-Upload high-quality, text-based CVs for optimal AI extraction accuracy. Scanned images or poorly formatted documents may result in incomplete data extraction.
-</Tip>
-
-### File Organization
-- Use descriptive filenames when possible
-- Group related candidates (e.g., by role or department)
-- Regular cleanup of outdated or duplicate profiles
-
-### Data Verification
-- Review AI-extracted information for accuracy
-- Add missing details that weren't captured
-- Verify contact information before outreach
-
-## Troubleshooting
-
-### Upload Issues
-- **File not uploading**: Check file format and size (max 10MB per file)
-- **Processing stuck**: Wait up to 2 minutes, then try refreshing the page
-- **Incomplete extraction**: Ensure CV text is selectable (not a scanned image)
-
-### Data Quality
-- **Missing information**: AI extraction works best with well-structured CVs
-- **Incorrect parsing**: Edit profiles manually to correct any errors
-- **Duplicate candidates**: Use search function to check before uploading
-
-## Next Steps
-
-After building your candidate database:
-1. **[Search and Filter](/candidates/candidates)** - Find the right candidates for your roles
-2. **[Chrome Extension](/candidates/chrome)** - Add LinkedIn prospects to your bank
-3. **[AI Screening](/ai-features/ai-screening)** - Automatically evaluate candidates against job requirements```
 
 # File: candidates/candidates.mdx
 
-```markdown
 ---
 title: 'Candidates'
 description: 'Manage and track all your job applicants in one centralized dashboard'
@@ -1241,11 +1130,107 @@ After organizing your candidates:
 
 1. **[Set up AI Screening](/ai-features/ai-screening)** - Get automated candidate insights (paid plans)
 2. **[Configure Auto Follow-ups](/core-features/automated-follow-ups)** - Automate candidate communication
-3. **[Analyze Job Performance](/core-features/jobs)** - Review which jobs and sources perform best```
+3. **[Analyze Job Performance](/core-features/jobs)** - Review which jobs and sources perform best
+
+# File: candidates/candidates-bank.mdx
+
+---
+title: 'Candidates Bank'
+description: 'Upload candidate CVs and leverage AI to automatically extract key information and generate intelligent summaries. Transform your hiring workflow with automated candidate data processing.'
+---
+
+
+<Warning>
+This feature is available on paid plans only. [Upgrade your plan](https://hirempire.com/pricing) to access the Candidates Bank.
+</Warning>
+
+## Overview
+
+The Candidates Bank allows you to build a comprehensive database of potential candidates by uploading their CVs directly to Hirempire. Our AI technology automatically extracts relevant information and creates structured candidate profiles with intelligent summaries.
+
+## How It Works
+
+### Upload CVs
+- **Drag and drop** CV files or click to browse and select
+- **Supported formats**: `PDF` Only 
+- **Bulk upload**: Process multiple CVs simultaneously
+- **File validation**: Automatic format and content verification
+
+### AI Data Extraction
+Hirempire AI automatically extracts:
+- **Contact Information**: Name, email, phone, location
+- **Professional Experience**: Job titles, companies, dates, responsibilities
+- **Education**: Degrees, institutions, graduation dates
+- **Skills & Technologies**: Technical and soft skills mentioned
+- **Languages**: Spoken languages and proficiency levels
+- **Certifications**: Professional credentials and qualifications
+
+### Intelligent Summaries
+AI generates comprehensive summaries including:
+- **Professional Overview**: Career progression and key achievements
+- **Core Competencies**: Primary skills and areas of expertise
+- **Experience Level**: Years of experience and seniority
+- **Industry Background**: Relevant sectors and domains
+- **Key Highlights**: Notable accomplishments and strengths
+
+## Using Candidates Bank
+
+### Accessing the Feature
+1. Navigate to [**Candidates**](https://app.hirempire.com/dashboard/talents) in your dashboard
+2. Select **Candidate Bank** from the bottom navigation
+3. Click **Upload CVs** to begin
+
+### Uploading Process
+1. **Select Files**: Choose CV files from your computer
+2. **Review Queue**: See files queued for processing
+3. **AI Processing**: Wait for automatic extraction (usually 30-60 seconds per CV)
+4. **Review Results**: Check extracted data and AI summaries
+
+### Managing Candidates
+- **Search & Filter**: Find candidates by skills, experience, location
+- **Edit Profiles**: Modify or add information as needed
+- **Add Notes**: Include internal comments and recruitment notes
+- **Tag Candidates**: Organize with custom tags and categories
+- **Export Data**: Download candidate information for external use
+
+## Best Practices
+
+### CV Quality
+<Tip>
+Upload high-quality, text-based CVs for optimal AI extraction accuracy. Scanned images or poorly formatted documents may result in incomplete data extraction.
+</Tip>
+
+### File Organization
+- Use descriptive filenames when possible
+- Group related candidates (e.g., by role or department)
+- Regular cleanup of outdated or duplicate profiles
+
+### Data Verification
+- Review AI-extracted information for accuracy
+- Add missing details that weren't captured
+- Verify contact information before outreach
+
+## Troubleshooting
+
+### Upload Issues
+- **File not uploading**: Check file format and size (max 10MB per file)
+- **Processing stuck**: Wait up to 2 minutes, then try refreshing the page
+- **Incomplete extraction**: Ensure CV text is selectable (not a scanned image)
+
+### Data Quality
+- **Missing information**: AI extraction works best with well-structured CVs
+- **Incorrect parsing**: Edit profiles manually to correct any errors
+- **Duplicate candidates**: Use search function to check before uploading
+
+## Next Steps
+
+After building your candidate database:
+1. **[Search and Filter](/candidates/candidates)** - Find the right candidates for your roles
+2. **[Chrome Extension](/candidates/chrome)** - Add LinkedIn prospects to your bank
+3. **[AI Screening](/ai-features/ai-screening)** - Automatically evaluate candidates against job requirements
 
 # File: candidates/chrome.mdx
 
-```markdown
 ---
 title: 'Chrome Extension'
 description: 'AI-Powered Candidate Evaluation from LinkedIn'
@@ -1612,7 +1597,7 @@ AI evaluation credits reset monthly. Unused credits don't roll over. Additional 
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(51, 73, 192, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(10, 102, 194, 0.1) 0%, transparent 70%);
   }
   
   .cta-section h3 {
@@ -1647,22 +1632,167 @@ AI evaluation credits reset monthly. Unused credits don't roll over. Additional 
     font-weight: 800;
     font-size: 18px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(51, 73, 192, 0.4);
+    box-shadow: 0 8px 32px rgba(10, 102, 194, 0.4);
     border: 2px solid rgba(255, 255, 255, 0.1);
   }
   
   .cta-button:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(51, 73, 192, 0.5);
+    box-shadow: 0 12px 40px rgba(10, 102, 194, 0.5);
     text-decoration: none;
     color: white;
   }
 `}
-</style>```
+</style>
+
+# File: candidates/sourcing.mdx
+
+---
+title: 'LinkedIn Sourcing'
+description: 'Source candidates from LinkedIn and the open web into Hirempire'
+icon: 'user-plus'
+---
+
+Sourcing lets you describe the candidate you want in plain English and get back a ranked list of real people with verified contact info, pulled from LinkedIn and other public professional sources. No boolean strings, no scraping, no spreadsheets.
+
+<Check>
+  Each search consumes Sourcing credits from your workspace plan.
+</Check>
+
+## How sourcing works
+
+<CardGroup cols={3}>
+  <Card title="1. Describe" icon="message">
+    Type the role, skills, location, and seniority you need.
+  </Card>
+  <Card title="2. Search" icon="magnifying-glass">
+    Hirempire AI scans professional networks and returns matching profiles.
+  </Card>
+  <Card title="3. Review" icon="users">
+    Browse candidates with photos, headlines, contact info, and AI summaries.
+  </Card>
+</CardGroup>
+
+## Running a search
+
+<Steps>
+  <Step title="Open the Sourcing page">
+    Go to [**Sourcing**](https://app.hirempire.com/dashboard/sourcing) from your dashboard sidebar.
+  </Step>
+  <Step title="Describe who you're looking for">
+    Use the prompt box and write a natural description. Be specific about the things that matter to you.
+
+    Example prompts:
+    - `Senior React developer with fintech experience in London`
+    - `Product designer who has shipped B2B SaaS, based in Berlin or remote EU`
+    - `Sales engineer with API and developer-tools background in the US`
+  </Step>
+  <Step title="Press Enter or click Search">
+    The search typically takes 30 to 90 seconds while Hirempire scans profiles, pulls contact data, and generates AI summaries.
+  </Step>
+  <Step title="Review results">
+    Candidates appear as cards with name, headline, location, LinkedIn and GitHub links, email, phone, and a short AI fit summary.
+  </Step>
+</Steps>
+
+<Tip>
+  Press `Enter` to search. Use `Shift + Enter` to add a new line inside your prompt.
+</Tip>
+
+## Understanding the results
+
+Each candidate card includes:
+
+| Field | What it shows |
+| --- | --- |
+| **Photo** | Profile picture from LinkedIn or GitHub |
+| **Name and headline** | Current role and short pitch |
+| **Location** | City or region |
+| **LinkedIn** | Direct link to the LinkedIn profile |
+| **GitHub** | Direct link when the candidate has a public GitHub |
+| **Email** | Verified work or personal email when available |
+| **Phone** | Phone number when available |
+| **AI summary** | One-line fit signal generated for your prompt |
+
+<Info>
+  Contact details (email, phone) are best-effort. Some profiles return a LinkedIn link only, especially for senior or privacy-conscious candidates.
+</Info>
+
+## Selecting and acting on candidates
+
+- Click the checkbox on any card to select it. A counter appears at the top right showing how many candidates you have selected.
+- Click the email, LinkedIn, GitHub, or phone icons on a card to open or copy that contact channel directly.
+- Click **Clear** to deselect everything and start again.
+
+## Search history
+
+The left sidebar lists your workspace's previous searches with the original prompt and how long ago it ran.
+
+- Click any past search to reopen its results without spending credits again.
+- Click **New Search** at the top of the sidebar to start a fresh prompt.
+- Collapse the sidebar with the arrow icon to give yourself more room on wider result grids.
+
+<Tip>
+  Past searches are shared at the workspace level, so teammates can see and reuse each other's sourcing work.
+</Tip>
+
+## Connecting LinkedIn (optional)
+
+Sourcing itself runs against Hirempire's own data and does not require a LinkedIn login. You can still connect a LinkedIn account in **Settings > LinkedIn** if you want to:
+
+- Post jobs to LinkedIn from inside Hirempire
+- Send connection requests or InMail from connected accounts in future workflows
+
+<Warning>
+  Connecting LinkedIn is only available on paid plans, not on Free or during a free trial. Each user connects their own LinkedIn account.
+</Warning>
+
+To connect:
+
+<Steps>
+  <Step title="Open settings">
+    Go to [**Settings > LinkedIn**](https://app.hirempire.com/dashboard/settings/linkedin).
+  </Step>
+  <Step title="Click Connect LinkedIn">
+    Accept the consent panel to authorize Hirempire to act on your behalf.
+  </Step>
+  <Step title="Pick a posting company">
+    Once connected, select the LinkedIn Company Page you want to post jobs as.
+  </Step>
+</Steps>
+
+## Writing better prompts
+
+<AccordionGroup>
+  <Accordion title="Be specific about must-haves">
+    Vague prompts like `developer in Europe` produce vague results. Try `Senior Go developer with payments or fintech experience, based in Western Europe` instead.
+  </Accordion>
+  <Accordion title="Mention seniority and scope">
+    Use words like `junior`, `senior`, `staff`, `lead`, `head of`, or specific years of experience.
+  </Accordion>
+  <Accordion title="Include industry or product context">
+    Context like `B2B SaaS`, `marketplaces`, `consumer mobile`, or `regulated healthcare` sharpens the matches considerably.
+  </Accordion>
+  <Accordion title="Be honest about location">
+    Say `remote OK`, `must be in CET timezone`, or list specific cities. The AI uses location as a hard filter.
+  </Accordion>
+</AccordionGroup>
+
+## Tips
+
+- Use one prompt per role. Avoid trying to source two different jobs in one search.
+- If results feel off, refine the prompt and run a second search rather than scrolling endlessly.
+- Save high-signal candidates to your [Candidates Bank](/candidates/candidates-bank) so you can search and reuse them later.
+- For passive sourcing while browsing LinkedIn yourself, use the [Chrome Extension](/candidates/chrome) instead.
+
+## Related
+
+- [Candidates Bank](/candidates/candidates-bank) - Store and search sourced candidates over time
+- [Chrome Extension](/candidates/chrome) - Capture and evaluate candidates while browsing LinkedIn manually
+- [Candidates](/candidates/candidates) - Manage candidates already in your pipeline
 
 # File: collaboration/chat.mdx
 
-```markdown
 ---
 title: 'Chat'
 description: 'Real-time team messaging with channels, direct messages, and @mentions'
@@ -1674,21 +1804,21 @@ description: 'Real-time team messaging with channels, direct messages, and @ment
 
 ## Overview
 
-Hirempire Chat brings your recruiting team together in real time. No need to switch to a separate messaging tool — conversations about candidates, roles, and interviews happen right where you're managing your hiring.
+Hirempire Chat brings your recruiting team together in real time. No need to switch to a separate messaging tool - conversations about candidates, roles, and interviews happen right where you're managing your hiring.
 
 ## Channels
 
 Channels are shared spaces for team-wide conversations. Every workspace starts with two default channels:
 
-- **#general** — for day-to-day team communication
-- **#announcements** — for important updates
+- **#general** - for day-to-day team communication
+- **#announcements** - for important updates
 
 ### Creating a channel
 
 Click the **+** icon next to "Channels" in the chat sidebar. You can create public or private channels:
 
-- **Public** — visible and joinable by all workspace members
-- **Private** — invite-only, only visible to added members
+- **Public** - visible and joinable by all workspace members
+- **Private** - invite-only, only visible to added members
 
 ### Managing channel members
 
@@ -1738,17 +1868,15 @@ Channels with unread messages show a badge with the count. Counts reset when you
 ## Best Practices
 
 <Tip>
-  Use **#announcements** for role-fills, policy changes, and team updates — keep #general for casual conversation.
+  Use **#announcements** for role-fills, policy changes, and team updates - keep #general for casual conversation.
 </Tip>
 
 <Tip>
   **@mention candidates and jobs** in messages to create clickable links. This makes it easy to reference specific applications during team discussions.
 </Tip>
-```
 
 # File: collaboration/inbox.mdx
 
-```markdown
 ---
 title: 'Inbox'
 description: 'Your notification center for mentions, reactions, and workspace activity'
@@ -1760,7 +1888,7 @@ description: 'Your notification center for mentions, reactions, and workspace ac
 
 ## Overview
 
-The Inbox collects all notifications that are relevant to you — mentions in chat, reactions to your messages, channel invites, and other workspace activity. It's your single place to stay on top of what needs your attention without leaving Hirempire.
+The Inbox collects all notifications that are relevant to you - mentions in chat, reactions to your messages, channel invites, and other workspace activity. It's your single place to stay on top of what needs your attention without leaving Hirempire.
 
 ## Notification types
 
@@ -1782,11 +1910,9 @@ The sidebar shows a count of unread notifications on the Inbox icon. The count c
 <Tip>
   Check your inbox at the start of each day to catch any mentions or action items from teammates in different time zones.
 </Tip>
-```
 
 # File: collaboration/tasks.mdx
 
-```markdown
 ---
 title: 'Tasks'
 description: 'Shared task board for tracking recruiting to-dos and action items'
@@ -1798,7 +1924,7 @@ description: 'Shared task board for tracking recruiting to-dos and action items'
 
 ## Overview
 
-The Tasks page gives your team a shared board to manage recruiting action items — from scheduling calls, to reviewing CVs, to following up with candidates. Everyone on the team can see what's been assigned and what's pending.
+The Tasks page gives your team a shared board to manage recruiting action items - from scheduling calls, to reviewing CVs, to following up with candidates. Everyone on the team can see what's been assigned and what's pending.
 
 ## Task Statuses
 
@@ -1815,17 +1941,17 @@ Tasks move through four stages:
 
 Click **New Task** and fill in:
 
-- **Title** — what needs to be done
-- **Description** — optional context or instructions
-- **Assigned to** — pick a team member responsible for the task
-- **Status** — set the initial state
+- **Title** - what needs to be done
+- **Description** - optional context or instructions
+- **Assigned to** - pick a team member responsible for the task
+- **Status** - set the initial state
 
 ## Assigning Tasks
 
 Tasks can be assigned to any workspace member. The assigned person's avatar appears on the task card and they'll be notified.
 
 <Tip>
-  Use tasks to delegate action items that come out of chat conversations — keep decisions in chat, execution in Tasks.
+  Use tasks to delegate action items that come out of chat conversations - keep decisions in chat, execution in Tasks.
 </Tip>
 
 ## Filtering and searching
@@ -1845,11 +1971,112 @@ Use the search and filter controls at the top of the Tasks page to:
 <Tip>
   **Use "In Review" as a handoff stage.** When you complete your part of a task but need someone else to sign off, move it to In Review rather than Done.
 </Tip>
-```
+
+# File: collaboration/tickets.mdx
+
+---
+title: 'Tickets'
+description: 'Submit support requests to the Hirempire team and track responses'
+icon: 'ticket'
+---
+
+The **Support** page is where you get help directly from the Hirempire team. Use it to report bugs, request features, ask about billing, or resolve account issues. Every ticket you submit is saved to your history so you can track its status as our team works on it.
+
+<Note>
+  This is for contacting Hirempire support - not for internal team tickets. For team to-dos, use [Tasks](/collaboration/tasks).
+</Note>
+
+## Creating a ticket
+
+<Steps>
+  <Step title="Open the Support page">
+    Navigate to **Support** from the dashboard sidebar.
+  </Step>
+  <Step title="Pick a category">
+    Choose the one that best matches your issue. This helps the team route your ticket to the right person.
+  </Step>
+  <Step title="Add a subject">
+    A short summary of the issue (up to 120 characters). Something like "Can't export candidates to CSV" is more useful than "Bug".
+  </Step>
+  <Step title="Describe the issue">
+    Add detail in the description box. For bugs, include the steps to reproduce, what you expected, and what actually happened.
+  </Step>
+  <Step title="Attach screenshots (optional)">
+    Upload up to 5 images (PNG, JPG, GIF, or WebP). Screenshots dramatically speed up resolution for visual bugs.
+  </Step>
+  <Step title="Submit">
+    Click **Submit ticket**. You'll see a confirmation, and the ticket is added to **Your tickets** on the right side of the page.
+  </Step>
+</Steps>
+
+## Ticket fields
+
+| Field | Description |
+|-------|-------------|
+| **Category** | One of: Bug, Feature request, Billing & subscription, Account & access, Other |
+| **Subject** | Short title, max 120 characters |
+| **Description** | Free-text details about the issue |
+| **Screenshots** | Up to 5 image attachments |
+
+## Categories
+
+- **Bug / Something broken** - something in Hirempire isn't working as expected
+- **Feature request** - an idea or improvement you'd like to see
+- **Billing & subscription** - questions about your plan, invoices, or charges
+- **Account & access** - login problems, permissions, workspace access
+- **Other** - anything that doesn't fit the categories above
+
+## Ticket statuses
+
+After you submit, the Hirempire team updates your ticket as they work on it:
+
+| Status | Meaning |
+|--------|---------|
+| **Open** | Received, waiting to be picked up |
+| **In progress** | A team member is actively working on it |
+| **Resolved** | The issue has been addressed |
+| **Closed** | The ticket is finalized and no further action is needed |
+
+## Your tickets
+
+The right side of the Support page shows your 50 most recent tickets, newest first. Each row shows:
+
+- A colored dot indicating the category
+- The subject line
+- Current status badge
+- Relative time since submission
+
+Click any ticket to expand it and see the full description, attached screenshots, and the exact submission timestamp.
+
+<Tip>
+  If the team sends you a direct link to a specific ticket (for example, `/dashboard/tickets?ticket=...`), the page automatically expands and scrolls to that ticket for you.
+</Tip>
+
+## Tips
+
+<Tip>
+  **One issue per ticket.** If you're hitting two unrelated problems, submit two tickets. It keeps each conversation focused and faster to resolve.
+</Tip>
+
+<Tip>
+  **Screenshots beat words for UI bugs.** A 5-second screen capture of an error state saves a lot of back-and-forth.
+</Tip>
+
+<Tip>
+  **Check the status before re-submitting.** If a ticket is already **In progress**, the team has it covered - duplicating it can slow things down.
+</Tip>
+
+<Note>
+  Typical response time is 1 - 2 business days. Critical billing or access issues are usually picked up faster.
+</Note>
+
+## Related
+
+- [Tasks](/collaboration/tasks) - for general action items inside your team
+- [Inbox](/collaboration/inbox) - for notifications
 
 # File: core-features/application-questions.mdx
 
-```markdown
 ---
 title: 'Application Questions'
 description: 'Customize what information you collect from job applicants'
@@ -2104,14 +2331,13 @@ When creating a job:
 
 After setting up your application questions:
 
-1. **[Test Your Application](/jobs)** - Apply to your own job to test the candidate experience
-2. **[Review Applications](/candidates)** - See how question responses appear in candidate profiles
-3. **[Analyze Performance](/jobs)** - Monitor application completion and response quality
-4. **[Use AI Insights](/ai-screening)** - Leverage question data for better candidate screening (paid plans)```
+1. **[Test Your Application](/core-features/jobs)** - Apply to your own job to test the candidate experience
+2. **[Review Applications](/candidates/candidates)** - See how question responses appear in candidate profiles
+3. **[Analyze Performance](/core-features/jobs)** - Monitor application completion and response quality
+4. **[Use AI Insights](/ai-features/ai-screening)** - Leverage question data for better candidate screening (paid plans)
 
 # File: core-features/automated-follow-ups.mdx
 
-```markdown
 ---
 title: 'Automated Follow-ups'
 description: 'Set up professional automated email sequences for seamless candidate communication'
@@ -2306,7 +2532,7 @@ Best regards,
 ### Candidate Management Integration
 
 **Seamless Workflow**:
-- Update candidate status in [Candidates dashboard](/candidates)
+- Update candidate status in [Candidates dashboard](/candidates/candidates)
 - Automated email triggers immediately
 - AI generates personalized rejection feedback when applicable
 - Candidate receives professional communication
@@ -2466,15 +2692,14 @@ Best regards,
 
 After setting up Automated Follow-ups:
 
-1. **[Configure AI Notes](/talents-hub)** - Customize rejection feedback in Talents Hub
-2. **[Manage Candidates](/candidates)** - Update candidate statuses to trigger automated emails
-3. **[Enable AI Screening](/ai-screening)** - Combine automation with AI insights (paid plans)
-4. **[Optimize Job Postings](/jobs)** - Create better job descriptions to attract quality candidates
-5. **[Monitor Performance](/analytics)** - Track email effectiveness and candidate satisfaction metrics```
+1. **[Configure AI Notes](/candidates/candidates)** - Customize rejection feedback in the Candidates section
+2. **[Manage Candidates](/candidates/candidates)** - Update candidate statuses to trigger automated emails
+3. **[Enable AI Screening](/ai-features/ai-screening)** - Combine automation with AI insights (paid plans)
+4. **[Optimize Job Postings](/core-features/jobs)** - Create better job descriptions to attract quality candidates
+5. **[Monitor Performance](/analytics/overview)** - Track email effectiveness and candidate satisfaction metrics
 
 # File: core-features/cal-com.mdx
 
-```markdown
 ---
 title: 'Calendar Integration'
 description: 'Connect your Cal.com calendar to Hirempire and let applicants book interviews automatically'
@@ -2507,7 +2732,7 @@ By connecting your **Cal.com** account, you enable:
 
 Follow these simple steps to connect Cal.com with Hirempire.
 
-### Step 1 — Connect Your Cal.com Account
+### Step 1 - Connect Your Cal.com Account
 
 1. Go to: [My Calendar](https://app.hirempire.com/dashboard/settings/calendar)
 2. Click **Connect Cal.com**
@@ -2518,7 +2743,7 @@ After successful authentication, you will be redirected back to Hirempire.
 
 ---
 
-### Step 2 — Choose the Event Type
+### Step 2 - Choose the Event Type
 
 Once you return to Hirempire:
 
@@ -2528,7 +2753,7 @@ Once you return to Hirempire:
 
 ---
 
-### Step 3 — Choose Your Hirempire Scheduling Username
+### Step 3 - Choose Your Hirempire Scheduling Username
 
 You will be prompted to choose a **Hirempire scheduling username**.
 
@@ -2625,11 +2850,9 @@ Once connected:
 - Applicants schedule interviews themselves
 - No manual coordination required
 - A smooth and professional hiring workflow
-```
 
 # File: core-features/companies.mdx
 
-```markdown
 ---
 title: 'Companies'
 description: 'Create and manage company profiles for your job postings'
@@ -2647,7 +2870,7 @@ Click **New Company** in the top right, then fill in the company details:
 
 | Field | Required | Description |
 |-------|----------|-------------|
-| **Logo** | Yes | PNG, JPG, WebP, or SVG — 1:1 ratio, max 2MB. Shown on job listings and the application form |
+| **Logo** | Yes | PNG, JPG, WebP, or SVG - 1:1 ratio, max 2MB. Shown on job listings and the application form |
 | **Company name** | Yes | Displayed on all job postings and candidate-facing pages |
 | **Industry** | No | Categorizes your company (43+ industry options) |
 | **Company size** | No | Employee headcount range |
@@ -2662,17 +2885,17 @@ After saving, the company card appears in your dashboard.
 
 Each company card shows the job board URL (`jobs.hirempire.com/{slug}`) with a copy button, and quick links to:
 
-- **Customize Job Board** — edit the appearance of your public job listing page (colors, fonts, messaging) via Settings → Job Board
-- **Culture** — set up your employer brand page (hero image, description, testimonials, photo gallery) via Settings → Culture
-- **Edit** — update the company's details
+- **Customize Job Board** - edit the appearance of your public job listing page (colors, fonts, messaging) via Settings → Job Board
+- **Culture** - set up your employer brand page (hero image, description, testimonials, photo gallery) via Settings → Culture
+- **Edit** - update the company's details
 
 ## Editing a company
 
-Click **Edit** on the company card to update any field — name, logo, industry, size, website, LinkedIn, location, or about text.
+Click **Edit** on the company card to update any field - name, logo, industry, size, website, LinkedIn, location, or about text.
 
 ## Culture page
 
-The culture page is your public employer brand page — candidates see it when they explore your company before applying. Access it from the **Culture** link on the company card.
+The culture page is your public employer brand page - candidates see it when they explore your company before applying. Access it from the **Culture** link on the company card.
 
 <AccordionGroup>
   <Accordion icon="image" title="Hero & Branding">
@@ -2719,13 +2942,153 @@ Your current usage is shown in **Settings → Workspace**.
 
 ## Next steps
 
-- [Post a job](/core-features/jobs) — link it to one of your company profiles
-- [Customize your job board](/settings/workspace) — tailor the look of your public listing page
-```
+- [Post a job](/core-features/jobs) - link it to one of your company profiles
+- [Customize your job board](/settings/workspace) - tailor the look of your public listing page
+
+# File: core-features/contracts.mdx
+
+---
+title: 'Contracts & E-signature'
+description: 'Send offer letters and contracts, get them signed online'
+icon: 'file-signature'
+---
+
+Send offer letters, employment contracts, NDAs and other agreements directly from a candidate profile. Both you and the candidate sign online - no printing, scanning, or third-party tool required. Track every contract from sent to fully signed in one place.
+
+## How it works
+
+1. **Create a template** (optional) with reusable text and `{{variable}}` placeholders, or upload a finished PDF
+2. **Send for signature** from any candidate's profile - we email them a signing link
+3. **Candidate signs** by typing their name and picking a signature style
+4. **You countersign** as the employer to finalize the document
+5. **Both parties get** the signed PDF by email and can download it any time
+
+## Creating a template
+
+Templates live at [Contracts → Templates](https://app.hirempire.com/dashboard/contracts?tab=templates). Only workspace **owners** and **admins** can create or edit templates.
+
+<Steps>
+  <Step title="Open the templates tab">
+    Go to **Contracts**, then click the **Templates** tab in the sidebar.
+  </Step>
+  <Step title="Start a new template">
+    Click the **+** button to start from scratch, or click the **AI** icon to generate one with AI.
+  </Step>
+  <Step title="Name it and pick a doc type">
+    Give the template a name and choose a document type:
+    - Offer Letter
+    - Employment Contract
+    - NDA
+    - Freelance Contract
+    - Consulting Agreement
+    - Independent Contractor Agreement
+    - Part-Time Contract
+    - Internship Agreement
+    - Probation Extension
+    - Promotion Letter
+  </Step>
+  <Step title="Write the content">
+    Use the markdown editor with **Bold**, *Italic*, headings, lists, and horizontal rules. Switch to the **Preview** tab to see the rendered output.
+  </Step>
+  <Step title="Insert variables">
+    Click any variable in the right sidebar to insert a `{{placeholder}}` at your cursor. When you send the contract, you'll fill these in for each candidate.
+
+    Available variables include: Candidate Name, Company Name, Manager Name, Department, Position, Employment Type, Contract Date, Start Date, Salary, Currency, Working Hours, Location, Probation Period, and Notice Period.
+  </Step>
+  <Step title="Save">
+    Click **Save**. The template is now available when sending contracts.
+  </Step>
+</Steps>
+
+### Generate with AI
+
+Click the **AI** icon in the templates sidebar to draft a template automatically. Pick a **Template Type**, optionally **Link a Job** (auto-fills role details), and add **Additional Instructions** like *"Include equity clause, 6-month probation, governed by UAE law"*. The generated draft opens in the editor for you to review and save.
+
+## Sending a contract
+
+Contracts are sent from a candidate's profile, not from the Contracts page itself.
+
+<Steps>
+  <Step title="Open a candidate">
+    Go to **Candidates**, open the candidate, and click **Send for Signature**.
+  </Step>
+  <Step title="Choose Upload PDF or Generate from Template">
+    - **Upload PDF** - drop in any PDF you already have
+    - **Generate from Template** - pick one of your templates and fill in the variables. Hirempire pre-fills what it knows (candidate name, position, company, location, employment type)
+  </Step>
+  <Step title="Confirm signer and message">
+    Check the **Document Name**, **Signer Name**, and **Signer Email** (pre-filled from the candidate). Add an optional **Message** that appears at the top of the signing page.
+  </Step>
+  <Step title="Send">
+    Click **Send for Signature**. The candidate receives an email with a unique signing link that expires in **7 days**.
+  </Step>
+</Steps>
+
+<Note>
+  Each signing link is single-use and tied to a random secure token. Links cannot be guessed or reused.
+</Note>
+
+## Signing experience
+
+When the candidate opens the link, they see your document side-by-side with a signing panel.
+
+- **Type your name** - the candidate types the name they want on the signature line
+- **Pick a style** - five handwriting fonts: Classic, Elegant, Friendly, Natural, Refined
+- **Consent checkbox** - they confirm the electronic signature is legally binding
+- **Sign Document** - their signature is rendered onto the PDF and saved
+- **Decline** - they can decline with an optional reason instead of signing
+
+After the candidate signs, you (the employer) get a **Countersign** link to add your own signature. Once both signatures are on the document, both parties receive the final signed PDF by email.
+
+<Tip>
+  Multi-page documents automatically get a **DS** initials stamp on every page except the last, where the actual signature block lives - the same convention major e-signature tools use.
+</Tip>
+
+## Status tracking
+
+The Contracts tab shows every signature request you've sent, with live status updates.
+
+| Status | What it means |
+|---|---|
+| **Pending** | Sent, candidate hasn't opened the link yet |
+| **Viewed** | Candidate opened the link but hasn't signed |
+| **Awaiting Countersign** | Candidate signed - your turn to countersign |
+| **Signed** | Both parties signed. Final PDF is available |
+| **Declined** | Candidate declined to sign |
+| **Expired** | The 7-day signing window passed without a signature |
+
+Click any contract to see signer details, sent date, expiry, signing link, countersign link (when applicable), and a download link for the signed PDF.
+
+<Warning>
+  Expired links cannot be reopened. If a candidate needs more time, send a new signature request.
+</Warning>
+
+## Tips
+
+<Tip>
+  **Pre-fill more variables.** When you link a job in AI generation - or send from a candidate already attached to a job - Hirempire auto-fills position, company, location, and employment type for you.
+</Tip>
+
+<Tip>
+  **Use clear document names.** "Sales Lead - Employment Contract - Jane Doe" is easier to track than "Contract Final v2.pdf".
+</Tip>
+
+<Tip>
+  **Preview before saving.** The Preview tab in the template editor shows exactly how the rendered document will look, with `{{variables}}` highlighted so you don't miss one.
+</Tip>
+
+<Tip>
+  **Add a personal message.** A short note in the signer message (e.g. *"Excited to have you on board - sign here to confirm"*) increases the chance candidates sign quickly.
+</Tip>
+
+## Related
+
+- [Candidates](/candidates/candidates) - send contracts from a candidate profile
+- [Jobs](/core-features/jobs) - link jobs to auto-fill role details in contract templates
+- [Companies](/core-features/companies) - the company name used in `{{company_name}}` comes from here
 
 # File: core-features/jobs.mdx
 
-```markdown
 ---
 title: 'Jobs'
 description: 'Create, manage, and track your job postings and applications'
@@ -2872,7 +3235,7 @@ Add up to **6 custom questions** tailored to your specific role:
 - **Multiple Select**: Choose multiple options (e.g., "Programming languages you know")
 
 <Info>
-  For detailed guidance on setting up application questions, visit our [Application Questions guide](/application-questions).
+  For detailed guidance on setting up application questions, visit our [Application Questions guide](/core-features/application-questions).
 </Info>
 
 ## Job Management
@@ -2995,13 +3358,12 @@ Add up to **6 custom questions** tailored to your specific role:
 
 After creating your jobs:
 
-1. **[Set up Auto Follow-ups](/automated-follow-ups)** - Automate candidate communication
-2. **[Enable AI Screening](/ai-screening)** - Get instant candidate insights (paid plans)
-3. **[Manage Candidates](/candidates)** - Organize and track your applicants```
+1. **[Set up Auto Follow-ups](/core-features/automated-follow-ups)** - Automate candidate communication
+2. **[Enable AI Screening](/ai-features/ai-screening)** - Get instant candidate insights (paid plans)
+3. **[Manage Candidates](/candidates/candidates)** - Organize and track your applicants
 
 # File: core-features/requisitions.mdx
 
-```markdown
 ---
 title: 'Requisitions'
 description: 'Manage internal hiring requests before they become job postings'
@@ -3009,7 +3371,7 @@ description: 'Manage internal hiring requests before they become job postings'
 
 ## What are Requisitions?
 
-Requisitions are internal hiring requests. When a department manager or team lead needs to hire, they submit a requisition — a structured request that includes the role details, priority, and expected start date. HR can then review and convert approved requisitions into actual job postings.
+Requisitions are internal hiring requests. When a department manager or team lead needs to hire, they submit a requisition - a structured request that includes the role details, priority, and expected start date. HR can then review and convert approved requisitions into actual job postings.
 
 This creates a clear approval workflow between department managers and the recruiting team.
 
@@ -3029,17 +3391,17 @@ Navigate to **Requisitions** in the sidebar and click **New Requisition**.
   </Accordion>
 
   <Accordion icon="map-pin" title="Location">
-    **Location**: City, country, or "Remote" — where the role is based.
+    **Location**: City, country, or "Remote" - where the role is based.
   </Accordion>
 
   <Accordion icon="flag" title="Priority & Timeline">
-    **Priority** *(required)*: Low, Medium, or High — helps recruiters triage open requisitions.
+    **Priority** *(required)*: Low, Medium, or High - helps recruiters triage open requisitions.
 
     **Target Start Date**: When you need the hire in place. Use the date picker to select a date.
   </Accordion>
 
   <Accordion icon="align-left" title="Description">
-    **Job Description**: Provide context for the recruiter — responsibilities, required skills, why the role exists. This becomes the starting point for the actual job posting.
+    **Job Description**: Provide context for the recruiter - responsibilities, required skills, why the role exists. This becomes the starting point for the actual job posting.
   </Accordion>
 </AccordionGroup>
 
@@ -3076,11 +3438,224 @@ All workspace roles can view and create requisitions, including **Department Man
 <Tip>
   **Use priority levels consistently.** Define what "High" means for your team (e.g., business-critical, backfill for departure) so recruiters can prioritize effectively.
 </Tip>
-```
+
+# File: core-features/workflows.mdx
+
+---
+title: 'Workflows'
+description: 'Automate candidate outreach and pipeline moves with a visual trigger → action builder'
+icon: 'workflow'
+---
+
+Workflows let you wire together triggers, actions, conditions, and wait steps into a fully automated pipeline. Build them yourself on the visual canvas, start from a prebuilt template, or describe what you want in plain English and let the AI builder do the wiring for you.
+
+## How it works
+
+Every workflow starts with a **trigger** (an event in your workspace), then runs one or more **actions** (send email, move stage, add tag, etc.). You can branch the flow with **conditions** and pause it between steps with **wait** delays.
+
+The builder lives at [Workflows](https://app.hirempire.com/dashboard/workflows). Each workflow has a status of `Draft`, `Active`, `Paused`, or `Archived`. Only **Active** workflows fire on real events.
+
+<Note>
+  Hirempire autosaves your graph as you edit. The header shows a `Saving…` / `Saved` indicator so you always know your changes are persisted.
+</Note>
+
+## Creating a workflow
+
+<Steps>
+  <Step title="Open Workflows">
+    Go to [Workflows](https://app.hirempire.com/dashboard/workflows) and click **New workflow**, pick a template, or click the AI builder button to start from a prompt.
+  </Step>
+  <Step title="Pick a trigger">
+    A blank workflow opens with the **Choose a trigger** panel. Select the event that should start the workflow.
+  </Step>
+  <Step title="Add steps">
+    Click the **+** button under any node to open the **Add step** panel and choose what happens next. The builder auto-positions each step for you.
+  </Step>
+  <Step title="Configure each node">
+    Click any node on the canvas to open its config panel on the right. Fill required fields - incomplete nodes show a red warning dot.
+  </Step>
+  <Step title="Publish">
+    When everything validates, the **Publish** button activates. Click it and the workflow status flips to **Active** and starts running on real events. Use the menu to **Unpublish** back to Draft anytime.
+  </Step>
+</Steps>
+
+## Triggers
+
+A workflow can only have one trigger. Choose the event that starts your automation.
+
+<AccordionGroup>
+  <Accordion icon="filter" title="Candidate matches criteria">
+    Fires when any candidate in your workspace matches the filters you define.
+
+    **Configure**:
+    - **Criteria** - one or more rules combined with `AND` / `OR` logic. Filter by candidate location, nationality, years of experience, skills, languages, certifications, tags, salary expectation, application source, AI screening decision/match %, or LinkedIn match.
+    - **Job scope** - apply to **all jobs** or only **specific jobs**.
+
+    At least one criterion with a field and operator is required.
+  </Accordion>
+
+  <Accordion icon="arrow-right-arrow-left" title="Candidate stage changed">
+    Fires when a candidate moves to a new pipeline stage.
+
+    **Configure**:
+    - **To Stage** *(required)* - the stage the candidate must move into.
+    - **Job scope** - all jobs or a specific subset.
+  </Accordion>
+
+  <Accordion icon="reply" title="Reply received">
+    Fires when a candidate replies to your email or LinkedIn message.
+
+    **Configure**:
+    - **Reply channel** - any, email only, or LinkedIn only.
+  </Accordion>
+</AccordionGroup>
+
+## Actions
+
+Actions are the work your workflow performs. Every action supports an optional delay (`Wait X days`) and a send window (e.g. business hours).
+
+<AccordionGroup>
+  <Accordion icon="envelope" title="Send Email">
+    Send a new email from one of your connected sending accounts.
+
+    **Required**: email account, subject, body. Insert variables like `{{candidate.first_name}}` or `{{job.title}}` into subject and body.
+  </Accordion>
+
+  <Accordion icon="linkedin" title="Send LinkedIn Message">
+    Send a direct LinkedIn message from a connected LinkedIn account.
+
+    **Required**: LinkedIn account, message body. Personalize with candidate and job variables.
+  </Accordion>
+
+  <Accordion icon="sparkles" title="Send AI Pre-Screen">
+    Send an AI-led pre-screen using Hirempire's built-in email. No account or copy required - the AI handles the conversation and writes a score plus summary back to the candidate's record.
+  </Accordion>
+
+  <Accordion icon="align-left" title="Move to Stage">
+    Move the candidate to a pipeline stage.
+
+    **Required**: target stage. Runs immediately by default (no delay).
+  </Accordion>
+
+  <Accordion icon="tag" title="Add Tag">
+    Apply a tag to the candidate so you can filter or group them later.
+
+    **Required**: tag value.
+  </Accordion>
+
+  <Accordion icon="clipboard-list" title="Create Task">
+    Open a task for your team to action manually (e.g. "Call this candidate").
+
+    **Required**: task title. Runs immediately by default.
+  </Accordion>
+</AccordionGroup>
+
+## Conditions
+
+Conditions branch your workflow into a **Yes** path and a **No** path based on candidate, application, AI screening, or LinkedIn fields.
+
+<AccordionGroup>
+  <Accordion icon="code-branch" title="How a condition works">
+    Configure one or more rules combined with `AND` / `OR` logic. At runtime the workflow evaluates the rules and follows either the green **Yes** edge or the red **No** edge. Each branch can have its own steps - including more conditions.
+  </Accordion>
+
+  <Accordion icon="list-check" title="Available fields">
+    - **Candidate**: location, nationality, years of experience, skills, languages, certifications, tags, salary min/max
+    - **Application**: source, job title
+    - **AI Screening**: decision (Select / Maybe / Reject), match %, skills match, experience match, location match
+    - **LinkedIn**: profile matched, match %
+  </Accordion>
+</AccordionGroup>
+
+## Wait steps
+
+Use a **Wait** node to pause the workflow before the next step runs. Set a delay in **days**, **hours**, or **minutes**. This is useful for natural-feeling follow-up cadences, e.g. wait 3 days after a LinkedIn message before sending an email.
+
+<Tip>
+  Most action nodes already have a built-in `Wait X days` header so you usually don't need a separate Wait node unless you want sub-day precision or to gate a branch.
+</Tip>
+
+## Templates
+
+If you don't want to start from scratch, head to [Workflow templates](https://app.hirempire.com/dashboard/workflows/templates) and click **Use template** on any card. The workflow is created in your workspace and opened in the builder, fully editable.
+
+Current templates:
+
+<CardGroup cols={3}>
+  <Card title="Multi-channel outreach" icon="linkedin">
+    Match criteria → send a LinkedIn message → wait 3 days → follow up by email.
+  </Card>
+  <Card title="AI Pre-Screen at scale" icon="sparkles">
+    Match criteria → automatically send an AI pre-screen to every matching candidate.
+  </Card>
+  <Card title="Reply handler" icon="reply">
+    Reply received → move to **Reviewed** stage → tag as `replied` so the team can act fast.
+  </Card>
+</CardGroup>
+
+## AI builder
+
+Click the **AI Builder** button in the top bar to open the AI panel. Describe your workflow in plain English and Hirempire returns a generated graph you can apply with one click.
+
+**Example prompts**:
+- "When a candidate matches criteria, send an email"
+- "When a candidate matches criteria, send a LinkedIn message, then an email"
+- "When a candidate stage changes, send an email and add a tag"
+- "When a candidate replies, move to a stage and add a tag"
+
+The panel previews the generated nodes before you commit. Hit **Apply to canvas** to load them into the builder, then fine-tune any details.
+
+<Tip>
+  The AI builder sees your current graph, so you can ask it to extend or modify an existing workflow - not just create from scratch.
+</Tip>
+
+## Testing and logs
+
+<AccordionGroup>
+  <Accordion icon="play" title="Test run">
+    Click **Test run** in the top bar, pick a real application from your workspace, and Hirempire executes the workflow against that candidate. The Logs panel opens automatically so you can watch each step resolve.
+  </Accordion>
+
+  <Accordion icon="scroll-text" title="Logs panel">
+    Click **Logs** in the top bar to see every run of this workflow. Each run shows:
+    - Overall status: **Running**, **Waiting**, **Completed**, **Failed**, **Paused**, or **Cancelled**.
+    - The entity it ran on (application, candidate, or CV bank entry).
+    - When it started and finished.
+
+    Click a run to drill into its individual steps and see each step's status (`pending`, `running`, `completed`, `failed`, `skipped`), input, output, and any error messages.
+  </Accordion>
+</AccordionGroup>
+
+## Tips
+
+<Tip>
+  **Validate before publish** - Hirempire blocks publishing until every required field is filled. Hover the disabled Publish button to see the exact list of fixes.
+</Tip>
+
+<Tip>
+  **Use the trigger's job scope** - Scope your trigger to a specific job (or set of jobs) so you don't accidentally fire automations on candidates from unrelated roles.
+</Tip>
+
+<Tip>
+  **Start in Draft** - Build and test in Draft status. Use **Test run** with a real candidate before publishing so you see exactly what each step will send.
+</Tip>
+
+<Tip>
+  **Personalize with variables** - Insert variables like `{{candidate.first_name}}`, `{{job.title}}`, or `{{application.ai_screening.match_percentage}}` into emails and messages so every send feels written for that candidate.
+</Tip>
+
+<Warning>
+  Deleting a workflow permanently removes it and all of its run history. This action can't be undone.
+</Warning>
+
+## Related features
+
+- [Automated follow-ups](/core-features/automated-follow-ups) - Simpler status-based emails for accept/reject decisions, no graph required.
+- [Jobs](/core-features/jobs) - Scope triggers and conditions to specific job postings.
+- [Application questions](/core-features/application-questions) - Collect the data your triggers and conditions filter on.
 
 # File: developers/applicants/get-all-applicants.mdx
 
-```markdown
 ---
 title: "Get all applicants"
 api: "GET https://api.hirempire.com/v1/applicants"
@@ -3394,11 +3969,10 @@ Scoring or rating assigned to the applicant
   ]
 }
 ```
-</ResponseExample>```
+</ResponseExample>
 
 # File: developers/applicants/get-specific-applicant.mdx
 
-```markdown
 ---
 title: "Get a specific applicant"
 api: "GET https://api.hirempire.com/v1/get-applicant"
@@ -3699,11 +4273,10 @@ Scoring or rating assigned to the applicant
   ]
 }
 ```
-</ResponseExample>```
+</ResponseExample>
 
 # File: developers/applicants/get-specific-job-applicants.mdx
 
-```markdown
 ---
 title: "Get a specific job's applicants"
 api: "GET https://api.hirempire.com/v1/job-applicants"
@@ -4029,11 +4602,10 @@ Scoring or rating assigned to the applicant
   ]
 }
 ```
-</ResponseExample>```
+</ResponseExample>
 
 # File: developers/applicants/update-applicant-status.mdx
 
-```markdown
 ---
 title: "Update applicant status"
 api: "PATCH https://api.hirempire.com/v1/update-applicant"
@@ -4355,11 +4927,10 @@ The new status of the applicant
   "status": "Rejected"
 }
 ```
-</ResponseExample>```
+</ResponseExample>
 
 # File: developers/auth.mdx
 
-```markdown
 ---
 title: "Authentication"
 description: "Learn how to authenticate your API requests with Hirempire using Bearer tokens"
@@ -4370,7 +4941,7 @@ description: "Learn how to authenticate your API requests with Hirempire using B
 <Steps>
   <Step title="Create Your API Token">
     To begin, go to your [Hirempire API Tokens](https://app.hirempire.com/dashboard/settings/tokens). From there, you can:
-    - Select the [scope](/scopes) (Jobs, Users, Applications, etc.)
+    - Select the [scope](/developers/scopes) (Jobs, Users, Applications, etc.)
     - Set the expiry (30 Days, 90 Days, or Never Expire)
     - Generate your access token
   </Step>
@@ -4397,7 +4968,7 @@ description: "Learn how to authenticate your API requests with Hirempire using B
 <CardGroup cols={1}>
   <Card title="Step 1: Create Your API Token">
     To begin, go to your [Hirempire Profile Page](https://app.hirempire.com/dashboard/settings/personal-info). From there, you can:
-    - Select the [scope](/scopes) (Jobs, Users, Applications, etc.)
+    - Select the [scope](/developers/scopes) (Jobs, Users, Applications, etc.)
     - Set the expiry (30 Days, 90 Days, or Never Expire)
     - Generate your access token
   </Card>
@@ -4428,11 +4999,143 @@ description: "Learn how to authenticate your API requests with Hirempire using B
   <Card title="Contact Support">
     Need help? Email us at support@hirempire.com
   </Card>
-</CardGroup>```
+</CardGroup>
+
+# File: developers/changelog.mdx
+
+---
+title: 'API Changelog'
+description: 'History of changes, additions, and deprecations to the Hirempire API'
+---
+
+Stay up to date with every change to the Hirempire API. Breaking changes are marked clearly.
+
+<Update label="May 2026" description="Google Jobs sync field" tags={["New"]}>
+
+Jobs created via the API now include a `google_jobs_indexed` boolean in the response, indicating whether the listing has been submitted to Google Jobs indexing.
+
+</Update>
+
+<Update label="April 2026" description="Webhook event types expanded" tags={["New"]}>
+
+Five new webhook event types are now available:
+
+| Event | Description |
+|-------|-------------|
+| `candidate.stage_changed` | Fired when a candidate moves pipeline stage |
+| `candidate.hired` | Fired when a candidate is marked as hired |
+| `interview.scheduled` | Fired when a meeting is booked |
+| `requisition.approved` | Fired when a requisition is approved by HR |
+| `ai_prescreen.completed` | Fired when an AI Pre-Screen session ends |
+
+See the [Event Types](/developers/webhooks/event-types) reference for full payloads.
+
+</Update>
+
+<Update label="April 2026" description="Create Company endpoint" tags={["New"]}>
+
+Added `POST /companies` - create a company directly via the API. See [Create Company](/developers/companies/create-company) for the full schema.
+
+</Update>
+
+<Update label="April 2026" description="Applicant status values expanded" tags={["New"]}>
+
+The `status` field on applicants now supports two additional values:
+
+- `scheduled` - interview has been scheduled
+- `met` - interview has been completed
+
+These align with the pipeline stages available in the Hirempire UI and MCP Server.
+
+</Update>
+
+<Update label="March 2026" description="Webhooks - real-time event delivery" tags={["New"]}>
+
+The Hirempire Webhooks API is now available. Subscribe to workspace events and receive instant `POST` notifications to your endpoint.
+
+**Supported events at launch:**
+
+| Event | Trigger |
+|-------|---------|
+| `job_added` | A new job is created |
+| `job_updated` | A job's details are changed |
+| `job_deleted` | A job is deleted |
+| `new_applicant` | A candidate applies to a job |
+| `cv_processed` | CV parsing by AI completes |
+| `meeting_created` | An interview is scheduled |
+| `application_status_changed` | A candidate's status changes |
+
+Endpoints: `POST /webhooks` (create), `GET /webhooks` (list), `PUT /webhooks/:id` (update).
+
+Each registered webhook goes through a **challenge verification** step - your endpoint must echo back the challenge token before delivery begins.
+
+See the [Webhooks reference](/developers/webhooks/get-started) for full setup instructions and payload schemas.
+
+</Update>
+
+<Update label="March 2026" description="Rate limits introduced" tags={["New"]}>
+
+API rate limits are now enforced per plan. Exceeding the limit returns `HTTP 429 Too Many Requests`.
+
+| Plan | Requests per hour |
+|------|------------------|
+| Free | 100 |
+| Starter | 500 |
+| Pro | 1,000 |
+| Premium | 5,000 |
+
+</Update>
+
+<Update label="March 2026" description="Bearer token scopes" tags={["New"]}>
+
+API tokens now support **granular scopes**. When generating a token from **Settings → Integrations → API Tokens**, you choose which resource groups the token can access:
+
+- `Jobs` - read and write job postings
+- `Applicants` - read and update applicant records
+- `Companies` - create and read company profiles
+
+Requests that use a token without the required scope return:
+
+```json
+{
+  "success": false,
+  "error": "Token is missing required scope 'Jobs'"
+}
+```
+
+</Update>
+
+<Update label="March 2026" description="Initial API launch - Jobs and Applicants endpoints" tags={["New"]}>
+
+The Hirempire REST API launched with full **Jobs** and **Applicants** coverage.
+
+**Jobs endpoints:**
+
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/v1/jobs` | List all jobs |
+| `GET` | `/v1/jobs/:id` | Get a specific job |
+| `POST` | `/v1/jobs` | Create a job |
+| `PUT` | `/v1/jobs/:id/status` | Update job status (`Active` / `Paused` / `Closed`) |
+| `DELETE` | `/v1/jobs/:id` | Delete a job |
+
+**Applicants endpoints:**
+
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/v1/applicants` | List all applicants across all jobs |
+| `GET` | `/v1/applicants/:id` | Get a specific applicant |
+| `GET` | `/v1/jobs/:id/applicants` | Get all applicants for a specific job |
+| `PUT` | `/v1/applicants/:id/status` | Update applicant status |
+
+**Applicant status values at launch:** `new`, `reviewed`, `accepted`, `rejected`
+
+All endpoints require Bearer token authentication. See [Get Started](/developers/get-started) for base URL, authentication, and response format details.
+
+</Update>
 
 # File: developers/companies/create-company.mdx
 
-```markdown
 ---
 title: "Create a Company"
 api: "POST https://api.hirempire.com/v1/create-company"
@@ -4762,11 +5465,10 @@ The unique identifier of the newly created company
   "company_id": "xyz456abc123"
 }
 ```
-</ResponseExample>```
+</ResponseExample>
 
 # File: developers/get-started.mdx
 
-```markdown
 ---
 title: "Get Started"
 description: "Learn how to integrate with the Hirempire API and start building powerful recruitment applications"
@@ -4862,25 +5564,10 @@ Error responses include additional error information:
 
 To ensure fair usage and optimal performance:
 
-- **Free Plan**: 100 requests per hour
 - **Starter Plan**: 500 requests per hour  
 - **Pro Plan**: 1,000 requests per hour
 - **Premium Plan**: 5,000 requests per hour
 
-
-## SDKs and Libraries
-
-<Info>
-Official SDKs are coming soon! Currently, you can use any HTTP client library in your preferred programming language.
-</Info>
-
-Popular HTTP client libraries:
-- **JavaScript**: fetch, axios, request
-- **Python**: requests, urllib3, httpx
-- **PHP**: cURL, Guzzle, file_get_contents
-- **Ruby**: net/http, HTTParty, Faraday
-- **Go**: net/http, resty
-- **Java**: HttpClient, OkHttp, Apache HttpClient
 
 ## Need Help?
 
@@ -4893,11 +5580,10 @@ Contact our team at [support@hirempire.com](mailto:support@hirempire.com)
 </Card>
 </CardGroup>
 
-Ready to get started? Head over to [Authentication](/developers/auth) to create your first API token!```
+Ready to get started? Head over to [Authentication](/developers/auth) to create your first API token!
 
 # File: developers/jobs/add-job.mdx
 
-```markdown
 ---
 title: "Add a job"
 api: "POST https://api.hirempire.com/v1/add-job"
@@ -5713,11 +6399,10 @@ URL to view the full application details
     "success": false,
     "error": "Token is missing required scope 'Jobs'"
 }
-``````
+```
 
 # File: developers/jobs/delete-job.mdx
 
-```markdown
 ---
 title: "Delete a job"
 api: 'DELETE https://api.hirempire.com/v1/delete-job?job_id={job-id}'
@@ -6074,11 +6759,9 @@ Confirmation message about the deletion
 }
 ```
 
-```
 
 # File: developers/jobs/get-jobs.mdx
 
-```markdown
 ---
 title: "Get all jobs"
 api: "GET https://api.hirempire.com/v1/jobs"
@@ -6430,11 +7113,10 @@ Number of applicants who have applied to this job
     "success": false,
     "error": "Job not found."
 }
-``````
+```
 
 # File: developers/jobs/get-specific-job.mdx
 
-```markdown
 ---
 title: "Get a specific job"
 api: "GET https://api.hirempire.com/v1/get-job"
@@ -6858,11 +7540,10 @@ URL for the application form for this source
     "success": false,
     "error": "Job not found."
 }
-``````
+```
 
 # File: developers/jobs/update-job-status.mdx
 
-```markdown
 ---
 title: "Update job status"
 api: "PATCH https://api.hirempire.com/v1/update-job"
@@ -7288,11 +7969,9 @@ The new status of the job
     "error": "Unauthorized. You don't have the permission to update this job."
 }
 ```
-```
 
 # File: developers/scopes.mdx
 
-```markdown
 ---
 title: 'API Scopes'
 description: 'Understand the different permission scopes available in the Hirempire API'
@@ -7403,11 +8082,10 @@ When creating a new API token in your [Hirempire API Tokens](https://app.hirempi
 
 <Warning>
 **Important**: API requests will fail with a `403 Forbidden` error if your token lacks the required scope for the endpoint you're trying to access.
-</Warning>```
+</Warning>
 
 # File: developers/webhooks/challenge.mdx
 
-```markdown
 ---
 title: "Challenge Verification"
 description: "How to verify your webhook endpoint using the challenge handshake"
@@ -7517,11 +8195,9 @@ http_response_code(200);
 <Info>
   Your endpoint should handle both challenge verification requests and regular event notifications on the same URL. Check for the presence of the `challenge` field to distinguish between the two.
 </Info>
-```
 
 # File: developers/webhooks/create-webhook.mdx
 
-```markdown
 ---
 title: "Create Webhook"
 api: "POST https://api.hirempire.com/v1/create-webhook"
@@ -7763,11 +8439,9 @@ Array of subscribed event types
   "error": "Token has been deleted"
 }
 ```
-```
 
 # File: developers/webhooks/event-types.mdx
 
-```markdown
 ---
 title: "Event Types"
 description: "All available webhook event types you can subscribe to in Hirempire"
@@ -7864,11 +8538,9 @@ When configuring your webhook at [hirempire.com/webhooks](https://app.hirempire.
 <Info>
   You can subscribe to one or more events per webhook. Visit [hirempire.com/webhooks](https://app.hirempire.com/dashboard/settings/webhooks) to configure your subscriptions.
 </Info>
-```
 
 # File: developers/webhooks/get-started.mdx
 
-```markdown
 ---
 title: "Get Started"
 description: "Set up webhooks to receive real-time notifications when events happen in your Hirempire account"
@@ -7879,7 +8551,7 @@ description: "Set up webhooks to receive real-time notifications when events hap
 Webhooks allow you to receive **real-time notifications** whenever a new event happens in your Hirempire account. Instead of polling the API to check for updates, Hirempire will instantly send an HTTP `POST` request to your specified endpoint as soon as an event occurs.
 
 <Info>
-  Webhooks are the most efficient way to stay in sync with your Hirempire data. You receive updates the moment they happen — no delays, no repeated requests.
+  Webhooks are the most efficient way to stay in sync with your Hirempire data. You receive updates the moment they happen - no delays, no repeated requests.
 </Info>
 
 ## How It Works
@@ -7931,11 +8603,9 @@ The rest of the payload varies depending on the event type. See [Event Types](/d
     See example payloads for each event
   </Card>
 </CardGroup>
-```
 
 # File: developers/webhooks/get-webhooks.mdx
 
-```markdown
 ---
 title: "Get Webhooks"
 api: "GET https://api.hirempire.com/v1/webhooks"
@@ -8112,11 +8782,9 @@ If no webhooks are registered, the `data` array will be empty:
   "error": "Token has been deleted"
 }
 ```
-```
 
 # File: developers/webhooks/responses.mdx
 
-```markdown
 ---
 title: "Responses"
 description: "Example webhook payloads for each event type"
@@ -8508,11 +9176,9 @@ Sent when a meeting is successfully scheduled via Hirempire.
 | `meeting.meeting_link`       | string  | Video call link                            |
 | `meeting.organizer.name`     | string  | Organizer's name                           |
 | `meeting.organizer.email`    | string  | Organizer's email                          |
-```
 
 # File: developers/webhooks/update-webhook.mdx
 
-```markdown
 ---
 title: "Update Webhook"
 api: "PATCH https://api.hirempire.com/v1/webhook"
@@ -8739,825 +9405,12 @@ ISO 8601 timestamp of when the webhook was last modified
   "error": "Token has been deleted"
 }
 ```
-```
-
-# File: essentials/code.mdx
-
-```markdown
----
-title: 'Code Blocks'
-description: 'Display inline code and code blocks'
-icon: 'code'
----
-
-## Basic
-
-### Inline Code
-
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
-
-```
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
-```
-
-### Code Block
-
-Use [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) by enclosing code in three backticks and follow the leading ticks with the programming language of your snippet to get syntax highlighting. Optionally, you can also write the name of your code after the programming language.
-
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
-
-````md
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
-````
-```
-
-# File: essentials/development.mdx
-
-```markdown
----
-title: 'Development'
-description: 'Learn how to preview changes locally'
----
-
-<Info>
-  **Prerequisite** You should have installed Node.js (version 18.10.0 or
-  higher).
-</Info>
-
-Step 1. Install Mintlify on your OS:
-
-<CodeGroup>
-
-```bash npm
-npm i -g mintlify
-```
-
-```bash yarn
-yarn global add mintlify
-```
-
-</CodeGroup>
-
-Step 2. Go to the docs are located (where you can find `mint.json`) and run the following command:
-
-```bash
-mintlify dev
-```
-
-The documentation website is now available at `http://localhost:3000`.
-
-### Custom Ports
-
-Mintlify uses port 3000 by default. You can use the `--port` flag to customize the port Mintlify runs on. For example, use this command to run in port 3333:
-
-```bash
-mintlify dev --port 3333
-```
-
-You will see an error like this if you try to run Mintlify in a port that's already taken:
-
-```md
-Error: listen EADDRINUSE: address already in use :::3000
-```
-
-## Mintlify Versions
-
-Each CLI is linked to a specific version of Mintlify. Please update the CLI if your local website looks different than production.
-
-<CodeGroup>
-
-```bash npm
-npm i -g mintlify@latest
-```
-
-```bash yarn
-yarn global upgrade mintlify
-```
-
-</CodeGroup>
-
-## Deployment
-
-<Tip>
-  Unlimited editors available under the [Startup
-  Plan](https://mintlify.com/pricing)
-</Tip>
-
-You should see the following if the deploy successfully went through:
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Troubleshooting
-
-Here's how to solve some common problems when working with the CLI.
-
-<AccordionGroup>
-  <Accordion title="Mintlify is not loading">
-    Update to Node v18. Run `mintlify install` and try again.
-  </Accordion>
-  <Accordion title="No such file or directory on Windows">
-Go to the `C:/Users/Username/.mintlify/` directory and remove the `mint`
-folder. Then Open the Git Bash in this location and run `git clone
-https://github.com/mintlify/mint.git`.
-
-Repeat step 3.
-
-  </Accordion>
-  <Accordion title="Getting an unknown error">
-    Try navigating to the root of your device and delete the ~/.mintlify folder.
-    Then run `mintlify dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in a CLI version? [Check out the CLI changelog.](/changelog/command-line)
-```
-
-# File: essentials/images.mdx
-
-```markdown
----
-title: 'Images and Embeds'
-description: 'Add image, video, and other HTML elements'
-icon: 'image'
----
-
-<img
-  style={{ borderRadius: '0.5rem' }}
-  src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
-/>
-
-## Image
-
-### Using Markdown
-
-The [markdown syntax](https://www.markdownguide.org/basic-syntax/#images) lets you add images using the following code
-
-```md
-![title](/path/image.jpg)
-```
-
-Note that the image file size must be less than 5MB. Otherwise, we recommend hosting on a service like [Cloudinary](https://cloudinary.com/) or [S3](https://aws.amazon.com/s3/). You can then use that URL and embed.
-
-### Using Embeds
-
-To get more customizability with images, you can also use [embeds](/writing-content/embed) to add images
-
-```html
-<img height="200" src="/path/image.jpg" />
-```
-
-## Embeds and HTML elements
-
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/4KzFe50RQkQ"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  style={{ width: '100%', borderRadius: '0.5rem' }}
-></iframe>
-
-<br />
-
-<Tip>
-
-Mintlify supports [HTML tags in Markdown](https://www.markdownguide.org/basic-syntax/#html). This is helpful if you prefer HTML tags to Markdown syntax, and lets you create documentation with infinite flexibility.
-
-</Tip>
-
-### iFrames
-
-Loads another HTML page within the document. Most commonly used for embedding videos.
-
-```html
-<iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>
-```
-```
-
-# File: essentials/markdown.mdx
-
-```markdown
----
-title: 'Markdown Syntax'
-description: 'Text, title, and styling in standard markdown'
-icon: 'text-size'
----
-
-## Titles
-
-Best used for section headers.
-
-```md
-## Titles
-```
-
-### Subtitles
-
-Best use to subsection headers.
-
-```md
-### Subtitles
-```
-
-<Tip>
-
-Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
-
-</Tip>
-
-## Text Formatting
-
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
-
-| Style         | How to write it   | Result          |
-| ------------- | ----------------- | --------------- |
-| Bold          | `**bold**`        | **bold**        |
-| Italic        | `_italic_`        | _italic_        |
-| Strikethrough | `~strikethrough~` | ~strikethrough~ |
-
-You can combine these. For example, write `**_bold and italic_**` to get **_bold and italic_** text.
-
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
-
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
-
-## Linking to Pages
-
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
-
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
-
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
-
-## Blockquotes
-
-### Singleline
-
-To create a blockquote, add a `>` in front of a paragraph.
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
-```
-
-### Multiline
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-```
-
-### LaTeX
-
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
-
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-
-```md
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-```
-```
-
-# File: essentials/navigation.mdx
-
-```markdown
----
-title: 'Navigation'
-description: 'The navigation field in mint.json defines the pages that go in the navigation menu'
-icon: 'map'
----
-
-The navigation menu is the list of links on every website.
-
-You will likely update `mint.json` every time you add a new page. Pages do not show up automatically.
-
-## Navigation syntax
-
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
-
-<CodeGroup>
-
-```json Regular Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": ["quickstart"]
-    }
-]
-```
-
-```json Nested Navigation
-"navigation": [
-    {
-        "group": "Getting Started",
-        "pages": [
-            "quickstart",
-            {
-                "group": "Nested Reference Pages",
-                "pages": ["nested-reference-page"]
-            }
-        ]
-    }
-]
-```
-
-</CodeGroup>
-
-## Folders
-
-Simply put your MDX files in folders and update the paths in `mint.json`.
-
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
-
-<Warning>
-
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
-
-</Warning>
-
-```json Navigation With Folder
-"navigation": [
-    {
-        "group": "Group Name",
-        "pages": ["your-folder/your-page"]
-    }
-]
-```
-
-## Hidden Pages
-
-MDX files not included in `mint.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
-```
-
-# File: essentials/reusable-snippets.mdx
-
-```markdown
----
-title: Reusable Snippets
-description: Reusable, custom snippets to keep content in sync
-icon: 'recycle'
----
-
-import SnippetIntro from '/snippets/snippet-intro.mdx';
-
-<SnippetIntro />
-
-## Creating a custom snippet
-
-**Pre-condition**: You must create your snippet file in the `snippets` directory.
-
-<Note>
-  Any page in the `snippets` directory will be treated as a snippet and will not
-  be rendered into a standalone page. If you want to create a standalone page
-  from the snippet, import the snippet into another file and call it as a
-  component.
-</Note>
-
-### Default export
-
-1. Add content to your snippet file that you want to re-use across multiple
-   locations. Optionally, you can add variables that can be filled in via props
-   when you import the snippet.
-
-```mdx snippets/my-snippet.mdx
-Hello world! This is my content I want to reuse across pages. My keyword of the
-day is {word}.
-```
-
-<Warning>
-  The content that you want to reuse must be inside the `snippets` directory in
-  order for the import to work.
-</Warning>
-
-2. Import the snippet into your destination file.
-
-```mdx destination-file.mdx
----
-title: My title
-description: My Description
----
-
-import MySnippet from '/snippets/path/to/my-snippet.mdx';
-
-## Header
-
-Lorem impsum dolor sit amet.
-
-<MySnippet word="bananas" />
-```
-
-### Reusable variables
-
-1. Export a variable from your snippet file:
-
-```mdx snippets/path/to/custom-variables.mdx
-export const myName = 'my name';
-
-export const myObject = { fruit: 'strawberries' };
-```
-
-2. Import the snippet from your destination file and use the variable:
-
-```mdx destination-file.mdx
----
-title: My title
-description: My Description
----
-
-import { myName, myObject } from '/snippets/path/to/custom-variables.mdx';
-
-Hello, my name is {myName} and I like {myObject.fruit}.
-```
-
-### Reusable components
-
-1. Inside your snippet file, create a component that takes in props by exporting
-   your component in the form of an arrow function.
-
-```mdx snippets/custom-component.mdx
-export const MyComponent = ({ title }) => (
-  <div>
-    <h1>{title}</h1>
-    <p>... snippet content ...</p>
-  </div>
-);
-```
-
-<Warning>
-  MDX does not compile inside the body of an arrow function. Stick to HTML
-  syntax when you can or use a default export if you need to use MDX.
-</Warning>
-
-2. Import the snippet into your destination file and pass in the props
-
-```mdx destination-file.mdx
----
-title: My title
-description: My Description
----
-
-import { MyComponent } from '/snippets/custom-component.mdx';
-
-Lorem ipsum dolor sit amet.
-
-<MyComponent title={'Custom title'} />
-```
-```
-
-# File: essentials/settings.mdx
-
-```markdown
----
-title: 'Global Settings'
-description: 'Mintlify gives you complete control over the look and feel of your documentation using the mint.json file'
-icon: 'gear'
----
-
-Every Mintlify site needs a `mint.json` file with the core configuration settings. Learn more about the [properties](#properties) below.
-
-## Properties
-
-<ResponseField name="name" type="string" required>
-Name of your project. Used for the global title.
-
-Example: `mintlify`
-
-</ResponseField>
-
-<ResponseField name="navigation" type="Navigation[]" required>
-  An array of groups with all the pages within that group
-  <Expandable title="Navigation">
-    <ResponseField name="group" type="string">
-    The name of the group.
-
-    Example: `Settings`
-
-    </ResponseField>
-    <ResponseField name="pages" type="string[]">
-    The relative paths to the markdown files that will serve as pages.
-
-    Example: `["customization", "page"]`
-
-    </ResponseField>
-
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="logo" type="string or object">
-  Path to logo image or object with path to "light" and "dark" mode logo images
-  <Expandable title="Logo">
-    <ResponseField name="light" type="string">
-      Path to the logo in light mode
-    </ResponseField>
-    <ResponseField name="dark" type="string">
-      Path to the logo in dark mode
-    </ResponseField>
-    <ResponseField name="href" type="string" default="/">
-      Where clicking on the logo links you to
-    </ResponseField>
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="favicon" type="string">
-  Path to the favicon image
-</ResponseField>
-
-<ResponseField name="colors" type="Colors">
-  Hex color codes for your global theme
-  <Expandable title="Colors">
-    <ResponseField name="primary" type="string" required>
-      The primary color. Used for most often for highlighted content, section
-      headers, accents, in light mode
-    </ResponseField>
-    <ResponseField name="light" type="string">
-      The primary color for dark mode. Used for most often for highlighted
-      content, section headers, accents, in dark mode
-    </ResponseField>
-    <ResponseField name="dark" type="string">
-      The primary color for important buttons
-    </ResponseField>
-    <ResponseField name="background" type="object">
-      The color of the background in both light and dark mode
-      <Expandable title="Object">
-        <ResponseField name="light" type="string" required>
-          The hex color code of the background in light mode
-        </ResponseField>
-        <ResponseField name="dark" type="string" required>
-          The hex color code of the background in dark mode
-        </ResponseField>
-      </Expandable>
-    </ResponseField>
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="topbarLinks" type="TopbarLink[]">
-  Array of `name`s and `url`s of links you want to include in the topbar
-  <Expandable title="TopbarLink">
-    <ResponseField name="name" type="string">
-    The name of the button.
-
-    Example: `Contact us`
-    </ResponseField>
-    <ResponseField name="url" type="string">
-    The url once you click on the button. Example: `https://mintlify.com/contact`
-    </ResponseField>
-
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="topbarCtaButton" type="Call to Action">
-  <Expandable title="Topbar Call to Action">
-    <ResponseField name="type" type={'"link" or "github"'} default="link">
-    Link shows a button. GitHub shows the repo information at the url provided including the number of GitHub stars.
-    </ResponseField>
-    <ResponseField name="url" type="string">
-    If `link`: What the button links to.
-    
-    If `github`: Link to the repository to load GitHub information from.
-    </ResponseField>
-    <ResponseField name="name" type="string">
-    Text inside the button. Only required if `type` is a `link`.
-    </ResponseField>
-
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="versions" type="string[]">
-  Array of version names. Only use this if you want to show different versions
-  of docs with a dropdown in the navigation bar.
-</ResponseField>
-
-<ResponseField name="anchors" type="Anchor[]">
-  An array of the anchors, includes the `icon`, `color`, and `url`.
-  <Expandable title="Anchor">
-    <ResponseField name="icon" type="string">
-    The [Font Awesome](https://fontawesome.com/search?s=brands%2Cduotone) icon used to feature the anchor.
-
-    Example: `comments`
-    </ResponseField>
-    <ResponseField name="name" type="string">
-    The name of the anchor label.
-
-    Example: `Community`
-    </ResponseField>
-    <ResponseField name="url" type="string">
-      The start of the URL that marks what pages go in the anchor. Generally, this is the name of the folder you put your pages in.
-    </ResponseField>
-    <ResponseField name="color" type="string">
-      The hex color of the anchor icon background. Can also be a gradient if you pass an object with the properties `from` and `to` that are each a hex color.
-    </ResponseField>
-    <ResponseField name="version" type="string">
-      Used if you want to hide an anchor until the correct docs version is selected.
-    </ResponseField>
-    <ResponseField name="isDefaultHidden" type="boolean" default="false">
-      Pass `true` if you want to hide the anchor until you directly link someone to docs inside it.
-    </ResponseField>
-    <ResponseField name="iconType" default="duotone" type="string">
-      One of: "brands", "duotone", "light", "sharp-solid", "solid", or "thin"
-    </ResponseField>
-
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="topAnchor" type="Object">
-  Override the default configurations for the top-most anchor.
-  <Expandable title="Object">
-    <ResponseField name="name" default="Documentation" type="string">
-      The name of the top-most anchor
-    </ResponseField>
-    <ResponseField name="icon" default="book-open" type="string">
-      Font Awesome icon.
-    </ResponseField>
-    <ResponseField name="iconType" default="duotone" type="string">
-      One of: "brands", "duotone", "light", "sharp-solid", "solid", or "thin"
-    </ResponseField>
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="tabs" type="Tabs[]">
-  An array of navigational tabs.
-  <Expandable title="Tabs">
-    <ResponseField name="name" type="string">
-      The name of the tab label.
-    </ResponseField>
-    <ResponseField name="url" type="string">
-      The start of the URL that marks what pages go in the tab. Generally, this
-      is the name of the folder you put your pages in.
-    </ResponseField>
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="api" type="API">
-  Configuration for API settings. Learn more about API pages at [API Components](/api-playground/demo).
-  <Expandable title="API">
-    <ResponseField name="baseUrl" type="string">
-      The base url for all API endpoints. If `baseUrl` is an array, it will enable for multiple base url
-      options that the user can toggle.
-    </ResponseField>
-
-    <ResponseField name="auth" type="Auth">
-      <Expandable title="Auth">
-        <ResponseField name="method" type='"bearer" | "basic" | "key"'>
-          The authentication strategy used for all API endpoints.
-        </ResponseField>
-        <ResponseField name="name" type="string">
-        The name of the authentication parameter used in the API playground.
-
-        If method is `basic`, the format should be `[usernameName]:[passwordName]`
-        </ResponseField>
-        <ResponseField name="inputPrefix" type="string">
-        The default value that's designed to be a prefix for the authentication input field.
-
-        E.g. If an `inputPrefix` of `AuthKey` would inherit the default input result of the authentication field as `AuthKey`.
-        </ResponseField>
-      </Expandable>
-    </ResponseField>
-
-    <ResponseField name="playground" type="Playground">
-      Configurations for the API playground
-
-      <Expandable title="Playground">
-        <ResponseField name="mode" default="show" type='"show" | "simple" | "hide"'>
-          Whether the playground is showing, hidden, or only displaying the endpoint with no added user interactivity `simple`
-
-          Learn more at the [playground guides](/api-playground/demo)
-        </ResponseField>
-      </Expandable>
-    </ResponseField>
-
-    <ResponseField name="maintainOrder" type="boolean">
-      Enabling this flag ensures that key ordering in OpenAPI pages matches the key ordering defined in the OpenAPI file.
-
-      <Warning>This behavior will soon be enabled by default, at which point this field will be deprecated.</Warning>
-    </ResponseField>
-
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="openapi" type="string | string[]">
-  A string or an array of strings of URL(s) or relative path(s) pointing to your
-  OpenAPI file.
-  
-  Examples:
-  <CodeGroup>
-    ```json Absolute
-    "openapi": "https://example.com/openapi.json"
-    ```
-    ```json Relative
-    "openapi": "/openapi.json"
-    ```
-    ```json Multiple
-    "openapi": ["https://example.com/openapi1.json", "/openapi2.json", "/openapi3.json"]
-    ```
-  </CodeGroup>
-
-</ResponseField>
-
-<ResponseField name="footerSocials" type="FooterSocials">
-  An object of social media accounts where the key:property pair represents the social media platform and the account url.
-  
-  Example: 
-  ```json
-  {
-    "twitter": "https://twitter.com/mintlify",
-    "website": "https://mintlify.com"
-  }
-  ```
-  <Expandable title="FooterSocials">
-    <ResponseField name="[key]" type="string">
-    One of the following values `website`, `facebook`, `twitter`, `discord`, `slack`, `github`, `linkedin`, `instagram`, `hacker-news`
-    
-    Example: `twitter`
-    </ResponseField>
-    <ResponseField name="property" type="string">
-    The URL to the social platform.
-    
-    Example: `https://twitter.com/mintlify`
-    </ResponseField>
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="feedback" type="Feedback">
-  Configurations to enable feedback buttons
-
-  <Expandable title="Feedback">
-    <ResponseField name="suggestEdit" type="boolean" default="false">
-    Enables a button to allow users to suggest edits via pull requests
-    </ResponseField>
-    <ResponseField name="raiseIssue" type="boolean" default="false">
-    Enables a button to allow users to raise an issue about the documentation
-    </ResponseField>
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="modeToggle" type="ModeToggle">
-  Customize the dark mode toggle.
-  <Expandable title="ModeToggle">
-    <ResponseField name="default" type={'"light" or "dark"'}>
-      Set if you always want to show light or dark mode for new users. When not
-      set, we default to the same mode as the user's operating system.
-    </ResponseField>
-    <ResponseField name="isHidden" type="boolean" default="false">
-      Set to true to hide the dark/light mode toggle. You can combine `isHidden` with `default` to force your docs to only use light or dark mode. For example:
-      
-      <CodeGroup>
-      ```json Only Dark Mode
-      "modeToggle": {
-        "default": "dark",
-        "isHidden": true
-      }
-      ```
-
-      ```json Only Light Mode
-      "modeToggle": {
-        "default": "light",
-        "isHidden": true
-      }
-      ```
-      </CodeGroup>
-
-    </ResponseField>
-
-  </Expandable>
-</ResponseField>
-
-<ResponseField name="backgroundImage" type="string">
-  A background image to be displayed behind every page. See example with
-  [Infisical](https://infisical.com/docs) and [FRPC](https://frpc.io).
-</ResponseField>
-```
 
 # File: index.mdx
 
-```markdown
 ---
 title: "Hirempire Docs"
-description: "The all-in-one recruitment platform — from job creation to hire"
+description: "The all-in-one recruitment platform - from job creation to hire"
 mode: "custom"
 ---
 
@@ -9574,7 +9427,7 @@ mode: "custom"
 # Hire smarter with Hirempire
 
 <p className="text-lg text-gray-600 dark:text-gray-300 mt-4">
-  The all-in-one recruitment platform — from job creation to hire. Post jobs, screen candidates with AI, run interviews, and collaborate as a team, all in one place.
+  The all-in-one recruitment platform - from job creation to hire. Post jobs, screen candidates with AI, run interviews, and collaborate as a team, all in one place.
 </p>
 
 </div>
@@ -9621,7 +9474,7 @@ mode: "custom"
     Set up your workspace and post your first job in under 5 minutes.
   </Card>
   <Card title="Pricing & Plans" icon="credit-card" href="/subscription">
-    Free, Starter, Pro — find the plan that fits your team.
+    Free, Starter, Pro - find the plan that fits your team.
   </Card>
   <Card title="API Reference" icon="code" href="/developers/get-started">
     Integrate Hirempire into your own tools and workflows.
@@ -9634,11 +9487,9 @@ mode: "custom"
 </div>
 
 </div>
-```
 
 # File: mcp/overview.mdx
 
-```markdown
 ---
 title: 'Hirempire MCP'
 description: 'Connect Claude AI to your Hirempire workspace for AI-powered recruiting actions'
@@ -9647,7 +9498,7 @@ icon: 'sparkles'
 
 ## What is the MCP Server?
 
-The Hirempire MCP (Model Context Protocol) Server lets you connect Claude AI directly to your Hirempire workspace. Once connected, you can use Claude to query your candidates, manage jobs, and get AI-powered insights — all through natural language conversation.
+The Hirempire MCP (Model Context Protocol) Server lets you connect Claude AI directly to your Hirempire workspace. Once connected, you can use Claude to query your candidates, manage jobs, and get AI-powered insights - all through natural language conversation.
 
 ## Why use it?
 
@@ -9672,11 +9523,9 @@ Instead of switching between Hirempire and another tool, you can do recruiting w
 ## Getting help
 
 For MCP setup issues, contact [support@hirempire.com](mailto:support@hirempire.com) or visit the [support page](/support).
-```
 
 # File: mcp/quickstart.mdx
 
-```markdown
 ---
 title: 'Quickstart'
 description: 'Connect Claude AI to your Hirempire workspace in four steps'
@@ -9705,7 +9554,7 @@ Follow these steps to connect Claude AI to your Hirempire workspace via the MCP 
     Use the copy buttons on the settings page for convenience.
   </Step>
   <Step title="Click Connect and authorize">
-    Click **Connect**. Claude will redirect you back to Hirempire to authorize access — make sure you're logged in to your Hirempire account.
+    Click **Connect**. Claude will redirect you back to Hirempire to authorize access - make sure you're logged in to your Hirempire account.
   </Step>
 </Steps>
 
@@ -9716,18 +9565,16 @@ Follow these steps to connect Claude AI to your Hirempire workspace via the MCP 
 ## Next steps
 
 Once connected, see [Available Tools](/mcp/tools) for the full list of actions Claude can take in your workspace.
-```
 
 # File: mcp/tools.mdx
 
-```markdown
 ---
 title: 'Available Tools'
 description: 'Reference of every action Claude can take in your Hirempire workspace via MCP'
 icon: 'wrench'
 ---
 
-Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to the following tools. Each tool maps to an action Claude can take on your behalf — read data from your workspace, create jobs and companies, or move candidates through your pipeline.
+Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to the following tools. Each tool maps to an action Claude can take on your behalf - read data from your workspace, create jobs and companies, or move candidates through your pipeline.
 
 ## Companies
 
@@ -9735,7 +9582,7 @@ Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to th
   <Accordion icon="building" title="get_companies">
     **Read-only.** Returns every company in your workspace along with current plan limits (e.g., `active_jobs_remaining`, `can_activate_job`).
 
-    Claude calls this automatically before creating a job — it needs the `company_id` and uses the limit fields to decide whether a new job can be activated or must be saved as a draft.
+    Claude calls this automatically before creating a job - it needs the `company_id` and uses the limit fields to decide whether a new job can be activated or must be saved as a draft.
 
     **Inputs:** none.
   </Accordion>
@@ -9744,15 +9591,15 @@ Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to th
     Create a new company in your workspace. Claude will ask you for the required details before calling.
 
     **Required inputs:**
-    - `name` — company name
-    - `website` — company website URL
-    - `logo` — logo image URL
-    - `industry` — one of the supported industries (Accounting, Advertising, Healthcare, Information Technology, etc.)
+    - `name` - company name
+    - `website` - company website URL
+    - `logo` - logo image URL
+    - `industry` - one of the supported industries (Accounting, Advertising, Healthcare, Information Technology, etc.)
 
     **Optional inputs:**
-    - `linkedin_url` — LinkedIn company page URL
-    - `location` — headquarters location
-    - `size` — employee size range (`1-10`, `11-50`, `51-100`, … `10000+`)
+    - `linkedin_url` - LinkedIn company page URL
+    - `location` - headquarters location
+    - `size` - employee size range (`1-10`, `11-50`, `51-100`, … `10000+`)
   </Accordion>
 </AccordionGroup>
 
@@ -9763,11 +9610,11 @@ Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to th
     **Read-only.** Lists all job postings in your workspace.
 
     **Optional input:**
-    - `status` — filter by `draft`, `active`, `paused`, `closed`, or `archived`
+    - `status` - filter by `draft`, `active`, `paused`, `closed`, or `archived`
   </Accordion>
 
   <Accordion icon="wand-magic-sparkles" title="create_job">
-    Create a new job posting. Claude follows a strict step-by-step flow and asks you for every field — title, department, location, employment type, career level, salary structure, description, sourcing channels, application form fields, and custom screening questions.
+    Create a new job posting. Claude follows a strict step-by-step flow and asks you for every field - title, department, location, employment type, career level, salary structure, description, sourcing channels, application form fields, and custom screening questions.
 
     **Plan limits are respected.** If your workspace has reached its active jobs limit (`can_activate_job` is `false` from `get_companies`), Claude will save the job as a `draft` and tell you to upgrade or close an existing job to activate it.
 
@@ -9779,7 +9626,7 @@ Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to th
     - Description (write your own or have Claude generate it)
     - Sourcing channels (LinkedIn, Indeed, Referral, Company Website, etc.)
     - Whether to post the job on LinkedIn
-    - Status — `active` to publish now, `draft` to save for later
+    - Status - `active` to publish now, `draft` to save for later
     - Application form: which built-in fields to show or require (cover letter, photo, experience years, languages, nationality, location, salary expectation), plus any custom screening questions
   </Accordion>
 </AccordionGroup>
@@ -9791,7 +9638,7 @@ Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to th
     **Read-only.** Fetches all candidates for a specific job.
 
     **Required input:**
-    - `job_id` — the job to fetch candidates for
+    - `job_id` - the job to fetch candidates for
   </Accordion>
 
   <Accordion icon="arrow-right-arrow-left" title="update_candidate_stage">
@@ -9799,13 +9646,13 @@ Once you've [connected the MCP Server](/mcp/quickstart), Claude has access to th
 
     **Required inputs:**
     - `candidate_id`
-    - `stage` — one of `uploaded`, `applied`, `reviewed`, `accepted`, `scheduled`, `met`, `hired`, `rejected`
+    - `stage` - one of `uploaded`, `applied`, `reviewed`, `accepted`, `scheduled`, `met`, `hired`, `rejected`
   </Accordion>
 </AccordionGroup>
 
 ## Example prompts
 
-Each tool can be invoked with natural language — Claude picks the right tool based on what you ask:
+Each tool can be invoked with natural language - Claude picks the right tool based on what you ask:
 
 - *"What companies do I have set up?"* → `get_companies`
 - *"Create a new company called Acme Corp"* → `create_company`
@@ -9828,14 +9675,12 @@ The full pipeline used by `update_candidate_stage`:
 | `met` | Interview completed |
 | `hired` | Offer accepted, candidate hired |
 | `rejected` | Not moving forward |
-```
 
 # File: meetings/interview-intelligence.mdx
 
-```markdown
 ---
 title: 'Interview Intelligence'
-description: 'AI-powered analysis of your recorded interviews — scores, scorecards, transcripts, and recommendations'
+description: 'AI-powered analysis of your recorded interviews - scores, scorecards, transcripts, and recommendations'
 icon: 'sparkles'
 ---
 
@@ -9845,7 +9690,7 @@ icon: 'sparkles'
 
 ## What is Interview Intelligence?
 
-Interview Intelligence automates everything that happens around your interviews — recording, transcription, evaluation, and reporting. Run the meeting normally; Hirempire captures the conversation in the background and produces a structured report when it's done.
+Interview Intelligence automates everything that happens around your interviews - recording, transcription, evaluation, and reporting. Run the meeting normally; Hirempire captures the conversation in the background and produces a structured report when it's done.
 
 It replaces manual note-taking and brings consistency to multi-interviewer panels, so your team can make faster, less biased hiring decisions.
 
@@ -9858,13 +9703,13 @@ It replaces manual note-taking and brings consistency to multi-interviewer panel
 
 <Steps>
   <Step title="Run the interview">
-    Conduct the interview as you normally would in your video tool (Google Meet, Zoom, etc.). Hirempire's AI bot joins the call and records in the background — no extra setup needed during the meeting.
+    Conduct the interview as you normally would in your video tool (Google Meet, Zoom, etc.). Hirempire's AI bot joins the call and records in the background - no extra setup needed during the meeting.
   </Step>
   <Step title="AI processes the recording">
-    After the call ends, Hirempire transcribes the audio, maps each response to the job's requirements, and analyzes the candidate's performance. Processing typically takes a few minutes — the meeting card shows a processing indicator while it runs.
+    After the call ends, Hirempire transcribes the audio, maps each response to the job's requirements, and analyzes the candidate's performance. Processing typically takes a few minutes - the meeting card shows a processing indicator while it runs.
   </Step>
   <Step title="Review insights instantly">
-    Once done, a **View Interview Intelligence** button appears on the meeting detail card. You'll have a full scorecard, transcript, and highlights ready before your next meeting — and one-click sharing for the team.
+    Once done, a **View Interview Intelligence** button appears on the meeting detail card. You'll have a full scorecard, transcript, and highlights ready before your next meeting - and one-click sharing for the team.
   </Step>
 </Steps>
 
@@ -9880,11 +9725,11 @@ It replaces manual note-taking and brings consistency to multi-interviewer panel
   </Accordion>
 
   <Accordion icon="list-check" title="Structured Scorecard">
-    A multi-competency breakdown — communication, technical skills, problem solving, culture fit, and more. Each competency gets an individual score and brief notes.
+    A multi-competency breakdown - communication, technical skills, problem solving, culture fit, and more. Each competency gets an individual score and brief notes.
   </Accordion>
 
   <Accordion icon="thumbs-up" title="AI Decision">
-    A categorical recommendation: **Accept**, **Hold**, or **Reject** — along with the plain-language reasoning behind it.
+    A categorical recommendation: **Accept**, **Hold**, or **Reject** - along with the plain-language reasoning behind it.
   </Accordion>
 
   <Accordion icon="file-lines" title="Automatic Transcription">
@@ -9892,11 +9737,11 @@ It replaces manual note-taking and brings consistency to multi-interviewer panel
   </Accordion>
 
   <Accordion icon="comments-question" title="Question & Answer Analysis">
-    Each question and the candidate's response is reviewed individually. The AI surfaces red flags — vague answers, inconsistencies, or concerning responses — so you can jump straight to the moments that matter.
+    Each question and the candidate's response is reviewed individually. The AI surfaces red flags - vague answers, inconsistencies, or concerning responses - so you can jump straight to the moments that matter.
   </Accordion>
 
   <Accordion icon="clapperboard" title="Time-Stamped Highlights">
-    Standout moments — strong answers, red flags, key examples — are detected automatically and time-stamped. Highlights are shareable as video clips so you can send a teammate the exact moment instead of the whole recording.
+    Standout moments - strong answers, red flags, key examples - are detected automatically and time-stamped. Highlights are shareable as video clips so you can send a teammate the exact moment instead of the whole recording.
   </Accordion>
 
   <Accordion icon="bolt" title="Instant Summary">
@@ -9904,15 +9749,15 @@ It replaces manual note-taking and brings consistency to multi-interviewer panel
   </Accordion>
 
   <Accordion icon="shield-check" title="Credibility Signals">
-    Indicators the AI detected about the candidate's authenticity — confidence level, consistency of answers, and any flags worth noting.
+    Indicators the AI detected about the candidate's authenticity - confidence level, consistency of answers, and any flags worth noting.
   </Accordion>
 
   <Accordion icon="chart-line" title="Engagement Timeline">
-    A timeline view of how engaged the candidate was throughout the interview — energy levels, response depth, and participation patterns.
+    A timeline view of how engaged the candidate was throughout the interview - energy levels, response depth, and participation patterns.
   </Accordion>
 
   <Accordion icon="person" title="Interviewer Analysis">
-    Feedback on the interview itself — question quality, time balance, follow-up depth. Helps interviewers improve over time.
+    Feedback on the interview itself - question quality, time balance, follow-up depth. Helps interviewers improve over time.
   </Accordion>
 
   <Accordion icon="flag" title="Compliance Flags">
@@ -9926,7 +9771,7 @@ It replaces manual note-taking and brings consistency to multi-interviewer panel
 
 ## Live transcript
 
-During the call, Hirempire shows a live transcript with both sides of the conversation in real time. When the AI detects a standout response, an **AI highlight detected** indicator appears with quick context on why the moment was notable — useful for interviewers who want to follow up immediately.
+During the call, Hirempire shows a live transcript with both sides of the conversation in real time. When the AI detects a standout response, an **AI highlight detected** indicator appears with quick context on why the moment was notable - useful for interviewers who want to follow up immediately.
 
 ## Candidate consent
 
@@ -9934,11 +9779,11 @@ During the call, Hirempire shows a live transcript with both sides of the conver
   Candidates must consent to being recorded before Interview Intelligence can be used. Hirempire includes a consent prompt at the start of the recorded session. Do not use Interview Intelligence without obtaining explicit consent from the candidate.
 </Warning>
 
-Hirempire handles the consent flow automatically — the AI bot announces its presence at the start of the call and records only after the candidate acknowledges.
+Hirempire handles the consent flow automatically - the AI bot announces its presence at the start of the call and records only after the candidate acknowledges.
 
 ## Sharing reports
 
-Every report is shareable with one click. Send the full report, or share an individual time-stamped highlight clip to a teammate — they'll see the exact moment without having to scrub through the recording.
+Every report is shareable with one click. Send the full report, or share an individual time-stamped highlight clip to a teammate - they'll see the exact moment without having to scrub through the recording.
 
 ## Accessing past reports
 
@@ -9952,12 +9797,12 @@ All Interview Intelligence reports are stored on the meeting record. Open any pa
 | `recording` | Recording in progress |
 | `processing` | AI is analyzing the recording |
 | `done` | Report is ready |
-| `failed` | Analysis failed — contact support |
+| `failed` | Analysis failed - contact support |
 
 ## Best practices
 
 <Tip>
-  **Define competencies on the job posting.** The scorecard maps responses against the role's requirements — clearer requirements produce more useful scorecards.
+  **Define competencies on the job posting.** The scorecard maps responses against the role's requirements - clearer requirements produce more useful scorecards.
 </Tip>
 
 <Tip>
@@ -9967,11 +9812,9 @@ All Interview Intelligence reports are stored on the meeting record. Open any pa
 <Tip>
   **Review compliance flags before rejecting.** If a flag appears, check the transcript moment before acting on the AI's recommendation.
 </Tip>
-```
 
 # File: meetings/overview.mdx
 
-```markdown
 ---
 title: 'Meetings'
 description: 'View and manage your scheduled interviews and candidate meetings'
@@ -9979,7 +9822,7 @@ description: 'View and manage your scheduled interviews and candidate meetings'
 
 ## Overview
 
-The Meetings page shows all meetings booked through your scheduling page — interviews, discovery calls, follow-ups — in one place. It syncs with your connected calendar so you always have an up-to-date view of what's coming up.
+The Meetings page shows all meetings booked through your scheduling page - interviews, discovery calls, follow-ups - in one place. It syncs with your connected calendar so you always have an up-to-date view of what's coming up.
 
 ## Connecting your calendar
 
@@ -9992,15 +9835,15 @@ Hirempire integrates with **Cal.com** for scheduling. To connect:
 Once connected, all meetings booked through your Cal.com scheduling page will appear in Hirempire automatically.
 
 <Info>
-  Department managers do not see the calendar connection banner — meetings are visible to all team members once the workspace calendar is connected.
+  Department managers do not see the calendar connection banner - meetings are visible to all team members once the workspace calendar is connected.
 </Info>
 
 ## Calendar views
 
 Switch between **Calendar** and **List** views using the toggle in the top right:
 
-- **Calendar view** — monthly, weekly, or daily grid with meetings plotted in time slots
-- **List view** — chronological list of all meetings, filterable by status
+- **Calendar view** - monthly, weekly, or daily grid with meetings plotted in time slots
+- **List view** - chronological list of all meetings, filterable by status
 
 ## Meeting card
 
@@ -10025,7 +9868,7 @@ To invite a colleague to a specific meeting:
 1. Click the meeting to open its detail card
 2. Click **Invite** in the footer
 3. Select from your team members list or enter an email address directly
-4. Click **Invite** — they'll receive a meeting invitation email
+4. Click **Invite** - they'll receive a meeting invitation email
 
 ## Upcoming count
 
@@ -10034,60 +9877,9 @@ The header shows a badge with the number of upcoming meetings so you can see you
 ## Next: Interview Intelligence
 
 After a meeting completes, Hirempire can generate an AI analysis of the interview. See [Interview Intelligence](/meetings/interview-intelligence) to learn how to enable and use it.
-```
-
-# File: platform.mdx
-
-```markdown
----
-title: 'Platform Overview'
-description: 'Comprehensive overview of the Hirempire recruitment platform'
----
-
-## Platform Overview
-
-Hirempire is a comprehensive recruitment platform designed to streamline your hiring process from job posting to candidate onboarding.
-
-## Key Features
-
-### Dashboard
-Access your central command center with real-time analytics and quick access to all core features.
-
-### Job Management
-Create, publish, and manage job postings across multiple channels with our intuitive job builder.
-
-### Candidate Tracking
-Track candidates through every stage of your hiring pipeline with customizable workflows.
-
-### AI-Powered Tools
-Leverage artificial intelligence to screen candidates, generate interview questions, and automate follow-ups.
-
-### Analytics & Reporting
-Get insights into your hiring performance with detailed analytics and customizable reports.
-
-## Getting Started
-
-1. **Set up your company profile** in the Companies section
-2. **Create your first job posting** using our job builder
-3. **Configure your hiring pipeline** with custom stages
-4. **Start receiving and managing applications**
-
-## Platform Navigation
-
-Use the main navigation to access:
-- **Companies**: Manage your company profiles
-- **Jobs**: Create and manage job postings
-- **Candidates**: Track and manage applicants
-- **AI Tools**: Access AI-powered features
-- **Analytics**: View performance metrics
-
-## Support
-
-Need help getting started? Visit our [Support](/support) section or contact us directly.```
 
 # File: quickstart.mdx
 
-```markdown
 ---
 title: 'Quick Start'
 description: 'Get your workspace set up and post your first job in under 5 minutes'
@@ -10098,7 +9890,7 @@ description: 'Get your workspace set up and post your first job in under 5 minut
 Go to [app.hirempire.com](https://app.hirempire.com) and sign up. After confirming your email you'll land in your workspace dashboard.
 
 <Tip>
-  If you were invited by a teammate, use the invite link from your email — it will automatically join you to the right workspace.
+  If you were invited by a teammate, use the invite link from your email - it will automatically join you to the right workspace.
 </Tip>
 
 ## 2. Set up your company
@@ -10122,7 +9914,7 @@ Go to [app.hirempire.com](https://app.hirempire.com) and sign up. After confirmi
     Then click **New Job** in the top right.
   </Step>
   <Step title="Use the AI Job Wizard">
-    Hirempire's AI wizard guides you through the job creation process conversationally — it asks for the role, department, location, salary, and generates a full job description automatically.
+    Hirempire's AI wizard guides you through the job creation process conversationally - it asks for the role, department, location, salary, and generates a full job description automatically.
   </Step>
   <Step title="Add application sources">
     Enter the platforms where you'll share the job (e.g., LinkedIn, Indeed). Each source gets a unique tracking URL so you can measure where your best candidates come from.
@@ -10137,7 +9929,7 @@ Go to [app.hirempire.com](https://app.hirempire.com) and sign up. After confirmi
 After saving, click **Application URLs** on the job card to copy source-specific links. Share them on your chosen platforms.
 
 <Info>
-  Each source URL is unique — candidates who apply through different links are automatically tagged by source so you can track performance.
+  Each source URL is unique - candidates who apply through different links are automatically tagged by source so you can track performance.
 </Info>
 
 ## 5. Manage incoming candidates
@@ -10175,11 +9967,9 @@ Go to **Settings → Members** to invite colleagues. Assign roles:
     Track source performance and hiring metrics
   </Card>
 </CardGroup>
-```
 
 # File: referral.mdx
 
-```markdown
 ---
 title: "Refer a Friend"
 description: "Share Hirempire with your network and earn free Pro plan months for every paying customer you refer"
@@ -10362,11 +10152,9 @@ Contact our support team for assistance with referral tracking, reward redemptio
 
 Start sharing Hirempire today and turn your professional network into free Pro plan months!
 
-```
 
 # File: settings/integrations.mdx
 
-```markdown
 ---
 title: 'Integrations'
 description: 'Connect Hirempire to your calendar and other external tools'
@@ -10416,11 +10204,9 @@ See the [Chrome Extension guide](/candidates/chrome) for installation and usage 
 To integrate Hirempire with your own tools or the MCP Server, generate API tokens in **Settings → Tokens**.
 
 See the [API Reference](/developers/get-started) for full documentation on available endpoints and authentication.
-```
 
 # File: settings/members-roles.mdx
 
-```markdown
 ---
 title: 'Members & Roles'
 description: 'Invite your team and control access with role-based permissions'
@@ -10472,15 +10258,15 @@ Hirempire has four roles with different levels of access:
 
 | Feature | Owner | Admin | Member | Dept Manager |
 |---------|-------|-------|--------|--------------|
-| Jobs | ✓ | ✓ | ✓ | — |
-| Talents / CV Bank | ✓ | ✓ | ✓ | — |
+| Jobs | ✓ | ✓ | ✓ | - |
+| Talents / CV Bank | ✓ | ✓ | ✓ | - |
 | Requisitions | ✓ | ✓ | ✓ | ✓ |
 | Chat & Tasks | ✓ | ✓ | ✓ | ✓ |
 | Meetings | ✓ | ✓ | ✓ | ✓ |
-| Analytics | ✓ | ✓ | — | — |
-| Workspace Settings | ✓ | ✓ | — | — |
-| Billing | ✓ | — | — | — |
-| API Tokens | ✓ | ✓ | — | — |
+| Analytics | ✓ | ✓ | - | - |
+| Workspace Settings | ✓ | ✓ | - | - |
+| Billing | ✓ | - | - | - |
+| API Tokens | ✓ | ✓ | - | - |
 
 ## Changing a member's role
 
@@ -10493,11 +10279,9 @@ Click the three-dot menu next to a member and select **Remove**. They will immed
 ## Pending invitations
 
 Invitations that haven't been accepted yet appear in a separate "Pending" section. You can resend or cancel pending invitations from there.
-```
 
 # File: settings/personal.mdx
 
-```markdown
 ---
 title: 'Personal Settings'
 description: 'Update your name, avatar, and account preferences'
@@ -10513,7 +10297,7 @@ Go to **Settings** in the sidebar. The **Personal Info** section is the first ta
 |-------|------------|
 | **Full name** | Your display name shown to teammates in Chat, Tasks, and throughout the app |
 | **Email** | Your login email address |
-| **Avatar** | Your profile photo — shown in chat messages, the DM list, and channel member previews |
+| **Avatar** | Your profile photo - shown in chat messages, the DM list, and channel member previews |
 
 ## Updating your avatar
 
@@ -10528,11 +10312,9 @@ Update your full name and click **Save**. The change is reflected immediately ac
 <Tip>
   Use your real name so teammates can recognize you in chat and task assignments.
 </Tip>
-```
 
 # File: settings/workspace.mdx
 
-```markdown
 ---
 title: 'Workspace Settings'
 description: 'Manage your workspace name, slug, and view your plan usage'
@@ -10566,7 +10348,7 @@ Usage bars update in real time as your team works.
 
 ## Company profiles
 
-Company profiles — including logo, name, industry, size, website, and location — are managed on the [Companies](/core-features/companies) page, not in workspace settings.
+Company profiles - including logo, name, industry, size, website, and location - are managed on the [Companies](/core-features/companies) page, not in workspace settings.
 
 ## Culture pages
 
@@ -10579,20 +10361,9 @@ The danger zone contains irreversible actions like deleting the workspace. These
 <Warning>
   Deleting a workspace permanently removes all jobs, candidates, settings, and data. This cannot be undone.
 </Warning>
-```
-
-# File: snippets/snippet-intro.mdx
-
-```markdown
-One of the core principles of software development is DRY (Don't Repeat
-Yourself). This is a principle that apply to documentation as
-well. If you find yourself repeating the same content in multiple places, you
-should consider creating a custom snippet to keep your content in sync.
-```
 
 # File: status.mdx
 
-```markdown
 ---
 title: 'System Status'
 description: 'Real-time monitoring of our core infrastructure and services.'
@@ -10625,11 +10396,9 @@ Our status portal provides 24/7 visibility into the health of all major componen
 <Note>
 If you are experiencing connectivity issues or errors that are not reflected on our status page, please [contact our support team](mailto:support@hirempire.com) immediately so we can investigate.
 </Note>
-```
 
 # File: subscription.mdx
 
-```markdown
 ---
 title: 'Subscription Plans'
 description: 'Choose the perfect plan for your recruitment needs with transparent, affordable pricing'
@@ -10640,13 +10409,12 @@ description: 'Choose the perfect plan for your recruitment needs with transparen
 ### Maximize Your Investment
 
 After choosing your plan:
-- **[Set Up AI Screening](/ai-screening)** - Make the most of AI features (paid plans)
-- **[Configure Auto Follow-ups](/automated-follow-ups)** - Automate your hiring communication
-- **[Optimize Job Postings](/jobs)** - Create better job descriptions for quality candidates```
+- **[Set Up AI Screening](/ai-features/ai-screening)** - Make the most of AI features (paid plans)
+- **[Configure Auto Follow-ups](/core-features/automated-follow-ups)** - Automate your hiring communication
+- **[Optimize Job Postings](/core-features/jobs)** - Create better job descriptions for quality candidates
 
 # File: support.mdx
 
-```markdown
 ---
 title: 'Support'
 description: 'Get help with Hirempire - open a support ticket or contact our team'
@@ -10696,200 +10464,12 @@ To help us assist you faster, please include:
 Before opening a ticket, check if your question is covered in our documentation:
 
 - [Getting Started](/quickstart)
-- [Managing Jobs](/jobs)
-- [AI Features](/hirempire-ai)
-- [Subscription Plans](/subscription)```
-
-# File: test.mdx
-
-```markdown
----
-title: "Refer a Friend"
-description: "Share Hirempire with your network and earn free Pro plan months for every paying customer you refer"
----
-
-# Love Hirempire? Share it with your network and get rewarded!
-
-Get **1 free month of the Pro plan** for every paying customer you refer to Hirempire.
-
-## Get Your Referral Link
-
-Enter your email below to generate your unique referral link and start earning rewards.
-
-<div id="referral-form">
-  <!-- The referral form component will be embedded here -->
-</div>
-
-<Info>
-  Your referral link will be unique to you and can be tracked through your Hirempire dashboard.
-</Info>
-
-## How It Works
-
-<CardGroup cols={3}>
-  <Card title="1. Generate Link" icon="link">
-    Enter your email above to get your personalized referral link
-  </Card>
-  <Card title="2. Share & Promote" icon="share">
-    Share your link via email, social media, or direct messages
-  </Card>
-  <Card title="3. Earn Rewards" icon="gift">
-    Get 1 free Pro plan month for each paying customer referral
-  </Card>
-</CardGroup>
-
-### Step 1: Create Your Referral Link
-Enter your email above to receive your unique referral link instantly.
-
-### Step 2: Share It With Your Network
-Promote your referral link through:
-- Email lists and newsletters
-- Social media platforms (LinkedIn, Twitter, Facebook)
-- Direct messages to colleagues
-- Professional networking events
-- Industry forums and communities
-
-### Step 3: Get Rewarded
-Earn **1 free month of the Pro plan** for every person who:
-- Signs up using your referral link
-- Becomes a paying customer (any paid plan)
-- Maintains an active subscription
-
-## Reward Details
-
-### What You Get
-- **1 free month of Pro plan** per successful referral
-- **Unlimited referrals** - no cap on earnings
-- **Dashboard tracking** to monitor your referrals
-- **Automatic rewards** applied to your account
-
-### Pro Plan Value
-Your free Pro plan month includes:
-- 10 active jobs
-- 5 company profiles  
-- 3 team members
-- AI Screening & Hirempire AI
-- All Pro features worth $30/month
-
-## Tracking Your Success
-
-**Referral Dashboard Access:**
-- View total referrals and conversion rates
-- Track pending and confirmed rewards
-- Monitor referral link performance
-- Download referral reports
-
-**Real-Time Updates:**
-- Instant notifications when someone uses your link
-- Confirmation when referrals become paying customers
-- Automatic reward application to your account
-
-## Program Terms
-
-<AccordionGroup>
-  <Accordion icon="file-text" title="Eligibility Requirements">
-    - Must be an existing Hirempire user
-    - Valid email address required for tracking
-    - Referred users must be new to Hirempire
-    - Self-referrals are not permitted
-  </Accordion>
-  
-  <Accordion icon="calendar" title="Reward Timeline">
-    - Rewards granted when referred user starts paying subscription
-    - Free months applied automatically to your account
-    - Rewards valid for 12 months from earning date
-    - No cash alternative available
-  </Accordion>
-  
-  <Accordion icon="warning" title="Important Conditions">
-    - Rewards tied to active paying customers only
-    - If referred customer cancels, associated reward may be adjusted
-    - Hirempire reserves right to modify program terms
-    - Fraudulent activity results in program removal
-  </Accordion>
-</AccordionGroup>
-
-By participating in this program, you agree to abide by Hirempire's [Refer-a-Friend Program Terms and Conditions](https://hirempire.com/ref-terms).
-
-## Frequently Asked Questions
-
-<AccordionGroup>
-  <Accordion title="How do I track my referrals?">
-    Once you generate your referral link, you can track all your referrals through your Hirempire dashboard. You'll see real-time updates on sign-ups, conversions, and earned rewards.
-  </Accordion>
-  
-  <Accordion title="When do I receive my reward?">
-    You'll receive your free month of the Pro plan automatically once your referred user becomes a paying customer on any paid plan (Starter, Pro, or Premium).
-  </Accordion>
-  
-  <Accordion title="Is there a limit to how many people I can refer?">
-    No limits! The more people you successfully refer, the more free Pro plan months you can earn. There's no cap on rewards.
-  </Accordion>
-  
-  <Accordion title="What happens if someone I refer cancels?">
-    Your reward is tied to active paying customers. If a referred customer cancels their subscription, the associated reward may be adjusted or removed accordingly.
-  </Accordion>
-  
-  <Accordion title="Can I refer myself or use my own link?">
-    No, self-referrals are not permitted under our terms and conditions. The program is designed to reward you for bringing new users to Hirempire.
-  </Accordion>
-  
-  <Accordion title="What if my referred user chooses a different plan?">
-    You earn the same reward (1 free Pro plan month) regardless of which paid plan your referral chooses - whether Starter ($18), Pro ($30), or Premium ($45).
-  </Accordion>
-  
-  <Accordion title="How long are my earned rewards valid?">
-    Earned free months are valid for 12 months from the date they're credited to your account. Make sure to use them before they expire!
-  </Accordion>
-  
-  <Accordion title="Can I combine referral rewards with other promotions?">
-    Referral rewards can typically be combined with other Hirempire promotions, but specific terms may apply. Check with support for details on current offers.
-  </Accordion>
-</AccordionGroup>
-
-## Tips for Successful Referrals
-
-### Target the Right Audience
-- **Recruiters and HR professionals** looking for affordable solutions
-- **Small to medium businesses** needing streamlined hiring
-- **Recruitment agencies** managing multiple clients
-- **Startups** seeking cost-effective recruitment tools
-
-### Effective Promotion Strategies
-
-<Tip>
-**Personal Approach**: Share your genuine experience with Hirempire. Explain how it's helped your recruitment process and saved you time and money.
-</Tip>
-
-<Tip>
-**Highlight Value**: Emphasize Hirempire's affordability compared to competitors, AI features, and ease of use.
-</Tip>
-
-<Tip>
-**Professional Networks**: Leverage LinkedIn, industry forums, and professional associations where recruiters gather.
-</Tip>
-
-<Tip>
-**Content Creation**: Write blog posts, create social media content, or record videos about your Hirempire experience.
-</Tip>
-
-## Need Help?
-
-**Support Resources:**
-- Email: [support@hirempire.com](mailto:support@hirempire.com)
-- Review: [Complete Terms and Conditions](https://hirempire.com/ref-terms)
-- Dashboard: Access your referral tracking in your account
-
-**Questions About the Program?**
-Contact our support team for assistance with referral tracking, reward redemption, or program terms.
-
----
-
-Start sharing Hirempire today and turn your professional network into free Pro plan months!```
+- [Managing Jobs](/core-features/jobs)
+- [AI Features](/ai-features/hirempire-ai)
+- [Subscription Plans](/subscription)
 
 # File: updates/feature-requests.mdx
 
-```markdown
 ---
 title: 'Feature Requests'
 description: 'Share your ideas and help shape the future of Hirempire. Submit feature requests, vote on community suggestions, and track development progress.'
@@ -10897,7 +10477,7 @@ description: 'Share your ideas and help shape the future of Hirempire. Submit fe
 
 Share your ideas and help shape the future of Hirempire. Submit feature requests, vote on community suggestions, and track development progress.
 
-[Submit Feature Request →](https://www.hirempire.com/feature-requests)
+[Submit Feature Request →](https://hirempire.canny.io/)
 
 ## What You Can Do
 
@@ -10906,13 +10486,12 @@ Share your ideas and help shape the future of Hirempire. Submit feature requests
 - **Track Progress**: See which features are in development
 - **Get Updates**: Receive notifications when your requests are implemented
 
-Visit our [feedback portal](https://www.hirempire.com/feature-requests) to get started.
+Visit our [feedback portal](https://hirempire.canny.io/) to get started.
 
-Exicted for your engagement 🤩```
+Exicted for your engagement 🤩
 
 # File: updates/roadmap.mdx
 
-```markdown
 ---
 title: 'Product Roadmap'
 description: 'See what we are building next and track our development progress. Our roadmap shows planned features, current priorities, and release timelines.'
@@ -10931,11 +10510,10 @@ See what we're building next and track our development progress. Our roadmap sho
 
 Check our [public roadmap](https://hirempire.canny.io/) to stay informed about Hirempire's future.
 
-See you there.```
+See you there.
 
 # File: updates/whats-new.mdx
 
-```markdown
 ---
 title: "What's New"
 description: "The latest features and improvements in Hirempire"
@@ -10943,23 +10521,48 @@ description: "The latest features and improvements in Hirempire"
 
 Stay up to date with the latest features, improvements, and enhancements to Hirempire.
 
-<Update label="April 2026" description="AI Pre-Screen — Async Proctored Interviews" tags={["New Feature", "AI"]}>
+<Update label="May 2026" description="AI Search - Ask Anything in the Docs" tags={["New Feature", "AI", "Documentation"]}>
 
-Replace the first-round phone screen with an asynchronous, proctored AI interview. Send a candidate a one-time link and they complete a live, structured AI conversation on their own time — no scheduling, no recruiter time.
+The Hirempire docs now have a built-in AI assistant. Ask any question in natural language and get instant, accurate answers sourced directly from the documentation - no more scanning pages to find what you need.
+
+**How it works:**
+- Click the **Ask me anything…** bar at the bottom of any docs page
+- Type your question in plain English
+- Get a direct answer with relevant context
+
+Available on every page of the docs at [docs.hirempire.com](https://docs.hirempire.com).
+
+</Update>
+
+<Update label="May 2026" description="Google Jobs - Automatic Job Indexing" tags={["New Feature", "Jobs"]}>
+
+Every active job you post on Hirempire is now automatically submitted to **Google Jobs**. No setup required - your listings appear directly in Google Search results, reaching candidates who are actively searching without any extra steps on your end.
+
+**What this means:**
+- Active jobs are indexed by Google Jobs automatically
+- Candidates find your listings directly in Google Search
+- More organic reach with zero additional effort
+- Works for all active job postings across all plans
+
+</Update>
+
+<Update label="April 2026" description="AI Pre-Screen - Async Proctored Interviews" tags={["New Feature", "AI"]}>
+
+Replace the first-round phone screen with an asynchronous, proctored AI interview. Send a candidate a one-time link and they complete a live, structured AI conversation on their own time - no scheduling, no recruiter time.
 
 **Built-in proctoring:**
 - Tab-switching detection terminates the session instantly
 - Paste blocking forces real, typed responses
-- The AI probes for specifics — vague answers get followed up on
+- The AI probes for specifics - vague answers get followed up on
 
 When the interview ends, you get an overall score, a scorecard, an AI recommendation, credibility signals, and the full transcript.
 
 [Read the AI Pre-Screen guide](/ai-features/ai-pre-screen)
 </Update>
 
-<Update label="April 2026" description="MCP Server — Claude AI Integration" tags={["New Feature", "AI", "Developer"]}>
+<Update label="April 2026" description="MCP Server - Claude AI Integration" tags={["New Feature", "AI", "Developer"]}>
 
-Connect Claude AI directly to your Hirempire workspace using the new **MCP Server** integration. Once connected, you can query candidates, manage jobs, and get AI-powered insights through natural language conversation — without leaving Claude.
+Connect Claude AI directly to your Hirempire workspace using the new **MCP Server** integration. Once connected, you can query candidates, manage jobs, and get AI-powered insights through natural language conversation - without leaving Claude.
 
 **Example prompts:**
 - "Show me all candidates for the Senior Developer role"
@@ -10971,9 +10574,9 @@ Go to **Settings → Claude AI (MCP)** to connect.
 [Read the MCP Server guide](/mcp/overview)
 </Update>
 
-<Update label="April 2026" description="Interview Intelligence — AI Interview Analysis" tags={["New Feature", "AI", "Meetings"]}>
+<Update label="April 2026" description="Interview Intelligence - AI Interview Analysis" tags={["New Feature", "AI", "Meetings"]}>
 
-After a recorded interview ends, Hirempire's AI automatically analyzes it and produces a structured report — so your team can make faster, more consistent hiring decisions.
+After a recorded interview ends, Hirempire's AI automatically analyzes it and produces a structured report - so your team can make faster, more consistent hiring decisions.
 
 **Each report includes:**
 - Overall candidate score (0–100)
@@ -11001,7 +10604,7 @@ All your scheduled interviews and candidate meetings are now in one place. The M
 
 <Update label="April 2026" description="Team Chat" tags={["New Feature", "Collaboration"]}>
 
-Your recruiting team can now communicate in real time without switching tools. Hirempire Chat includes channels, direct messages, @mentions, emoji reactions, and typing indicators — all built into your hiring workspace.
+Your recruiting team can now communicate in real time without switching tools. Hirempire Chat includes channels, direct messages, @mentions, emoji reactions, and typing indicators - all built into your hiring workspace.
 
 **Highlights:**
 - Public and private channels
@@ -11012,7 +10615,7 @@ Your recruiting team can now communicate in real time without switching tools. H
 [Read the Chat guide](/collaboration/chat)
 </Update>
 
-<Update label="April 2026" description="Tasks — Shared Team Task Board" tags={["New Feature", "Collaboration"]}>
+<Update label="April 2026" description="Tasks - Shared Team Task Board" tags={["New Feature", "Collaboration"]}>
 
 Manage recruiting action items as a team with the shared Tasks board. Create tasks, assign them to teammates, and track progress through four stages: **To Do → In Progress → In Review → Done**.
 
@@ -11021,16 +10624,16 @@ Filter by status, assignee, or search by title to find what you need fast.
 [Read the Tasks guide](/collaboration/tasks)
 </Update>
 
-<Update label="April 2026" description="Inbox — Notification Center" tags={["New Feature", "Collaboration"]}>
+<Update label="April 2026" description="Inbox - Notification Center" tags={["New Feature", "Collaboration"]}>
 
-The Inbox collects all notifications relevant to you — chat mentions, emoji reactions, channel invites, and workspace activity — in one feed. Stay on top of what needs your attention without leaving Hirempire.
+The Inbox collects all notifications relevant to you - chat mentions, emoji reactions, channel invites, and workspace activity - in one feed. Stay on top of what needs your attention without leaving Hirempire.
 
 [Read the Inbox guide](/collaboration/inbox)
 </Update>
 
-<Update label="April 2026" description="Requisitions — Internal Hiring Requests" tags={["New Feature", "Recruiting"]}>
+<Update label="April 2026" description="Requisitions - Internal Hiring Requests" tags={["New Feature", "Recruiting"]}>
 
-Department managers can now submit structured internal hiring requests before a job goes live. HR reviews and approves requisitions, then converts them into actual job postings — creating a clear approval workflow between managers and recruiters.
+Department managers can now submit structured internal hiring requests before a job goes live. HR reviews and approves requisitions, then converts them into actual job postings - creating a clear approval workflow between managers and recruiters.
 
 **Requisition fields:** Job title, department, employment type, workplace type, location, priority (Low / Medium / High), target start date, and description.
 
@@ -11070,7 +10673,7 @@ Analytics is available on **Pro** and higher plans.
 
 <Update label="April 2026" description="Role-Based Access Control" tags={["New Feature", "Settings", "Team"]}>
 
-Hirempire now has four distinct roles — **Owner**, **Admin**, **Member**, and **Department Manager** — each with tailored access to the right pages and features.
+Hirempire now has four distinct roles - **Owner**, **Admin**, **Member**, and **Department Manager** - each with tailored access to the right pages and features.
 
 Department Managers get targeted access to Requisitions, Meetings, Chat, and Tasks without seeing the full recruiting pipeline.
 
@@ -11079,15 +10682,139 @@ Department Managers get targeted access to Requisitions, Meetings, Chat, and Tas
 
 <Update label="April 2026" description="Integrations Settings" tags={["Improvement", "Settings"]}>
 
-All third-party connections are now managed from a single **Settings → Integrations** page. Connect Cal.com for meeting sync, manage the Chrome Extension, and access API tokens — all in one place.
+All third-party connections are now managed from a single **Settings → Integrations** page. Connect Cal.com for meeting sync, manage the Chrome Extension, and access API tokens - all in one place.
 
 [Read the Integrations guide](/settings/integrations)
+</Update>
+
+<Update label="March 2026" description="Webhooks - Real-Time Event Notifications" tags={["New Feature", "Developer"]}>
+
+Subscribe to events in your Hirempire account and receive instant HTTP `POST` notifications when they happen - no polling required. The webhooks system uses a challenge-verification handshake to confirm your endpoint before delivery begins.
+
+**Available events:**
+- `job_added`, `job_updated`, `job_deleted`
+- `new_applicant` - new application received
+- `cv_processed` - CV parsing complete
+- `meeting_created` - interview scheduled
+- `application_status_changed` - candidate moved in pipeline
+
+Set up webhooks from **Settings → Integrations → Webhooks**.
+
+[Read the Webhooks guide](/developers/webhooks/get-started)
+</Update>
+
+<Update label="March 2026" description="Cal.com Calendar Integration - Automatic Interview Scheduling" tags={["New Feature", "Meetings"]}>
+
+Let candidates book their own interviews directly on your calendar. Connect your **Cal.com** account and candidates who advance in the pipeline receive an automatic booking link - no back-and-forth emails, no scheduling overhead.
+
+**How it works:**
+- Connect Cal.com from **Settings → Integrations → My Calendar**
+- Select which Cal.com event type candidates should book (e.g., 30-min interview)
+- Accepted candidates receive the booking link automatically
+- Meetings sync to your Hirempire Meetings page in real time
+
+[Read the Calendar Integration guide](/settings/integrations)
+</Update>
+
+<Update label="March 2026" description="Automated Follow-ups - AI Rejection Notes" tags={["New Feature", "Recruiting"]}>
+
+Every candidate status change now triggers a professional, automated email - from acceptance to rejection - without any manual work. Rejection emails include an **AI-generated personalized note** based on the candidate's background compared to the job requirements, so every candidate leaves with a constructive response and your employer brand stays intact.
+
+**Trigger types:**
+- **Accepted** → congratulations email with next steps
+- **Rejected** → professional rejection with AI-written feedback note
+
+Available on all plans, including Free Forever.
+
+</Update>
+
+<Update label="March 2026" description="AI Screening - Instant Candidate Fit Scoring" tags={["New Feature", "AI", "Recruiting"]}>
+
+Every application is automatically screened the moment it arrives. Hirempire AI analyzes the candidate's CV against your job requirements and produces an instant summary, match score, and key highlights - so you spend time on the best candidates, not reading every CV from scratch.
+
+**What you get per applicant:**
+- AI-generated professional summary
+- Job fit match score
+- Career level and skills assessment
+- Interview focus areas and potential gaps
+
+Available on **Starter, Pro, and Premium** plans.
+
+[Read the AI Screening guide](/ai-features/ai-screening)
+</Update>
+
+<Update label="March 2026" description="Candidate Bank - AI CV Database" tags={["New Feature", "Recruiting", "AI"]}>
+
+Build a searchable database of candidates beyond your active job pipeline. Upload CVs in bulk (PDF) and Hirempire AI automatically extracts contact info, experience, education, skills, languages, and certifications - then generates a structured profile with an intelligent summary.
+
+**Key capabilities:**
+- Bulk PDF upload (up to 10 MB per file, processed in 30–60 seconds)
+- AI extracts: name, email, phone, roles, companies, degrees, skills, certifications
+- Search and filter by skills, experience level, or location
+- Add notes, tags, and custom labels to organize your talent pool
+- Combine with the Chrome Extension to add LinkedIn prospects in one click
+
+Available on **paid plans**.
+
+[Read the Candidate Bank guide](/candidates/candidates-bank)
+</Update>
+
+<Update label="March 2026" description="Referral Program - Sourcing Through Your Network" tags={["New Feature", "Recruiting"]}>
+
+Turn your network - and your team's networks - into a candidate source. Every Hirempire account has a unique referral link. Share it anywhere and anyone who visits can browse your open roles and submit a candidate on behalf of a referrer.
+
+**What gets tracked automatically:**
+- The referred candidate's details
+- Which job they were referred for
+- The referrer's identity
+- Current pipeline status of every referral
+
+Share the link in email signatures, LinkedIn posts, or your company's careers page.
+
+[Read the Referrals guide](/analytics/referrals)
+</Update>
+
+<Update label="March 2026" description="Custom Application Questions - 6 Types, 6 Per Job" tags={["New Feature", "Recruiting"]}>
+
+Go beyond the standard CV. Add up to **6 custom questions** per job posting and collect exactly the information you need before the first interview.
+
+**Question types available:**
+- Short text
+- Long text (paragraph)
+- Single choice
+- Multiple choice
+- Yes / No
+- File upload
+
+Questions can be marked as required or optional. Candidates answer them as part of the application flow.
+
+[Read the Application Questions guide](/core-features/application-questions)
+</Update>
+
+<Update label="March 2026" description="Developer API - Jobs, Applicants & Companies" tags={["New Feature", "Developer"]}>
+
+The Hirempire REST API is now available. Programmatically access and manage your recruitment data with Bearer token authentication and granular scope controls.
+
+**Available endpoints at launch:**
+- `GET /jobs` - list all job postings
+- `GET /jobs/:id` - get a specific job
+- `POST /jobs` - create a job
+- `PUT /jobs/:id/status` - update job status
+- `DELETE /jobs/:id` - delete a job
+- `GET /applicants` - list all applicants
+- `GET /applicants/:id` - get a specific applicant
+- `GET /jobs/:id/applicants` - get applicants for a job
+- `PUT /applicants/:id/status` - update applicant status
+
+Rate limits apply by plan: **100 req/hr** (Free) → **5,000 req/hr** (Premium).
+
+[Read the API docs](/developers/get-started)
 </Update>
 
 <Update label="September 15, 2025" description="AI Docs Helper" tags={["New Feature", "AI"]}>
 ![AI Docs Helper](/images/new-ai-docs-helper.png)
 
-Introducing AI Docs Helper — your intelligent documentation companion. Ask questions naturally and get instant answers from the full Hirempire documentation.
+Introducing AI Docs Helper - your intelligent documentation companion. Ask questions naturally and get instant answers from the full Hirempire documentation.
 
 [Try it now](https://hirempire.com)
 </Update>
@@ -11103,7 +10830,7 @@ The Candidates page now has streamlined navigation across three sections: **Job 
 <Update label="September 3, 2025" description="Brand New Documentation" tags={["Improvement", "Documentation"]}>
 ![Brand New Documentation](/images/brand-new-hirempire-documentations.png)
 
-Comprehensive documentation now live — complete guides for job posting, AI screening, candidate management, and the full API reference.
+Comprehensive documentation now live - complete guides for job posting, AI screening, candidate management, and the full API reference.
 
 [Visit Docs](https://docs.hirempire.com)
 </Update>
@@ -11111,7 +10838,7 @@ Comprehensive documentation now live — complete guides for job posting, AI scr
 <Update label="August 29, 2025" description="Chrome Extension Launch" tags={["New Feature", "Chrome Extension"]}>
 ![Chrome Extension](/images/new-chrome-extesntion.png)
 
-The Hirempire Headhunting Chrome Extension lets you save LinkedIn profiles to your CV Bank with one click — no more manual copy-paste.
+The Hirempire Headhunting Chrome Extension lets you save LinkedIn profiles to your CV Bank with one click - no more manual copy-paste.
 
 [Add to Chrome](https://chromewebstore.google.com/detail/hirempire-headhunting/micnjpbgakkncginjpmbkdkkbbhomlmd)
 </Update>
@@ -11119,8 +10846,7 @@ The Hirempire Headhunting Chrome Extension lets you save LinkedIn profiles to yo
 <Update label="August 27, 2025" description="Candidate Kanban View" tags={["Improvement", "Kanban"]}>
 ![Candidate Kanban View](/images/new-candidate-kanban-view.png)
 
-A visual pipeline board where you can drag candidates across hiring stages — Applied, Reviewed, Accepted, Hired — and see their key details at a glance.
+A visual pipeline board where you can drag candidates across hiring stages - Applied, Reviewed, Accepted, Hired - and see their key details at a glance.
 
 [Try it](https://app.hirempire.com/dashboard/talents)
 </Update>
-```

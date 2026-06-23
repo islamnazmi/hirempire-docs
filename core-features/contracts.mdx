@@ -1,0 +1,139 @@
+---
+title: 'Contracts & E-signature'
+description: 'Send offer letters and contracts, get them signed online'
+icon: 'file-signature'
+---
+
+Send offer letters, employment contracts, NDAs and other agreements directly from a candidate profile. Both you and the candidate sign online - no printing, scanning, or third-party tool required. Track every contract from sent to fully signed in one place.
+
+## How it works
+
+1. **Create a template** (optional) with reusable text and `{{variable}}` placeholders, or upload a finished PDF
+2. **Send for signature** from any candidate's profile - we email them a signing link
+3. **Candidate signs** by typing their name and picking a signature style
+4. **You countersign** as the employer to finalize the document
+5. **Both parties get** the signed PDF by email and can download it any time
+
+## Creating a template
+
+Templates live at [Contracts → Templates](https://app.hirempire.com/dashboard/contracts?tab=templates). Only workspace **owners** and **admins** can create or edit templates.
+
+<Steps>
+  <Step title="Open the templates tab">
+    Go to **Contracts**, then click the **Templates** tab in the sidebar.
+  </Step>
+  <Step title="Start a new template">
+    Click the **+** button to start from scratch, or click the **AI** icon to generate one with AI.
+  </Step>
+  <Step title="Name it and pick a doc type">
+    Give the template a name and choose a document type:
+    - Offer Letter
+    - Employment Contract
+    - NDA
+    - Freelance Contract
+    - Consulting Agreement
+    - Independent Contractor Agreement
+    - Part-Time Contract
+    - Internship Agreement
+    - Probation Extension
+    - Promotion Letter
+  </Step>
+  <Step title="Write the content">
+    Use the markdown editor with **Bold**, *Italic*, headings, lists, and horizontal rules. Switch to the **Preview** tab to see the rendered output.
+  </Step>
+  <Step title="Insert variables">
+    Click any variable in the right sidebar to insert a `{{placeholder}}` at your cursor. When you send the contract, you'll fill these in for each candidate.
+
+    Available variables include: Candidate Name, Company Name, Manager Name, Department, Position, Employment Type, Contract Date, Start Date, Salary, Currency, Working Hours, Location, Probation Period, and Notice Period.
+  </Step>
+  <Step title="Save">
+    Click **Save**. The template is now available when sending contracts.
+  </Step>
+</Steps>
+
+### Generate with AI
+
+Click the **AI** icon in the templates sidebar to draft a template automatically. Pick a **Template Type**, optionally **Link a Job** (auto-fills role details), and add **Additional Instructions** like *"Include equity clause, 6-month probation, governed by UAE law"*. The generated draft opens in the editor for you to review and save.
+
+## Sending a contract
+
+Contracts are sent from a candidate's profile, not from the Contracts page itself.
+
+<Steps>
+  <Step title="Open a candidate">
+    Go to **Candidates**, open the candidate, and click **Send for Signature**.
+  </Step>
+  <Step title="Choose Upload PDF or Generate from Template">
+    - **Upload PDF** - drop in any PDF you already have
+    - **Generate from Template** - pick one of your templates and fill in the variables. Hirempire pre-fills what it knows (candidate name, position, company, location, employment type)
+  </Step>
+  <Step title="Confirm signer and message">
+    Check the **Document Name**, **Signer Name**, and **Signer Email** (pre-filled from the candidate). Add an optional **Message** that appears at the top of the signing page.
+  </Step>
+  <Step title="Send">
+    Click **Send for Signature**. The candidate receives an email with a unique signing link that expires in **7 days**.
+  </Step>
+</Steps>
+
+<Note>
+  Each signing link is single-use and tied to a random secure token. Links cannot be guessed or reused.
+</Note>
+
+## Signing experience
+
+When the candidate opens the link, they see your document side-by-side with a signing panel.
+
+- **Type your name** - the candidate types the name they want on the signature line
+- **Pick a style** - five handwriting fonts: Classic, Elegant, Friendly, Natural, Refined
+- **Consent checkbox** - they confirm the electronic signature is legally binding
+- **Sign Document** - their signature is rendered onto the PDF and saved
+- **Decline** - they can decline with an optional reason instead of signing
+
+After the candidate signs, you (the employer) get a **Countersign** link to add your own signature. Once both signatures are on the document, both parties receive the final signed PDF by email.
+
+<Tip>
+  Multi-page documents automatically get a **DS** initials stamp on every page except the last, where the actual signature block lives - the same convention major e-signature tools use.
+</Tip>
+
+## Status tracking
+
+The Contracts tab shows every signature request you've sent, with live status updates.
+
+| Status | What it means |
+|---|---|
+| **Pending** | Sent, candidate hasn't opened the link yet |
+| **Viewed** | Candidate opened the link but hasn't signed |
+| **Awaiting Countersign** | Candidate signed - your turn to countersign |
+| **Signed** | Both parties signed. Final PDF is available |
+| **Declined** | Candidate declined to sign |
+| **Expired** | The 7-day signing window passed without a signature |
+
+Click any contract to see signer details, sent date, expiry, signing link, countersign link (when applicable), and a download link for the signed PDF.
+
+<Warning>
+  Expired links cannot be reopened. If a candidate needs more time, send a new signature request.
+</Warning>
+
+## Tips
+
+<Tip>
+  **Pre-fill more variables.** When you link a job in AI generation - or send from a candidate already attached to a job - Hirempire auto-fills position, company, location, and employment type for you.
+</Tip>
+
+<Tip>
+  **Use clear document names.** "Sales Lead - Employment Contract - Jane Doe" is easier to track than "Contract Final v2.pdf".
+</Tip>
+
+<Tip>
+  **Preview before saving.** The Preview tab in the template editor shows exactly how the rendered document will look, with `{{variables}}` highlighted so you don't miss one.
+</Tip>
+
+<Tip>
+  **Add a personal message.** A short note in the signer message (e.g. *"Excited to have you on board - sign here to confirm"*) increases the chance candidates sign quickly.
+</Tip>
+
+## Related
+
+- [Candidates](/candidates/candidates) - send contracts from a candidate profile
+- [Jobs](/core-features/jobs) - link jobs to auto-fill role details in contract templates
+- [Companies](/core-features/companies) - the company name used in `{{company_name}}` comes from here

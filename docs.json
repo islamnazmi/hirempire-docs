@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Hirempire Docs",
@@ -6,7 +6,6 @@
   "favicon": "favicon.png",
   "colors": {
     "primary": "#0A66C2",
-    "light": "#4287f5",
     "dark": "#0A66C2"
   },
   "background": {
@@ -47,8 +46,12 @@
               "core-features/jobs",
               "core-features/requisitions",
               "core-features/application-questions",
+              "core-features/workflows",
+              "core-features/automated-follow-ups",
+              "core-features/contracts",
               "candidates/candidates",
               "candidates/candidates-bank",
+              "candidates/sourcing",
               "candidates/chrome"
             ]
           },
@@ -57,14 +60,16 @@
             "pages": [
               "collaboration/chat",
               "collaboration/tasks",
-              "collaboration/inbox"
+              "collaboration/inbox",
+              "collaboration/tickets"
             ]
           },
           {
             "group": "Meetings",
             "pages": [
               "meetings/overview",
-              "meetings/interview-intelligence"
+              "meetings/interview-intelligence",
+              "core-features/cal-com"
             ]
           },
           {

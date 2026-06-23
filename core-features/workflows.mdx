@@ -1,0 +1,212 @@
+---
+title: 'Workflows'
+description: 'Automate candidate outreach and pipeline moves with a visual trigger → action builder'
+icon: 'workflow'
+---
+
+Workflows let you wire together triggers, actions, conditions, and wait steps into a fully automated pipeline. Build them yourself on the visual canvas, start from a prebuilt template, or describe what you want in plain English and let the AI builder do the wiring for you.
+
+## How it works
+
+Every workflow starts with a **trigger** (an event in your workspace), then runs one or more **actions** (send email, move stage, add tag, etc.). You can branch the flow with **conditions** and pause it between steps with **wait** delays.
+
+The builder lives at [Workflows](https://app.hirempire.com/dashboard/workflows). Each workflow has a status of `Draft`, `Active`, `Paused`, or `Archived`. Only **Active** workflows fire on real events.
+
+<Note>
+  Hirempire autosaves your graph as you edit. The header shows a `Saving…` / `Saved` indicator so you always know your changes are persisted.
+</Note>
+
+## Creating a workflow
+
+<Steps>
+  <Step title="Open Workflows">
+    Go to [Workflows](https://app.hirempire.com/dashboard/workflows) and click **New workflow**, pick a template, or click the AI builder button to start from a prompt.
+  </Step>
+  <Step title="Pick a trigger">
+    A blank workflow opens with the **Choose a trigger** panel. Select the event that should start the workflow.
+  </Step>
+  <Step title="Add steps">
+    Click the **+** button under any node to open the **Add step** panel and choose what happens next. The builder auto-positions each step for you.
+  </Step>
+  <Step title="Configure each node">
+    Click any node on the canvas to open its config panel on the right. Fill required fields — incomplete nodes show a red warning dot.
+  </Step>
+  <Step title="Publish">
+    When everything validates, the **Publish** button activates. Click it and the workflow status flips to **Active** and starts running on real events. Use the menu to **Unpublish** back to Draft anytime.
+  </Step>
+</Steps>
+
+## Triggers
+
+A workflow can only have one trigger. Choose the event that starts your automation.
+
+<AccordionGroup>
+  <Accordion icon="filter" title="Candidate matches criteria">
+    Fires when any candidate in your workspace matches the filters you define.
+
+    **Configure**:
+    - **Criteria** - one or more rules combined with `AND` / `OR` logic. Filter by candidate location, nationality, years of experience, skills, languages, certifications, tags, salary expectation, application source, AI screening decision/match %, or LinkedIn match.
+    - **Job scope** - apply to **all jobs** or only **specific jobs**.
+
+    At least one criterion with a field and operator is required.
+  </Accordion>
+
+  <Accordion icon="arrow-right-arrow-left" title="Candidate stage changed">
+    Fires when a candidate moves to a new pipeline stage.
+
+    **Configure**:
+    - **To Stage** *(required)* - the stage the candidate must move into.
+    - **Job scope** - all jobs or a specific subset.
+  </Accordion>
+
+  <Accordion icon="reply" title="Reply received">
+    Fires when a candidate replies to your email or LinkedIn message.
+
+    **Configure**:
+    - **Reply channel** - any, email only, or LinkedIn only.
+  </Accordion>
+</AccordionGroup>
+
+## Actions
+
+Actions are the work your workflow performs. Every action supports an optional delay (`Wait X days`) and a send window (e.g. business hours).
+
+<AccordionGroup>
+  <Accordion icon="envelope" title="Send Email">
+    Send a new email from one of your connected sending accounts.
+
+    **Required**: email account, subject, body. Insert variables like `{{candidate.first_name}}` or `{{job.title}}` into subject and body.
+  </Accordion>
+
+  <Accordion icon="linkedin" title="Send LinkedIn Message">
+    Send a direct LinkedIn message from a connected LinkedIn account.
+
+    **Required**: LinkedIn account, message body. Personalize with candidate and job variables.
+  </Accordion>
+
+  <Accordion icon="sparkles" title="Send AI Pre-Screen">
+    Send an AI-led pre-screen using Hirempire's built-in email. No account or copy required - the AI handles the conversation and writes a score plus summary back to the candidate's record.
+  </Accordion>
+
+  <Accordion icon="align-left" title="Move to Stage">
+    Move the candidate to a pipeline stage.
+
+    **Required**: target stage. Runs immediately by default (no delay).
+  </Accordion>
+
+  <Accordion icon="tag" title="Add Tag">
+    Apply a tag to the candidate so you can filter or group them later.
+
+    **Required**: tag value.
+  </Accordion>
+
+  <Accordion icon="clipboard-list" title="Create Task">
+    Open a task for your team to action manually (e.g. "Call this candidate").
+
+    **Required**: task title. Runs immediately by default.
+  </Accordion>
+</AccordionGroup>
+
+## Conditions
+
+Conditions branch your workflow into a **Yes** path and a **No** path based on candidate, application, AI screening, or LinkedIn fields.
+
+<AccordionGroup>
+  <Accordion icon="code-branch" title="How a condition works">
+    Configure one or more rules combined with `AND` / `OR` logic. At runtime the workflow evaluates the rules and follows either the green **Yes** edge or the red **No** edge. Each branch can have its own steps - including more conditions.
+  </Accordion>
+
+  <Accordion icon="list-check" title="Available fields">
+    - **Candidate**: location, nationality, years of experience, skills, languages, certifications, tags, salary min/max
+    - **Application**: source, job title
+    - **AI Screening**: decision (Select / Maybe / Reject), match %, skills match, experience match, location match
+    - **LinkedIn**: profile matched, match %
+  </Accordion>
+</AccordionGroup>
+
+## Wait steps
+
+Use a **Wait** node to pause the workflow before the next step runs. Set a delay in **days**, **hours**, or **minutes**. This is useful for natural-feeling follow-up cadences, e.g. wait 3 days after a LinkedIn message before sending an email.
+
+<Tip>
+  Most action nodes already have a built-in `Wait X days` header so you usually don't need a separate Wait node unless you want sub-day precision or to gate a branch.
+</Tip>
+
+## Templates
+
+If you don't want to start from scratch, head to [Workflow templates](https://app.hirempire.com/dashboard/workflows/templates) and click **Use template** on any card. The workflow is created in your workspace and opened in the builder, fully editable.
+
+Current templates:
+
+<CardGroup cols={3}>
+  <Card title="Multi-channel outreach" icon="linkedin">
+    Match criteria → send a LinkedIn message → wait 3 days → follow up by email.
+  </Card>
+  <Card title="AI Pre-Screen at scale" icon="sparkles">
+    Match criteria → automatically send an AI pre-screen to every matching candidate.
+  </Card>
+  <Card title="Reply handler" icon="reply">
+    Reply received → move to **Reviewed** stage → tag as `replied` so the team can act fast.
+  </Card>
+</CardGroup>
+
+## AI builder
+
+Click the **AI Builder** button in the top bar to open the AI panel. Describe your workflow in plain English and Hirempire returns a generated graph you can apply with one click.
+
+**Example prompts**:
+- "When a candidate matches criteria, send an email"
+- "When a candidate matches criteria, send a LinkedIn message, then an email"
+- "When a candidate stage changes, send an email and add a tag"
+- "When a candidate replies, move to a stage and add a tag"
+
+The panel previews the generated nodes before you commit. Hit **Apply to canvas** to load them into the builder, then fine-tune any details.
+
+<Tip>
+  The AI builder sees your current graph, so you can ask it to extend or modify an existing workflow - not just create from scratch.
+</Tip>
+
+## Testing and logs
+
+<AccordionGroup>
+  <Accordion icon="play" title="Test run">
+    Click **Test run** in the top bar, pick a real application from your workspace, and Hirempire executes the workflow against that candidate. The Logs panel opens automatically so you can watch each step resolve.
+  </Accordion>
+
+  <Accordion icon="scroll-text" title="Logs panel">
+    Click **Logs** in the top bar to see every run of this workflow. Each run shows:
+    - Overall status: **Running**, **Waiting**, **Completed**, **Failed**, **Paused**, or **Cancelled**.
+    - The entity it ran on (application, candidate, or CV bank entry).
+    - When it started and finished.
+
+    Click a run to drill into its individual steps and see each step's status (`pending`, `running`, `completed`, `failed`, `skipped`), input, output, and any error messages.
+  </Accordion>
+</AccordionGroup>
+
+## Tips
+
+<Tip>
+  **Validate before publish** - Hirempire blocks publishing until every required field is filled. Hover the disabled Publish button to see the exact list of fixes.
+</Tip>
+
+<Tip>
+  **Use the trigger's job scope** - Scope your trigger to a specific job (or set of jobs) so you don't accidentally fire automations on candidates from unrelated roles.
+</Tip>
+
+<Tip>
+  **Start in Draft** - Build and test in Draft status. Use **Test run** with a real candidate before publishing so you see exactly what each step will send.
+</Tip>
+
+<Tip>
+  **Personalize with variables** - Insert variables like `{{candidate.first_name}}`, `{{job.title}}`, or `{{application.ai_screening.match_percentage}}` into emails and messages so every send feels written for that candidate.
+</Tip>
+
+<Warning>
+  Deleting a workflow permanently removes it and all of its run history. This action can't be undone.
+</Warning>
+
+## Related features
+
+- [Automated follow-ups](/core-features/automated-follow-ups) - Simpler status-based emails for accept/reject decisions, no graph required.
+- [Jobs](/core-features/jobs) - Scope triggers and conditions to specific job postings.
+- [Application questions](/core-features/application-questions) - Collect the data your triggers and conditions filter on.
