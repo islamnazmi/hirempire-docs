@@ -1,7 +1,6 @@
 ---
 title: 'Workflows'
 description: 'Automate candidate outreach and pipeline moves with a visual trigger → action builder'
-icon: 'workflow'
 ---
 
 Workflows let you wire together triggers, actions, conditions, and wait steps into a fully automated pipeline. Build them yourself on the visual canvas, start from a prebuilt template, or describe what you want in plain English and let the AI builder do the wiring for you.
@@ -84,7 +83,7 @@ Actions are the work your workflow performs. Every action supports an optional d
     **Required**: LinkedIn account, message body. Personalize with candidate and job variables.
   </Accordion>
 
-  <Accordion icon="sparkles" title="Send AI Pre-Screen">
+  <Accordion icon="/images/ai.svg" title="Send AI Pre-Screen">
     Send an AI-led pre-screen using Hirempire's built-in email. No account or copy required - the AI handles the conversation and writes a score plus summary back to the candidate's record.
   </Accordion>
 
@@ -142,7 +141,7 @@ Current templates:
   <Card title="Multi-channel outreach" icon="linkedin">
     Match criteria → send a LinkedIn message → wait 3 days → follow up by email.
   </Card>
-  <Card title="AI Pre-Screen at scale" icon="sparkles">
+  <Card title="AI Pre-Screen at scale" icon="/images/ai.svg">
     Match criteria → automatically send an AI pre-screen to every matching candidate.
   </Card>
   <Card title="Reply handler" icon="reply">
@@ -173,7 +172,7 @@ The panel previews the generated nodes before you commit. Hit **Apply to canvas*
     Click **Test run** in the top bar, pick a real application from your workspace, and Hirempire executes the workflow against that candidate. The Logs panel opens automatically so you can watch each step resolve.
   </Accordion>
 
-  <Accordion icon="scroll-text" title="Logs panel">
+  <Accordion icon="list" title="Logs panel">
     Click **Logs** in the top bar to see every run of this workflow. Each run shows:
     - Overall status: **Running**, **Waiting**, **Completed**, **Failed**, **Paused**, or **Cancelled**.
     - The entity it ran on (application, candidate, or CV bank entry).
