@@ -5,6 +5,62 @@ description: 'History of changes, additions, and deprecations to the Hirempire A
 
 Stay up to date with every change to the Hirempire API. Breaking changes are marked clearly.
 
+<Update label="June 2026" description="Applicants renamed to Candidates, status enums, webhook paths, scopes removed" tags={["Breaking"]}>
+
+A workspace-wide breaking-changes release. **All clients integrating against the Applicants endpoints, scoped tokens, or capitalized status values need to update.**
+
+### Applicants renamed to Candidates
+
+The applications table now stores three candidate sub-types — `applicant`, `prospect`, and `upload` — so the public API has been renamed from "applicants" to "candidates" to reflect this. Every candidate object now includes a `type` field, and `GET /v1/candidates` accepts an optional `?type=` filter.
+
+| Old path | New path |
+|---|---|
+| `GET /v1/applicants` | `GET /v1/candidates` |
+| `GET /v1/get-applicant?applicant_id=` | `GET /v1/get-candidate?candidate_id=` |
+| `GET /v1/job-applicants?job_id=` | `GET /v1/job-candidates?job_id=` |
+| `PATCH /v1/update-applicant` | `PATCH /v1/update-candidate` |
+
+| Old field | New field |
+|---|---|
+| `applicant_id` (query / body) | `candidate_id` |
+| `applicants[]` (response) | `candidates[]` |
+| `total_applicants` | `total_candidates` |
+| `applicant` (single object) | `candidate` |
+
+A new endpoint `GET /v1/get-candidate?candidate_id=` was added — single-candidate fetches were previously undocumented.
+
+### Webhook path changes
+
+| Old path | New path |
+|---|---|
+| `PATCH /v1/webhooks` | `PATCH /v1/webhook` |
+| `DELETE /v1/webhooks?id=` | `DELETE /v1/delete-webhook?id=` |
+
+`GET /v1/webhooks` and `POST /v1/create-webhook` are unchanged.
+
+**Multiple webhooks per workspace are now allowed.** The previous one-per-workspace unique constraint has been dropped.
+
+### Lowercase status enums
+
+Status values are now lowercase in both input and output.
+
+- **Job status** — input accepts `Pending` `Active` `Paused` `Hired` `Closed` (capitalized values still accepted for backwards compatibility) and normalizes them. `Pending` maps to `draft`. `Hired` is accepted as a **deprecated alias** for `closed`. Output is always lowercase: one of `draft` `active` `paused` `closed`.
+- **Candidate status** — canonical lowercase values: `applied` `screening` `phone_screen` `interview` `technical` `offer` `hired` `rejected` `withdrawn` `on_hold` `shortlisted` `qualified` `uploaded`. The previous 7-value capitalized list (`Applied` / `Reviewed` / `Accepted` / `Scheduled` / `Met` / `Hired` / `Rejected`) is no longer accepted.
+- **`job_mode`** — `onsite` `remote` `hybrid` (note: `onsite`, no hyphen).
+- **`job_type`** — `full-time` `part-time` `contract` `freelance` `internship` `temporary` `project-based`.
+- **`career_level`** — `junior` `mid-level` `senior` `team-leader` `manager` `director` `vp` `c-level`.
+
+### Scopes removed
+
+The scope system has been removed entirely. Any valid API token can call any endpoint — there is no `Token is missing required scope` error any more. The `developers/scopes` page has been deleted from the documentation. Existing tokens continue to work.
+
+### Other changes
+
+- **`job_location`** in job responses is now formatted as `"City, Country"` (the city portion is omitted if the job has no city).
+- **Companies** are soft-deleted using an `archived_at` timestamp. No public-facing behavior change for `DELETE /v1/delete-company` — the response shape is the same.
+
+</Update>
+
 <Update label="May 2026" description="Google Jobs sync field" tags={["New"]}>
 
 Jobs created via the API now include a `google_jobs_indexed` boolean in the response, indicating whether the listing has been submitted to Google Jobs indexing.

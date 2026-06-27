@@ -69,7 +69,7 @@ Array of job posting sources. Example: `LinkedIn` `Referral` or any source you w
 </ParamField>
 
 <ParamField body="status" type="string">
-Job posting status. Options: `Pending` `Active` `Paused` `Hired` `Closed` `Delete`. Default is `Pending` 
+Job posting status. Accepted input values: `Pending` `Active` `Paused` `Hired` `Closed`. Values are normalized to lowercase before storage. `Pending` is mapped to `draft`. `Hired` is accepted as a **deprecated alias** for `Closed`. Default is `draft`.
 </ParamField>
 
 
@@ -505,7 +505,7 @@ Unique identifier for the newly created job
 </ResponseField>
 
 <ResponseField name="job_status" type="string">
-Current status of the job posting
+Current status of the job posting (lowercase). One of: `draft` `active` `paused` `closed`
 </ResponseField>
 
 <ResponseField name="total_applications" type="integer">
@@ -535,26 +535,13 @@ URL to view the full application details
 </ResponseField>
 
 <ResponseExample>
-```json
+```json 200
 {
   "success": true,
-  "job_id": "xyz456abc123",
-  "job_status": "Active",
-  "total_applications": 2,
-  "applications": [
-    {
-      "id": "xyz456abc123",
-      "created_at": "2025-02-25T03:23:32.000Z",
-      "source": "Facebook",
-      "application_url": "https://www.hirempire.com/job-application?recordid=xyz456abc123"
-    },
-    {
-      "id": "xyz456abc123",
-      "created_at": "2025-02-25T03:23:32.000Z",
-      "source": "LinkedIn",
-      "application_url": "https://www.hirempire.com/job-application?recordid=xyz456abc123"
-    }
-  ]
+  "job_id": "f3a2c1d4-1111-4222-9333-444455556666",
+  "job_status": "active",
+  "total_applications": 0,
+  "applications": []
 }
 ```
 </ResponseExample>
@@ -783,7 +770,7 @@ URL to view the full application details
 
 ### Token Validation Errors
 
-**400 - Bad Request**
+**401 - Unauthorized**
 ```json
 {
     "success": false,
@@ -796,21 +783,5 @@ URL to view the full application details
 {
     "success": false,
     "error": "Token is expired"
-}
-```
-
-**403 - Forbidden**
-```json
-{
-    "success": false,
-    "error": "Token has been deleted"
-}
-```
-
-**401 - Unauthorized**
-```json
-{
-    "success": false,
-    "error": "Token is missing required scope 'Jobs'"
 }
 ```

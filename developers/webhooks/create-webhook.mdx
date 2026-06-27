@@ -196,6 +196,10 @@ Array of subscribed event types
 }
 ```
 
+<Info>
+You can register multiple webhooks per workspace — there is no longer a one-per-workspace limit. Each webhook is independent and can subscribe to any combination of event types.
+</Info>
+
 ### Authorization Errors
 
 **401 - Unauthorized**
@@ -210,32 +214,6 @@ Array of subscribed event types
 ```json
 {
   "success": false,
-  "error": "Token is missing required scope"
-}
-```
-
-**401 - Unauthorized**
-```json
-{
-  "success": false,
-  "error": "You already have an active webhook."
-}
-```
-
-**401 - Unauthorized**
-```json
-{
-  "success": false,
   "error": "Invalid request url"
-}
-```
-
-### Forbidden
-
-**403 - Forbidden**
-```json
-{
-  "success": false,
-  "error": "Token has been deleted"
 }
 ```

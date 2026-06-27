@@ -56,6 +56,10 @@ When configuring your webhook at [hirempire.com/webhooks](https://app.hirempire.
     This event fires when a candidate submits an application to any of your published job postings. The payload includes the applicant's full profile, AI evaluation, and application details.
 
     **Event ID:** `applicant_applied`
+
+    <Info>
+      Although the resource group was renamed from "applicants" to "candidates", this event keeps its `applicant_applied` name and its `applicant.*` payload fields. The event describes a specific candidate sub-type (a candidate of `type: "applicant"` — someone who actively submitted an application), so the legacy naming is preserved.
+    </Info>
   </Accordion>
 
   <Accordion title="cv_upload_completed" icon="file-circle-check">

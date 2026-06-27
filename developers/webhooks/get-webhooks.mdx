@@ -156,21 +156,3 @@ If no webhooks are registered, the `data` array will be empty:
   "error": "Token is expired"
 }
 ```
-
-**401 - Unauthorized**
-```json
-{
-  "success": false,
-  "error": "Token is missing required scope"
-}
-```
-
-### Forbidden
-
-**403 - Forbidden**
-```json
-{
-  "success": false,
-  "error": "Token has been deleted"
-}
-```

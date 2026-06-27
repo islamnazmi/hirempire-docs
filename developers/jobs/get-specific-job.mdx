@@ -232,10 +232,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 Indicates if the request was successful
 </ResponseField>
 
-<ResponseField name="job" type="array">
-Array containing the requested job object
+<ResponseField name="job" type="object">
+The job object
 
-<Expandable title="Job Object Properties">
+<Expandable title="Job object properties">
 <ResponseField name="id" type="string">
 Unique identifier for the job
 </ResponseField>
@@ -253,15 +253,15 @@ Name of the hiring company
 </ResponseField>
 
 <ResponseField name="job_type" type="string">
-Employment type (e.g., Full-time, Part-time, Contract)
+Employment type. One of: `full-time` `part-time` `contract` `freelance` `internship` `temporary` `project-based`
 </ResponseField>
 
-<ResponseField name="workplace_type" type="string">
-Work arrangement (e.g., Remote, Hybrid, On-site)
+<ResponseField name="job_mode" type="string">
+Work arrangement. One of: `onsite` `remote` `hybrid`
 </ResponseField>
 
 <ResponseField name="salary" type="string">
-Salary amount for the position
+Salary amount as a string. For a fixed salary this is the single value; for a range it is `"min - max"`. `null` if not set.
 </ResponseField>
 
 <ResponseField name="currency" type="string">
@@ -277,15 +277,15 @@ Indicates if the salary is hidden from public view
 </ResponseField>
 
 <ResponseField name="career_level" type="string">
-Required experience level (e.g., Entry-level, Mid-level, Senior-level)
+Career level. One of: `junior` `mid-level` `senior` `team-leader` `manager` `director` `vp` `c-level`
 </ResponseField>
 
 <ResponseField name="job_location" type="string">
-Geographic location for the job
+Geographic location for the job, formatted as `"City, Country"`. The city portion is omitted if not set.
 </ResponseField>
 
 <ResponseField name="status" type="string">
-Current status of the job posting (Active, Paused, Closed)
+Current status of the job posting. One of: `draft` `active` `paused` `closed`
 </ResponseField>
 
 <ResponseField name="applicants" type="integer">
@@ -311,10 +311,6 @@ Array of source objects
 <ResponseField name="source_name" type="string">
 Name of the application source (e.g., LinkedIn, Referral)
 </ResponseField>
-
-<ResponseField name="source_url" type="string">
-URL for the application form for this source
-</ResponseField>
 </Expandable>
 </ResponseField>
 </Expandable>
@@ -323,37 +319,34 @@ URL for the application form for this source
 </ResponseField>
 
 <ResponseExample>
-```json
+```json 200
 {
     "success": true,
-    "job": [
-        {
-            "id": "tskxb758re93mmdv8g",
-            "created_time": "2025-08-23T12:40:08.000Z",
-            "job_title": "Marketing Manager",
-            "company_name": "Hirempire",
-            "job_type": "Full-time",
-            "workplace_type": "Remote",
-            "salary": "500000",
-            "currency": "USD",
-            "salary_period": "Per year",
-            "is_salary_hidden": false,
-            "career_level": "Mid-level",
-            "job_location": "Egypt",
-            "status": "Active",
-            "applicants": 13,
-            "job_description": "Job Description",
-            "sources": {
-                "count": 2,
-                "items": [
-                    { "source_name": "LinkedIn", "source_url": "https://hirempire.com/job-application?recordid=recdJKwSWQWFfs" },
-                    { "source_name": "Referral", "source_url": "https://hirempire.com/job-application?recordid=recAEQ9l1Q7kVN" }
-                ]
-            }
+    "job": {
+        "id": "f3a2c1d4-1111-4222-9333-444455556666",
+        "created_time": "2026-06-23T12:40:08.000Z",
+        "job_title": "Marketing Manager",
+        "company_name": "Hirempire",
+        "job_type": "full-time",
+        "job_mode": "remote",
+        "salary": "500000",
+        "currency": "USD",
+        "salary_period": "Per year",
+        "is_salary_hidden": false,
+        "career_level": "mid-level",
+        "job_location": "Cairo, Egypt",
+        "status": "active",
+        "applicants": 13,
+        "job_description": "Job Description",
+        "sources": {
+            "count": 2,
+            "items": [
+                { "source_name": "LinkedIn" },
+                { "source_name": "Referral" }
+            ]
         }
-    ]
+    }
 }
-
 ```
 </ResponseExample>
 
@@ -364,9 +357,11 @@ URL for the application form for this source
 ```json
 {
     "success": false,
-    "error": "Only 'job_id' is allowed in query parameters."
+    "error": "Only 'job_id' query parameter is allowed."
 }
 ```
+
+### 401 Unauthorized
 
 ```json
 {
@@ -378,39 +373,7 @@ URL for the application form for this source
 ```json
 {
     "success": false,
-    "error": "Not found. This job has been deleted."
-}
-```
-
-### 401 Unauthorized
-
-```json
-{
-    "success": false,
     "error": "Token is expired"
-}
-```
-
-```json
-{
-    "success": false,
-    "error": "Token is missing required scope 'Jobs'"
-}
-```
-
-```json
-{
-    "success": false,
-    "error": "Unauthorized. You don't have the permission to access this job."
-}
-```
-
-### 403 Forbidden
-
-```json
-{
-    "success": false,
-    "error": "Token has been deleted"
 }
 ```
 
@@ -419,6 +382,6 @@ URL for the application form for this source
 ```json
 {
     "success": false,
-    "error": "Job not found."
+    "error": "Job not found"
 }
 ```

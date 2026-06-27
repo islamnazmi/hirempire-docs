@@ -8,34 +8,29 @@ description: "Learn how to authenticate your API requests with Hirempire using B
 <Steps>
   <Step title="Create Your API Token">
     To begin, go to your [Hirempire API Tokens](https://app.hirempire.com/dashboard/settings/tokens). From there, you can:
-    - Select the [scope](/developers/scopes) (Jobs, Users, Applications, etc.)
     - Set the expiry (30 Days, 90 Days, or Never Expire)
     - Generate your access token
   </Step>
   <Step title="Authenticate Your Requests">
     Use the token in the **`Authorization`** header:
     ```http
-    Authorization: Bearer sk•••••••••••••••••••••••••
+    Authorization: Bearer sk-••••••••••••
     ```
-    - The token grants access to selected scopes
+    - The token grants full access to your workspace's API
     - Keep it safe; treat it like a password
   </Step>
   <Step title="Start Using Endpoints">
     Use the documentation sidebar to explore endpoints grouped under:
     - Jobs
+    - Candidates
     - Companies
-    - Applications
-    - Applicants
-    - Organizations
-    - Users
+    - Webhooks
   </Step>
 </Steps>
 
-
 <CardGroup cols={1}>
   <Card title="Step 1: Create Your API Token">
-    To begin, go to your [Hirempire Profile Page](https://app.hirempire.com/dashboard/settings/personal-info). From there, you can:
-    - Select the [scope](/developers/scopes) (Jobs, Users, Applications, etc.)
+    To begin, go to your [Hirempire API Tokens](https://app.hirempire.com/dashboard/settings/tokens). From there, you can:
     - Set the expiry (30 Days, 90 Days, or Never Expire)
     - Generate your access token
   </Card>
@@ -43,20 +38,18 @@ description: "Learn how to authenticate your API requests with Hirempire using B
   <Card title="Step 2: Authenticate Your Requests">
     Use the token in the **`Authorization`** header:
     ```http
-    Authorization: Bearer sk•••••••••••••••••••••••••
+    Authorization: Bearer sk-••••••••••••
     ```
-    - The token grants access to selected scopes
+    - The token grants full access to your workspace's API
     - Keep it safe; treat it like a password
   </Card>
 
   <Card title="Step 3: Start Using Endpoints">
     Use the documentation sidebar to explore endpoints grouped under:
     - Jobs
+    - Candidates
     - Companies
-    - Applications
-    - Applicants
-    - Organizations
-    - Users
+    - Webhooks
   </Card>
 </CardGroup>
 

@@ -233,15 +233,15 @@ Title of the job position
 </ResponseField>
 
 <ResponseField name="job_type" type="string">
-Employment type (e.g., Full-time, Part-time, Contract)
+Employment type. One of: `full-time` `part-time` `contract` `freelance` `internship` `temporary` `project-based`
 </ResponseField>
 
 <ResponseField name="job_mode" type="string">
-Work arrangement (e.g., Remote, Hybrid, On-site)
+Work arrangement. One of: `onsite` `remote` `hybrid`
 </ResponseField>
 
 <ResponseField name="job_location" type="string">
-Geographic location for the job
+Geographic location for the job, formatted as `"City, Country"`. The city portion is omitted if not set.
 </ResponseField>
 
 <ResponseField name="company_name" type="string">
@@ -253,7 +253,7 @@ Full description of the job requirements and responsibilities
 </ResponseField>
 
 <ResponseField name="status" type="string">
-Current status of the job posting (Active, Paused, Closed)
+Current status of the job posting. One of: `draft` `active` `paused` `closed`
 </ResponseField>
 
 <ResponseField name="applicants" type="integer">
@@ -263,33 +263,33 @@ Number of applicants who have applied to this job
 </ResponseField>
 
 <ResponseExample>
-```json
+```json 200
 {
   "success": true,
   "total_jobs": 2,
   "jobs": [
     {
-      "id": "abc123xyz789",
-      "created_time": "2025-02-20T10:00:00.000Z",
+      "id": "abc123xy-1234-4567-89ab-cdef01234567",
+      "created_time": "2026-06-20T10:00:00.000Z",
       "job_title": "Software Engineer",
-      "job_type": "Full-time",
-      "job_mode": "Remote",
-      "job_location": "USA",
+      "job_type": "full-time",
+      "job_mode": "remote",
+      "job_location": "San Francisco, United States",
       "company_name": "TechCorp",
-      "job_description": "We are looking for a talented Software Engineer to join our development team. Responsibilities include designing, developing, and maintaining software applications, collaborating with cross-functional teams, and ensuring high-quality code through testing and code reviews.",
-      "status": "Active",
+      "job_description": "We are looking for a talented Software Engineer to join our development team.",
+      "status": "active",
       "applicants": 5
     },
     {
-      "id": "xyz456abc123",
-      "created_time": "2025-02-18T15:30:00.000Z",
+      "id": "xyz456ab-1234-4567-89ab-cdef01234567",
+      "created_time": "2026-06-18T15:30:00.000Z",
       "job_title": "Marketing Manager",
-      "job_type": "Part-time",
-      "job_mode": "Hybrid",
-      "job_location": "UK",
+      "job_type": "part-time",
+      "job_mode": "hybrid",
+      "job_location": "London, United Kingdom",
       "company_name": "MarketGenius",
-      "job_description": "The Marketing Manager will be responsible for developing and executing marketing campaigns, analyzing market trends, and working with internal teams to enhance brand visibility. The ideal candidate should have strong communication skills and experience in digital marketing strategies.",
-      "status": "Paused",
+      "job_description": "The Marketing Manager will be responsible for developing and executing marketing campaigns.",
+      "status": "paused",
       "applicants": 3
     }
   ]
@@ -304,9 +304,11 @@ Number of applicants who have applied to this job
 ```json
 {
     "success": false,
-    "error": "Request params are not allowed."
+    "error": "Query parameters are not allowed."
 }
 ```
+
+### 401 Unauthorized
 
 ```json
 {
@@ -315,38 +317,9 @@ Number of applicants who have applied to this job
 }
 ```
 
-
-### 401 Unauthorized
-
 ```json
 {
     "success": false,
     "error": "Token is expired"
-}
-```
-
-```json
-{
-    "success": false,
-    "error": "Token is missing required scope 'Jobs'"
-}
-```
-
-
-### 403 Forbidden
-
-```json
-{
-    "success": false,
-    "error": "Token has been deleted"
-}
-```
-
-### 404 Not Found
-
-```json
-{
-    "success": false,
-    "error": "Job not found."
 }
 ```

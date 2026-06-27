@@ -7,6 +7,10 @@ description: "Example webhook payloads for each event type"
 
 Below are example response payloads for each webhook event type. All payloads are sent as JSON via a `POST` request to your webhook endpoint.
 
+<Info>
+  Although the REST API resource has been renamed from "applicants" to "candidates", the `applicant_applied` and `cv_upload_completed` events keep their `applicant.*` payload field names. These events fire for a specific candidate sub-type (`type: "applicant"`) and the legacy naming is preserved for backwards compatibility.
+</Info>
+
 ---
 
 ## applicant_applied
