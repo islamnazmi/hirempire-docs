@@ -256,6 +256,50 @@ Full description of the job requirements and responsibilities
 Current status of the job posting. One of: `draft` `active` `paused` `closed`
 </ResponseField>
 
+<ResponseField name="public_slug" type="string">URL slug for the public job board page.</ResponseField>
+
+<ResponseField name="company_logo_url" type="string">URL to the hiring company's logo.</ResponseField>
+
+<ResponseField name="department" type="string">Department the job is in (e.g. Engineering).</ResponseField>
+
+<ResponseField name="industry" type="string">Industry classification.</ResponseField>
+
+<ResponseField name="career_level" type="string">Seniority. One of: `junior` `mid-level` `senior` `team-leader` `manager` `director` `vp` `c-level`.</ResponseField>
+
+<ResponseField name="salary" type="string">Computed salary display string. `null` when salary is confidential.</ResponseField>
+
+<ResponseField name="salary_type" type="string">One of: `fixed` `range` `confidential`.</ResponseField>
+
+<ResponseField name="salary_min" type="number">Lower bound (range mode).</ResponseField>
+
+<ResponseField name="salary_max" type="number">Upper bound (range mode).</ResponseField>
+
+<ResponseField name="salary_fixed" type="number">Fixed salary amount (fixed mode).</ResponseField>
+
+<ResponseField name="currency" type="string">ISO 4217 three-letter currency code.</ResponseField>
+
+<ResponseField name="salary_period" type="string">One of: `Per hour` `Per day` `Per week` `Bi-weekly` `Per month` `Per year`.</ResponseField>
+
+<ResponseField name="is_salary_hidden" type="boolean">`true` if salary should be hidden on the public board.</ResponseField>
+
+<ResponseField name="questions" type="object">Application form configuration — built-in `fields` toggles plus an array of `custom` per-job questions. See [Get specific job](/developers/jobs/get-specific-job) for the full structure.</ResponseField>
+
+<ResponseField name="sources" type="object">
+Source-link breakdown for the job.
+
+<Expandable title="sources structure">
+<ResponseField name="count" type="integer">Number of source links configured.</ResponseField>
+<ResponseField name="items" type="array">
+Each item:
+- `id` (string) — source link UUID
+- `source_name` (string) — label like `LinkedIn` or `Indeed`
+- `source_url` (string) — public tracking URL: `https://jobs.hirempire.com/{company-slug}/{source-id}`
+- `visits` (integer) — visits to that URL
+- `created_at` (string) — ISO 8601
+</ResponseField>
+</Expandable>
+</ResponseField>
+
 <ResponseField name="applicants" type="integer">
 Number of applicants who have applied to this job
 </ResponseField>
@@ -266,31 +310,45 @@ Number of applicants who have applied to this job
 ```json 200
 {
   "success": true,
-  "total_jobs": 2,
+  "total_jobs": 1,
   "jobs": [
     {
       "id": "abc123xy-1234-4567-89ab-cdef01234567",
       "created_time": "2026-06-20T10:00:00.000Z",
       "job_title": "Software Engineer",
+      "public_slug": "software-engineer-a3f9",
+      "company_name": "TechCorp",
+      "company_logo_url": "https://cdn.hirempire.com/logos/techcorp.png",
+      "department": "Engineering",
+      "industry": "Software",
+      "career_level": "senior",
       "job_type": "full-time",
       "job_mode": "remote",
       "job_location": "San Francisco, United States",
-      "company_name": "TechCorp",
+      "salary": "120000",
+      "salary_type": "fixed",
+      "salary_min": null,
+      "salary_max": null,
+      "salary_fixed": 120000,
+      "currency": "USD",
+      "salary_period": "Per year",
+      "is_salary_hidden": false,
       "job_description": "We are looking for a talented Software Engineer to join our development team.",
+      "questions": {
+        "fields": { "show_cover_letter": true, "show_photo": false, "show_languages": true },
+        "custom": [
+          { "id": "q-1", "label": "Why do you want to work with us?", "type": "textarea", "required": true }
+        ]
+      },
+      "sources": {
+        "count": 2,
+        "items": [
+          { "id": "1a2b3c4d-...", "source_name": "LinkedIn", "source_url": "https://jobs.hirempire.com/techcorp/1a2b3c4d-...", "visits": 142, "created_at": "2026-06-18T10:00:00.000Z" },
+          { "id": "9z8y7x6w-...", "source_name": "Referral", "source_url": "https://jobs.hirempire.com/techcorp/9z8y7x6w-...", "visits": 36, "created_at": "2026-06-19T08:14:00.000Z" }
+        ]
+      },
       "status": "active",
       "applicants": 5
-    },
-    {
-      "id": "xyz456ab-1234-4567-89ab-cdef01234567",
-      "created_time": "2026-06-18T15:30:00.000Z",
-      "job_title": "Marketing Manager",
-      "job_type": "part-time",
-      "job_mode": "hybrid",
-      "job_location": "London, United Kingdom",
-      "company_name": "MarketGenius",
-      "job_description": "The Marketing Manager will be responsible for developing and executing marketing campaigns.",
-      "status": "paused",
-      "applicants": 3
     }
   ]
 }

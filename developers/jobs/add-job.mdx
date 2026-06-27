@@ -68,6 +68,37 @@ Full description of the job requirements and responsibilities
 Array of job posting sources. Example: `LinkedIn` `Referral` or any source you would like to add.
 </ParamField>
 
+<ParamField body="industry" type="string">
+Industry classification (optional).
+</ParamField>
+
+<ParamField body="public_slug" type="string">
+URL slug for the public job board page. If omitted, auto-generated from the job title with a random 4-char suffix.
+</ParamField>
+
+<ParamField body="questions" type="object">
+Application form configuration (optional). Object shape:
+
+```
+{
+  "fields": {
+    "show_cover_letter": boolean,
+    "show_photo": boolean,
+    "show_experience_years": boolean,
+    "show_languages": boolean,
+    "show_nationality": boolean,
+    "show_location": boolean,
+    "show_salary_expectation": boolean
+  },
+  "custom": [
+    { "label": string, "type": string, "options": any, "required": boolean }
+  ]
+}
+```
+
+`custom[].type` must be one of: `text` `textarea` `number` `date` `url` `file` `single_select` `multi_select` `video` `audio`.
+</ParamField>
+
 <ParamField body="status" type="string">
 Job posting status. Accepted input values: `Pending` `Active` `Paused` `Hired` `Closed`. Values are normalized to lowercase before storage. `Pending` is mapped to `draft`. `Hired` is accepted as a **deprecated alias** for `Closed`. Default is `draft`.
 </ParamField>

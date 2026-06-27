@@ -1,8 +1,10 @@
 ---
-title: "Update candidate status"
+title: "Update candidate"
 api: "PATCH https://api.hirempire.com/v1/update-candidate"
-description: "Update the pipeline status of an existing candidate in your Hirempire workspace"
+description: "Update a candidate — partial update, send only the fields you want to change"
 ---
+
+Send only the fields you want to change. All fields except `candidate_id` are optional.
 
 ## Authentication
 
@@ -12,13 +14,29 @@ Bearer authentication header of the form `Bearer <token>`, where `<token>` is yo
 
 ## Request Body
 
-<ParamField body="candidate_id" type="string" required placeholder="Enter candidate ID">
-  The unique identifier (UUID) of the candidate to update
+<ParamField body="candidate_id" type="string" required placeholder="Candidate UUID">
+The candidate to update.
 </ParamField>
 
-<ParamField body="status" type="string" required>
-The new pipeline status for the candidate. One of: `applied` `screening` `phone_screen` `interview` `technical` `offer` `hired` `rejected` `withdrawn` `on_hold` `shortlisted` `qualified` `uploaded`
+<ParamField body="status" type="string">
+New pipeline status. One of: `applied` `screening` `phone_screen` `interview` `technical` `offer` `hired` `rejected` `withdrawn` `on_hold` `shortlisted` `qualified` `uploaded`.
 </ParamField>
+
+<ParamField body="tags" type="string[]">
+Array of free-form tags. Replaces the existing tag list.
+</ParamField>
+
+<ParamField body="pool_stage" type="string">
+Talent-pool stage. One of: `cold` `warm` `hot` `not_interested`. Pass `null` to clear.
+</ParamField>
+
+<ParamField body="note_to_candidate" type="string">
+Recruiter note attached to the candidate (used in follow-up emails). Pass `null` to clear.
+</ParamField>
+
+<Info>
+At least one field beyond `candidate_id` must be provided. Otherwise the response is `400 At least one updatable field must be provided`.
+</Info>
 
 <RequestExample>
 

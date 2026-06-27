@@ -140,7 +140,9 @@
               "developers/jobs/get-specific-job",
               "developers/jobs/add-job",
               "developers/jobs/update-job-status",
-              "developers/jobs/delete-job"
+              "developers/jobs/delete-job",
+              "developers/jobs/job-sources",
+              "developers/jobs/create-source"
             ]
           },
           {

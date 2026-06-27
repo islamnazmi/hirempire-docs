@@ -244,77 +244,88 @@ Unique identifier for the job
 ISO 8601 timestamp when the job was created
 </ResponseField>
 
-<ResponseField name="job_title" type="string">
-Title of the job position
-</ResponseField>
+<ResponseField name="job_title" type="string">Title of the job position.</ResponseField>
 
-<ResponseField name="company_name" type="string">
-Name of the hiring company
-</ResponseField>
+<ResponseField name="public_slug" type="string">URL slug for the public job board page.</ResponseField>
 
-<ResponseField name="job_type" type="string">
-Employment type. One of: `full-time` `part-time` `contract` `freelance` `internship` `temporary` `project-based`
-</ResponseField>
+<ResponseField name="company_name" type="string">Name of the hiring company.</ResponseField>
 
-<ResponseField name="job_mode" type="string">
-Work arrangement. One of: `onsite` `remote` `hybrid`
-</ResponseField>
+<ResponseField name="company_logo_url" type="string">URL to the hiring company's logo.</ResponseField>
 
-<ResponseField name="salary" type="string">
-Salary amount as a string. For a fixed salary this is the single value; for a range it is `"min - max"`. `null` if not set.
-</ResponseField>
+<ResponseField name="department" type="string">Department the job is in (e.g. Engineering).</ResponseField>
 
-<ResponseField name="currency" type="string">
-Currency code for the salary (e.g., USD, EUR)
-</ResponseField>
+<ResponseField name="industry" type="string">Industry classification.</ResponseField>
 
-<ResponseField name="salary_period" type="string">
-Salary payment period (e.g., Per year, Per month, Per hour)
-</ResponseField>
+<ResponseField name="career_level" type="string">Career level. One of: `junior` `mid-level` `senior` `team-leader` `manager` `director` `vp` `c-level`.</ResponseField>
 
-<ResponseField name="is_salary_hidden" type="boolean">
-Indicates if the salary is hidden from public view
-</ResponseField>
+<ResponseField name="job_type" type="string">Employment type. One of: `full-time` `part-time` `contract` `freelance` `internship` `temporary` `project-based`.</ResponseField>
 
-<ResponseField name="career_level" type="string">
-Career level. One of: `junior` `mid-level` `senior` `team-leader` `manager` `director` `vp` `c-level`
-</ResponseField>
+<ResponseField name="job_mode" type="string">Work arrangement. One of: `onsite` `remote` `hybrid`.</ResponseField>
 
-<ResponseField name="job_location" type="string">
-Geographic location for the job, formatted as `"City, Country"`. The city portion is omitted if not set.
-</ResponseField>
+<ResponseField name="job_location" type="string">Geographic location, formatted as `"City, Country"`. The city portion is omitted if not set.</ResponseField>
 
-<ResponseField name="status" type="string">
-Current status of the job posting. One of: `draft` `active` `paused` `closed`
-</ResponseField>
+<ResponseField name="salary" type="string">Computed salary display string. `null` when confidential.</ResponseField>
 
-<ResponseField name="applicants" type="integer">
-Number of applicants who have applied to this job
-</ResponseField>
+<ResponseField name="salary_type" type="string">One of: `fixed` `range` `confidential`.</ResponseField>
 
-<ResponseField name="job_description" type="string">
-Full description of the job requirements and responsibilities
+<ResponseField name="salary_min" type="number">Lower bound (range mode).</ResponseField>
+
+<ResponseField name="salary_max" type="number">Upper bound (range mode).</ResponseField>
+
+<ResponseField name="salary_fixed" type="number">Fixed salary (fixed mode).</ResponseField>
+
+<ResponseField name="currency" type="string">ISO 4217 three-letter code (e.g., `USD`).</ResponseField>
+
+<ResponseField name="salary_period" type="string">One of: `Per hour` `Per day` `Per week` `Bi-weekly` `Per month` `Per year`.</ResponseField>
+
+<ResponseField name="is_salary_hidden" type="boolean">`true` if the salary is hidden on the public board.</ResponseField>
+
+<ResponseField name="job_description" type="string">Full description of the job requirements and responsibilities.</ResponseField>
+
+<ResponseField name="questions" type="object">
+Application form configuration. `null` if no custom questions are set up.
+
+<Expandable title="questions structure">
+<ResponseField name="fields" type="object">
+Built-in toggles for standard application data. Each is a boolean:
+- `show_cover_letter`
+- `show_photo`
+- `show_experience_years`
+- `show_languages`
+- `show_nationality`
+- `show_location`
+- `show_salary_expectation`
+</ResponseField>
+<ResponseField name="custom" type="array">
+Array of per-job custom questions. Each item:
+- `id` (string) — question UUID
+- `label` (string) — the question text
+- `type` (string) — one of: `text` `textarea` `number` `date` `url` `file` `single_select` `multi_select` `video` `audio`
+- `options` (any) — for select types, the list of choices; otherwise `null`
+- `required` (boolean) — whether the candidate must answer
+</ResponseField>
+</Expandable>
 </ResponseField>
 
 <ResponseField name="sources" type="object">
-Application source tracking information
+Source link tracking for the job.
 
-<Expandable title="Sources Object Properties">
-<ResponseField name="count" type="integer">
-Total number of application sources
-</ResponseField>
-
+<Expandable title="sources structure">
+<ResponseField name="count" type="integer">Number of source links.</ResponseField>
 <ResponseField name="items" type="array">
-Array of source objects
+Each item:
+- `id` (string) — source link UUID
+- `source_name` (string) — label like `LinkedIn`
+- `source_url` (string) — public tracking URL: `https://jobs.hirempire.com/{company-slug}/{source-id}`
+- `visits` (integer) — visits to that URL
+- `created_at` (string) — ISO 8601
+</ResponseField>
+</Expandable>
+</ResponseField>
 
-<Expandable title="Source Item Properties">
-<ResponseField name="source_name" type="string">
-Name of the application source (e.g., LinkedIn, Referral)
-</ResponseField>
-</Expandable>
-</ResponseField>
-</Expandable>
-</ResponseField>
+<ResponseField name="status" type="string">Current status. One of: `draft` `active` `paused` `closed`.</ResponseField>
+
+<ResponseField name="applicants" type="integer">Number of applicants on this job.</ResponseField>
 </Expandable>
 </ResponseField>
 

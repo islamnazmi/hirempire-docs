@@ -1,18 +1,52 @@
 ---
-title: "Update job status"
+title: "Update job"
 api: "PATCH https://api.hirempire.com/v1/update-job"
-description: "Update the status of an existing job posting in your Hirempire account"
+description: "Update an existing job — partial update, send only the fields you want to change"
 ---
+
+Send only the fields you want to change. All fields except `job_id` are optional. The job must belong to your workspace.
 
 ## Request Body
 
-<ParamField body="job_id" type="string" required placeholder="Enter job ID">
-  The job ID to retrieve
+<ParamField body="job_id" type="string" required placeholder="Job UUID">
+The job to update.
 </ParamField>
 
-<ParamField body="status" type="string" required>
-The new status for the job. Accepted input values: `Pending` `Active` `Paused` `Hired` `Closed`. Values are normalized to lowercase before storage. `Pending` maps to `draft`. `Hired` is accepted as a **deprecated alias** for `Closed`. The response always returns the canonical lowercase value: one of `draft` `active` `paused` `closed`.
+<ParamField body="status" type="string">
+New status. Accepted input values: `Pending` `Active` `Paused` `Hired` `Closed`. `Pending` maps to `draft`. `Hired` is accepted as a **deprecated alias** for `Closed`. Storage and response always use the canonical lowercase value: `draft` `active` `paused` `closed`.
 </ParamField>
+
+<ParamField body="job_title" type="string">New job title.</ParamField>
+
+<ParamField body="job_description" type="string">New job description (markdown).</ParamField>
+
+<ParamField body="department" type="string">Department.</ParamField>
+
+<ParamField body="industry" type="string">Industry classification.</ParamField>
+
+<ParamField body="job_country" type="string">Country.</ParamField>
+
+<ParamField body="city" type="string">City (or `null` to clear).</ParamField>
+
+<ParamField body="workplace" type="string">One of: `On-site` `Remote` `Hybrid` (stored lowercase).</ParamField>
+
+<ParamField body="job_type" type="string">One of: `Full-time` `Part-time` `Contract` `Freelance` `Internship` `Temporary` `Project-based`.</ParamField>
+
+<ParamField body="career_level" type="string">One of: `Junior` `Mid-level` `Senior` `Team Leader` `Manager` `Director` `VP` `C-level`.</ParamField>
+
+<ParamField body="salary" type="number">New salary amount.</ParamField>
+
+<ParamField body="currency" type="string">Three-letter ISO currency code.</ParamField>
+
+<ParamField body="salary_period" type="string">One of: `Per hour` `Per day` `Per week` `Bi-weekly` `Per month` `Per year`.</ParamField>
+
+<ParamField body="hide_salary" type="boolean">Hide salary on the public board.</ParamField>
+
+<ParamField body="questions" type="object">Replace the application form configuration. See [Get specific job](/developers/jobs/get-specific-job) for the `{ fields, custom }` structure.</ParamField>
+
+<Info>
+At least one field beyond `job_id` must be provided. Otherwise the response is `400 At least one updatable field must be provided`.
+</Info>
 
 
 ## Authentication

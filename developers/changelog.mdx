@@ -5,6 +5,52 @@ description: 'History of changes, additions, and deprecations to the Hirempire A
 
 Stay up to date with every change to the Hirempire API. Breaking changes are marked clearly.
 
+<Update label="June 2026" description="Expanded response fields, partial updates, job source URL endpoints" tags={["New"]}>
+
+Two follow-up additions on top of the breaking-changes release earlier this month.
+
+### New: Job source URL endpoints
+
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/v1/job-sources?job_id=` | List source links for a job |
+| `POST` | `/v1/create-source` | Create a new source link (idempotent on `job_id`+`source_name`) |
+
+Each source object includes:
+
+```json
+{
+  "id": "uuid",
+  "source_name": "LinkedIn",
+  "source_url": "https://jobs.hirempire.com/{company-slug}/{source-id}",
+  "code": "a3f9",
+  "visits": 142,
+  "created_at": "2026-06-18T10:00:00.000Z"
+}
+```
+
+`source_url` is the publicly shareable link for that source. Visits to that URL increment the `visits` counter — useful for attribution.
+
+### Expanded response fields
+
+Many fields were previously available in the database but not exposed. They are now included in responses without changing existing field names.
+
+**Jobs** (`GET /v1/jobs`, `GET /v1/get-job`) now include: `public_slug`, `company_logo_url`, `department`, `industry`, `career_level`, full salary breakdown (`salary_type`, `salary_min`, `salary_max`, `salary_fixed`), and a `sources` object with each source's tracking URL. `GET /v1/get-job` additionally includes `questions` (the application form configuration: built-in `fields` toggles plus `custom` per-job questions).
+
+**Candidates** (`GET /v1/candidates`, `GET /v1/get-candidate`, `GET /v1/job-candidates`) now include: `github_url`, `cover_letter`, `languages`, `custom_answers` (answers to the job's `questions`), `tags`, `pool_stage`, `location_country`, and the full AI screening breakdown (`ai_skills_match`, `ai_experience_match`, `ai_location_match`, plus `linkedin_matching`). The single-candidate endpoint additionally returns `linkedin_data`, `github_data`, and `github_evaluation`.
+
+**Webhooks** (`GET /v1/webhooks`) now include `updated_at` alongside `created_at`.
+
+### Partial updates: PATCH endpoints accept more fields
+
+**`PATCH /v1/update-job`** now accepts any subset of: `job_title`, `job_description`, `department`, `industry`, `job_country`, `city`, `workplace`, `job_type`, `career_level`, `salary`, `currency`, `salary_period`, `hide_salary`, `questions`, `status`. Only the fields you send are updated. Status casing rules (`Pending`→`draft`, `Hired`→`closed`) are unchanged.
+
+**`PATCH /v1/update-candidate`** now accepts: `status`, `tags`, `pool_stage` (`cold`/`warm`/`hot`/`not_interested`), `note_to_candidate`.
+
+**`POST /v1/add-job`** now accepts two new optional body fields: `industry` and `questions`. `public_slug` is also optional — auto-generated from the title if not provided.
+
+</Update>
+
 <Update label="June 2026" description="Applicants renamed to Candidates, status enums, webhook paths, scopes removed" tags={["Breaking"]}>
 
 A workspace-wide breaking-changes release. **All clients integrating against the Applicants endpoints, scoped tokens, or capitalized status values need to update.**
